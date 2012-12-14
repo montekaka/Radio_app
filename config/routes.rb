@@ -1,4 +1,6 @@
 RadioApp::Application.routes.draw do
+  resources :audioposts
+
   resources :users
 
   # The priority is based upon order of creation:

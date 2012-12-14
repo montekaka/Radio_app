@@ -1,0 +1,37 @@
+<%= form_for(@audiopost) do |f| %>
+  <% if @audiopost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@audiopost.errors.count, "error") %> prohibited this audiopost from being saved:</h2>
+
+      <ul>
+      <% @audiopost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :short_note %><br />
+    <%= f.text_field :short_note %>
+  </div>
+  <div class="field">
+    <%= f.label :audio %><br />
+    <%= f.text_field :audio %>
+  </div>
+  <div class="field">
+    <%= f.label :audio_date %><br />
+    <%= f.date_select :audio_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
