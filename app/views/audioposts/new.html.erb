@@ -1,5 +1,8 @@
-<h1>New audiopost</h1>
+<div data-role="header" data-theme="b">
+	<h2>Add New Audio</h2>
+	<%= link_to 'Back', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "back"} %>
+</div>
+<div data-role="content">
+	<%= render 'form' %>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', audioposts_path %>

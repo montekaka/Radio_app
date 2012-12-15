@@ -1,3 +1,33 @@
+<div data-role="header" data-theme="b">
+    <h1>今日話題</h1>
+    <%= link_to 'New Audio', new_audiopost_path,{"class"=>"ui-btn-right", "data-icon" => "plus"} %>
+</div>
+<div data-role="content">
+    <div data-role="collapsible-set" data-theme="e" data-content-theme="d">
+      <div data-role="collapsible">
+        <h2>Dec 2012</h2>
+            <ul data-role="listview" data-theme="d" data-divider-theme="d">
+                <% @audioposts.each do |audiopost| %>
+                    <li data-role="list-divider">
+                        <%= audiopost.audio_date.strftime("%A") %>
+                        <%= audiopost.audio_date %>
+                        <%= link_to 'Delete', audiopost, :confirm => 'Are you sure?', :method => :delete %>
+                    </li>
+                    <li>
+                        <%= link_to(audiopost) do %>
+                            <h3><%= audiopost.title %></h3>
+                            <p><%= audiopost.short_note %></p>
+                        <% end %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+<div data-role="footer" data-position="fixed" data-theme='b'>
+    <h4>power by bruinsquare</h4>
+</div>
+<!--
 <h1>Listing audioposts</h1>
 
 <table>
@@ -29,3 +59,4 @@
 <br />
 
 <%= link_to 'New Audiopost', new_audiopost_path %>
+-->

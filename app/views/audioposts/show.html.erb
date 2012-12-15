@@ -1,3 +1,62 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<div data-role="header" data-theme="b">   
+  <h1>
+    <%= @audiopost.title %>
+  </h1>
+  <%= link_to 'Home', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
+  <%= link_to 'Edit', edit_audiopost_path(@audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear"} %>
+</div>
+<div data-role="content">
+  <div class="ui-body ui-body-b">
+    <h3><%= @audiopost.title %> (<%= @audiopost.audio_date %>)</h3>
+    <p><%= @audiopost.short_note %></p>
+  </div>
+  <p></p>
+  <div class="ui-body ui-body-c">
+    <div id="sliderVol">
+      <input type="range" name="slider-fill" id="volControl" value="60" min="0" max="100" data-highlight="true" />
+    </div>
+      <div class="ui-grid-a">       
+        <div class="ui-block-a">
+          <button type="button" data-theme="c" onclick="playControl();">Play</button>
+        </div>
+        <div class="ui-block-b">
+          <button type="button" data-theme="c" onclick="pauseControl();">Pause</button>
+      </div>
+    <div>    
+  </div>
+  <audio class="player">
+    <source src=<%= @audiopost.audio %> type='audio/mpeg'>
+  </audio>
+</div>
+<script>
+var v = document.getElementsByTagName("audio")[0];
+
+function playControl(){
+  v.play();
+}
+
+function pauseControl(){
+  v.pause();
+}
+
+function setVolumn(Vol){
+  v.volume = Vol;
+}
+
+function getSeeking(){
+  v.seeking();
+}
+
+$("#sliderVol").change(function() {
+  var slider_value = $("#volControl").val()/100;
+  // do something..
+  v.volume = slider_value;
+});
+</script>
+<!--
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -28,3 +87,4 @@
 
 <%= link_to 'Edit', edit_audiopost_path(@audiopost) %> |
 <%= link_to 'Back', audioposts_path %>
+-->

@@ -1,6 +1,8 @@
-<h1>Editing audiopost</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @audiopost %> |
-<%= link_to 'Back', audioposts_path %>
+<div data-role="header" data-theme="b">
+	<h2>Edit Audio</h2>
+	<%= link_to 'Home', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
+	<%= link_to 'Back', @audiopost, {"class"=>"ui-btn-right", "data-icon" => "arrow-r", "data-iconpos"=>"right"} %>
+</div>
+<div data-role="content">	
+	<%= render 'form' %>
+</div>
