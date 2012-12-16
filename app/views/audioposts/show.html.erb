@@ -15,25 +15,30 @@
   </div>
   <p></p>
   <div class="ui-body ui-body-c">
+  <audio class="player" controls>
+    <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
+  </audio>    
     <div id="sliderVol">
-      <input type="range" name="slider-fill" id="volControl" value="60" min="0" max="100" data-highlight="true" />
+      <input type="range" name="slider-fill" id="volControl" value="100" min="0" max="100" data-highlight="true" />
     </div>
+    <div id="sliderTime">
+      <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" />
+    </div>  
       <div class="ui-grid-a">       
         <div class="ui-block-a">
-          <button type="button" data-theme="c" onclick="playControl();">Play</button>
+          <button type="button" data-theme="c" id='play' onclick="playControl();">Play</button>
         </div>
         <div class="ui-block-b">
-          <button type="button" data-theme="c" onclick="pauseControl();">Pause</button>
+          <button type="button" data-theme="c" id='pause' onclick="pauseControl();">Pause</button>
       </div>
-    <div>    
+    <div>
   </div>
-  <audio class="player">
-    <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
-  </audio>
 </div>
 <script>
+
+
 var v = document.getElementsByTagName("audio")[0];
-var mediaElement = document.getElementById('todaynews');
+
 function playControl(){
   v.play();
 }
@@ -42,15 +47,45 @@ function pauseControl(){
   v.pause();
 }
 
-function getSeeking(){
-  v.seeking();
-}
+/*
+var SliderValue = $("#volControl").attr('max');
+console.log("Slider value = " + SliderValue);
+$("#volControl").attr("min", 4);
+var SliderValue = $("#volControl").attr('min');
+console.log("Slider value = " + SliderValue);
+*/
 
-console.log(mediaElement.seekable);
+
+v.addEventListener("loadedmetadata", function(){
+  var duration = this.duration;
+  var seconds = parseInt(duration%60);
+  var minutes = parseInt((duration/60)%60);
+  //var seconds = Math.round(duration)%60;
+  //var minutes = Math.floor(Math.round(duration)/60);
+  //console.log(minutes + ":" + seconds);
+ // console.log(duration);
+ console.log(v.volume);
+});
 
 $("#sliderVol").change(function() {
   var slider_value = $("#volControl").val()/100;
   // do something..
   v.volume = slider_value;
 });
+
+/*
+$("#sliderTime").change(function() {
+  var slider_value = $("#timeControl").val();
+  v.currentTime = slider_value;
+  v.play();
+});
+*/
+
+$("#sliderTime").on('slidestop', function() {
+  var slider_value = $("#timeControl").val();
+  v.currentTime = slider_value;
+  console.log(slider_value);
+  v.play();
+});
+
 </script>
