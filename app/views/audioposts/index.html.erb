@@ -35,6 +35,51 @@
 </div>
 
 <script>
+//prepare the function we need
+function sortDateArray(arrayName, type){
+    var dummyArray = [];
+    for(var i in arrayName){
+        dummyArray.push(arrayName[i]);
+    }
+    if(type=="descending"){
+        return dummyArray.sort(function(d1, d2){
+            return d2-d1;
+        });
+    }
+    else if(type=="ascending"){
+        return dummyArray.sort(function(d1, d2){
+            return d1-d2;
+        });
+    }
+    else{
+        return 0;
+    }
+}
+
+function getArrayIndex(sortedArray, originalArray){
+    var indexArray = [];
+    for(var i in sortedArray){
+        indexArray.push(originalArray.indexOf(sortedArray[i]));
+    }
+    return indexArray;
+}
+
+function getUniqueArray(inputArray){
+    var dummy = inputArray.filter(function(item,i,inputArray){
+        return i==inputArray.indexOf(item);
+    });
+    return sortDateArray(dummy, "descending");
+}
+
+function getArrayMonths(inputArray){
+    var audioMonths=[];
+    for(var i in inputArray){
+        audioMonths.push(inputArray[i].getMonth());
+    }
+    return audioMonths;
+}
+
+//prepare the data we need
 var audioDates = [];
 var aduioLinks = [];
 var aduioTitles = [];
@@ -46,8 +91,16 @@ var aduioNotes = [];
     aduioTitles.push('<%= audiopost.title%>');
     aduioNotes.push('<%= audiopost.short_note%>');
 <% end %>
-var max_date = audioDates.sort(function(d1, d2){
-    return d1-d2;
-});
-console.log(max_date);
+
+var descendingDates = sortDateArray(audioDates,"descending");
+var indexDateArray = getArrayIndex(descendingDates, audioDates);
+var maxDate = descendingDates[0];
+var minDate = descendingDates[descendingDates.length-1];
+var maxYear = maxDate.getFullYear();
+var minYear = minDate.getFullYear();
+
+var audioMonths = getArrayMonths(audioDates);
+uniqueMonths = getUniqueArray(audioMonths);
+console.log(uniqueMonths);
+
 </script>
