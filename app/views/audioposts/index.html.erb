@@ -10,7 +10,7 @@
             <option value="2012">2010</option>
         </select>
     </div>
-    <div data-role="collapsible-set" data-theme="e" data-content-theme="d">
+    <div data-role="collapsible-set" data-theme="a" data-content-theme="c" id="audiolist">
       <div data-role="collapsible">
         <h2>Dec 2012</h2>
             <ul data-role="listview" data-theme="d" data-divider-theme="d">
@@ -24,8 +24,7 @@
                     </li>
                     <li>
                         <%= link_to(audiopost, "data-transition"=>"slide") do %>
-                            <h3><%= audiopost.title %></h3>
-                            <p><%= audiopost.short_note %></p>
+                            <h3><%= audiopost.title %></h3>                            
                         <% end %>
                     </li>
                 <% end %>
@@ -64,6 +63,16 @@ function getArrayIndex(sortedArray, originalArray){
     return indexArray;
 }
 
+function putArrayCorresponding(indexArray, inputArray){
+    var outputArray = [];
+    var j;
+    for(var i in indexArray){
+        j = indexArray[i];
+        outputArray.push(inputArray[j]);
+    }
+    return outputArray;
+}
+
 function getUniqueArray(inputArray){
     var dummy = inputArray.filter(function(item,i,inputArray){
         return i==inputArray.indexOf(item);
@@ -78,7 +87,6 @@ function getArrayMonths(inputArray){
     }
     return audioMonths;
 }
-
 //prepare the data we need
 var audioDates = [];
 var aduioLinks = [];
@@ -94,13 +102,41 @@ var aduioNotes = [];
 
 var descendingDates = sortDateArray(audioDates,"descending");
 var indexDateArray = getArrayIndex(descendingDates, audioDates);
+var newAudioTitles = putArrayCorresponding(indexDateArray, aduioTitles);
+var newAudioLinks = putArrayCorresponding(indexDateArray, aduioLinks);
+var newAudioNotes = putArrayCorresponding(indexDateArray, aduioNotes);
 var maxDate = descendingDates[0];
 var minDate = descendingDates[descendingDates.length-1];
 var maxYear = maxDate.getFullYear();
 var minYear = minDate.getFullYear();
 
 var audioMonths = getArrayMonths(audioDates);
-uniqueMonths = getUniqueArray(audioMonths);
-console.log(uniqueMonths);
-
+var uniqueMonths = getUniqueArray(audioMonths);
+//write html
+var collapsibleDiv='';
+for(var i in uniqueMonths){
+    var listViewDiv='';
+    for(var j in descendingDates){
+        if(descendingDates[j].getMonth()==uniqueMonths[i]){
+            listViewDiv = listViewDiv 
+            +'<li data-role="list-divider">'
+                + descendingDates[j].getMonth()+ '/'+ descendingDates[j].getDate()
+            +'</li>'
+            +'<li>'
+                +'<a href="'+newAudioLinks[j]+'" data-transition="slide">'
+                    +'<h3>'+newAudioTitles[j]+'</h3>'
+                +'</a>'
+            +'</li>'
+        }
+    }    
+    collapsibleDiv = collapsibleDiv
+        +'<div data-role="collapsible">'
+            +'<h2>'+uniqueMonths[i]+'</h2>'
+                +'<ul data-role="listview" data-theme="d" data-divider-theme="d">'
+                    +listViewDiv
+                +'</ul>'
+        +'</div>'
+}
+console.log(collapsibleDiv);
+//$('#audiolist').html(collapsibleDiv);
 </script>
