@@ -1,91 +1,200 @@
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
-<div data-role="header" data-theme="b">   
+<div data-role="header" data-theme="a">   
   <h1>
     <%= @audiopost.title %>
   </h1>
-  <%= link_to 'Home', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
+  <%= link_to 'Home', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
   <%= link_to 'Edit', edit_audiopost_path(@audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear"} %>
 </div>
 <div data-role="content">
   <div class="ui-body ui-body-b">
-    <h3><%= @audiopost.title %> (<%= @audiopost.audio_date %>)</h3>
+    <h3><%= @audiopost.title %></h3>
+    <p>(<%= @audiopost.audio_date %>)</p>
+    <p>This section is for puting reference information.</p>
     <p><%= @audiopost.short_note %></p>
   </div>
-  <p></p>
-  <div class="ui-body ui-body-c">
-  <audio class="player" controls>
-    <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
-  </audio>    
-    <div id="sliderVol">
-      <input type="range" name="slider-fill" id="volControl" value="100" min="0" max="100" data-highlight="true" />
+    <audio class="player">
+      <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
+    </audio>
+    <!--
+    <br />
+    <div id="sliderVol" data-role="fieldcontain">
+      <label for="slider-2">Volume</label>
+      <input type="range" name="slider-fill" id="volControl" value="20" min="0" max="100" data-highlight="true" data-mini="true"/>
     </div>
-    <div id="sliderTime">
-      <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" />
-    </div>  
-      <div class="ui-grid-a">       
-        <div class="ui-block-a">
-          <button type="button" data-theme="c" id='play' onclick="playControl();">Play</button>
-        </div>
-        <div class="ui-block-b">
-          <button type="button" data-theme="c" id='pause' onclick="pauseControl();">Pause</button>
-      </div>
-    <div>
+    -->
+</div>
+<div>
+  <div data-role='footer' style='text-align:center' data-position="fixed">
+    <div id="sliderTime" data-role="fieldcontain">
+      <span id='startTimeDisplay'></span>
+      <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" data-mini="true"/>        
+      <span id='currentTimeDisplay'></span>
+    </div>
+    <div class='playback' data-role="navbar" data-type='horizontal' style='text-align:center'>
+      <button type="button" id = "progressControl" data-theme="a" id='play' onclick="progressControl();">Play</button>
+    </div>    
   </div>
 </div>
+
 <script>
 
+function setSliderValue(id, w, s){
+    return $(id).attr(w, s);
+}
 
-var v = document.getElementsByTagName("audio")[0];
+function getSliderValue(id, w){
+  return $(id).attr(w);
+}
 
-function playControl(){
-  v.play();
+function progressControl(){
+  if($('#progressControl').html() == "Play"){
+    $('#progressControl').text('||').button('refresh');
+    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
+    v.play();
+  }
+  else{
+    $('#progressControl').text('Play').button('refresh');
+    v.pause();
+  }
 }
 
 function pauseControl(){
   v.pause();
+  timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTime);
+  v.play();
 }
 
-/*
-var SliderValue = $("#volControl").attr('max');
-console.log("Slider value = " + SliderValue);
-$("#volControl").attr("min", 4);
-var SliderValue = $("#volControl").attr('min');
-console.log("Slider value = " + SliderValue);
-*/
+//fuction to calculate display hours
+function displayTime(input_seconds){
+  var h = Math.floor(input_seconds/3600);
+  input_seconds = input_seconds % 3600;
+  var min = Math.floor(input_seconds/60);
+  input_seconds = Math.floor(input_seconds % 60);
+  if (input_seconds.toString().length < 2) {input_seconds = "0" + input_seconds};
+  if (min.toString().length < 2) {min = "0" + min};
+  var currentPlayingTime = h + ":" + min + ":" + input_seconds;
+  return currentPlayingTime;
+}
 
+var v = document.getElementsByTagName("audio")[0];
 
-v.addEventListener("loadedmetadata", function(){
-  var duration = this.duration;
-  var seconds = parseInt(duration%60);
-  var minutes = parseInt((duration/60)%60);
-  //var seconds = Math.round(duration)%60;
-  //var minutes = Math.floor(Math.round(duration)/60);
-  //console.log(minutes + ":" + seconds);
- // console.log(duration);
- console.log(v.volume);
+$(document).ready(function(){  
+  $('.song-progress').html();
 });
 
+//progress controller
+$("#sliderTime").on('slidestart', function() {
+  if($('#progressControl').text()=="Play"){
+    return 0;
+  }
+  else{
+    v.pause();  
+    timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTime);
+    v.play();
+    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTimeDisplayOnly);  
+  }
+});
+
+$("#sliderTime").on('change', function() {
+  var audio_duration = v.duration;
+  var slider_value = $("#timeControl").val();
+  var remain_audio_time = "-"+displayTime(audio_duration - slider_value);
+
+  //only update the starTimeDisplay
+  $("#startTimeDisplay").html(displayTime(slider_value));
+});
+
+
+$("#sliderTime").on('slidestop', function() {
+  if($('#progressControl').text()=="Play"){
+    var slider_value = $("#timeControl").val();
+    v.currentTime = slider_value;
+  }
+  else{
+    v.pause();
+    timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTimeDisplayOnly);
+    var slider_value = $("#timeControl").val();
+    v.currentTime = slider_value;
+    v.play();
+    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
+  }
+});
+
+//volume controller
 $("#sliderVol").change(function() {
   var slider_value = $("#volControl").val()/100;
   // do something..
   v.volume = slider_value;
 });
 
-/*
-$("#sliderTime").change(function() {
-  var slider_value = $("#timeControl").val();
-  v.currentTime = slider_value;
-  v.play();
+//set default volume to 20 and max length
+v.addEventListener("loadedmetadata", function(){
+  this.volume=0.2;
+  var default_Volume = this.volume*100
+  setSliderValue('#volControl', 'value', default_Volume);
+  $("#volControl").slider('refresh');
+  //for max length
+  var playLenght = Math.round(this.duration);
+  setSliderValue('#timeControl','max',playLenght);
+  $("#timeControl").slider('refresh');
+  //for displyaing the start time
+  var audio_startPlayingTime = displayTime(getSliderValue("#timeControl","value"));
+  $("#startTimeDisplay").html(audio_startPlayingTime);
+  //for displyaing the end time
+  var currentPlayingTime = "-" + displayTime(playLenght);
+  $("#currentTimeDisplay").html(currentPlayingTime);
 });
-*/
 
-$("#sliderTime").on('slidestop', function() {
-  var slider_value = $("#timeControl").val();
-  v.currentTime = slider_value;
-  console.log(slider_value);
-  v.play();
-});
+//audio time progress update
+var audioPlayUpdateTime = function() {
+    var duration = this.duration;
+    var sec = this.currentTime;
+    var currentPlayingTime = displayTime(sec);
+
+    //set the timeControl slider input value to audio currentTime
+    setSliderValue('#timeControl', 'value', this.currentTime);
+    $("#timeControl").slider('refresh');
+
+    //slide and change the display time equal to the time in the input field    
+    var remaindingTime = "-" + displayTime(duration-sec);
+    $("#currentTimeDisplay").html(remaindingTime);
+
+    //once the audio finished playing, reset the Play button
+    if(duration == v.currentTime){
+      $('#progressControl').text('Play').button('refresh');
+    }
+  };
+
+var audioPlayUpdateTimeDisplayOnly = function() {
+    var duration = this.duration;
+    var sec = this.currentTime;
+    var currentPlayingTime = displayTime(sec);
+
+    //slide and change the display time equal to the time in the input field    
+    var remaindingTime = "-" + displayTime(duration-sec);
+    $("#currentTimeDisplay").html(remaindingTime);
+
+    //once the audio finished playing, reset the Play button
+    if(duration == v.currentTime){
+      $('#progressControl').text('Play').button('refresh');
+    }
+  };  
+
+function timeProgressUpdate(audioSource, type, listener){
+  audioSource.addEventListener(type,listener , false);
+}
+
+function timeProgressStopUpdate(audioSource,type, listener){
+  audioSource.removeEventListener(type, listener, false);
+}
+
 
 </script>
+<style type=text/css>
+  input.ui-slider-input {
+    display : none !important;
+  }
+</style>

@@ -3,6 +3,13 @@
     <%= link_to 'New Audio', new_audiopost_path,{"class"=>"ui-btn-right", "data-icon" => "plus"} %>
 </div>
 <div data-role="content">
+    <div data-role="fieldcontain">
+        <select name="select-choice-3" id="select-choice-3" data-native-menu="false">
+            <option value="2012">2012</option>
+            <option value="2012">2011</option>
+            <option value="2012">2010</option>
+        </select>
+    </div>
     <div data-role="collapsible-set" data-theme="e" data-content-theme="d">
       <div data-role="collapsible">
         <h2>Dec 2012</h2>
@@ -11,10 +18,12 @@
                     <li data-role="list-divider">
                         <%= audiopost.audio_date.strftime("%A") %>
                         <%= audiopost.audio_date %>
+                        <!--
                         <%= link_to 'Delete', audiopost, :confirm => 'Are you sure?', :method => :delete %>
+                        -->
                     </li>
                     <li>
-                        <%= link_to(audiopost) do %>
+                        <%= link_to(audiopost, "data-transition"=>"slide") do %>
                             <h3><%= audiopost.title %></h3>
                             <p><%= audiopost.short_note %></p>
                         <% end %>
@@ -24,3 +33,21 @@
         </div>
     </div>
 </div>
+
+<script>
+var audioDates = [];
+var aduioLinks = [];
+var aduioTitles = [];
+var aduioNotes = [];
+
+<% @audioposts.each do |audiopost| %>
+    audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
+    aduioLinks.push('<%= audiopost.audio%>');
+    aduioTitles.push('<%= audiopost.title%>');
+    aduioNotes.push('<%= audiopost.short_note%>');
+<% end %>
+var max_date = audioDates.sort(function(d1, d2){
+    return d1-d2;
+});
+console.log(max_date);
+</script>
