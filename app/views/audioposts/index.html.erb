@@ -10,7 +10,7 @@
             <option value="2012">2010</option>
         </select>
     </div>
-    <div data-role="collapsible-set" data-theme="a" data-content-theme="c" id="audiolist">
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="c" id="audiolist">
       <div data-role="collapsible">
         <h2>Dec 2012</h2>
             <ul data-role="listview" data-theme="d" data-divider-theme="d">
@@ -95,7 +95,7 @@ var aduioNotes = [];
 
 <% @audioposts.each do |audiopost| %>
     audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
-    aduioLinks.push('<%= audiopost.audio%>');
+    aduioLinks.push('<%= audiopost_path(audiopost.id)%>');
     aduioTitles.push('<%= audiopost.title%>');
     aduioNotes.push('<%= audiopost.short_note%>');
 <% end %>
@@ -138,5 +138,5 @@ for(var i in uniqueMonths){
         +'</div>'
 }
 console.log(collapsibleDiv);
-//$('#audiolist').html(collapsibleDiv);
+$('#audiolist').html(collapsibleDiv);
 </script>
