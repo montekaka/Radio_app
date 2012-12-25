@@ -38,6 +38,16 @@ var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
 //prepare the function we need
+function currentYearArray(inputArray, DateArray, currentYear){
+    var indexArray = [];
+    for(var i in DateArray){
+        if(DateArray[i].getFullYear() == currentYear){
+            indexArray.push(i);
+        }
+    }
+    return putArrayCorresponding(indexArray, inputArray);
+}
+
 function sortDateArray(arrayName, type){
     var dummyArray = [];
     for(var i in arrayName){
@@ -103,20 +113,25 @@ var aduioNotes = [];
     aduioNotes.push('<%= audiopost.short_note%>');
 <% end %>
 
-var descendingDates = sortDateArray(audioDates,"descending");
-var indexDateArray = getArrayIndex(descendingDates, audioDates);
-var newAudioTitles = putArrayCorresponding(indexDateArray, aduioTitles);
-var newAudioLinks = putArrayCorresponding(indexDateArray, aduioLinks);
-var newAudioNotes = putArrayCorresponding(indexDateArray, aduioNotes);
+var currentYear = '2012';
+var currentYearAudioDates = currentYearArray(audioDates,audioDates, currentYear);
+var currentYearAudioTitles = currentYearArray(aduioTitles,audioDates, currentYear);
+var currentYearAudioLinks = currentYearArray(aduioLinks,audioDates, currentYear);
+var currentYearAudioNotes = currentYearArray(aduioNotes,audioDates, currentYear);
+
+var descendingDates = sortDateArray(currentYearAudioDates,"descending");
+var indexDateArray = getArrayIndex(descendingDates, currentYearAudioDates);
+var newAudioTitles = putArrayCorresponding(indexDateArray, currentYearAudioTitles);
+var newAudioLinks = putArrayCorresponding(indexDateArray, currentYearAudioLinks);
+var newAudioNotes = putArrayCorresponding(indexDateArray, currentYearAudioNotes);
 var maxDate = descendingDates[0];
 var minDate = descendingDates[descendingDates.length-1];
 var maxYear = maxDate.getFullYear();
 var minYear = minDate.getFullYear();
 
-var audioMonths = getArrayMonths(audioDates);
+var audioMonths = getArrayMonths(currentYearAudioDates);
 var uniqueMonths = getUniqueArray(audioMonths);
 //write html
-var currentYear = '2012';
 var collapsibleDiv='';
 for(var i in uniqueMonths){
     var listViewDiv='';
@@ -141,6 +156,6 @@ for(var i in uniqueMonths){
                 +'</ul>'
         +'</div>'
 }
-console.log(collapsibleDiv);
+//console.log(currentYearArray(aduioTitles,audioDates,2012));
 $('#audiolist').html(collapsibleDiv);
 </script>
