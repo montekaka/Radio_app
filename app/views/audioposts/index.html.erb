@@ -34,6 +34,9 @@
 </div>
 
 <script>
+var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+
 //prepare the function we need
 function sortDateArray(arrayName, type){
     var dummyArray = [];
@@ -113,6 +116,7 @@ var minYear = minDate.getFullYear();
 var audioMonths = getArrayMonths(audioDates);
 var uniqueMonths = getUniqueArray(audioMonths);
 //write html
+var currentYear = '2012';
 var collapsibleDiv='';
 for(var i in uniqueMonths){
     var listViewDiv='';
@@ -120,19 +124,19 @@ for(var i in uniqueMonths){
         if(descendingDates[j].getMonth()==uniqueMonths[i]){
             listViewDiv = listViewDiv 
             +'<li data-role="list-divider">'
-                + descendingDates[j].getMonth()+ '/'+ descendingDates[j].getDate()
+                + (descendingDates[j].getMonth()+1)+ '/'+ descendingDates[j].getDate()+'/'+descendingDates[j].getFullYear()
             +'</li>'
             +'<li>'
                 +'<a href="'+newAudioLinks[j]+'" data-transition="slide">'
-                    +'<h3>'+newAudioTitles[j]+'</h3>'
+                    +'<h3>'+newAudioTitles[j]+'</h3>'                    
                 +'</a>'
             +'</li>'
         }
     }    
     collapsibleDiv = collapsibleDiv
         +'<div data-role="collapsible">'
-            +'<h2>'+uniqueMonths[i]+'</h2>'
-                +'<ul data-role="listview" data-theme="d" data-divider-theme="d">'
+            +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
+                +'<ul data-role="listview" data-theme="d" data-divider-theme="b">'
                     +listViewDiv
                 +'</ul>'
         +'</div>'
