@@ -165,9 +165,12 @@ $(document).bind('pageinit', function() {
         audioYears.push(audioDates[i].getFullYear());
     }
     var uniqueYear = sortDateArray(getUniqueArray(audioYears),"descending");
+    var optionListOfYear = '';
     for(var i in uniqueYear){
-        $('#selectYearMenu').append('<option value="'+uniqueYear[i]+'">'+uniqueYear[i]+'</option>');    
+        optionListOfYear = optionListOfYear + '<option value="'+uniqueYear[i]+'">'+uniqueYear[i]+'</option>';
     }
+
+    $('#selectYearMenu').html(optionListOfYear);
     $('#selectYearMenu').selectmenu('refresh');
 
     var currentYear = sortDateArray(audioDates,"descending")[0].getFullYear();    
