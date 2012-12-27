@@ -1,7 +1,7 @@
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
-<div data-role="header" data-theme="a">   
+<div data-role="header" data-theme="b">   
   <h1>
     <%= @audiopost.title %>
   </h1>
@@ -27,14 +27,14 @@
     -->
 </div>
 <div>
-  <div data-role='footer' style='text-align:center' data-position="fixed">
+  <div data-role='footer' style='text-align:center' data-position="fixed" data-theme="b">
     <div id="sliderTime" data-role="fieldcontain">
       <span id='startTimeDisplay'></span>
       <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" data-mini="true"/>        
       <span id='currentTimeDisplay'></span>
     </div>
     <div class='playback' data-role="navbar" data-type='horizontal' style='text-align:center'>
-      <button type="button" id = "progressControl" data-theme="a" id='play' onclick="progressControl();">Play</button>
+      <button type="button" id = "progressControl" data-theme="b" id='play' onclick="progressControl();">Play</button>
     </div>    
   </div>
 </div>
