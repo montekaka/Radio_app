@@ -1,17 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Emanuel', :city => cities.first)
-
+# encoding: UTF-8
 
 Audiopost.destroy_all
-#Audiopost.create(:title => "俄敍通婚/通緝名單", :audio => "http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date => "07/03/2012")
-Audiopost.create(:title =>"俄敍通婚 通緝名單", :audio =>"http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date =>"07/03/2012")
-Audiopost.create(:title =>"相處距離 男女快樂", :audio =>"http://www.am1300.com/uploadfile/2012/0705/20120705105449945.mp3", :audio_date =>"07/04/2012")
-Audiopost.create(:title =>"舉重女英 電腦窺視", :audio =>"http://www.am1300.com/uploadfile/2012/0706/20120706125122185.mp3", :audio_date =>"07/05/2012")
+Audiopost.create(:title =>"俄敍通婚/通緝名單", :audio =>"http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date =>"07/03/2012")
+Audiopost.create(:title =>"相處距離/男女快樂", :audio =>"http://www.am1300.com/uploadfile/2012/0705/20120705105449945.mp3", :audio_date =>"07/04/2012")
+Audiopost.create(:title =>"舉重女英/電腦窺視", :audio =>"http://www.am1300.com/uploadfile/2012/0706/20120706125122185.mp3", :audio_date =>"07/05/2012")
 Audiopost.create(:title =>"總統問答/夫妻隱私", :audio =>"http://www.am1300.com/uploadfile/2012/0707/20120707011602998.mp3", :audio_date =>"07/06/2012")
 Audiopost.create(:title =>"活殺雞鴨/質疑牛奶", :audio =>"http://www.am1300.com/uploadfile/2012/0710/20120710022121568.mp3", :audio_date =>"07/09/2012")
 Audiopost.create(:title =>"夢幻男籃/幸福定價", :audio =>"http://www.am1300.com/uploadfile/2012/0711/20120711020546888.mp3", :audio_date =>"07/10/2012")
@@ -32,7 +24,7 @@ Audiopost.create(:title =>"漫談奧運/奧運漫談", :audio =>"http://www.am13
 Audiopost.create(:title =>"泳池風波/自殺裁決", :audio =>"http://www.am1300.com/uploadfile/2012/0801/20120801022139826.mp3", :audio_date =>"07/31/2012")
 Audiopost.create(:title =>"羽球爭輸/獎牌記錄", :audio =>"http://www.am1300.com/uploadfile/2012/0802/20120802012003302.mp3", :audio_date =>"08/01/2012")
 Audiopost.create(:title =>"餐廳表態/印度停電", :audio =>"http://www.am1300.com/uploadfile/2012/0803/20120803023835186.mp3", :audio_date =>"08/02/2012")
-Audiopost.create(:title =>"電話訪吳炫寧父母", :audio =>"http://www.am1300.com/uploadfile/2012/0804/20120804015151167.mp3", :audio_date =>"08/03/2012")
+Audiopost.create(:title =>"電話訪吳/炫寧父母", :audio =>"http://www.am1300.com/uploadfile/2012/0804/20120804015151167.mp3", :audio_date =>"08/03/2012")
 Audiopost.create(:title =>"脫衣舞忙/識貨買貨", :audio =>"http://www.am1300.com/uploadfile/2012/0807/20120807120653318.mp3", :audio_date =>"08/06/2012")
 Audiopost.create(:title =>"遙控生涯/亞猶通婚", :audio =>"http://www.am1300.com/uploadfile/2012/0808/20120808082953627.mp3", :audio_date =>"08/07/2012")
 Audiopost.create(:title =>"東部之旅/東西對比", :audio =>"http://www.am1300.com/uploadfile/2012/0810/20120810102758239.mp3", :audio_date =>"08/08/2012")
