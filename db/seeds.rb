@@ -9,9 +9,9 @@
 
 Audiopost.destroy_all
 #Audiopost.create(:title => "俄敍通婚/通緝名單", :audio => "http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date => "07/03/2012")
-Audiopost.create(:title =>"俄敍通婚/通緝名單", :audio =>"http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date =>"07/03/2012")
-Audiopost.create(:title =>"相處距離/男女快樂", :audio =>"http://www.am1300.com/uploadfile/2012/0705/20120705105449945.mp3", :audio_date =>"07/04/2012")
-Audiopost.create(:title =>"舉重女英/電腦窺視", :audio =>"http://www.am1300.com/uploadfile/2012/0706/20120706125122185.mp3", :audio_date =>"07/05/2012")
+Audiopost.create(:title =>"俄敍通婚 通緝名單", :audio =>"http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date =>"07/03/2012")
+Audiopost.create(:title =>"相處距離 男女快樂", :audio =>"http://www.am1300.com/uploadfile/2012/0705/20120705105449945.mp3", :audio_date =>"07/04/2012")
+Audiopost.create(:title =>"舉重女英 電腦窺視", :audio =>"http://www.am1300.com/uploadfile/2012/0706/20120706125122185.mp3", :audio_date =>"07/05/2012")
 Audiopost.create(:title =>"總統問答/夫妻隱私", :audio =>"http://www.am1300.com/uploadfile/2012/0707/20120707011602998.mp3", :audio_date =>"07/06/2012")
 Audiopost.create(:title =>"活殺雞鴨/質疑牛奶", :audio =>"http://www.am1300.com/uploadfile/2012/0710/20120710022121568.mp3", :audio_date =>"07/09/2012")
 Audiopost.create(:title =>"夢幻男籃/幸福定價", :audio =>"http://www.am1300.com/uploadfile/2012/0711/20120711020546888.mp3", :audio_date =>"07/10/2012")
