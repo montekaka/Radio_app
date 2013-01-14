@@ -9,11 +9,19 @@
   <%= link_to 'Edit', edit_audiopost_path(@audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear"} %>
 </div>
 <div data-role="content">
-  <div class="ui-body ui-body-b">
-    <h3><%= @audiopost.title %></h3>
-    <p>(<%= @audiopost.audio_date %>)</p>
-    <p><%= @audiopost.short_note %></p>
-  </div>
+  <% if @audiopost.short_note.nil? %>
+    <div data-role="collapsible" data-theme="e" data-content-theme="c">
+      <h3><%= @audiopost.title %></h3>
+      <p><%= @audiopost.audio_date %></p>
+      <p><%= @audiopost.short_note %></p>
+    </div>
+  <% else %>
+    <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
+      <h3><%= @audiopost.title %></h3>
+      <p><%= @audiopost.audio_date %></p>
+      <p><%= @audiopost.short_note %></p>
+    </div> 
+  <% end %>
     <audio class="player">
       <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
     </audio>
