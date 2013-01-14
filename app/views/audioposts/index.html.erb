@@ -112,6 +112,7 @@ function setupHTML(inputYear){
     var minDate = descendingDates[descendingDates.length-1];
     var maxYear = maxDate.getFullYear();
     var minYear = minDate.getFullYear();
+    var maxMonth = maxDate.getMonth(); 
 
     var audioMonths = getArrayMonths(currentYearAudioDates);
     var uniqueMonths = getUniqueArray(audioMonths);
@@ -132,14 +133,25 @@ function setupHTML(inputYear){
                     +'</a>'
                 +'</li>'
             }
-        }    
-        collapsibleDiv = collapsibleDiv
-            +'<div data-role="collapsible" class="willisuck">'
+        }
+        if(uniqueMonths[i] == maxMonth){
+            collapsibleDiv = collapsibleDiv
+            +'<div data-role="collapsible" data-collapsed="false" class="willisuck">'
                 +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
                     +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
                         +listViewDiv
                     +'</ul>'
             +'</div>'
+        }
+        else{
+            collapsibleDiv = collapsibleDiv
+                +'<div data-role="collapsible" class="willisuck">'
+                    +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
+                        +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
+                            +listViewDiv
+                        +'</ul>'
+                +'</div>'
+        }
     }
     $('#audiolist').html(collapsibleDiv);
     $('#audiolist').collapsibleset('refresh');
