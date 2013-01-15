@@ -127,9 +127,19 @@ function setupHTML(inputYear){
                 +'<li data-role="list-divider" class="audioItemDate">'
                     + (descendingDates[j].getMonth()+1)+ '/'+ descendingDates[j].getDate()+'/'+descendingDates[j].getFullYear()
                 +'</li>'
-                +'<li>'
+                +'<li>'           
                     +'<a href="'+newAudioLinks[j]+'" data-transition="slide">'
-                        +'<h3>'+newAudioTitles[j]+'</h3>'                    
+                        +'<div class="ui-grid-b">'
+                            +'<div class="ui-block-a" style="width:30%">'
+                                +'<p class="calendar" style="font-size:18px">'
+                                +descendingDates[j].getDate()
+                                +'<em>'+monthNames[descendingDates[j].getMonth()]+'</em>'
+                                +'</p>'
+                            +'</div>'
+                            +'<div class="ui-block-b" style="width:70%">'
+                                +'<h3>'+newAudioTitles[j]+'</h3>'
+                            +'</div>'                                
+                        +'</div>'         
                     +'</a>'
                 +'</li>'
             }
