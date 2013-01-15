@@ -123,10 +123,7 @@ function setupHTML(inputYear){
         var listViewDiv='';
         for(var j in descendingDates){
             if(descendingDates[j].getMonth()==uniqueMonths[i]){
-                listViewDiv = listViewDiv 
-                +'<li data-role="list-divider" class="audioItemDate">'
-                    + (descendingDates[j].getMonth()+1)+ '/'+ descendingDates[j].getDate()+'/'+descendingDates[j].getFullYear()
-                +'</li>'
+                listViewDiv = listViewDiv
                 +'<li>'           
                     +'<a href="'+newAudioLinks[j]+'" data-transition="slide">'
                         +'<div class="ui-grid-b">'
@@ -146,7 +143,7 @@ function setupHTML(inputYear){
         }
         if(uniqueMonths[i] == maxMonth){
             collapsibleDiv = collapsibleDiv
-            +'<div data-role="collapsible" data-collapsed="false" class="willisuck">'
+            +'<div data-role="collapsible" data-theme="b" data-collapsed="false" class="willisuck">'
                 +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
                     +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
                         +listViewDiv
@@ -155,7 +152,7 @@ function setupHTML(inputYear){
         }
         else{
             collapsibleDiv = collapsibleDiv
-                +'<div data-role="collapsible" class="willisuck">'
+                +'<div data-role="collapsible" data-theme="b" class="willisuck">'
                     +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
                         +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
                             +listViewDiv
