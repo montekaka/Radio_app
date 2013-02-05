@@ -1,8 +1,11 @@
 class AudiopostsController < ApplicationController
+  
+   before_filter :load_parent
+  
   # GET /audioposts
   # GET /audioposts.json
   def index
-    @audioposts = Audiopost.all
+    @audioposts = @show.audioposts.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +16,7 @@ class AudiopostsController < ApplicationController
   # GET /audioposts/1
   # GET /audioposts/1.json
   def show
-    @audiopost = Audiopost.find(params[:id])
+    @audiopost = @show.audioposts.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +27,7 @@ class AudiopostsController < ApplicationController
   # GET /audioposts/new
   # GET /audioposts/new.json
   def new
-    @audiopost = Audiopost.new
+    @audiopost = @show.audioposts.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +37,13 @@ class AudiopostsController < ApplicationController
 
   # GET /audioposts/1/edit
   def edit
-    @audiopost = Audiopost.find(params[:id])
+    @audiopost = @show.audioposts.find(params[:id])
   end
 
   # POST /audioposts
   # POST /audioposts.json
   def create
-    @audiopost = Audiopost.new(params[:audiopost])
+    @audiopost = @show.audioposts.new(params[:audiopost])
 
     respond_to do |format|
       if @audiopost.save
@@ -56,7 +59,7 @@ class AudiopostsController < ApplicationController
   # PUT /audioposts/1
   # PUT /audioposts/1.json
   def update
-    @audiopost = Audiopost.find(params[:id])
+    @audiopost = @show.audioposts.find(params[:id])
 
     respond_to do |format|
       if @audiopost.update_attributes(params[:audiopost])
@@ -72,12 +75,17 @@ class AudiopostsController < ApplicationController
   # DELETE /audioposts/1
   # DELETE /audioposts/1.json
   def destroy
-    @audiopost = Audiopost.find(params[:id])
+    @audiopost = @show.audioposts.find(params[:id])
     @audiopost.destroy
 
     respond_to do |format|
-      format.html { redirect_to audioposts_url }
+      format.html { redirect_to show_audioposts_url(@show) }
       format.json { head :ok }
     end
   end
+  
+  def load_parent
+      @show = Show.find(params[:show_id])
+  end
+  
 end

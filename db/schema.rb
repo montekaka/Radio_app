@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214070734) do
+ActiveRecord::Schema.define(:version => 20130204005024) do
 
   create_table "audioposts", :force => true do |t|
     t.integer  "user_id"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(:version => 20121214070734) do
     t.string   "short_note"
     t.string   "audio"
     t.date     "audio_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "show_id"
+  end
+
+  create_table "shows", :force => true do |t|
+    t.string   "name"
+    t.string   "category"
+    t.string   "description"
+    t.string   "djname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,6 +1,6 @@
 <div data-role="header" data-theme="b">
-    <h1>今日話題</h1>
-    <%= link_to 'New Audio', new_audiopost_path,{"class"=>"ui-btn-right", "data-icon" => "plus"} %>
+    <h1><%=@show.name%></h1>
+    <%= link_to 'New Audio', new_show_audiopost_path(@show),{"class"=>"ui-btn-right", "data-icon" => "plus"} %>
 </div>
 <div data-role="content">
     <div data-role="fieldcontain">
@@ -174,7 +174,7 @@ var aduioNotes = [];
 
 <% @audioposts.each do |audiopost| %>
     audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
-    aduioLinks.push('<%= audiopost_path(audiopost.id)%>');
+    aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
     aduioTitles.push('<%= audiopost.title%>');
     aduioNotes.push('<%= audiopost.short_note%>');
 <% end %>

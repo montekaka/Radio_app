@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @show.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @show.category %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @show.description %>
+</p>
+
+<p>
+  <b>Djname:</b>
+  <%= @show.djname %>
+</p>
+
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>

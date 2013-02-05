@@ -5,8 +5,8 @@
   <h1>
     <%= @audiopost.title %>
   </h1>
-  <%= link_to 'Home', audioposts_path, {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
-  <%= link_to 'Edit', edit_audiopost_path(@audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear"} %>
+  <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
+  <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear"} %>
 </div>
 <div data-role="content">
   <!--Audio Info-->
