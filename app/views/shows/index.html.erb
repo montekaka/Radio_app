@@ -1,3 +1,34 @@
+<div data-role="header" data-theme="a">
+    <h1>Rabile</h1>
+</div>
+<div data-role="content">
+  <div class="content-primary">
+    <%= link_to 'Create Yours Now', new_show_path, :"data-role"=>"button",:"data-theme"=>"e" %>
+    <br />
+    <ul data-role="listview" data-filter="true" data-inset="true">
+      <% @shows.each do |show| %>
+        <div data-role="collapsible" data-inset="true" data-theme="b" data-content-theme="c">
+          <h1><%= show.name%></h1> 
+            <% if show.djname.nil? %>
+              <p><strong><%= show.djname %></strong></p>
+            <% end %>
+            <% if show.category.nil? %>
+              <p><%= show.category %></p>
+            <% end %>
+            <% if show.category.nil? %>
+              <p><%= show.description %></p>  
+            <% end %>
+            <div data-role="controlgroup" data-type="horizontal" >
+              <%= link_to 'View', show_audioposts_path(show), :"data-role"=>"button"%>
+              <%= link_to 'Show', show, :"data-role"=>"button" %>
+              <%= link_to 'Edit', edit_show_path(show), :"data-role"=>"button" %>
+              <%= link_to 'Destroy', show, :"data-role"=>"button", :confirm => 'Are you sure?', :method => :delete %>
+            </div>            
+        </div>
+      <% end %> 
+  </div>
+</div>
+
 <h1>Listing shows</h1>
 
 <table>
@@ -26,4 +57,4 @@
 
 <br />
 
-<%= link_to 'New Show', new_show_path %>
+
