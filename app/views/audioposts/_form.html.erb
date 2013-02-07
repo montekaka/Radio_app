@@ -10,28 +10,35 @@
       </ul>
     </div>
   <% end %>
-
-  <div data-role="fieldcontain">
+<ul data-role="listview" data-inset="true">
+  <li data-role="fieldcontain">
     <%= f.label :title %>
     <%= f.text_field :title %>
-  </div>
-  <div data-role="fieldcontain">
+  </li>
+  <li data-role="fieldcontain">
     <%= f.label :short_note %>
     <%= f.text_area :short_note %>
-  </div>
-  <div data-role="fieldcontain">
+  </li>
+  <li data-role="fieldcontain">
     <%= f.label :audio %>
     <%= f.text_field :audio %>
-  </div>
-  <div data-role="fieldcontain">
+  </li>
+  <li data-role="fieldcontain">
     <%= f.label :user_id %>
     <%= f.text_field :user_id %>
-  </div>
-  <div data-role="fieldcontain">
-    <%= f.label :audio_date %>
-    <%= f.date_select :audio_date %>
-  </div>  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </li>
+  <li data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+      <legend>Audio Date</legend>
+      <%= f.date_select :audio_date %>
+    </fieldset>
+  </li>
+  <li class="ui-body ui-body-b">
+    <fieldset class="ui-grid-a">
+      <div class="ui-block-a">
+        <%= f.submit %>
+      </div>
+    </fieldset>
+  </li>
+</ul>
 <% end %>
