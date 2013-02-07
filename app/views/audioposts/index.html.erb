@@ -13,13 +13,13 @@
     </div>
     <div data-role="collapsible-set" data-theme="c" data-content-theme="c" id="audiolist">
         <div data-role="collapsible">
-            <h2>Hello</h2>
+            <h2>Hello World!</h2>
             <ul data-role="listview" data-theme="d" data-divider-theme="d" class="willisuck">
                 <li data-role="list-divider" class="audioItemDate">
-                    Today is today
+                    today
                 </li>
                 <li class="audioItemTitle">
-                    Hello World!!
+                    Let's start uploading your first audio content.
                 </li>
             </ul>
         </div>
@@ -171,36 +171,42 @@ var audioYears = [];
 var aduioLinks = [];
 var aduioTitles = [];
 var aduioNotes = [];
+var audioCount = 0;
 
 <% @audioposts.each do |audiopost| %>
-    audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
-    aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
-    aduioTitles.push('<%= audiopost.title%>');
-    aduioNotes.push('<%= audiopost.short_note%>');
+    audioCount = audioCount + 1;    
 <% end %>
+if(audioCount>0){
+    <% @audioposts.each do |audiopost| %>
+        audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
+        aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
+        aduioTitles.push('<%= audiopost.title%>');
+        aduioNotes.push('<%= audiopost.short_note%>');
+    <% end %>
 
-$(document).bind('pageinit', function() {
-    for (var i in audioDates){
-        audioYears.push(audioDates[i].getFullYear());
-    }
-    var uniqueYear = sortDateArray(getUniqueArray(audioYears),"descending");
-    var optionListOfYear = '';
-    for(var i in uniqueYear){
-        optionListOfYear = optionListOfYear + '<option value="'+uniqueYear[i]+'">'+uniqueYear[i]+'</option>';
-    }
+    $(document).bind('pageinit', function() {
+        for (var i in audioDates){
+            audioYears.push(audioDates[i].getFullYear());
+        }
+        var uniqueYear = sortDateArray(getUniqueArray(audioYears),"descending");
+        var optionListOfYear = '';
+        for(var i in uniqueYear){
+            optionListOfYear = optionListOfYear + '<option value="'+uniqueYear[i]+'">'+uniqueYear[i]+'</option>';
+        }
 
-    $('#selectYearMenu').html(optionListOfYear);
-    $('#selectYearMenu').selectmenu('refresh');
+        $('#selectYearMenu').html(optionListOfYear);
+        $('#selectYearMenu').selectmenu('refresh');
 
-    var currentYear = sortDateArray(audioDates,"descending")[0].getFullYear();    
-    setupHTML(currentYear); 
-    //$('.willisuck').listview('refresh'); 
-});
+        var currentYear = sortDateArray(audioDates,"descending")[0].getFullYear();    
+        setupHTML(currentYear); 
+        //$('.willisuck').listview('refresh'); 
+    });
 
-//select the year
-$("#selectYearMenu").change(function() {
-    var currentYear = $(this).val();
-    setupHTML(currentYear);
-    $(this).selectmenu('refresh');
-});
+    //select the year
+    $("#selectYearMenu").change(function() {
+        var currentYear = $(this).val();
+        setupHTML(currentYear);
+        $(this).selectmenu('refresh');
+    });
+}
 </script>
