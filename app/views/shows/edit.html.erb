@@ -1,6 +1,13 @@
-<h1>Editing show</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @show %> |
-<%= link_to 'Back', shows_path %>
+<div data-role="header" data-theme="a">
+    <h1>Editing Show</h1>
+    <%= link_to 'Back', shows_path, :"data-icon"=>"home", :"data-iconpos"=>"notext", :"data-direction"=>"reverse" %>
+    <%= link_to 'Show', @show, :"data-icon"=>"search", :"data-iconpos"=>"notext", :"data-direction"=>"reverse"%>
+</div>
+<div data-role="content">
+	<div class="content-primary">
+		<%= render 'form' %>
+	</div>
+</div>
+<!--
+<%= link_to 'Show', @show %>
+-->
