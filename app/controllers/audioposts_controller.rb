@@ -1,6 +1,7 @@
 class AudiopostsController < ApplicationController
   
-   before_filter :load_parent
+  before_filter :authenticate_user!, :except=>[:index, :show]  
+  before_filter :load_parent
   
   # GET /audioposts
   # GET /audioposts.json

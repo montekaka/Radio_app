@@ -1,4 +1,6 @@
 RadioApp::Application.routes.draw do
+  devise_for :users
+
   resources :shows do
       resources :audioposts
   end
