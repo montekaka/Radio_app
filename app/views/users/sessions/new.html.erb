@@ -28,12 +28,11 @@
   			<li class="ui-body ui-body-b">
   				<fieldset class="ui-grid-a">
   					<div class="ui-block-a"><%= f.submit "Sign in" %></div>
-  					<div class="ui-block-a">
-  						<%= render :partial => "devise/shared/links" %>
-  					</div>
   				</fieldset>
   			</li>  			
 			<% end %>			
 		</ul>
 	</div>
 </div>
+
+<%= render :partial => "devise/shared/links" %>

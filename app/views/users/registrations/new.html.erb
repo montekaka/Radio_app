@@ -1,18 +1,31 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
-
+<div data-role="header" data-theme="a">
+	<h1>Sign up</h1>
+</div>
+<div data-role="content">
+	<div class="content-primary">
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			
+  			<%= devise_error_messages! %>
+  			<ul data-role="listview" data-inset="true">
+  				<li data-role="fieldcontain">
+  					<%= f.label :email %>
+  					<%= f.email_field :email %>
+  				</li>
+  				<li data-role="fieldcontain">
+  					<%= f.label :password %>
+  					<%= f.password_field :password %>
+  				</li>
+  				<li data-role="fieldcontain">
+  					<%= f.label :password_confirmation %>
+  					<%= f.password_field :password_confirmation %>
+  				</li>
+  				<li class="ui-body ui-body-b">
+  					<fieldset class="ui-grid-a">
+  						<div class="ui-block-a"><%= f.submit "Sign up" %></div>
+  					</fieldset>
+  				</li>
+  			</ul>
+	<% end %>		
+	</div>
+</div>
 <%= render :partial => "devise/shared/links" %>
