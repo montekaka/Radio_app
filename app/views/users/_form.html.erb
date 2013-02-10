@@ -10,7 +10,23 @@
       </ul>
     </div>
   <% end %>
-
+<ul data-role="listview" data-inset="true">
+  <li data-role="fieldcontain">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <li data-role="fieldcontain">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </li>
+  <li class="ui-body ui-body-b">
+    <fieldset class="ui-grid-a">
+      <div class="ui-block-a">
+        <%= f.submit %>
+      </div>
+    </fieldset>
+  </li>  
+</ul>  
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
