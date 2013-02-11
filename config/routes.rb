@@ -5,7 +5,7 @@ RadioApp::Application.routes.draw do
       resources :audioposts
   end
 
-  resources :users
+  # resources :users # edit by roland 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
