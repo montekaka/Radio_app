@@ -3,8 +3,9 @@
 </div>
 <div data-role="content">
 	<div class="content-primary">
-		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-		<ul data-role="listview" data-inset="true">
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:data => {:ajax => 'false'}}) do |f| %>
+		<%= devise_error_messages! %>
+                                        <ul data-role="listview" data-inset="true">
 			<li data-role="fieldcontain">
 				<%= f.label :email %>
 				<%= f.email_field :email %>
