@@ -5,6 +5,8 @@
 	<div class="content-primary">
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:data => {:ajax => 'false'}}) do |f| %>
 		<%= devise_error_messages! %>
+                                         <p class="notice"><%= notice %></p>
+                                      <p class="alert"><%= alert %></p>
                                         <ul data-role="listview" data-inset="true">
 			<li data-role="fieldcontain">
 				<%= f.label :email %>
