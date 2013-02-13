@@ -15,9 +15,31 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </li>
+  <li data-role="fieldcontain" id="toolbar">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <legend>Font styling:</legend>
+      <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+      <label data-wysihtml5-command="bold" for="checkbox-1">b</label>      
+      <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+      <label data-wysihtml5-command="italic" for="checkbox-2"><em>i</em></label>
+      <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+      <label data-wysihtml5-command="underline" for="checkbox-3">u</label>
+      <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-wysihtml5-command="createLink">insert Link</a>
+    </fieldset>
+    <div data-wysihtml5-dialog="createLink" data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
+      <div data-role="header" data-theme="a" class="ui-corner-top">
+        Insert Link
+      </div>
+      <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+        <input data-wysihtml5-dialog-field="href" value="http://">
+        <a data-wysihtml5-dialog-action="save" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">OK</a>
+        <a data-wysihtml5-dialog-action="cancel" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
+      </div>
+    </div>    
+  </li>
   <li data-role="fieldcontain">
     <%= f.label :short_note %>
-    <%= f.text_area :short_note %>
+    <%= f.text_area :short_note%>
   </li>
   <li data-role="fieldcontain">
     <%= f.label :audio %>
@@ -42,3 +64,10 @@
   </li>
 </ul>
 <% end %>
+<script>
+  var editor = new wysihtml5.Editor("audiopost_short_note", {
+    toolbar:        "toolbar",
+    parserRules:    wysihtml5ParserRules,
+    useLineBreaks:  false
+  });  
+</script>
