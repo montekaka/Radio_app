@@ -24,18 +24,21 @@
       <label data-wysihtml5-command="italic" for="checkbox-2"><em>i</em></label>
       <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
       <label data-wysihtml5-command="underline" for="checkbox-3">u</label>
-      <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-wysihtml5-command="createLink">insert Link</a>
+      <a href="" data-role="button" data-inline="true" data-wysihtml5-command="createLink">Hyperlink</a>
     </fieldset>
-    <div data-wysihtml5-dialog="createLink" data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width:400px;" class="ui-corner-all">
-      <div data-role="header" data-theme="a" class="ui-corner-top">
-        Insert Link
-      </div>
-      <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+    <div data-role="fieldcontain" data-wysihtml5-dialog="createLink" style="display: none;">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Insert Link</legend>
         <input data-wysihtml5-dialog-field="href" value="http://">
-        <a data-wysihtml5-dialog-action="save" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">OK</a>
-        <a data-wysihtml5-dialog-action="cancel" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>
-      </div>
-    </div>    
+      </fieldset>
+      <br />
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend></legend>
+        <a data-wysihtml5-dialog-action="save" data-role="button" data-inline="true" data-theme="c">OK</a>
+        <a data-wysihtml5-dialog-action="cancel" data-role="button" data-inline="true" data-theme="a">Cancel
+        </a>
+      </fieldset>
+    </div> 
   </li>
   <li data-role="fieldcontain">
     <%= f.label :short_note %>
