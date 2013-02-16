@@ -6,15 +6,15 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=default-width, initial-scale=1" />
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>  
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
 	<div data-role="page">  
-                                        <%if current_user %>
-                                            <%= link_to "Logout", destroy_user_session_path, :method=>"delete"%>
-                                        <%end%>    
+    <%if current_user %>
+      <%= link_to "Logout", destroy_user_session_path, :method=>"delete"%>
+    <%end%>    
 		<%= yield %>
 	</div>
 </body>
