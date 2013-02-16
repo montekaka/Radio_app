@@ -18,10 +18,8 @@
 <div data-role="content">
 <div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
 
-    <button data-theme="a" data-icon="back" data-mini="true">Back</button>
-    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>
-    <button data-theme="a" data-icon="search" data-mini="true">Search</button>
-   
+    <button class= 'audioChapter' data-theme="a" data-mini="true" value='0' >城市破產</button>
+    <button class='audioChapter' data-theme="a" data-mini="true" value='960' >奧運軍訓</button>   
 </div>
   <!--Audio Info-->
   <% if @audiopost.short_note.nil? %>
@@ -250,6 +248,11 @@ function timeProgressStopUpdate(audioSource,type, listener){
 var sectionTimes = ['360','600','1200'];
 var currentSection = sectionTimes[0];
 
+$('.audioChapter').tap(function(){
+  var $chapterValue = $(this).val();
+
+  console.log($chapterValue);
+});
 
 </script>
 <style type=text/css>
