@@ -31,7 +31,7 @@
   -->
 </div>
 <div data-role="content">
-  <!--Audio Info-->
+  <!--Audio Info-->  
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
@@ -65,12 +65,12 @@
 </div>
 <div>
   <div data-role='footer' style='text-align:center' data-position="fixed" data-theme="b">
-    <div id="sliderTime" data-role="fieldcontain" data-type="horizontal">
+    <div id="sliderTime" data-role="fieldcontain">
       <span id='startTimeDisplay'></span>
       <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" data-mini="true"/>
       <span id='currentTimeDisplay'></span>      
     </div>
-    <div class='playback' data-role="navbar" data-type='horizontal' style='text-align:center'>
+    <div class='playback' data-type='horizontal' style='text-align:center'>      
       <button type="button" id = "progressControl" data-theme="b" id='play' onclick="progressControl();">Play</button>
     </div>
   </div>
