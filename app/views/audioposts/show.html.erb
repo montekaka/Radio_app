@@ -2,25 +2,35 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-
-
+<!---panel-->
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="a">
+        <!-- panel content goes here -->
+        <h2>Choose Section</h2>
+        <div data-role="content">
+          <button class= 'audioChapter' data-theme="d" value='0' >
+            城市破產
+          </button>
+          <button class='audioChapter' data-theme="d"  value='960' >
+            奧運軍訓
+          </button>
+          <button href="#mypanel" data-theme="b" data-rel="close">
+            Done
+          </button>
+        </div>
+    </div><!-- /panel -->
+<!---panel-->
 
 <div data-role="header" data-theme="b">   
   <h1>
     <%= @audiopost.title %>
   </h1>
   <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
-  <a href="#popupPanel" class="ui-btn-right" data-rel="popup" data-transition="slide" data-position-to="window" data-icon="grid">All</a>
+  <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="grid">All</a>
   <!--
   <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear", :rel=>"external"} %>
   -->
 </div>
 <div data-role="content">
-<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
-
-    <button class= 'audioChapter' data-theme="a" data-mini="true" value='0' >城市破產</button>
-    <button class='audioChapter' data-theme="a" data-mini="true" value='960' >奧運軍訓</button>   
-</div>
   <!--Audio Info-->
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
@@ -55,7 +65,7 @@
 </div>
 <div>
   <div data-role='footer' style='text-align:center' data-position="fixed" data-theme="b">
-    <div id="sliderTime" data-role="fieldcontain">
+    <div id="sliderTime" data-role="fieldcontain" data-type="horizontal">
       <span id='startTimeDisplay'></span>
       <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" data-mini="true"/>
       <span id='currentTimeDisplay'></span>      
@@ -78,17 +88,6 @@
         })();
     </script>
 <!--end-->
-<!--panel-->
-<script>
-$( "#popupPanel" ).on({
-    popupbeforeposition: function() {
-        var h = $( window ).height();
-
-        $( "#popupPanel" ).css( "height", h );
-    }
-});
-</script>
-<!--panel-->
 <script>
 function setSliderValue(id, w, s){
     return $(id).attr(w, s);
@@ -269,18 +268,4 @@ $('.audioChapter').tap(function(){
   input.ui-slider-input {
     display : none !important;
   }
-#popupPanel-popup {
-    right: 0 !important;
-    left: auto !important;
-}
-#popupPanel {
-    width: 200px;
-    border: 1px solid #000;
-    border-right: none;
-    background: rgba(0,0,0,.5);
-    margin: -1px 0;
-}
-#popupPanel .ui-btn {
-    margin: 2em 15px;
-}  
 </style>
