@@ -3,7 +3,7 @@
 <% end %>
 
 <!---panel-->
-    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="a">
+    <div data-role="panel" id="mypanel" data-position="right" data-display="overlay" data-theme="a">
         <!-- panel content goes here -->
         <h2>Choose Section</h2>
         <div data-role="content">
@@ -267,5 +267,9 @@ $('.audioChapter').tap(function(){
 <style type=text/css>
   input.ui-slider-input {
     display : none !important;
+  }
+
+  #mypanel{
+    opacity:0.92;
   }
 </style>
