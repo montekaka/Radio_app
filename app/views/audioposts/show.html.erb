@@ -5,7 +5,7 @@
 <!---panel-->
     <div data-role="panel" id="mypanel" data-position="right" data-display="overlay" data-theme="a">
         <!-- panel content goes here -->
-        <h2>Choose Section</h2>
+        <h2>Jump to section</h2>
         <div data-role="content">
           <button class= 'audioChapter' data-theme="d" value='0' >
             城市破產
@@ -25,10 +25,10 @@
     <%= @audiopost.title %>
   </h1>
   <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
-  <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="grid">All</a>
   <!--
-  <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear", :rel=>"external"} %>
+  <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="grid">All</a>
   -->
+  <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear", :rel=>"external"} %>
 </div>
 <div data-role="content">
   <!--Audio Info-->  
@@ -64,12 +64,16 @@
     -->
 </div>
 <div>
-  <div data-role='footer' style='text-align:center' data-position="fixed" data-theme="b">
-    <div id="sliderTime" data-role="fieldcontain">
-      <span id='startTimeDisplay'></span>
-      <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" data-highlight="true" data-mini="true"/>
-      <span id='currentTimeDisplay'></span>      
-    </div>
+  <div data-role='footer' data-position="fixed" data-theme="b">
+    <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
+      <tr>
+        <td><p id="startTimeDisplay"></p></td>
+        <td width="100%" class="slider-shit">
+          <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
+        </td>
+        <td><p id="currentTimeDisplay"></p></td>
+      </tr>
+    </table>
     <div class='playback' data-type='horizontal' style='text-align:center'>      
       <button type="button" id = "progressControl" data-theme="b" id='play' onclick="progressControl();">Play</button>
     </div>
