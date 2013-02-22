@@ -4,9 +4,8 @@
 <div data-role="content">
   <div class="content-primary">
     <%= link_to 'Create Yours Now', new_show_path, :"data-role"=>"button",:"data-theme"=>"e", :rel=>"external" %>
-    <br />
-    <ul data-role="listview" data-filter="true" data-inset="true">
-      <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+    <br />    
+      <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">        
         <thead>
           <tr class="ui-bar-d">
             <th>Show Name</th>
@@ -18,10 +17,12 @@
             <th data-priority="3">Destroy</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody>          
           <% @shows.each do |show| %>
             <tr>
-              <td><%= link_to show.name, show_audioposts_path(show)%></td>
+              <td>
+                <%= link_to show.name, show_audioposts_path(show)%>
+              </td>
               <td><%= show.djname%></td>
               <td><%= show.category%></td>
               <td><%= show.description%></td>
@@ -37,8 +38,7 @@
             </tr>
           <% end %>
         </tboyd>
-      </table>
-    </ul>
+      </table>    
   </div>
 </div>
 
