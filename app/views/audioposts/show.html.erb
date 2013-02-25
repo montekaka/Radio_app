@@ -3,14 +3,14 @@
 <% end %>
 
 <!---panel-->
-    <div data-role="panel" id="mypanel" data-position="right" data-display="overlay" data-theme="a">
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="a">
         <!-- panel content goes here -->
         <h2>Jump to section</h2>
         <div data-role="content">
           <button class= 'audioChapter' data-theme="d" value='0' >
             城市破產
           </button>
-          <button class='audioChapter' data-theme="d"  value='960' >
+          <button class='audioChapter' data-theme="d"  value='960'>
             奧運軍訓
           </button>
           <button href="#mypanel" data-theme="b" data-rel="close">
@@ -270,11 +270,13 @@ $('.audioChapter').tap(function(){
     timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
     v.play();
     v.currentTime = $chapterValue;
+
   }
   else{
     v.currentTime = $chapterValue;    
   }  
   console.log($chapterValue);
+  $("#mypanel").panel("close");
 });
 </script>
 
