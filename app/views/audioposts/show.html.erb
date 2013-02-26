@@ -38,15 +38,16 @@
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
-      <p><%= @audiopost.audio_date %></p>
-      <p><%= raw(@audiopost.short_note) %></p>
+      <p><%= @audiopost.audio_date %></p>      
     </div>
   <% else %>
     <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
       <p><%= @audiopost.audio_date %></p>
       <%= @audiopost.short_note.html_safe %>
+      <!--
       <p><%= raw(@audiopost.short_note) %></p>
+      -->
     </div> 
   <% end %>
   <!--end-->
