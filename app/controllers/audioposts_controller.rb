@@ -48,7 +48,7 @@ class AudiopostsController < ApplicationController
 
     respond_to do |format|
       if @audiopost.save
-        format.html { redirect_to @audiopost, :notice => 'Audiopost was successfully created.' }
+        format.html { redirect_to show_audiopost_path(@show, @audiopost), :notice => 'Audiopost was successfully created.' }
         format.json { render :json => @audiopost, :status => :created, :location => @audiopost }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class AudiopostsController < ApplicationController
 
     respond_to do |format|
       if @audiopost.update_attributes(params[:audiopost])
-        format.html { redirect_to @audiopost, :notice => 'Audiopost was successfully updated.' }
+        format.html { redirect_to show_audiopost_path(@show, @audiopost), :notice => 'Audiopost was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

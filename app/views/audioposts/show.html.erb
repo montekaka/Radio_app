@@ -26,13 +26,13 @@
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
       <p><%= @audiopost.audio_date %></p>
-      <p><%= @audiopost.short_note %></p>
+      <p><%= raw(@audiopost.short_note) %></p>
     </div>
   <% else %>
     <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
       <p><%= @audiopost.audio_date %></p>
-      <p><%= @audiopost.short_note %></p>
+      <p><%= raw(@audiopost.short_note) %></p>
     </div> 
   <% end %>
   <!--end-->
