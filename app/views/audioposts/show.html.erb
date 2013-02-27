@@ -25,12 +25,9 @@
     <%= @audiopost.title %>
   </h1>
   <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
-  <!--
-  <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="grid">All</a>
-  -->
-  
-  <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), {"class"=>"ui-btn-right", "data-icon" => "gear", :rel=>"external"} %>
-  
+  <!--tricker the panel-->
+  <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="bars">All</a>
+  <!---->
 </div>
 <div data-role="content">
   <!--Audio Info-->  
@@ -38,11 +35,17 @@
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
+      <div>        
+        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-mini"=>"true", "data-theme"=>"e", "data-inline"=>"true"} %>
+      </div>
       <p><%= @audiopost.audio_date %></p>      
     </div>
   <% else %>
     <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
+      <div>        
+        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-mini"=>"true","data-theme"=>"e", "data-inline"=>"true"} %>
+      </div>
       <p><%= @audiopost.audio_date %></p>
       <%= @audiopost.short_note.html_safe %>
       <!--
