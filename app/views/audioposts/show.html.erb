@@ -34,20 +34,22 @@
 
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
-      <h3><%= @audiopost.title %></h3>
+      <h4><%= @audiopost.title %></h4> 
       <div>        
-        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-mini"=>"true", "data-theme"=>"e", "data-inline"=>"true"} %>
-      </div>
-      <p><%= @audiopost.audio_date %></p>      
+        <%= @audiopost.audio_date %>
+        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-iconpos"=>"notext", "data-theme"=>"a", "data-inline"=>"true"} %>
+      </div>      
     </div>
   <% else %>
     <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
-      <h3><%= @audiopost.title %></h3>
-      <div>        
-        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-mini"=>"true","data-theme"=>"e", "data-inline"=>"true"} %>
+      <h4><%= @audiopost.title %></h4>
+      <div>
+        <%= @audiopost.audio_date %>
+        <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-iconpos"=>"notext", "data-theme"=>"a", "data-inline"=>"true"} %>
       </div>
-      <p><%= @audiopost.audio_date %></p>
-      <%= @audiopost.short_note.html_safe %>
+      <div id ="episodeNote">
+        <%= @audiopost.short_note.html_safe %>
+      </div>
       <!--
       <p><%= raw(@audiopost.short_note) %></p>
       -->
@@ -108,7 +110,6 @@
         })();
     </script>
 <!--end-->
-
 <script>
 function setSliderValue(id, w, s){
     return $(id).attr(w, s);
