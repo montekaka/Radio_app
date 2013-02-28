@@ -181,9 +181,9 @@ if(audioCount>0){
         audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
         aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
         aduioTitles.push('<%= audiopost.title%>');
-        //aduioNotes.push('<%= audiopost.short_note%>');
+        //aduioNotes.push('<%= audiopost.short_note%>');        
     <% end %>
-
+    
     $(document).bind('pageinit', function() {
         for (var i in audioDates){
             audioYears.push(audioDates[i].getFullYear());

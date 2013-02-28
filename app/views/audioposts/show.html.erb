@@ -31,7 +31,6 @@
 </div>
 <div data-role="content">
   <!--Audio Info-->  
-
   <% if @audiopost.short_note.nil? %>
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h4><%= @audiopost.title %></h4> 
@@ -47,7 +46,7 @@
         <%= @audiopost.audio_date %>
         <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-iconpos"=>"notext", "data-theme"=>"a", "data-inline"=>"true"} %>
       </div>
-      <div id ="episodeNote">
+      <div id ="episodeNote">        
         <%= @audiopost.short_note.html_safe %>
       </div>
       <!--
