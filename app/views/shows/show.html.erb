@@ -1,24 +1,28 @@
 <div data-role="header" data-theme="a">
     <h1><%= @show.name %></h1>
+    <%= link_to "Back", shows_path, :"data-icon"=>"home", :"class"=>"ui-btn-left"%>
+    <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
 </div>
 <div data-role="content">
 	<p id="notice"><%= notice %></p>
-	<p>
-		<b>Show Name:</b>
-		<%= @show.name %>
-	</p>
-	<p>
-		<b>Show Host:</b>
-		<%= @show.djname %>
-	</p>	
-	<p>
-		<b>Show Category:</b>
-		<%= @show.category %>
-	</p>
-	<p>
-		<b>Show description:</b>
-		<%= @show.description %>
-	</p>
-	<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external" %>
-	<%= link_to 'Back', shows_path, :"data-role"=>"button", :"data-theme"=>"b",:"data-inline"=>"true" %>
+	<div data-role="collapsible" data-theme="b" data-content-theme="d">
+		<h4>Show Details</h4>
+		<p>
+			<b>Show Name:</b>
+			<%= @show.name %>
+		</p>
+		<p>
+			<b>Show Host:</b>
+			<%= @show.djname %>
+		</p>	
+		<p>
+			<b>Show Category:</b>
+			<%= @show.category %>
+		</p>
+		<p>
+			<b>Show description:</b>
+			<%= @show.description %>
+		</p>
+		<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external" %>		
+	</div>
 </div>
