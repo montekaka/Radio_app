@@ -1,32 +1,51 @@
-<div data-role="header" data-theme="b">
-    <h1><%=@show.name%></h1>
-    <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
-</div>
-<div data-role="content">
-    <div data-role="fieldcontain">
-        <select name="select-choice-3" id="selectYearMenu" data-native-menu="false">
+<div data-role="page" id="mainpage">
+    <div data-role="header" data-theme="b">
+        <h1><%=@show.name%></h1>
+        <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
+        <a href="#infopage" class="ui-btn-left" data-icon="info">About</a>
+    </div>
+    <div data-role="content">
+        <div data-role="fieldcontain">
+            <select name="select-choice-3" id="selectYearMenu" data-native-menu="false">
             <!--
             <option value="2012">2012</option>
             <option value="2011">2011</option>            
             -->
-        </select>
-    </div>
-    <div data-role="collapsible-set" data-theme="c" data-content-theme="c" id="audiolist">
-        <div data-role="collapsible">
-            <h2>Hello World!</h2>
-            <ul data-role="listview" data-theme="d" data-divider-theme="d" class="willisuck">
-                <li data-role="list-divider" class="audioItemDate">
-                    today
-                </li>
-                <li class="audioItemTitle">
-                    Let's start uploading your first audio content.
-                </li>
-            </ul>
+            </select>
         </div>
-    </div> 
+        <div data-role="collapsible-set" data-theme="c" data-content-theme="c" id="audiolist">
+            <div data-role="collapsible">
+                <h2>Hello World!</h2>
+                <ul data-role="listview" data-theme="d" data-divider-theme="d" class="willisuck">
+                    <li data-role="list-divider" class="audioItemDate">
+                        today
+                    </li>
+                    <li class="audioItemTitle">
+                        Let's start uploading your first audio content.
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
 </div>
+<!-- Start of info page -->
+<div data-role="page" id="infopage">
 
+    <div data-role="header" data-theme="b">
+        <h1>Info</h1>
+        <a href="#mainpage" class="ui-btn-left" data-icon="back">Back</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <h2><%=@show.name %></h2>
+        <p><strong>Show Host:</strong> <%=@show.djname%></p>
+        <p><strong>Show Category:</strong> <%=@show.category%></p>
+        <br />
+        <p><%= @show.description %></p>        
+    </div><!-- /content -->
+</div><!-- /page -->
 <script>
+console.log('<%= @show.djname %>');
 
 var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
