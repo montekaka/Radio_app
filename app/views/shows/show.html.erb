@@ -1,7 +1,11 @@
 <div data-role="header" data-theme="a">
     <h1><%= @show.name %></h1>
     <%= link_to "Back", shows_path, :"data-icon"=>"home", :"class"=>"ui-btn-left"%>
-    <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+    <%if current_user %>
+      <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+    <%else%>
+      <%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+    <%end%> 
 </div>
 <div data-role="content">
 	<p id="notice"><%= notice %></p>
@@ -23,6 +27,20 @@
 			<b>Show description:</b>
 			<%= @show.description %>
 		</p>
-		<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external" %>		
+		<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external", :"data-theme"=>"b" %>		
+	</div>
+	<div data-role="collapsible" data-theme="e" data-content-theme="d">
+		<h4>List of Episode</h4>
+		<table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+			<thead>
+				<tr class="ui-bar-d">
+					<th>Episode Name</th>
+					<th data-priority="2">Date</th>
+					<th data-priority="1">Detail</th>
+				</tr>
+			</thead>
+			 <tbody>
+			 </tbody>
+		</table>
 	</div>
 </div>
