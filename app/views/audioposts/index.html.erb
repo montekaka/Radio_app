@@ -1,8 +1,8 @@
-<div data-role="page" id="mainpage">
+
     <div data-role="header" data-theme="b">
         <h1><%=@show.name%></h1>
         <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
-        <a href="#infopage" class="ui-btn-left" data-icon="info">About</a>
+        <a href="#popupInfo" class="ui-btn-left" data-icon="info" data-rel="popup" data-position-to="window">About</a>
     </div>
     <div data-role="content">
         <div data-role="fieldcontain">
@@ -27,23 +27,19 @@
             </div>
         </div> 
     </div>
-</div>
-<!-- Start of info page -->
-<div data-role="page" id="infopage">
-
-    <div data-role="header" data-theme="b">
-        <h1>Info</h1>
-        <a href="#mainpage" class="ui-btn-left" data-icon="back">Back</a>
-    </div><!-- /header -->
-
-    <div data-role="content">
-        <h2><%=@show.name %></h2>
+<!--info popup-->
+<div data-role="popup" id="popupInfo" class="ui-content" style="max-width:280px">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+    <div data-role="header" data-theme="a" class="ui-corner-top">
+        <h1><%=@show.name %></h1>
+    </div>
+    <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
         <p><strong>Show Host:</strong> <%=@show.djname%></p>
         <p><strong>Show Category:</strong> <%=@show.category%></p>
-        <br />
-        <p><%= @show.description %></p>        
-    </div><!-- /content -->
-</div><!-- /page -->
+        <p><%= @show.description %></p>
+    </div>
+</div>
+
 <script>
 console.log('<%= @show.djname %>');
 
