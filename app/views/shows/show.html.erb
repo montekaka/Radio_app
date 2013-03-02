@@ -27,13 +27,13 @@
 			<b>Show description:</b>
 			<%= @show.description %>
 		</p>
-		<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external", :"data-theme"=>"b" %>		
+		<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external", :"data-theme"=>"b", :'data-mini'=>'true', 'data-icon'=>'edit' %>		
 	</div>
 	<div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="d">
 		<h4>List of Episode</h4>
-		<div>
-			<%= link_to 'New Audio', new_show_audiopost_path(@show) %>
-		</div>
+		<p>
+			<%= link_to 'New Audio', new_show_audiopost_path(@show) ,{'data-role'=>"button", 'data-mini'=>"true", "data-theme"=>"b", 'data-inline'=>"true", 'data-icon'=>"new"} %>
+		</p>
 		<table data-role="table" id="table-custom-2" data-mode="Reflow" class="ui-body-d ui-shadow table-stripe ui-responsive">
 			<thead>
 				<tr class="ui-bar-d">
