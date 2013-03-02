@@ -2,7 +2,7 @@
     <div data-role="header" data-theme="b">
         <h1><%=@show.name%></h1>
         <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
-        <a href="#popupInfo" class="ui-btn-left" data-icon="info" data-rel="popup" data-position-to="window">About</a>
+        <a href="#infoPanel" class="ui-btn-left" data-icon="info" data-rel="push">About</a>
     </div>
     <div data-role="content">
         <div data-role="fieldcontain">
@@ -27,9 +27,8 @@
             </div>
         </div> 
     </div>
-<!--info popup-->
-<div data-role="popup" id="popupInfo" class="ui-content" style="max-width:280px">
-    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+<!--info panel-->
+<div data-role="panel" id="infoPanel" data-position="left" data-display="push" data-theme="a">
     <div data-role="header" data-theme="a" class="ui-corner-top">
         <h1><%=@show.name %></h1>
     </div>
@@ -39,7 +38,6 @@
         <p><%= @show.description %></p>
     </div>
 </div>
-
 <script>
 
 var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
