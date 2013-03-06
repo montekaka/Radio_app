@@ -38,8 +38,9 @@
 			<thead>
 				<tr class="ui-bar-d">
 					<th>Episode Name</th>
-					<th >Date</th>
-					<th >Detail</th>
+					<th>Date</th>
+					<th>Detail</th>
+					<th>Destroy</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -53,6 +54,9 @@
 						</td>
 						<td>
 							<%= link_to 'Edit', edit_show_audiopost_path(@show, audiopost)%>
+						</td>
+						<td>
+							<a href="#">Delete</a>
 						</td>						
 					</tr>				
 				<% end %>
