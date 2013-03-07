@@ -56,7 +56,7 @@
 							<%= link_to 'Edit', edit_show_audiopost_path(@show, audiopost)%>
 						</td>
 						<td>
-							<a href="#">Delete</a>
+							<%= link_to 'Destroy', show_audiopost_path(@show, audiopost), :confirm => 'Are you sure?', :method => :delete, :rel=>"external" %>
 						</td>						
 					</tr>				
 				<% end %>

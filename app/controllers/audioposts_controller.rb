@@ -80,7 +80,7 @@ class AudiopostsController < ApplicationController
     @audiopost.destroy
 
     respond_to do |format|
-      format.html { redirect_to show_audioposts_url(@show) }
+      format.html { redirect_to show_url(@show) }
       format.json { head :ok }
     end
   end
