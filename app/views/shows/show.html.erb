@@ -47,7 +47,7 @@
 				<% @show.audioposts.each do |audiopost|%>
 					<tr>
 						<td>
-							<%= audiopost.title%>
+							<%= link_to audiopost.title, show_audiopost_path(@show, audiopost)%>
 						</td>
 						<td>
 							<%= audiopost.audio_date%>

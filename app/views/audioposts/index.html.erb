@@ -1,7 +1,12 @@
 
     <div data-role="header" data-theme="b">
         <h1><%=@show.name%></h1>
-        <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
+        <!--
+            <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
+        -->
+        <%if current_user %>
+            <%= link_to 'Home', @show, {"class"=>"ui-btn-right", "data-icon" => "home"} %>
+        <% end %>
         <a href="#infoPanel" class="ui-btn-left" data-icon="info" data-rel="push">About</a>
     </div>
     <div data-role="content">
