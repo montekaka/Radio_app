@@ -15,6 +15,8 @@ gem 'json'
 
 gem 'devise'
 
+gem 'nokogiri'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
