@@ -4,10 +4,10 @@
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
         -->
+        <a href="#infoPanel" class="ui-btn-right" data-icon="info" data-rel="push">About</a>
         <%if current_user %>
-            <%= link_to 'Home', @show, {"class"=>"ui-btn-right", "data-icon" => "home"} %>
-        <% end %>
-        <a href="#infoPanel" class="ui-btn-left" data-icon="info" data-rel="push">About</a>
+            <%= link_to 'Home', @show, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
+        <% end %>        
     </div>
     <div data-role="content">
         <div data-role="fieldcontain">
@@ -33,7 +33,7 @@
         </div> 
     </div>
 <!--info panel-->
-<div data-role="panel" id="infoPanel" data-position="left" data-display="push" data-theme="a">
+<div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="a">
     <div data-role="header" data-theme="a" class="ui-corner-top">
         <h1><%=@show.name %></h1>
     </div>
@@ -158,25 +158,14 @@ function setupHTML(inputYear){
                 +'</li>'
             }
         }
-        if(uniqueMonths[i] == maxMonth){
+        
             collapsibleDiv = collapsibleDiv
-            +'<div data-role="collapsible" data-theme="b" data-collapsed="false" class="willisuck">'
-                +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
-                    +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
+                +'<li data-role="list-divider">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</li>'                    
                         +listViewDiv
-                    +'</ul>'
-            +'</div>'
-        }
-        else{
-            collapsibleDiv = collapsibleDiv
-                +'<div data-role="collapsible" data-theme="b" class="willisuck">'
-                    +'<h2>'+monthNames[uniqueMonths[i]]+' '+currentYear+'</h2>'
-                        +'<ul data-role="listview" data-theme="d" data-divider-theme="b" class="audioItemList">'
-                            +listViewDiv
-                        +'</ul>'
-                +'</div>'
-        }
     }
+    collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
+                        +collapsibleDiv
+                    +"</ul>"
     $('#audiolist').html(collapsibleDiv);
     $('#audiolist').collapsibleset('refresh');
     $('#audiolist').trigger("create");
