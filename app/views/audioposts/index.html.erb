@@ -138,6 +138,7 @@ function setupHTML(inputYear){
     var collapsibleDiv='';
     for(var i in uniqueMonths){
         var listViewDiv='';
+        var ep = 0
         for(var j in descendingDates){
             if(descendingDates[j].getMonth()==uniqueMonths[i]){
                 listViewDiv = listViewDiv
@@ -155,17 +156,17 @@ function setupHTML(inputYear){
                             +'</div>'                                
                         +'</div>'         
                     +'</a>'
-                +'</li>'
+                +'</li>';
+                ep = ep+1;
             }
         }
         
-            collapsibleDiv = collapsibleDiv
-                +'<li data-role="list-divider">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</li>'                    
-                        +listViewDiv
+        collapsibleDiv = collapsibleDiv
+            +'<li data-role="list-divider">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+listViewDiv;
     }
     collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
                         +collapsibleDiv
-                    +"</ul>"
+                    +"</ul>";
     $('#audiolist').html(collapsibleDiv);
     $('#audiolist').collapsibleset('refresh');
     $('#audiolist').trigger("create");
