@@ -1,7 +1,8 @@
 desc "Update Money Radio Episodes"
 task :update_money_radio => :environment do
-  require 'nokogiri'
-  require 'open-uri'
+  #require 'nokogiri'
+  #require 'open-uri'
+  require 'nokogiriKMRB'
   
   show = Show.find_by_name('理財天地')
   #create the show if there is no 理財天地
@@ -10,15 +11,15 @@ task :update_money_radio => :environment do
      puts "there is no 理財天地, create a new one..."
   end
 
-# delete all existing post  
-show.audioposts.each do |audiopost|
-  audiopost.destroy
-end  
-puts "delete all existing audioposts"
+  # delete all existing post  
+  show.audioposts.each do |audiopost|
+  	audiopost.destroy
+  end  
+  puts "delete all existing audioposts"
   
-class EpisodePage
-	attr_accessor :name, :desc, :date, :url, :id, :showID
-end
+  class EpisodePage
+  	attr_accessor :name, :desc, :date, :url, :id, :showID
+  end
   
 	dummyURL = []
 	dummyName = []
@@ -68,6 +69,6 @@ end
      # loop through the array and add each record
      show.audioposts.create(:title =>e.name, :audio =>e.url, :audio_date =>e.date)
      puts "record added"
-end
+ end
   
 end
