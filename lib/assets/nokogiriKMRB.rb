@@ -322,5 +322,22 @@ def podcastShowInfo(homeHTML, firstTime)
 	return podcastShowArray
 end	
 
-
-
+def getEpisodes(dataDummy, categoryName, showName)
+	categoryName_index = 0
+	showName_index = 0
+	dataDummy.each do |f|
+		if f.name != categoryName
+			categoryName_index = categoryName_index + 1
+		else
+			break
+		end
+	end
+	dataDummy[categoryName_index].showArray.each do |i|
+		if i.name !=showName
+			showName_index = showName_index + 1
+		else
+			break
+		end
+	end
+	return dataDummy[categoryName_index].showArray[showName_index]
+end
