@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-# encoding: utf-8
+
 class ShowCategory
 	attr_accessor :name, :url, :hier, :id
 end
