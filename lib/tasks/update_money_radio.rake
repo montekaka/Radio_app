@@ -24,8 +24,8 @@ task :update_money_radio => :environment do
 
   # only for money radio archive
   moneyRadioHTML = 'http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=46'
-  latestDateInDB = Date.parse('2013-03-14') #March 14 2013
-  episodeMaster = updateAudiopost('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=33', 'F', latestDateInDB)
+  latestDateInDB = Date.parse('2013-01-01') #March 14 2013
+  episodeMaster = updateAudiopost('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=46', 'F', latestDateInDB)
 
  episodeMaster.each do |e|
 	puts "episode name: " + e.name
