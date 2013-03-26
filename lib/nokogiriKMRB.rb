@@ -148,7 +148,8 @@ def getShowPlayListTable(showURL)
 		l = title.length
 
 		episodeURL = t['href']
-		episodeDate = title[0..5]+'20'+title[6..7]
+		#episodeDate = title[0..5]+'20'+title[6..7]
+		episodeDate = title[3..5]+title[0..2]+'20'+title[6..7]
 		episodeName = title[8..l]
 
 		episode = DummyEpisodeInfo.new
@@ -279,7 +280,7 @@ end
 # end
 
 
-#episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32&page=2',"T")
+#episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32',"T")
 
 # episode.each do |e|
 # 	puts "episode name: " + e.name
