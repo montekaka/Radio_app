@@ -294,13 +294,14 @@ class PodcastCategory
 end
 
 class PodcastShow
-	attr_accessor :name, :desc, :hostDJ, :url, :id, :categoryID, :playDay, :playTime, :episodeArray
+	attr_accessor :name, :desc, :hostDJ, :url, :id, :categoryID, :categoryName, :playDay, :playTime, :episodeArray
 end
 
 def podcastShowInfo(homeHTML, firstTime)
 	podcastShowArray = []
 	allCategory = getShowCategory(homeHTML)
-	allCategory.each do |c|		
+	allCategory.each do |c|
+		#dummyCategoryName = c.name
 		dummyShowArray = []
 		dummyshow = getShowInfo(c.url)
 		dummyshow.each do |s|			
@@ -312,6 +313,7 @@ def podcastShowInfo(homeHTML, firstTime)
 			dummy_show.playDay = s.playDay
 			dummy_show.playTime = s.playTime
 			dummy_show.episodeArray = getEpisodeInfo(s.url,firstTime)
+			#dummy_show.categoryName = dummyCategoryName
 			dummyShowArray.push(dummy_show)
 		end	
 		dummy_PodcastCategory = PodcastCategory.new
