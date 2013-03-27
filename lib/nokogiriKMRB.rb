@@ -15,7 +15,7 @@ class DummyEpisodeInfo
 end
 
 class ShowPage
-	attr_accessor :name, :desc, :hostDJ, :url, :id, :categoryID, :playDay, :playTime
+	attr_accessor :name, :desc, :hostDJ, :url, :id, :categoryName, :categoryID, :playDay, :playTime
 end
 
 class EpisodePage

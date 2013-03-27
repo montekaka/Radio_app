@@ -1,6 +1,9 @@
 require 'nokogiriKMRB'
 require 'date'
 
+def
+
+
 def updateAudiopost(showHTML, firstTime, dbLastDay)
     audiopostUpdateArray = []
     fetchAudiopost = getEpisodeInfo(showHTML, firstTime)
