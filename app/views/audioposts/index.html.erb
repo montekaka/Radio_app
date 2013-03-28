@@ -9,7 +9,7 @@
             <%= link_to 'Home', @show, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
         <% end %>        
     </div>
-    <div data-role="content">
+    <div data-role="content" id="content">
         <div data-role="fieldcontain">
             <select name="select-choice-3" id="selectYearMenu" data-native-menu="false">
             <!--
@@ -44,7 +44,13 @@
     </div>
 </div>
 <script>
-
+//panel
+$(document).on('pageinit',function(){
+    $("#content").on("swipeleft",function(){
+        $("#infoPanel").panel( "open");
+    });
+});
+//end panel
 var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
