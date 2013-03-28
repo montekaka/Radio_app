@@ -5,10 +5,17 @@ task :update_money_radio => :environment do
   #require 'nokogiriKMRB.rb'
   require 'updateAudiopost.rb'
   
+  #check whether 1430 station exist?
+  station = Station.find_by_name('am1430')
+  if station == nil
+    station = Station.create(:name=>"am1430")
+    puts "there is no am1430 station, create a new one"
+  end  
+  
   show = Show.find_by_name('理財天地')
   #create the show if there is no 理財天地
   if show == nil
-     show = Show.create(:name=>"理財天地", :djname=>"林修榮 / Inez")
+     show = station.shows.create(:name=>"理財天地", :djname=>"林修榮 / Inez") #show will contain station info
      puts "there is no 理財天地, create a new one..."
   end
 

@@ -1,4 +1,8 @@
 RadioApp::Application.routes.draw do
+  resources :stations do
+    resources :shows
+  end
+
   devise_for :users
 
   resources :shows do

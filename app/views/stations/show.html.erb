@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @station.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @station.description %>
+</p>
+
+<p>
+  <b>Station url:</b>
+  <%= @station.station_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_station_path(@station) %> |
+<%= link_to 'Back', stations_path %>

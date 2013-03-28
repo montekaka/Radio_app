@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327174026) do
+ActiveRecord::Schema.define(:version => 20130327233651) do
 
   create_table "audioposts", :force => true do |t|
     t.integer  "user_id"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(:version => 20130327174026) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "show_url"
+    t.integer  "station_id"
+  end
+
+  create_table "stations", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "station_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
