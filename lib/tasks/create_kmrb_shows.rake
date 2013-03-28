@@ -1,5 +1,5 @@
 desc "Create KMRB"
-task :update_kmrb => :environment do
+task :create_kmrb_shows => :environment do
   #require 'nokogiri'
   #require 'open-uri'
   #require 'nokogiriKMRB.rb'
