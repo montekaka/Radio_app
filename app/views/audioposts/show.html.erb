@@ -6,18 +6,28 @@
 <!---panel-->
     <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="b">
       <!--Panel for description-->
-        <h3><%= @audiopost.title %></h3>        
+      <div data-role="header" data-theme="a" class="ui-corner-top">
+        <h1><%= @audiopost.title %></h1>
+      </div>
+      <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+        <p id = 'showDate'><strong>Show Date:</strong> <%= @audiopost.audio_date %></p>
         <% if @audiopost.short_note.nil? %>
-          <p id='showDate'><%= @audiopost.audio_date %></p>
+        <p>
+          <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
+            Close
+          </button>        
+        </p>
         <% else %>
-          <p id='showDate'><%= @audiopost.audio_date %></p>
-          <div id ="episodeNote">
-            <%= @audiopost.short_note %>
-          </div>
+          <p id='showDescription'>
+            <%= @audiopost.short_note.html_safe %>
+          </p>
+          <p>
+            <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
+              Close
+            </button>        
+          </p>          
         <% end %>
-        <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
-          Close
-        </button>
+      </div>
       <!--end Panel for description-->
         <!--panel for jump to the different section content goes here-->
 <!--         <h2>Jump to section</h2>
@@ -43,38 +53,11 @@
     </h1>
     <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
     <!--tricker the panel-->
-    <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="bars">All</a>
+    <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="info">About</a>
     <!---->
   </div>
   <div data-role="content">
-    <a href="#" data-role="button"><%= @audiopost.title %></a>     
-    <!--Audio Info-->  
-    <% if @audiopost.short_note.nil? %>
-      <div data-role="collapsible" data-theme="e" data-content-theme="c">
-        <h4><%= @audiopost.title %></h4> 
-        <div>        
-          <%= @audiopost.audio_date %>
-          <!--
-            <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-iconpos"=>"notext", "data-theme"=>"a", "data-inline"=>"true"} %>
-          -->
-        </div>      
-      </div>
-    <% else %>
-      <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="c">
-        <h4><%= @audiopost.title %></h4>
-        <div>
-          <%= @audiopost.audio_date %>
-          <%= link_to 'Edit', edit_show_audiopost_path(@show, @audiopost), { "data-role"=>"button", "data-icon" => "edit", "data-iconpos"=>"notext", "data-theme"=>"a", "data-inline"=>"true"} %>
-        </div>
-        <div id ="episodeNote">        
-          <%= @audiopost.short_note.html_safe %>
-        </div>
-        <!--
-        <p><%= raw(@audiopost.short_note) %></p>
-        -->
-      </div> 
-    <% end %>
-    <!--end-->
+    <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>
     <!--Disqus-->
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3>留言</h3>
