@@ -4,9 +4,23 @@
 
 
 <!---panel-->
-    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="a">
-        <!-- panel content goes here -->
-        <h2>Jump to section</h2>
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="b">
+      <!--Panel for description-->
+        <h3><%= @audiopost.title %></h3>        
+        <% if @audiopost.short_note.nil? %>
+          <p id='showDate'><%= @audiopost.audio_date %></p>
+        <% else %>
+          <p id='showDate'><%= @audiopost.audio_date %></p>
+          <div id ="episodeNote">
+            <%= @audiopost.short_note %>
+          </div>
+        <% end %>
+        <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
+          Close
+        </button>
+      <!--end Panel for description-->
+        <!--panel for jump to the different section content goes here-->
+<!--         <h2>Jump to section</h2>
         <div data-role="content">
           <button class= 'audioChapter' data-theme="d" value='0' >
             城市破產
@@ -18,7 +32,9 @@
             Done
           </button>
         </div>
-    </div><!-- /panel -->
+     -->
+    <!-- /panel -->
+    </div>
 <!---panel-->
 
   <div data-role="header" data-theme="b">   
@@ -31,6 +47,7 @@
     <!---->
   </div>
   <div data-role="content">
+    <a href="#" data-role="button"><%= @audiopost.title %></a>     
     <!--Audio Info-->  
     <% if @audiopost.short_note.nil? %>
       <div data-role="collapsible" data-theme="e" data-content-theme="c">
@@ -269,7 +286,7 @@ function timeProgressStopUpdate(audioSource,type, listener){
   audioSource.removeEventListener(type, listener, false);
 }
 
-//jump to selected Chapter
+//jump to selected section example
 var sectionTimes = ['360','600','1200'];
 var currentSection = sectionTimes[0];
 
