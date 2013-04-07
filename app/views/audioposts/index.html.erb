@@ -1,5 +1,5 @@
 
-    <div data-role="header" data-theme="b">    
+    <div data-role="header" data-theme="b" id ="topheader">    
         <h1><%=@show.name%></h1>
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
@@ -34,14 +34,18 @@
     </div>
 <!--info panel-->
 <div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="a">
-    <div data-role="header" data-theme="a" class="ui-corner-top">
+    <ul data-role="listview" data-inset="false" data-theme="d" data-divider-theme="d" class="jqm-list">
+        <li class="jqm-list-header">Jump to section</li>
+        <li><a href="#Jun2012" data-ajax="false">June 2012</a></li>
+    </ul>
+<!--     <div data-role="header" data-theme="a" class="ui-corner-top">
         <h1><%=@show.name %></h1>
     </div>
     <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
         <p><strong>Show Host:</strong> <%=@show.djname%></p>
         <p><strong>Show Category:</strong> <%=@show.category%></p>
         <p><%= @show.description %></p>
-    </div>
+    </div> -->
 </div>
 <script>
 //panel
@@ -178,7 +182,7 @@ function setupHTML(inputYear){
         }
         
         collapsibleDiv = collapsibleDiv
-            +'<li data-role="list-divider">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+listViewDiv;
+            +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'<a href="#topheader" data-ajax="false" class="backtoTop">Return to top</a>'+'</li>'+listViewDiv;
     }
     collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
                         +collapsibleDiv
@@ -233,3 +237,8 @@ if(audioCount>0){
     });
 }
 </script>
+<style type=text/css>
+    .backtoTop{
+        padding-left:50%;
+    }
+</style>
