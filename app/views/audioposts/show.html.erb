@@ -62,7 +62,7 @@
      <p id='startTimeDisplay' onclick="progressControl();"></p>
     <hr id="hr_bottom">
     
-    <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>
+    <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>  
     <!--Disqus-->
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
       <h3>留言</h3>
@@ -307,6 +307,24 @@ function timeProgressStopUpdate(audioSource,type, listener){
         var currentPlayingTime = displayTime(playLenght);
         $("#startTimeDisplay").html(currentPlayingTime);        
       })
+    });
+  </script>
+  <!--Open Panel on swipe-->
+  <script>
+    $( document ).on( "pageinit", "#demo-page", function() {
+      $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+          // We check if there is no open panel on the page because otherwise
+          // a swipe to close the left panel would also open the right panel (and v.v.).
+          // We do this by checking the data that the framework stores on the page element (panel: open).
+          if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+              if ( e.type === "swipeleft"  ) {
+                  $( "#mypanel" ).panel( "open" );
+              } 
+              // else if ( e.type === "swiperight" ) {
+              //     $( "#left-panel" ).panel( "open" );
+              // }
+          }
+      });
     });
   </script>
 <!--end-->
