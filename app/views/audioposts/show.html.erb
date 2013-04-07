@@ -57,6 +57,11 @@
     <!---->
   </div>
   <div data-role="content">
+    
+    <hr>
+     <p id='startTimeDisplay' onclick="progressControl();"></p>
+    <hr id="hr_bottom">
+    
     <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>
     <!--Disqus-->
     <div data-role="collapsible" data-theme="e" data-content-theme="c">
@@ -69,23 +74,23 @@
       <audio class="player">
         <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
       </audio>
-      <!--
+<!--       
       <br />
       <div id="sliderVol" data-role="fieldcontain">
         <label for="slider-2">Volume</label>
         <input type="range" name="slider-fill" id="volControl" value="20" min="0" max="100" data-highlight="true" data-mini="true"/>
       </div>
-      -->
+       -->
   </div>
-  <div>
+  
     <div data-role='footer' data-position="fixed" data-theme="b">
       <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
         <tr>
-          <td><p id="startTimeDisplay"></p></td>
+          <!--<td><p id="startTimeDisplay"></p></td>-->
+          <td><p id="currentTimeDisplay"></p></td>
           <td width="100%" class="slider-shit">
             <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
           </td>
-          <td><p id="currentTimeDisplay"></p></td>
         </tr>
       </table>
       <div data-role="footer" class="ui-bar" data-theme="b">
@@ -217,10 +222,12 @@ v.addEventListener("loadedmetadata", function(){
   //for max length
   var playLenght = Math.round(this.duration);
   setSliderValue('#timeControl','max',playLenght);
+
   $("#timeControl").slider('refresh');
   //for displyaing the start time
   var audio_startPlayingTime = displayTime(getSliderValue("#timeControl","value"));
   $("#startTimeDisplay").html(audio_startPlayingTime);
+
   //for displyaing the end time
   var currentPlayingTime = "-" + displayTime(playLenght);
   $("#currentTimeDisplay").html(currentPlayingTime);
@@ -249,6 +256,7 @@ var audioPlayUpdateTime = function() {
 var audioPlayUpdateTimeDisplayOnly = function() {
     var duration = this.duration;
     var sec = this.currentTime;
+    
     var currentPlayingTime = displayTime(sec);
 
     //slide and change the display time equal to the time in the input field    
@@ -270,27 +278,52 @@ function timeProgressStopUpdate(audioSource,type, listener){
 }
 
 //jump to selected section example
-var sectionTimes = ['360','600','1200'];
-var currentSection = sectionTimes[0];
+// var sectionTimes = ['360','600','1200'];
+// var currentSection = sectionTimes[0];
 
-$('.audioChapter').tap(function(){
-  var $chapterValue = $(this).val();
+// $('.audioChapter').tap(function(){
+//   var $chapterValue = $(this).val();
 
-  if($('#progressControl').html() == "Play"){
-    $('#progressControl').text('||').button('refresh');
-    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
-    v.play();
-    v.currentTime = $chapterValue;
+//   if($('#progressControl').html() == "Play"){
+//     $('#progressControl').text('||').button('refresh');
+//     timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
+//     v.play();
+//     v.currentTime = $chapterValue;
 
-  }
-  else{
-    v.currentTime = $chapterValue;    
-  }  
-  console.log($chapterValue);
-  $("#mypanel").panel("close");
-});
+//   }
+//   else{
+//     v.currentTime = $chapterValue;    
+//   }  
+//   console.log($chapterValue);
+//   $("#mypanel").panel("close");
+// });
 </script>
+<!--Get Current Time to display the length of total time for starting-->
+  <script>    
+    $(document).ready(function(){     
+      var f = document.getElementsByTagName("audio")[0];
+      f.addEventListener("loadedmetadata", function(){
+        var playLenght = Math.round(this.duration);
+        var currentPlayingTime = displayTime(playLenght);
+        $("#startTimeDisplay").html(currentPlayingTime);        
+      })
+    });
+  </script>
+<!--end-->
+<!--style the display current time section-->
+<style type=text/css>
+.hr_bottom{
+  margin-bottom: 40px;  
+}
 
+#startTimeDisplay{
+  margin: 20px;
+  font: "Lucida Grande", Arial, Verdana, sans-serif; 
+  text-align:center;
+  font-size: 400%;
+}
+</style>
+<!--end-->
 <style type=text/css>
   input.ui-slider-input {
     display : none !important;
