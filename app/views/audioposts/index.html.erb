@@ -33,10 +33,10 @@
         </div> 
     </div>
 <!--info panel-->
-<div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="a">
-    <ul data-role="listview" data-inset="false" data-theme="d" data-divider-theme="d" class="jqm-list">
-        <li class="jqm-list-header">Jump to section</li>
-        <li><a href="#Jun2012" data-ajax="false">June 2012</a></li>
+<div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="c">
+     <ul data-role="listview" data-inset="false" data-theme="d" data-divider-theme="d" class="jqm-list" id='jumptosection'>
+<!--         <li class="jqm-list-header">Jump to section</li>
+        <li><a href="#Jun2012" data-ajax="false">June 2012</a></li> -->
     </ul>
 <!--     <div data-role="header" data-theme="a" class="ui-corner-top">
         <h1><%=@show.name %></h1>
@@ -155,8 +155,9 @@ function setupHTML(inputYear){
     var uniqueMonths = getUniqueArray(audioMonths);
 
     //write html
-    var collapsibleDiv=''; 
-    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to top</a></li>'
+    var jumpToSectionDiv = '<li class="jqm-list-header">Jump to section</li>';
+    var collapsibleDiv='';     
+    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>'
     for(var i in uniqueMonths){
         var listViewDiv='';        
         var ep = 0
@@ -185,6 +186,8 @@ function setupHTML(inputYear){
         
         collapsibleDiv = collapsibleDiv
             +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
+                
+        jumpToSectionDiv = jumpToSectionDiv + '<li><a href="#'+monthNames[uniqueMonths[i]]+currentYear+'" data-ajax="false">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</a></li>';
     }
     collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
                         +collapsibleDiv
@@ -192,7 +195,13 @@ function setupHTML(inputYear){
     $('#audiolist').html(collapsibleDiv);
     $('#audiolist').collapsibleset('refresh');
     $('#audiolist').trigger("create");
+    
+    $('#jumptosection').html(jumpToSectionDiv);
+    //$('#jumptosection').trigger("create");
+    $('#jumptosection').listview('refresh');
+    //console.log(jumpToSectionDiv);    
 }
+
 
 //prepare the data we need
 var audioDates = [];
