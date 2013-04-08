@@ -1,3 +1,27 @@
+<!--style the display current time section-->
+<style type=text/css>
+.hr_bottom{
+  margin-bottom: 40px;  
+}
+
+#startTimeDisplay{
+  margin: 20px;
+  font: "Lucida Grande", Arial, Verdana, sans-serif; 
+  text-align:center;
+  font-size: 400%;
+}
+</style>
+<!--end-->
+<style type=text/css>
+  input.ui-slider-input {
+    display : none !important;
+  }
+
+  #mypanel{
+    opacity:0.92;
+  }
+</style>
+
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
@@ -328,26 +352,3 @@ function timeProgressStopUpdate(audioSource,type, listener){
     });
   </script>
 <!--end-->
-<!--style the display current time section-->
-<style type=text/css>
-.hr_bottom{
-  margin-bottom: 40px;  
-}
-
-#startTimeDisplay{
-  margin: 20px;
-  font: "Lucida Grande", Arial, Verdana, sans-serif; 
-  text-align:center;
-  font-size: 400%;
-}
-</style>
-<!--end-->
-<style type=text/css>
-  input.ui-slider-input {
-    display : none !important;
-  }
-
-  #mypanel{
-    opacity:0.92;
-  }
-</style>

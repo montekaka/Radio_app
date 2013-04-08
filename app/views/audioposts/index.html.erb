@@ -155,10 +155,12 @@ function setupHTML(inputYear){
     var uniqueMonths = getUniqueArray(audioMonths);
 
     //write html
-    var collapsibleDiv='';
+    var collapsibleDiv=''; 
+    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to top</a></li>'
     for(var i in uniqueMonths){
-        var listViewDiv='';
+        var listViewDiv='';        
         var ep = 0
+
         for(var j in descendingDates){
             if(descendingDates[j].getMonth()==uniqueMonths[i]){
                 listViewDiv = listViewDiv
@@ -182,7 +184,7 @@ function setupHTML(inputYear){
         }
         
         collapsibleDiv = collapsibleDiv
-            +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'<a href="#topheader" data-ajax="false" class="backtoTop">Return to top</a>'+'</li>'+listViewDiv;
+            +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
     }
     collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
                         +collapsibleDiv
@@ -237,8 +239,3 @@ if(audioCount>0){
     });
 }
 </script>
-<style type=text/css>
-    .backtoTop{
-        padding-left:50%;
-    }
-</style>
