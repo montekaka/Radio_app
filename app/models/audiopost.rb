@@ -4,7 +4,7 @@ class Audiopost < ActiveRecord::Base
 	belongs_to :user
      belongs_to :show
      
-	validates :short_note, :length=>{ :maximum => 500 }
+	validates :short_note, :length=>{ :maximum => 1500 }
 	validates :title, :length=>{ :maximum => 100 }, :presence => :true
   
 end
