@@ -26,7 +26,7 @@
                         today
                     </li>
                     <li class="audioItemTitle">
-                        Let's start uploading your first audio content.
+                        Let's start uploading your first audio content.-->
                     </li>
                 </ul>
             </div>
@@ -60,8 +60,8 @@ $( document ).on( "pageinit", "#demo-page", function() {
         if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
             if ( e.type === "swipeleft"  ) {
                 $( "#infoPanel" ).panel( "open" );
-            } 
-        }
+            };
+        };
     });
 });
 //end panel
@@ -74,16 +74,16 @@ function currentYearArray(inputArray, DateArray, currentYear){
     for(var i in DateArray){
         if(DateArray[i].getFullYear() == currentYear){
             indexArray.push(i);
-        }
-    }
+        };
+    };
     return putArrayCorresponding(indexArray, inputArray);
-}
+};
 
 function sortDateArray(arrayName, type){
     var dummyArray = [];
     for(var i in arrayName){
         dummyArray.push(arrayName[i]);
-    }
+    };
     if(type=="descending"){
         return dummyArray.sort(function(d1, d2){
             return d2-d1;
@@ -96,16 +96,16 @@ function sortDateArray(arrayName, type){
     }
     else{
         return 0;
-    }
-}
+    };
+};
 
 function getArrayIndex(sortedArray, originalArray){
     var indexArray = [];
     for(var i in sortedArray){
         indexArray.push(originalArray.indexOf(sortedArray[i]));
-    }
+    };
     return indexArray;
-}
+};
 
 function putArrayCorresponding(indexArray, inputArray){
     var outputArray = [];
@@ -113,24 +113,24 @@ function putArrayCorresponding(indexArray, inputArray){
     for(var i in indexArray){
         j = indexArray[i];
         outputArray.push(inputArray[j]);
-    }
+    };
     return outputArray;
-}
+};
 
 function getUniqueArray(inputArray){
     var dummy = inputArray.filter(function(item,i,inputArray){
         return i==inputArray.indexOf(item);
     });
     return sortDateArray(dummy, "descending");
-}
+};
 
 function getArrayMonths(inputArray){
     var audioMonths=[];
     for(var i in inputArray){
         audioMonths.push(inputArray[i].getMonth());
-    }
+    };
     return audioMonths;
-}
+};
 
 function setupHTML(inputYear){
     var currentYear = inputYear;
@@ -157,7 +157,7 @@ function setupHTML(inputYear){
     //write html
     var jumpToSectionDiv = '<li class="jqm-list-header">Jump to section</li>';
     var collapsibleDiv='';     
-    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>'
+    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
         var listViewDiv='';        
         var ep = 0
@@ -181,14 +181,14 @@ function setupHTML(inputYear){
                     +'</a>'
                 +'</li>';
                 ep = ep+1;
-            }
-        }
+            };
+        };
         
         collapsibleDiv = collapsibleDiv
             +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
                 
         jumpToSectionDiv = jumpToSectionDiv + '<li><a href="#'+monthNames[uniqueMonths[i]]+currentYear+'" data-ajax="false">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</a></li>';
-    }
+    };
     collapsibleDiv = "<ul data-role='listview' data-inset='true'>"
                         +collapsibleDiv
                     +"</ul>";
@@ -200,7 +200,7 @@ function setupHTML(inputYear){
     //$('#jumptosection').trigger("create");
     $('#jumptosection').listview('refresh');
     //console.log(jumpToSectionDiv);    
-}
+};
 
 
 //prepare the data we need
@@ -225,12 +225,12 @@ if(audioCount>0){
     $(document).bind('pageinit', function() {
         for (var i in audioDates){
             audioYears.push(audioDates[i].getFullYear());
-        }
+        };
         var uniqueYear = sortDateArray(getUniqueArray(audioYears),"descending");
         var optionListOfYear = '';
         for(var i in uniqueYear){
             optionListOfYear = optionListOfYear + '<option value="'+uniqueYear[i]+'">'+uniqueYear[i]+'</option>';
-        }
+        };
 
         $('#selectYearMenu').html(optionListOfYear);
         $('#selectYearMenu').selectmenu('refresh');
@@ -246,5 +246,5 @@ if(audioCount>0){
         setupHTML(currentYear);
         $(this).selectmenu('refresh');
     });
-}
+};
 </script>

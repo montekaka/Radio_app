@@ -128,28 +128,14 @@
       </div>
     </div>
   </div>
-
-<!--Disqus-->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'am1300'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-<!--end-->
 <script>
 function setSliderValue(id, w, s){
     return $(id).attr(w, s);
-}
+};
 
 function getSliderValue(id, w){
   return $(id).attr(w);
-}
+};
 
 function progressControl(){
   if($('#progressControl').html() == "Play"){
@@ -161,13 +147,13 @@ function progressControl(){
     $('#progressControl').text('Play').button('refresh');
     v.pause();
   }
-}
+};
 
 function pauseControl(){
   v.pause();
   timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTime);
   v.play();
-}
+};
 
 //fuction to calculate display hours
 function displayTime(input_seconds){
@@ -184,13 +170,10 @@ function displayTime(input_seconds){
     currentPlayingTime = min + ":" + input_seconds;
   }
   return currentPlayingTime;
-}
+};
+
 
 var v = document.getElementsByTagName("audio")[0];
-
-$(document).ready(function(){  
-  $('.song-progress').html();
-});
 
 //progress controller
 $("#sliderTime").on('slidestart', function() {
@@ -227,7 +210,7 @@ $("#sliderTime").on('slidestop', function() {
     v.currentTime = slider_value;
     v.play();
     timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
-  }
+  };
 });
 
 //volume controller
@@ -274,7 +257,7 @@ var audioPlayUpdateTime = function() {
     //once the audio finished playing, reset the Play button
     if(duration == v.currentTime){
       $('#progressControl').text('Play').button('refresh');
-    }
+    };
   };
 
 var audioPlayUpdateTimeDisplayOnly = function() {
@@ -290,16 +273,16 @@ var audioPlayUpdateTimeDisplayOnly = function() {
     //once the audio finished playing, reset the Play button
     if(duration == v.currentTime){
       $('#progressControl').text('Play').button('refresh');
-    }
+    };
   };  
 
 function timeProgressUpdate(audioSource, type, listener){
   audioSource.addEventListener(type,listener , false);
-}
+};
 
 function timeProgressStopUpdate(audioSource,type, listener){
   audioSource.removeEventListener(type, listener, false);
-}
+};
 
 //jump to selected section example
 // var sectionTimes = ['360','600','1200'];
@@ -326,11 +309,14 @@ function timeProgressStopUpdate(audioSource,type, listener){
   <script>    
     $(document).ready(function(){     
       var f = document.getElementsByTagName("audio")[0];
+
       f.addEventListener("loadedmetadata", function(){
         var playLenght = Math.round(this.duration);
+        console.log(playLenght);
         var currentPlayingTime = displayTime(playLenght);
         $("#startTimeDisplay").html(currentPlayingTime);        
-      })
+      });
+    //console.log('document ready');
     });
   </script>
   <!--Open Panel on swipe-->
@@ -349,6 +335,20 @@ function timeProgressStopUpdate(audioSource,type, listener){
               // }
           }
       });
-    });
+    });    
   </script>
+<!--end-->
+
+<!--Disqus-->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'am1300'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 <!--end-->
