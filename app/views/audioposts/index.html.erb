@@ -160,7 +160,7 @@ function setupHTML(inputYear){
     var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
         var listViewDiv='';        
-        var ep = 0
+        var ep = 0;
 
         for(var j in descendingDates){
             if(descendingDates[j].getMonth()==uniqueMonths[i]){
@@ -246,5 +246,5 @@ if(audioCount>0){
         setupHTML(currentYear);
         $(this).selectmenu('refresh');
     });
-};
+}
 </script>
