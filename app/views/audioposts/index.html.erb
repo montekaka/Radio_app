@@ -35,17 +35,7 @@
 <!--info panel-->
 <div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="c">
      <ul data-role="listview" data-inset="false" data-theme="d" data-divider-theme="d" class="jqm-list" id='jumptosection'>
-<!--         <li class="jqm-list-header">Jump to section</li>
-        <li><a href="#Jun2012" data-ajax="false">June 2012</a></li> -->
     </ul>
-<!--     <div data-role="header" data-theme="a" class="ui-corner-top">
-        <h1><%=@show.name %></h1>
-    </div>
-    <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
-        <p><strong>Show Host:</strong> <%=@show.djname%></p>
-        <p><strong>Show Category:</strong> <%=@show.category%></p>
-        <p><%= @show.description %></p>
-    </div> -->
 </div>
 <script>
 //panel
@@ -219,7 +209,7 @@ if(audioCount>0){
         audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
         aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
         aduioTitles.push('<%= audiopost.title%>');
-        aduioNotes.push('<%= audiopost.short_note%>');        
+        //aduioNotes.push('<%= audiopost.short_note %>');
     <% end %>
     
     $(document).bind('pageinit', function() {
