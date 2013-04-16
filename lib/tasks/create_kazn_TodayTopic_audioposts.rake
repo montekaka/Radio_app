@@ -1,4 +1,4 @@
-desc "Create KMRB Shows Podcast Archive"
+desc "Create Today Topic Shows Podcast Archive"
 task :create_kazn_TodayTopic_audioposts => :environment do
 	require 'updateAudiopost'
 	require 'nokogiriTodayTopic'
@@ -29,8 +29,6 @@ task :create_kazn_TodayTopic_audioposts => :environment do
 		showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 	end
 end
-
-
 
 
 
