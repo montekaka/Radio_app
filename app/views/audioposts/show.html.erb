@@ -27,99 +27,66 @@
 <% end %>
 
 
-<!---panel-->
-    <div data-role="panel" id="mypanel" data-position="right" data-display="push" data-theme="b">
-      <!--Panel for description-->
-      <div data-role="header" data-theme="a" class="ui-corner-top">
-        <h1><%= @audiopost.title %></h1>
-      </div>
-      <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
-        <p id = 'showDate'><strong>Show Date:</strong> <%= @audiopost.audio_date %></p>
-        <% if @audiopost.short_note.nil? %>
-        <p>
-          <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
-            Close
-          </button>        
-        </p>
-        <% else %>
-          <p id='showDescription'>
-            <%= @audiopost.short_note.html_safe %>
-          </p>
-          <p>
-            <button href="#mypanel" data-theme="b" data-rel="close" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">
-              Close
-            </button>        
-          </p>          
-        <% end %>
-      </div>
-      <!--end Panel for description-->
-        <!--panel for jump to the different section content goes here-->
-<!--         <h2>Jump to section</h2>
-        <div data-role="content">
-          <button class= 'audioChapter' data-theme="d" value='0' >
-            城市破產
-          </button>
-          <button class='audioChapter' data-theme="d"  value='960'>
-            奧運軍訓
-          </button>
-          <button href="#mypanel" data-theme="b" data-rel="close">
-            Done
-          </button>
-        </div>
-     -->
-    <!-- /panel -->
-    </div>
-<!---panel-->
-
-  <div data-role="header" data-theme="b">   
-    <h1>
-      <%= @audiopost.title %>
-    </h1>
-    <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
-    <!--tricker the panel-->
-    <a href="#mypanel" class="ui-btn-right" data-position-to="window" data-icon="info">About</a>
-    <!---->
+<!---right panel-->
+  <div data-role="panel" id="rightPanel" data-position="right" data-display="push" data-theme="b">
   </div>
-  <div data-role="content">
-    
-    <hr>
-     <p id='DisplayCurrentTime'>00:00</p>
-    <hr id="hr_bottom">
-    
-    <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>  
-    <!--Disqus-->
-    <div data-role="collapsible" data-theme="e" data-content-theme="c">
-      <h3>留言</h3>
-      <!-- START: Livefyre Embed -->
-        <div id="disqus_thread"></div>
-      <!-- END: Livefyre Embed -->
-    </div>
-    <!--end-->
-      <audio class="player" id='audioArchive'>
-        <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
-      </audio>
-  </div>
-  
-    <div data-role='footer' data-position="fixed" data-theme="b">
-      <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
-        <tr>
-          <td><p id="DisplayRemindTime"></p></td>
-          <td width="100%" class="slider-shit">
-            <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
-          </td>
-        </tr>
-      </table>
-      <div data-role="footer" class="ui-bar" data-theme="b">
-        <div data-role="navbar">
-          <ul>
-            <li>
-              <button type="button" id = "playButton" data-theme="b">Play</button>
-            </li>
-          </ul>
-        </div>     
-      </div>
+<!---end right panel-->
+<!---left panel-->
+<div data-role="panel" id="leftPanel" data-position="left" data-display="push" data-theme="b">
+  <div id="disqus_thread"></div>
+</div>
+<!---end left panel-->
+<div data-role="header" data-theme="b">
+  <h1>
+    <%= @audiopost.title %>
+  </h1>    
+  <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "data-rel"=>"back"} %>
+</div>
+<div data-role="content">    
+  <hr>
+   <p id='DisplayCurrentTime'>00:00</p>
+  <hr id="hr_bottom">
+  <div data-role="collapsible" data-theme="e" data-content-theme="c">
+    <h3><%= @audiopost.title %></h3>
+    <div>
+      <p id = 'showDate'><strong>Show Date:</strong> <%= @audiopost.audio_date %></p>
+      <% if @audiopost.short_note.nil? %>
+      <% else %>
+        <%= @audiopost.short_note.html_safe %>
+      <% end %>
+      <p>        
     </div>
   </div>
+    <audio class="player" id='audioArchive'>
+      <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
+    </audio>
+  </div>
+  <div data-role='footer' data-position="fixed" data-theme="b">
+    <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
+      <tr>
+        <td><p id="DisplayRemindTime"></p></td>
+        <td width="100%" class="slider-shit">
+          <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
+        </td>
+      </tr>
+    </table>
+    <div data-role="footer" class="ui-bar" data-theme="b">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="#leftPanel" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Discuss</a>
+          </li>            
+          <li>
+            <button type="button" id = "playButton" data-theme="b" data-corners="false" >Play</button>
+          </li>
+          <li>
+            <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
+          </a>            
+        </ul>
+      </div>     
+    </div>
+  </div>
+</div>
 <!--the Time control js-->  
 <script>
 //fuction to calculate display hours
@@ -151,7 +118,6 @@ function sliderController(audioSource, PlayStopButtonID, DisplayCurrentTimeID, D
 
 //ProgressControl function link the slider time to display time
 function sliderControllerWithSliderTime(audioSource, PlayStopButtonID, DisplayCurrentTimeID, DisplayRemindTimeID, TimeSliderID){
-  //$(TimeSliderID).val(Math.round(audioSource.currentTime)).slider("refresh");
   $(DisplayCurrentTimeID).html(displayTime($(TimeSliderID).val()));
   $(DisplayRemindTimeID).html("-"+displayTime(audioSource.duration-audioSource.currentTime));
   if(audioSource.currentTime==audioSource.duration){
