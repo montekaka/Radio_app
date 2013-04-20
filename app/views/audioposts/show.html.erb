@@ -4,7 +4,7 @@
   margin-bottom: 40px;  
 }
 
-#startTimeDisplay{
+#DisplayCurrentTime{
   margin: 20px;
   font: "Lucida Grande", Arial, Verdana, sans-serif; 
   text-align:center;
@@ -83,7 +83,7 @@
   <div data-role="content">
     
     <hr>
-     <p id='startTimeDisplay' onclick="progressControl();">00:00</p>
+     <p id='DisplayCurrentTime'>00:00</p>
     <hr id="hr_bottom">
     
     <a href="#mypanel" data-role="button" data-icon="arrow-l" data-iconpos="right" data-theme="e"><%= @audiopost.title %></a>  
@@ -95,23 +95,15 @@
       <!-- END: Livefyre Embed -->
     </div>
     <!--end-->
-      <audio class="player">
+      <audio class="player" id='audioArchive'>
         <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
       </audio>
-<!--       
-      <br />
-      <div id="sliderVol" data-role="fieldcontain">
-        <label for="slider-2">Volume</label>
-        <input type="range" name="slider-fill" id="volControl" value="20" min="0" max="100" data-highlight="true" data-mini="true"/>
-      </div>
-       -->
   </div>
   
     <div data-role='footer' data-position="fixed" data-theme="b">
       <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
         <tr>
-          <!--<td><p id="startTimeDisplay"></p></td>-->
-          <td><p id="currentTimeDisplay"></p></td>
+          <td><p id="DisplayRemindTime"></p></td>
           <td width="100%" class="slider-shit">
             <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
           </td>
@@ -121,40 +113,15 @@
         <div data-role="navbar">
           <ul>
             <li>
-              <button type="button" id = "progressControl" data-theme="b" onclick="progressControl();">Play</button>
+              <button type="button" id = "playButton" data-theme="b">Play</button>
             </li>
           </ul>
         </div>     
       </div>
     </div>
   </div>
+<!--the Time control js-->  
 <script>
-function setSliderValue(id, w, s){
-    return $(id).attr(w, s);
-};
-
-function getSliderValue(id, w){
-  return $(id).attr(w);
-};
-
-function progressControl(){
-  if($('#progressControl').html() == "Play"){
-    $('#progressControl').text('||').button('refresh');
-    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
-    v.play();
-  }
-  else{
-    $('#progressControl').text('Play').button('refresh');
-    v.pause();
-  }
-};
-
-function pauseControl(){
-  v.pause();
-  timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTime);
-  v.play();
-};
-
 //fuction to calculate display hours
 function displayTime(input_seconds){
   var h = Math.floor(input_seconds/3600);
@@ -172,173 +139,123 @@ function displayTime(input_seconds){
   return currentPlayingTime;
 };
 
-
-var v = document.getElementsByTagName("audio")[0];
-
-//progress controller
-$("#sliderTime").on('slidestart', function() {
-  if($('#progressControl').text()=="Play"){
-    return 0;
-  }
-  else{
-    v.pause();  
-    timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTime);
-    v.play();
-    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTimeDisplayOnly);  
-  }
-});
-
-$("#sliderTime").on('change', function() {
-  var audio_duration = v.duration;
-  var slider_value = $("#timeControl").val();
-  var remain_audio_time = "-"+displayTime(audio_duration - slider_value);
-
-  //only update the starTimeDisplay
-  $("#startTimeDisplay").html(displayTime(slider_value));
-});
-
-
-$("#sliderTime").on('slidestop', function() {
-  if($('#progressControl').text()=="Play"){
-    var slider_value = $("#timeControl").val();
-    v.currentTime = slider_value;
-  }
-  else{
-    v.pause();
-    timeProgressStopUpdate(v,"timeupdate",audioPlayUpdateTimeDisplayOnly);
-    var slider_value = $("#timeControl").val();
-    v.currentTime = slider_value;
-    v.play();
-    timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
+//ProgressControl function link the play time to display time
+function sliderController(audioSource, PlayStopButtonID, DisplayCurrentTimeID, DisplayRemindTimeID, TimeSliderID){
+  $(TimeSliderID).val(Math.round(audioSource.currentTime)).slider("refresh");
+  $(DisplayCurrentTimeID).html(displayTime($(TimeSliderID).val()));
+  $(DisplayRemindTimeID).html("-"+displayTime(audioSource.duration-audioSource.currentTime));
+  if(audioSource.currentTime==audioSource.duration){
+    $(PlayStopButtonID).text('Play').button('refresh');
   };
-});
-
-//volume controller
-$("#sliderVol").change(function() {
-  var slider_value = $("#volControl").val()/100;
-  // do something..
-  v.volume = slider_value;
-});
-
-//set default volume to 20 and max length
-v.addEventListener("loadedmetadata", function(){
-  this.volume=0.2;
-  var default_Volume = this.volume*100
-  setSliderValue('#volControl', 'value', default_Volume);
-  $("#volControl").slider('refresh');
-  //for max length
-  var playLenght = Math.round(this.duration);
-  setSliderValue('#timeControl','max',playLenght);
-
-  $("#timeControl").slider('refresh');
-  //for displyaing the start time
-  var audio_startPlayingTime = displayTime(getSliderValue("#timeControl","value"));
-  $("#startTimeDisplay").html(audio_startPlayingTime);
-
-  //for displyaing the end time
-  var currentPlayingTime = "-" + displayTime(playLenght);
-  $("#currentTimeDisplay").html(currentPlayingTime);
-});
-
-//audio time progress update
-var audioPlayUpdateTime = function() {
-    var duration = this.duration;
-    var sec = this.currentTime;
-    var currentPlayingTime = displayTime(sec);
-
-    //set the timeControl slider input value to audio currentTime
-    setSliderValue('#timeControl', 'value', this.currentTime);
-    $("#timeControl").slider('refresh');
-
-    //slide and change the display time equal to the time in the input field    
-    var remaindingTime = "-" + displayTime(duration-sec);
-    $("#currentTimeDisplay").html(remaindingTime);
-
-    //once the audio finished playing, reset the Play button
-    if(duration == v.currentTime){
-      $('#progressControl').text('Play').button('refresh');
-    };
-  };
-
-var audioPlayUpdateTimeDisplayOnly = function() {
-    var duration = this.duration;
-    var sec = this.currentTime;
-    
-    var currentPlayingTime = displayTime(sec);
-
-    //slide and change the display time equal to the time in the input field    
-    var remaindingTime = "-" + displayTime(duration-sec);
-    $("#currentTimeDisplay").html(remaindingTime);
-
-    //once the audio finished playing, reset the Play button
-    if(duration == v.currentTime){
-      $('#progressControl').text('Play').button('refresh');
-    };
-  };  
-
-function timeProgressUpdate(audioSource, type, listener){
-  audioSource.addEventListener(type,listener , false);
 };
 
-function timeProgressStopUpdate(audioSource,type, listener){
-  audioSource.removeEventListener(type, listener, false);
+//ProgressControl function link the slider time to display time
+function sliderControllerWithSliderTime(audioSource, PlayStopButtonID, DisplayCurrentTimeID, DisplayRemindTimeID, TimeSliderID){
+  //$(TimeSliderID).val(Math.round(audioSource.currentTime)).slider("refresh");
+  $(DisplayCurrentTimeID).html(displayTime($(TimeSliderID).val()));
+  $(DisplayRemindTimeID).html("-"+displayTime(audioSource.duration-audioSource.currentTime));
+  if(audioSource.currentTime==audioSource.duration){
+    $(PlayStopButtonID).text('Play').button('refresh');
+  };
 };
 
-//jump to selected section example
-// var sectionTimes = ['360','600','1200'];
-// var currentSection = sectionTimes[0];
-
-// $('.audioChapter').tap(function(){
-//   var $chapterValue = $(this).val();
-
-//   if($('#progressControl').html() == "Play"){
-//     $('#progressControl').text('||').button('refresh');
-//     timeProgressUpdate(v,"timeupdate",audioPlayUpdateTime);  
-//     v.play();
-//     v.currentTime = $chapterValue;
-
-//   }
-//   else{
-//     v.currentTime = $chapterValue;    
-//   }  
-//   console.log($chapterValue);
-//   $("#mypanel").panel("close");
-// });
-</script>
-<!--Get Current Time to display the length of total time for starting-->
-  <script>    
-    $(document).ready(function(){     
-      var f = document.getElementsByTagName("audio")[0];
-
-      f.addEventListener("loadedmetadata", function(){
-        var playLenght = Math.round(this.duration);
-        console.log(playLenght);
-        var currentPlayingTime = displayTime(playLenght);
-        $("#startTimeDisplay").html(currentPlayingTime);        
-      });
-    //console.log('document ready');
+function audioControl(audioSource, PlayStopButtonID, DisplayCurrentTimeID, DisplayRemindTimeID, TimeSliderID){
+  if(audioSource.paused){
+    console.log('Target Audio is currently at pause mood');
+    audioSource.play();
+    $(PlayStopButtonID).text('Stop').button('refresh');
+    $('audio').bind('timeupdate',function(){
+      sliderController(audioSource, PlayStopButtonID, DisplayCurrentTimeID, DisplayRemindTimeID, TimeSliderID);
     });
-  </script>
-  <!--Open Panel on swipe-->
-  <script>
-    $( document ).on( "pageinit", "#demo-page", function() {
-      $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
-          // We check if there is no open panel on the page because otherwise
-          // a swipe to close the left panel would also open the right panel (and v.v.).
-          // We do this by checking the data that the framework stores on the page element (panel: open).
-          if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
-              if ( e.type === "swipeleft"  ) {
-                  $( "#mypanel" ).panel( "open" );
-              } 
-              // else if ( e.type === "swiperight" ) {
-              //     $( "#left-panel" ).panel( "open" );
-              // }
-          }
-      });
-    });    
-  </script>
-<!--end-->
+  }
+  else{
+    console.log('Target Audio is currently at playing mood');
+    audioSource.pause();
+    $(PlayStopButtonID).text('Play').button('refresh');
+  };
+};
 
+$(document).ready(function(){
+  var audio = document.getElementById('audioArchive');
+  audio.addEventListener("loadedmetadata", function(){
+
+  var playLength = Math.round(audio.duration);
+    $('#DisplayCurrentTime').html(displayTime(playLength));
+    if(audio.currentTime==0){
+      $('#DisplayRemindTime').html("-"+displayTime(playLength));
+    };
+    $('#timeControl').attr('max', playLength);
+    $('#timeControl').slider('refresh');
+    
+    $('#DisplayCurrentTime').on('tap',function(){
+      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
+    });
+    $('#playButton').on('tap',function(){
+      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
+    });
+
+    //slider control the time
+    $('#timeControl').on('slidestart',function(){
+      if(audio.currentTime==0){
+        audio.play();
+        audio.pause();
+        console.log("The audio has not played any yet, so we will like to init it.");
+      }
+      else if($('#playButton').text()=="Play"){        
+        console.log("The audio has been playing but currently at a pause state, so we do not need to do anything.");
+        return 0;
+      }
+      else{
+        console.log("The audio is playing, so we will like to pause it first.");
+        audio.pause();
+        $('audio').unbind('timeupdate');
+        audio.play();
+        $('audio').bind('timeupdate', function(){
+          sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+        });
+      };
+    });
+    //end slider start
+    //slider change
+    $("#timeControl").on('change', function(){    
+      $("#DisplayCurrentTime").html(displayTime($("#timeControl").val()));
+      if($('#playButton').text()=="Play"){        
+        $('#DisplayRemindTime').html("-"+displayTime(audio.duration - $("#timeControl").val()));
+      }
+    });
+    //end slider change
+    //slider stop
+    $("#timeControl").on('slidestop', function(){
+      if(audio.currentTime==0){
+        var slider_value = $("#timeControl").val();        
+        console.log("update time to " + displayTime(slider_value));
+        $('audio').bind('timeupdate', function(){
+          sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+        });        
+        audio.currentTime = slider_value;        
+      }
+      else if($('#playButton').text()=="Play"){      
+        var slider_value = $("#timeControl").val();
+        console.log("update time to " + displayTime(slider_value));
+        audio.currentTime = slider_value;
+      }
+      else{
+        audio.pause();
+        $('audio').unbind('timeupdate');
+        var slider_value = $("#timeControl").val();
+        console.log("Slider stop and update time to " + displayTime(slider_value));
+        audio.currentTime = slider_value;
+        $('audio').bind('timeupdate',function(){
+          sliderController(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+        });        
+        audio.play();
+      };
+    });    
+    //end slider stop
+    //end slider control
+  });
+});
+</script>
 <!--Disqus-->
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
