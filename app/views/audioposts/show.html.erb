@@ -48,7 +48,7 @@
 </div>
 <div data-role="content">    
   <hr>
-   <p id='DisplayCurrentTime'>00:00</p>
+   <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
   <hr id="hr_bottom">
   <div data-role="collapsible" data-theme="e" data-content-theme="c">
     <h3><%= @audiopost.title %></h3>
@@ -81,7 +81,7 @@
             <a href="#leftPanel" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Discuss</a>
           </li>            
           <li>
-            <button type="button" id = "playButton" onclick="fuck();" data-theme="b" data-corners="false" >Play</button>
+            <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
           </li>
           <li>
             <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
@@ -146,16 +146,14 @@ function audioControl(audioSource, PlayStopButtonID, DisplayCurrentTimeID, Displ
 };
 
 var audio = document.getElementById('audioArchive');
-  audio.play();
-  audio.pause();
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
 };  
 
 $(document).ready(function(){
-  //var audio = document.getElementById('audioArchive');
-
-
+  // var audio = document.getElementById('audioArchive');
+  // audio.play();
+  // audio.pause();
   audio.addEventListener("loadedmetadata", function(){
 
   var playLength = Math.round(audio.duration);
@@ -166,10 +164,10 @@ $(document).ready(function(){
     $('#timeControl').attr('max', playLength);
     $('#timeControl').slider('refresh');
     
-    $('#DisplayCurrentTime').on('tap',function(){
-      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
-    });
     // this is not working well with iOS Simulator
+    // $('#DisplayCurrentTime').on('tap',function(){
+    //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
+    // });
     // $('#playButton').on('tap',function(){
     //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
     // });
