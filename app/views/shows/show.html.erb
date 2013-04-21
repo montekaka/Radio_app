@@ -48,7 +48,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<% @show.audioposts.each do |audiopost|%>
+				<% @show.audioposts.order('audio_date DESC').each do |audiopost|%>
 					<tr>
 						<td>
 							<%= link_to audiopost.title, show_audiopost_path(@show, audiopost), :rel=>"external"%>
