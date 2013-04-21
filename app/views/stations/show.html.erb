@@ -1,5 +1,6 @@
 <div data-role="header" data-theme="a">
     <h1><%= @station.name %></h1>
+    <%= link_to "Back", stations_path, :"data-icon"=>"home", :"class"=>"ui-btn-left"%>
     <%if current_user %>
       <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
     <%else%>
@@ -7,16 +8,34 @@
     <%end%>    
 </div>
 <div data-role="content">
-  <div class="content-primary">
-    <%= link_to 'Create New Show', new_show_path, :"data-role"=>"button",:"data-theme"=>"e", :rel=>"external" %>
-    <br />
+  <p id="notice"><%= notice %></p>
+  <div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="d">
+    <h4>Station Details</h4>
+    <p>
+      <b>Station Name:</b>
+      <%= @station.name %>
+    </p>
+    <p>
+      <b>Station Description:</b>
+      <%= @station.description %>
+    </p>    
+    <p>
+      <b>Show URL:</b>
+      <%= @station.station_url %>
+    </p>
+    <%= link_to 'Edit', edit_station_path(@station), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external", :"data-theme"=>"b", :'data-mini'=>'true', 'data-icon'=>'edit' %>
+  </div>
+  <div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="d">
+    <h4>List of Shows</h4>
+    <p>
+      <%= link_to 'New Audio', new_station_show_path(@station) ,{'data-role'=>"button", 'data-mini'=>"true", "data-theme"=>"b", 'data-inline'=>"true", 'data-icon'=>"new"} %>
+    </p>
     <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
       <thead>
         <tr class="ui-bar-d">
           <th>Show Name</th>
           <th data-priority="3">Show Host</th>
           <th data-priority="4">Show Category</th>
-          <th data-priority="5">Show Description</th>
           <th data-priority="1">Detail</th>
           <th data-priority="2">Destroy</th>
         </tr>        
@@ -29,7 +48,6 @@
             </td>
             <td><%= show.djname%></td>
             <td><%= show.category%></td>
-            <td><%= show.description%></td>
             <td><%= link_to 'Manage', show %></td>
             <td>
               <%= link_to 'Destroy', show, :confirm => 'Are you sure?', :method => :delete, :rel=>"external" %>
@@ -37,6 +55,6 @@
           </tr>
         <% end %>
       </tbody>
-    </table>
+    </table>    
   </div>
 </div>
