@@ -1,3 +1,4 @@
+# encoding: UTF-8
 desc "Update Money Radio Episodes"
 task :update_money_radio => :environment do
   #require 'nokogiri'

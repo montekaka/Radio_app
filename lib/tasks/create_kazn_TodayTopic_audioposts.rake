@@ -1,3 +1,4 @@
+# encoding: UTF-8
 desc "Create Today Topic Shows Podcast Archive"
 task :create_kazn_TodayTopic_audioposts => :environment do
 	require 'updateAudiopost'
