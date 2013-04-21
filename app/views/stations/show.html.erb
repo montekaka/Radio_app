@@ -1,20 +1,42 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @station.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @station.description %>
-</p>
-
-<p>
-  <b>Station url:</b>
-  <%= @station.station_url %>
-</p>
-
-
-<%= link_to 'Edit', edit_station_path(@station) %> |
-<%= link_to 'Back', stations_path %>
+<div data-role="header" data-theme="a">
+    <h1><%= @station.name %></h1>
+    <%if current_user %>
+      <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+    <%else%>
+      <%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+    <%end%>    
+</div>
+<div data-role="content">
+  <div class="content-primary">
+    <%= link_to 'Create New Show', new_show_path, :"data-role"=>"button",:"data-theme"=>"e", :rel=>"external" %>
+    <br />
+    <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+      <thead>
+        <tr class="ui-bar-d">
+          <th>Show Name</th>
+          <th data-priority="3">Show Host</th>
+          <th data-priority="4">Show Category</th>
+          <th data-priority="5">Show Description</th>
+          <th data-priority="1">Detail</th>
+          <th data-priority="2">Destroy</th>
+        </tr>        
+      </thead>
+      <tbody>
+        <% @station.shows.each do |show| %>
+          <tr>
+            <td>
+              <%= link_to show.name, show_audioposts_path(show)%>
+            </td>
+            <td><%= show.djname%></td>
+            <td><%= show.category%></td>
+            <td><%= show.description%></td>
+            <td><%= link_to 'Manage', show %></td>
+            <td>
+              <%= link_to 'Destroy', show, :confirm => 'Are you sure?', :method => :delete, :rel=>"external" %>
+            </td>            
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
