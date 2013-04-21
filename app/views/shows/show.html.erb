@@ -51,7 +51,7 @@
 				<% @show.audioposts.each do |audiopost|%>
 					<tr>
 						<td>
-							<%= link_to audiopost.title, show_audiopost_path(@show, audiopost)%>
+							<%= link_to audiopost.title, show_audiopost_path(@show, audiopost), :rel=>"external"%>
 						</td>
 						<td>
 							<%= audiopost.audio_date%>

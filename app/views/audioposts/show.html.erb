@@ -153,18 +153,17 @@ function audioControl(audioSource, PlayStopButtonID, DisplayCurrentTimeID, Displ
   };
 };
 
+
 var audio = document.getElementById('audioArchive');
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
 };  
-
-$(document).ready(function(){
+$(document).bind('pageinit', '#deme-page',function(){
   // var audio = document.getElementById('audioArchive');
   // audio.play();
   // audio.pause();
   audio.addEventListener("loadedmetadata", function(){
-
-  var playLength = Math.round(audio.duration);
+    var playLength = Math.round(audio.duration);
     $('#DisplayCurrentTime').html(displayTime(playLength));
     if(audio.currentTime==0){
       $('#DisplayRemindTime').html("-"+displayTime(playLength));
