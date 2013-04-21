@@ -129,13 +129,10 @@ function setupHTML(inputYear){
     var currentYearAudioDates = currentYearArray(audioDates,audioDates, currentYear);
     var currentYearAudioTitles = currentYearArray(aduioTitles,audioDates, currentYear);
     var currentYearAudioLinks = currentYearArray(aduioLinks,audioDates, currentYear);
-    var currentYearAudioNotes = currentYearArray(aduioNotes,audioDates, currentYear);
-
     var descendingDates = sortDateArray(currentYearAudioDates,"descending");
     var indexDateArray = getArrayIndex(descendingDates, currentYearAudioDates);
     var newAudioTitles = putArrayCorresponding(indexDateArray, currentYearAudioTitles);
     var newAudioLinks = putArrayCorresponding(indexDateArray, currentYearAudioLinks);
-    var newAudioNotes = putArrayCorresponding(indexDateArray, currentYearAudioNotes);
     var maxDate = descendingDates[0];
     var minDate = descendingDates[descendingDates.length-1];
     var maxYear = maxDate.getFullYear();
@@ -210,7 +207,6 @@ if(audioCount>0){
         audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
         aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
         aduioTitles.push('<%= audiopost.title%>');
-        //aduioNotes.push('<%= audiopost.short_note %>');
     <% end %>
     
     $(document).bind('pageinit', function() {
