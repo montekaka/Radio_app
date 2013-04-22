@@ -143,7 +143,7 @@ function setupHTML(inputYear){
     var uniqueMonths = getUniqueArray(audioMonths);
 
     //write html
-    var jumpToSectionDiv = '<li class="jqm-list-header">Jump to section</li>';
+    var jumpToSectionDiv = '<li class="jqm-list-header" data-icon="delete"><a href="#" data-rel="close">Table of Content (目錄)</a></li>';
     var collapsibleDiv='';     
     var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
