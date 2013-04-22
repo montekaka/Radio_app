@@ -55,6 +55,7 @@ def getShowDescription(showurl)
 	dummyDesc = []
 	page = Nokogiri::HTML(open(showurl))
 	description = page.css('ul#breakNewsList').text.strip
+	puts "description:" + description
 	description.each do |i|
 		dummyDesc.push(i)
 	end
