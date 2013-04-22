@@ -1,10 +1,9 @@
-# encoding: UTF-8
 desc "Update Today Topic Shows Podcast Archive"
-task :kazn_TodayTopic_audioposts_update => :environment do
+task :kazn_DCWire_audioposts_update => :environment do
 	require 'updateAudiopost'
-	require 'nokogiriTodayTopic'
+	require 'nokogiriDCWire'
 	station = Station.find_by_name('AM1300')
-	showa = station.shows.find_by_name('今日話題')
+	showa = station.shows.find_by_name('華府熱線')
 	puts showa.name
 
 	lastAudiopost = showa.audioposts.order("audio_date desc").limit(1)

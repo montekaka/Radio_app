@@ -4,7 +4,7 @@
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
         -->
-        <a href="#infoPanel" class="ui-btn-right" data-icon="info" data-rel="push">About</a>
+        <a href="#infoPanel" class="ui-btn-right" data-icon="bars" data-rel="push">About</a>
         <%if current_user %>
             <%= link_to 'Home', @show, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
         <% end %>        
@@ -55,6 +55,7 @@ $( document ).on( "pageinit", "#demo-page", function() {
     });
 });
 //end panel
+
 var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
 
@@ -128,13 +129,10 @@ function setupHTML(inputYear){
     var currentYearAudioDates = currentYearArray(audioDates,audioDates, currentYear);
     var currentYearAudioTitles = currentYearArray(aduioTitles,audioDates, currentYear);
     var currentYearAudioLinks = currentYearArray(aduioLinks,audioDates, currentYear);
-    var currentYearAudioNotes = currentYearArray(aduioNotes,audioDates, currentYear);
-
     var descendingDates = sortDateArray(currentYearAudioDates,"descending");
     var indexDateArray = getArrayIndex(descendingDates, currentYearAudioDates);
     var newAudioTitles = putArrayCorresponding(indexDateArray, currentYearAudioTitles);
     var newAudioLinks = putArrayCorresponding(indexDateArray, currentYearAudioLinks);
-    var newAudioNotes = putArrayCorresponding(indexDateArray, currentYearAudioNotes);
     var maxDate = descendingDates[0];
     var minDate = descendingDates[descendingDates.length-1];
     var maxYear = maxDate.getFullYear();
@@ -145,7 +143,7 @@ function setupHTML(inputYear){
     var uniqueMonths = getUniqueArray(audioMonths);
 
     //write html
-    var jumpToSectionDiv = '<li class="jqm-list-header">Jump to section</li>';
+    var jumpToSectionDiv = '<li class="jqm-list-header" data-icon="delete"><a href="#" data-rel="close">Table of Content (目錄)</a></li>';
     var collapsibleDiv='';     
     var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
@@ -209,7 +207,6 @@ if(audioCount>0){
         audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
         aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
         aduioTitles.push('<%= audiopost.title%>');
-        //aduioNotes.push('<%= audiopost.short_note %>');
     <% end %>
     
     $(document).bind('pageinit', function() {
@@ -236,5 +233,6 @@ if(audioCount>0){
         setupHTML(currentYear);
         $(this).selectmenu('refresh');
     });
-}
+};
+
 </script>
