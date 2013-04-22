@@ -16,6 +16,8 @@ task :kazn_TodayTopic_audioposts_update => :environment do
 				puts "episode date: " + e.date
 				showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 			end
+		else
+			puts "No new episode to update"
 		end		
 	end
 end
