@@ -7,9 +7,9 @@ task :create_kmrb_shows => :environment do
   if station == nil
     station = Station.create(:name=>"AM1430")
     puts "there is no am1430 station, create a new one"
-  end    
-  #we should delete all the shows associate to am1430
-  showMaster = updateShowInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=15')
+    showMaster = updateShowInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=15')
+  end  
+  #we should delete all the shows associate to am1430  
   showMaster.each do |s|
     puts "show name: " + s.name
     puts "show category: " + s.categoryName

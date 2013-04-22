@@ -34,6 +34,7 @@
       <thead>
         <tr class="ui-bar-d">
           <th>Show Name</th>
+          <th>Epsiodes</th>
           <th data-priority="3">Show Host</th>
           <th data-priority="4">Show Category</th>
           <th data-priority="1">Detail</th>
@@ -44,8 +45,13 @@
         <% @station.shows.each do |show| %>
           <tr>
             <td>
-              <%= link_to show.name, show_audioposts_path(show)%>
+              <% if show.audioposts.count>0 %>
+                <%= link_to show.name, show_audioposts_path(show)%>
+              <% else %>
+                <%= show.name %>
+              <% end %>
             </td>
+            <td><%= show.audioposts.count%></td>
             <td><%= show.djname%></td>
             <td><%= show.category%></td>
             <td><%= link_to 'Manage', show %></td>
