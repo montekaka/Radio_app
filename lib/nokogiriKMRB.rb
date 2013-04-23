@@ -58,8 +58,8 @@ def getShowDescription(showurl)
 	return description
 end
 
-fuck = getShowDescription('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
-puts fuck
+# fuck = getShowDescription('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+# puts fuck
 
 def getShowName(showurl)
 	dummyTitle = []
