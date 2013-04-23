@@ -50,21 +50,16 @@ def getShowCategory(homeURL)
 	end
 	return categoryMaster
 end
-
+#'td:nth-child(1) a'
 def getShowDescription(showurl)
 	dummyDesc = []
 	page = Nokogiri::HTML(open(showurl))
-	description = page.css('ul#breakNewsList').text.strip
-	puts "description:" + description
-	description.each do |i|
-		dummyDesc.push(i)
-	end
-	if dummyDesc[2].nil?
-		return ''
-	else
-		return dummyDesc[2].strip
-	end
+	description = page.css('div.right01 dl ul.list6')[1].text.strip
+	return description
 end
+
+fuck = getShowDescription('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+puts fuck
 
 def getShowName(showurl)
 	dummyTitle = []
