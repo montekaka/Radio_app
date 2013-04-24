@@ -7,7 +7,7 @@ task :create_kazn_shows => :environment do
   if station == nil
     station = Station.create(:name=>"AM1300")
     puts "there is no AM1300 station, create a new one"
-  end    
+  end
   #we should delete all the shows associate to AM1300
   showMaster = updateShowInfo('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=29')
   showMaster.each do |s|

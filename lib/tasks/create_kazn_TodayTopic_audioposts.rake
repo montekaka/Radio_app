@@ -5,7 +5,7 @@ task :create_kazn_TodayTopic_audioposts => :environment do
 	require 'nokogiriTodayTopic'
 	
 	#check whether 1430 station exist?
-  station = Station.find_by_name('am1300')
+  station = Station.find_by_name('AM1300')
   # if station == nil
   #   station = Station.create(:name=>"am1300")
   #   puts "there is no am1300 station, create a new one"
