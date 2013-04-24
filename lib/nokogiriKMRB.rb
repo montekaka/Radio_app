@@ -70,11 +70,7 @@ def getShowName(showurl)
 	#return title[6..titleLength]	
 end
 
-# s = 'this has   some     whitespace'
-# s.gsub! /\s+/, ''
-# puts s.gsub! /\s+/, ''
-
-puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+#puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
 
 def getShowDummyInfo(showURL)
 	page = Nokogiri::HTML(open(showURL))
