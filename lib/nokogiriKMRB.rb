@@ -65,7 +65,7 @@ def getShowName(showurl)
 	dummyTitle = []
 	page = Nokogiri::HTML(open(showurl))
 	title = page.css('div.right01 dl ul.list6')[0].text.strip
-	return title
+	return title[3..title.length]
 	#titleLength = title.length
 	#return title[6..titleLength]	
 end
