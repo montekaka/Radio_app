@@ -65,12 +65,16 @@ def getShowName(showurl)
 	dummyTitle = []
 	page = Nokogiri::HTML(open(showurl))
 	title = page.css('div.right01 dl ul.list6')[0].text.strip
-	return title[6..title.length]
+	return title
 	#titleLength = title.length
 	#return title[6..titleLength]	
 end
 
-#puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+# s = 'this has   some     whitespace'
+# s.gsub! /\s+/, ''
+# puts s.gsub! /\s+/, ''
+
+puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
 
 def getShowDummyInfo(showURL)
 	page = Nokogiri::HTML(open(showURL))
