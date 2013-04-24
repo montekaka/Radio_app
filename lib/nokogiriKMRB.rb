@@ -70,7 +70,7 @@ def getShowName(showurl)
 	#return title[6..titleLength]	
 end
 
-puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+#puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
 
 def getShowDummyInfo(showURL)
 	page = Nokogiri::HTML(open(showURL))
