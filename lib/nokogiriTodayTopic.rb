@@ -55,23 +55,21 @@ end
 def updateAudiopost(showHTML, firstTime, dbLastDay)
     audiopostUpdateArray = []
     fetchAudiopost = getEpisodeInfo(showHTML, firstTime)
-    fetchAudiopost.each do |i|
-    	#puts Date.strptime(i.date[0..1]+'-'+i.date[3..4]+'-'+i.date[6..9], '%d-%m-%Y')
-        if Date.strptime(i.date[3..4]+'-'+i.date[0..1]+'-'+i.date[6..9], '%d-%m-%Y') > dbLastDay 
-        #we need to turn the i.date into datevalue
+    fetchAudiopost.each do |i|    	
+        if i.date > dbLastDay
             audiopostUpdateArray.push(i)            
         end
     end
     return audiopostUpdateArray
 end
 
-# latestDateInDB = Date.parse('2013-04-13') #March 20 2013
+# latestDateInDB = Date.parse('2013-04-23') #March 20 2013
 
 # episode = updateAudiopost('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37', 'F', latestDateInDB)
 
 # episode.each do |e|
 # 	puts "episode name: " + e.name
 # 	puts "episode desc: " + e.desc
-# 	puts "episode date: " + e.date
+# 	puts "episode date: " + e.date.to_s
 # 	puts "episode url: " + e.url
 # end
