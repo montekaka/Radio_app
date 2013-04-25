@@ -65,9 +65,10 @@ def getShowName(showurl)
 	dummyTitle = []
 	page = Nokogiri::HTML(open(showurl))
 	title = page.css('div.right01 dl ul.list6')[0].text.strip
-	return title[6..title.length]
-	#titleLength = title.length
-	#return title[6..titleLength]	
+	#this is for heroku production
+	return title[3..title.length]
+	#this is for local development
+	#return title[6..title.length]
 end
 
 #puts getShowName('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')

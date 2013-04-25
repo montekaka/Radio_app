@@ -3,7 +3,7 @@ class CreateShows < ActiveRecord::Migration
     create_table :shows do |t|
       t.string :name
       t.string :category
-      t.string :description, :limit => nil
+      t.text   :description, :limit => nil
       t.string :djname
 
       t.timestamps
