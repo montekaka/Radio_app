@@ -45,12 +45,12 @@ def getShowPlayListTable(showURL)
 end
 
 
-fy = getShowPlayListTable('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
-fy.each do |f|
-	puts f.name
-	puts f.date
-	puts f.url
-end
+# fy = getShowPlayListTable('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37')
+# fy.each do |f|
+# 	puts f.name
+# 	puts f.date
+# 	puts f.url
+# end
 
 def updateAudiopost(showHTML, firstTime, dbLastDay)
     audiopostUpdateArray = []

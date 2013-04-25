@@ -12,7 +12,7 @@ task :create_kazn_TodayTopic_audioposts => :environment do
 	audiopostMaster.each do |e|
 		puts "episode name: " + e.name
 		puts "episode desc: " + e.desc
-		puts "episode date: " + e.date
+		puts "episode date: " + e.date.to_s
 		puts "episode url: " + e.url
 		showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 	end
