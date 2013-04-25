@@ -25,10 +25,10 @@ def getShowPlayListTable(showURL)
 		end
 		dummyDate = t.css('td:nth-child(3)').text.strip		
 		if dummyDate != "週一~週五"
-			ddate=dummyDate[0..2]+dummyDate[3..5]+'20'+dummyDate[6..7]
+			ddate=Date.strptime(dummyDate[0..2]+dummyDate[3..5]+'20'+dummyDate[6..7], '%m/%d/%Y')
 			episodeDate = ddate
 		else
-			episodeDate = '01/01/2010'				
+			episodeDate = Date.strptime('01/01/2010','%m/%d/%Y')
 		end
 		dummyEpisodeDate.push(episodeDate)
 	end
