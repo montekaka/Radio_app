@@ -18,13 +18,14 @@ def getShowPlayListTable(showURL)
 	 	dummyURL = t.css('td:nth-child(1) a')
 		dummyURL.each do |u|
 			dummyEpisodeURL.push(u['href'].strip)
-			dummyEpisodeTitle.push(u.text.strip)
+			dummyEpisodeTitle.push(u.text.strip)			
 		end
-		dummyDate = t.css('td:nth-child(3)').text.strip
-		dummyDate.each do |d|
-			ddate=d[0..2]+d[3..5]+'20'+d[6..7]
-			#ddate=d[3..5]+d[0..2]+'20'+d[6..7]
-			if ddate.to_f > 0
+		dummyDate = t.css('td:nth-child(3)').text.strip		
+		dummyDate.each do |d|			
+			#puts Date.strptime(ddate, '%m/%d/%Y')
+			puts d
+			if d != "週一~週五"
+				ddate=d[0..2]+d[3..5]+'20'+d[6..7]
 				episodeDate = ddate
 			else
 				episodeDate = '01/01/2010'				
@@ -45,7 +46,7 @@ def getShowPlayListTable(showURL)
 end
 
 
-# fy = getShowPlayListTable('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37&page=4')
+# fy = getShowPlayListTable('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=37&page=6')
 # fy.each do |f|
 # 	puts f.name
 # 	puts f.date
