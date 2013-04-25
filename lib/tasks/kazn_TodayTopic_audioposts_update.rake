@@ -3,7 +3,7 @@ desc "Update Today Topic Shows Podcast Archive"
 task :kazn_TodayTopic_audioposts_update => :environment do
 	require 'updateAudiopost'
 	require 'nokogiriTodayTopic'
-	station = Station.find_by_name('AM1300')
+	station = Station.find_by_name('am1300')
 	showa = station.shows.find_by_name('今日話題')
 	puts showa.name
 
