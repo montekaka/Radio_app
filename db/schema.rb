@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20130327233651) do
   create_table "audioposts", :force => true do |t|
     t.integer  "user_id"
     t.string   "title"
-    t.string   "short_note"
+    t.text     "short_note"
     t.string   "audio"
     t.date     "audio_date"
     t.datetime "created_at"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20130327233651) do
   create_table "shows", :force => true do |t|
     t.string   "name"
     t.string   "category"
-    t.string   "description"
+    t.text     "description"
     t.string   "djname"
     t.datetime "created_at"
     t.datetime "updated_at"

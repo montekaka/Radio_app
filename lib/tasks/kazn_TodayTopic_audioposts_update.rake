@@ -14,7 +14,7 @@ task :kazn_TodayTopic_audioposts_update => :environment do
 		if updateEpisode.length > 0
 			updateEpisode.each do |e|
 				puts "episode name: " + e.name
-				puts "episode date: " + e.date
+				puts "episode date: " + e.date.to_s
 				showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 			end
 		else
