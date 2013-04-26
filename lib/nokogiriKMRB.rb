@@ -175,7 +175,7 @@ def getShowPlayList(showURL, firstTime)
 		#totalPageToFetch = (totalEpisode[0..totalEpisode.length-4].to_f/15).ceil
 		#for heroku production
 		totalPageToFetch = (totalEpisode[0..totalEpisode.length-1].to_f/15).ceil
-		puts totalEpisode
+		puts totalPageToFetch
 		$i  = 2
 		while $i <= totalPageToFetch do
 			dummyFetchPage.push(showURL+"&page="+$i.to_s)
