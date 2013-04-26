@@ -171,8 +171,11 @@ def getShowPlayList(showURL, firstTime)
 	if firstTime == "T"
 		page = Nokogiri::HTML(open(showURL))
 		totalEpisode = page.css('a.a1:nth-child(1)').text.strip
-		totalPageToFetch = (totalEpisode[0..totalEpisode.length-4].to_f/15).ceil
-		puts totalPageToFetch
+		#for development
+		#totalPageToFetch = (totalEpisode[0..totalEpisode.length-4].to_f/15).ceil
+		#for heroku production
+		totalPageToFetch = (totalEpisode[0..totalEpisode.length-1].to_f/15).ceil
+		puts totalEpisode
 		$i  = 2
 		while $i <= totalPageToFetch do
 			dummyFetchPage.push(showURL+"&page="+$i.to_s)
