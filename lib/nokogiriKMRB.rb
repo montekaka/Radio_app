@@ -172,6 +172,7 @@ def getShowPlayList(showURL, firstTime)
 		page = Nokogiri::HTML(open(showURL))
 		totalEpisode = page.css('a.a1:nth-child(1)').text.strip
 		totalPageToFetch = (totalEpisode[0..totalEpisode.length-4].to_f/15).ceil
+		puts totalPageToFetch
 		$i  = 2
 		while $i <= totalPageToFetch do
 			dummyFetchPage.push(showURL+"&page="+$i.to_s)
