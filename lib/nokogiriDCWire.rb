@@ -53,7 +53,7 @@ def updateAudiopost(showHTML, firstTime, dbLastDay)
     fetchAudiopost = getEpisodeInfo(showHTML, firstTime)
     fetchAudiopost.each do |i|
     	#puts Date.strptime(i.date[0..1]+'-'+i.date[3..4]+'-'+i.date[6..9], '%d-%m-%Y')
-    	puts i.date
+    	#puts i.date
         if i.date > dbLastDay 
         #we need to turn the i.date into datevalue
             audiopostUpdateArray.push(i)            
