@@ -271,7 +271,7 @@ end
 # end
 
 
-#episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32',"T")
+# episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32',"T")
 
 # episode.each do |e|
 # 	puts "episode name: " + e.name

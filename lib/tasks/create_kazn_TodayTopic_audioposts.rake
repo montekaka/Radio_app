@@ -6,7 +6,7 @@ task :create_kazn_TodayTopic_audioposts => :environment do
 	
 	#check whether 1430 station exist?
 	station = Station.find_by_name('AM1300')
-	showa = station.shows.find_by_name('今日話題')
+showa = station.shows.find_by_name('今日話題')
 	puts showa.name
 	audiopostMaster = getEpisodeInfo(showa.show_url, 'T')
 	audiopostMaster.each do |e|

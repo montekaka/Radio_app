@@ -12,14 +12,15 @@ task :kazn_DCWire_audioposts_create => :environment do
 		puts "episode desc: " + e.desc
 		puts "episode date: " + e.date.to_s
 		puts "episode url: " + e.url
-		showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+		#showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 	end
 end
 
+episode = getEpisodeInfo('http://www.am1300.com/index.php?m=content&c=index&a=lists&catid=41',"T")
 
-
-
-
-
-
-
+episode.each do |e|
+	puts "episode name: " + e.name
+	puts "episode desc: " + e.desc
+	puts "episode date: " + e.date.to_s
+	puts "episode url: " + e.url
+end
