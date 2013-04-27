@@ -1,10 +1,11 @@
-<div data-role="header" data-theme="a">
-    <h1>New Show</h1>
-    <%= link_to 'Home', shows_path, :"data-icon"=>"home", :"data-iconpos"=>"notext", :"data-direction"=>"reverse" %>
-</div>
-<div data-role="content">
-	<div class="content-primary">
-		<%= render 'form' %>
+<div data-role="page" id="demo-page">  
+	<div data-role="header" data-theme="a">
+	    <h1>New Show</h1>
+	    <%= link_to 'Home', shows_path, :"data-icon"=>"home", :"data-iconpos"=>"notext", :"data-direction"=>"reverse" %>
+	</div>
+	<div data-role="content">
+		<div class="content-primary">
+			<%= render 'form' %>
+		</div>
 	</div>
 </div>
-
