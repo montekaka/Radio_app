@@ -47,7 +47,7 @@
             <tr>
               <td>
                 <% if show.audioposts.count>0 %>
-                  <%= link_to show.name, show_audioposts_path(show)%>
+                  <%= link_to show.name, show_audioposts_path(show), :rel=>"external"%>
                 <% else %>
                   <%= show.name %>
                 <% end %>
