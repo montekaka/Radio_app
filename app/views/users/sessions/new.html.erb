@@ -1,41 +1,43 @@
-<div data-role="header" data-theme="a">
-	<h1>Login</h1>
-</div>
-<div data-role="content">
-	<div class="content-primary">
-		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:data => {:ajax => 'false'}}) do |f| %>
-		<%= devise_error_messages! %>
-                                         <p class="notice"><%= notice %></p>
-                                      <p class="alert"><%= alert %></p>
-                                        <ul data-role="listview" data-inset="true">
-			<li data-role="fieldcontain">
-				<%= f.label :email %>
-				<%= f.email_field :email %>
-			</li>
+<div data-role="page" id="demo-page">  
+  <div data-role="header" data-theme="a">
+  	<h1>Login</h1>
+  </div>
+  <div data-role="content">
+  	<div class="content-primary">
+  		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:data => {:ajax => 'false'}}) do |f| %>
+  		<%= devise_error_messages! %>
+                                           <p class="notice"><%= notice %></p>
+                                        <p class="alert"><%= alert %></p>
+                                          <ul data-role="listview" data-inset="true">
   			<li data-role="fieldcontain">
-  				<%= f.label :password %>
-  				<%= f.password_field :password %>
+  				<%= f.label :email %>
+  				<%= f.email_field :email %>
   			</li>
-  			<li data-role="fieldcontain">
-  				<label for="slider2">Remember me:</label>
-  					<select name="slider2" id="slider2" data-role="slider">
-  						<option value="off">No</option>
-  						<option value="on">Yes</option>
-  					</select>
-  				<!--
-  					<% if devise_mapping.rememberable? %>
-    					<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  					<% end %>
-  				-->  				
-  			</li>
-  			<li class="ui-body ui-body-b">
-  				<fieldset class="ui-grid-a">
-  					<div class="ui-block-a"><%= f.submit "Sign in" %></div>
-  				</fieldset>
-  			</li>  			
-			<% end %>			
-		</ul>
-	</div>
-</div>
+    			<li data-role="fieldcontain">
+    				<%= f.label :password %>
+    				<%= f.password_field :password %>
+    			</li>
+    			<li data-role="fieldcontain">
+    				<label for="slider2">Remember me:</label>
+    					<select name="slider2" id="slider2" data-role="slider">
+    						<option value="off">No</option>
+    						<option value="on">Yes</option>
+    					</select>
+    				<!--
+    					<% if devise_mapping.rememberable? %>
+      					<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    					<% end %>
+    				-->  				
+    			</li>
+    			<li class="ui-body ui-body-b">
+    				<fieldset class="ui-grid-a">
+    					<div class="ui-block-a"><%= f.submit "Sign in" %></div>
+    				</fieldset>
+    			</li>  			
+  			<% end %>			
+  		</ul>
+  	</div>
+  </div>
 
-<%= render :partial => "devise/shared/links" %>
+  <%= render :partial => "devise/shared/links" %>
+</div>

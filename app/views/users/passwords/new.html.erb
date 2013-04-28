@@ -1,20 +1,22 @@
-<div data-role="header" data-theme="a">
-	<h1>Rest Password</h1>
+<div data-role="page" id="demo-page">  
+  <div data-role="header" data-theme="a">
+  	<h1>Rest Password</h1>
+  </div>
+  <div data-role="content">
+  	<div class="content-primary">
+  	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+    		<%= devise_error_messages! %>
+    		<ul data-role="listview" data-inset="true">
+    			<li data-role="fieldcontain">
+    				<%= f.label :email %>
+    				<%= f.email_field :email %>
+    			</li>
+    			<li class="ui-body ui-body-b">
+    				<%= f.submit "Send me reset password instructions", :"data-role"=>"button" %>
+    			</li>  			
+    		</ul>
+  	<% end %>		
+  	</div>
+  </div>
+  <%= render :partial => "devise/shared/links" %>
 </div>
-<div data-role="content">
-	<div class="content-primary">
-	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  		<%= devise_error_messages! %>
-  		<ul data-role="listview" data-inset="true">
-  			<li data-role="fieldcontain">
-  				<%= f.label :email %>
-  				<%= f.email_field :email %>
-  			</li>
-  			<li class="ui-body ui-body-b">
-  				<%= f.submit "Send me reset password instructions", :"data-role"=>"button" %>
-  			</li>  			
-  		</ul>
-	<% end %>		
-	</div>
-</div>
-<%= render :partial => "devise/shared/links" %>
