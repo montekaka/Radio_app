@@ -11,7 +11,7 @@
 		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search station" data-inset="true">
 			<% @stations.each do |station| %>
 				<li>
-					<%= station.name %>
+					<%= link_to station.name, station_shows_path(station) %>
 				</li>
 			<% end %>
 		</ul>
