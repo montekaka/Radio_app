@@ -1,5 +1,11 @@
+<style type=text/css>
+.stationName{
+  height: 80px;
+  text-align: left;
+}
+</style>
 <div data-role="page" id="demo-page">  
-	<div data-role="header">
+	<div data-role="header" data-theme="b">
 		<h1>Podcast</h1>
         <%if current_user %>
         	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
@@ -8,15 +14,12 @@
       	<%end%>		
 	</div>
 	<div data-role="content">
-		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search station" data-inset="true">
-			<% @stations.each do |station| %>
-				<li>
-					<%= link_to station.name, station_shows_path(station) %>
-				</li>
-			<% end %>
+		<% @stations.each do |station| %>
+			<%= link_to station.name, station_shows_path(station), :"data-role"=>"button", :"data-icon"=>"arrow-r", :"data-iconpos"=>"right", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName" %>	
+		<% end %>
 		</ul>
 	</div><!-- /content -->	
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>powered by @BruinSquare</h4>
 	</div><!-- /footer -->	
 </div>
