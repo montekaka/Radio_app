@@ -7,10 +7,19 @@ class ShowsController < ApplicationController
   def index
     @shows = Show.all
     
+    if !current_user
+      #render :action => 'index_user', :layout => 'admin'
+      respond_to do |format|
+        format.html { render :action => 'index_user' }
+        format.json { render :json => @shows }
+      end    
+    else
       respond_to do |format|
         format.html # index.html.erb
         format.json { render :json => @shows }
-      end 
+      end    
+    end 
+
   end
 
   # GET /shows/1
