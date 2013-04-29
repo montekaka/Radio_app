@@ -1,4 +1,16 @@
-
-This page is showing list of Radio Stations
-User will pick the radio they want and go to
-the Category Page
+<div data-role="page" id="demo-page">  
+	<div data-role="header">
+		<h1>Podcast</h1>
+        <%if current_user %>
+        	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+      	<%else%>
+        	<%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+      	<%end%>		
+	</div>
+	<div data-role="content">
+		<p>Page content goes here.</p>
+	</div><!-- /content -->	
+	<div data-role="footer" data-position="fixed">
+		<h4>powered by @BruinSquare</h4>
+	</div><!-- /footer -->	
+</div>
