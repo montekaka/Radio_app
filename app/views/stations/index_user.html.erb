@@ -8,7 +8,13 @@
       	<%end%>		
 	</div>
 	<div data-role="content">
-		<p>Page content goes here.</p>
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Search station" data-inset="true">
+			<% @stations.each do |station| %>
+				<li>
+					<%= station.name %>
+				</li>
+			<% end %>
+		</ul>
 	</div><!-- /content -->	
 	<div data-role="footer" data-position="fixed">
 		<h4>powered by @BruinSquare</h4>
