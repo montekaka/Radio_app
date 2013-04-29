@@ -6,11 +6,11 @@ class ShowsController < ApplicationController
   # GET /shows.json
   def index
     @shows = Show.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @shows }
-    end
+    
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @shows }
+      end 
   end
 
   # GET /shows/1
@@ -18,10 +18,19 @@ class ShowsController < ApplicationController
   def show
     @show = Show.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @show }
-    end
+    if !current_user
+      #render :action => 'index_user', :layout => 'admin'
+      respond_to do |format|
+        format.html { render :action => 'show_user' }
+        format.json { render :json => @show }
+      end    
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @show }
+      end      
+    end   
+    
   end
 
   # GET /shows/new

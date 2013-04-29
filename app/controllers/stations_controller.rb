@@ -3,11 +3,20 @@ class StationsController < ApplicationController
   # GET /stations.json
   def index
     @stations = Station.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @stations }
+    
+    if !current_user
+      #render :action => 'index_user', :layout => 'admin'
+      respond_to do |format|
+        format.html { render :action => 'index_user' }
+        format.json { render :json => @stations }
+      end    
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @stations }
+      end      
     end
+    
   end
 
   # GET /stations/1
