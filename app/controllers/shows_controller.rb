@@ -6,6 +6,7 @@ class ShowsController < ApplicationController
   # GET /shows.json
   def index
     @shows = Show.all
+    @station = @shows.first.station
     
     if !current_user
       #render :action => 'index_user', :layout => 'admin'
