@@ -1,7 +1,11 @@
 <style type=text/css>
-.stationName{
-  height: 80px;
-  text-align: left;
+#buttoncontainer .ui-btn {
+	padding: 15px;
+    text-align: left;
+}
+#buttoncontainer .ui-btn-text{
+	font-size: 30px;
+	color: #000066;
 }
 </style>
 <div data-role="page" id="demo-page">  
@@ -13,9 +17,9 @@
         	<%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
       	<%end%>		
 	</div>
-	<div data-role="content">
+	<div data-role="content" id='buttoncontainer'>
 		<% @stations.each do |station| %>
-			<%= link_to station.name, station_shows_path(station), :"data-role"=>"button", :"data-icon"=>"arrow-r", :"data-iconpos"=>"right", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName" %>	
+			<%= link_to station.name, station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName" %>	
 		<% end %>
 		</ul>
 	</div><!-- /content -->	
