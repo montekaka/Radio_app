@@ -1,12 +1,29 @@
 class ShowsController < ApplicationController
   
-  before_filter :authenticate_user!, :except=>[:index, :show]  
+  before_filter :authenticate_user!, :except=>[:index, :show, :categories]  
+  
+  # GET /station/1/shows/categories
+  def categories
+    @station = Station.find(params[:station_id])
+  end 
+  
+  
+  # GET /stations/1/shows
+  # GET /stations/1/shows.json  
   
   # GET /shows
   # GET /shows.json
   def index
-    @shows = Show.all
-    @station = @shows.first.station
+    if (params[:station_id])
+      @station = Station.find(params[:station_id])
+      if (params[:category])
+        @shows = @station.shows.find_all_by_category(params[:category])
+      else          
+        @shows = @station.shows
+      end
+    else
+      @shows = Show.all      
+    end
     
     if !current_user
       #render :action => 'index_user', :layout => 'admin'
@@ -20,7 +37,7 @@ class ShowsController < ApplicationController
         format.json { render :json => @shows }
       end    
     end 
-
+    
   end
 
   # GET /shows/1

@@ -1,12 +1,16 @@
 RadioApp::Application.routes.draw do
   resources :stations do
-    resources :shows
+    resources :shows do
+      collection do
+        get 'categories' #add for route: shows/categories
+      end
+    end
   end
 
   devise_for :users
 
   resources :shows do
-      resources :audioposts
+      resources :audioposts      
   end
 
   # resources :users # edit by roland 
