@@ -86,13 +86,13 @@
               <a href="#discusspage" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Comment</a>
             </li> -->
             <li>
-              <a href="#" type="button" id = "goback" data-theme="b" data-corners="false" ><</a>
+              <a href="#" type="button" id = "goback" data-theme="b" data-corners="false" >-15s</a>
             </li>            
             <li>
               <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
             </li>
             <li>
-              <a href="#" type="button" id = "goforward" data-theme="b" data-corners="false" >></a>
+              <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15);">+15s</button>
             </li>             
 <!--             <li>
               <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
@@ -171,9 +171,38 @@ function audioControl(audioSource, PlayStopButtonID, DisplayCurrentTimeID, Displ
 
 
 var audio = document.getElementById('audioArchive');
+
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
-};  
+};
+
+//fast forward and backward
+function fastForward(changeTimeInSecond){
+  //determine what stage are we at
+  console.log("audio current time "+audio.currentTime);
+  if(audio.currentTime==0){
+    audio.play();
+    audio.pause();  
+    console.log("The audio has not played any yet, so we will like to init audio.");
+    var slider_value = $("#timeControl").val();
+    console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
+    console.log(slider_value + changeTimeInSecond);
+    $("#timeControl").val(slider_value + changeTimeInSecond).slider("refresh");
+    console.log($("#timeControl").val());
+    audio.currentTime = $("#timeControl").val();
+    audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+  }
+  else if($('#playButton').text()=="Play") {
+    console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
+    var slider_value = $("#timeControl").val();
+    console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
+    $("#timeControl").val(slider_value + changeTimeInSecond).slider("refresh");
+    console.log($("#timeControl").val());
+    audio.currentTime = $("#timeControl").val();
+    audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+  }
+};
+
 $(document).bind('pageinit', '#deme-page',function(){
   // var audio = document.getElementById('audioArchive');
   // audio.play();
@@ -193,7 +222,7 @@ $(document).bind('pageinit', '#deme-page',function(){
     // });
     // $('#playButton').on('tap',function(){
     //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
-    // });
+    // });    
 
     //slider control the time
     $('#timeControl').on('slidestart',function(){
@@ -258,15 +287,16 @@ $(document).bind('pageinit', '#deme-page',function(){
 });
 </script>
 <!--Disqus-->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'am1300'; // required: replace example with your forum shortname
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'am1300'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>    
 <!--end-->
