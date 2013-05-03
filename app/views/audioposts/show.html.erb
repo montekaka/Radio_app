@@ -86,13 +86,13 @@
               <a href="#discusspage" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Comment</a>
             </li> -->
             <li>
-              <a href="#" type="button" id = "goback" data-theme="b" data-corners="false" >-15s</a>
+              <button type="button" id = "goback" data-theme="b" data-corners="false" onclick="fastForward(15, 'backward');">-15s</button>
             </li>            
             <li>
               <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
             </li>
             <li>
-              <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15);">+15s</button>
+              <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15, 'forward');">+15s</button>
             </li>             
 <!--             <li>
               <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
@@ -177,30 +177,90 @@ function fuck(){
 };
 
 //fast forward and backward
-function fastForward(changeTimeInSecond){
+function fastForward(changeTimeInSecond, moveToward){
   //determine what stage are we at
   console.log("audio current time "+audio.currentTime);
   if(audio.currentTime==0){
-    audio.play();
-    audio.pause();  
-    console.log("The audio has not played any yet, so we will like to init audio.");
-    var slider_value = $("#timeControl").val();
-    console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
-    console.log(slider_value + changeTimeInSecond);
-    $("#timeControl").val(slider_value + changeTimeInSecond).slider("refresh");
-    console.log($("#timeControl").val());
-    audio.currentTime = $("#timeControl").val();
-    audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+    //if the currentTime is 0 then we have nowhere to backward to
+    if(moveToward == 'forward'){
+      audio.play();
+      audio.pause();
+      console.log("The audio has not played any yet, so we will like to init audio.");
+      var slider_value = $("#timeControl").val();
+      console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
+      console.log(parseInt(slider_value) + parseInt(changeTimeInSecond));
+      $("#timeControl").val(parseInt(slider_value) + parseInt(changeTimeInSecond)).slider("refresh");
+      console.log($("#timeControl").val());
+      audio.currentTime = $("#timeControl").val();
+      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+    }else{
+      console.log("The audio has not played any yet, and because it's move backward we do nothing.");
+    }
   }
   else if($('#playButton').text()=="Play") {
-    console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
-    var slider_value = $("#timeControl").val();
-    console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
-    $("#timeControl").val(slider_value + changeTimeInSecond).slider("refresh");
-    console.log($("#timeControl").val());
-    audio.currentTime = $("#timeControl").val();
-    audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+    if(moveToward == 'forward'){
+      console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
+      var slider_value = $("#timeControl").val();
+      console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
+      console.log(parseInt(slider_value) + parseInt(changeTimeInSecond));
+      $("#timeControl").val(parseInt(slider_value) + parseInt(changeTimeInSecond)).slider("refresh");
+      console.log($("#timeControl").val());
+      audio.currentTime = $("#timeControl").val();
+      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+    }
+    else{
+      //we need to check if the current time is greater than the time we want to change, if not we just set it to start from 0 second
+      if(audio.currentTime>changeTimeInSecond){
+        console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
+        var slider_value = $("#timeControl").val();
+        console.log("substract " + changeTimeInSecond + ' second from ' +slider_value +' second');
+        console.log(parseInt(slider_value) - parseInt(changeTimeInSecond));
+        $("#timeControl").val(parseInt(slider_value) - parseInt(changeTimeInSecond)).slider("refresh");
+        console.log($("#timeControl").val());
+        audio.currentTime = $("#timeControl").val();
+        audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+      }
+      else{
+        console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
+        $("#timeControl").val(0).slider("refresh");
+        audio.currentTime = $("#timeControl").val();
+        audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+      }
+    }
   }
+  else{
+    if(moveToward == 'forward'){
+      console.log("The audio is playing, so we will like to pause it first.");
+      audio.pause();
+      var slider_value = $("#timeControl").val();
+      console.log("added " + changeTimeInSecond + ' second to ' +slider_value +' second');
+      console.log(parseInt(slider_value) + parseInt(changeTimeInSecond));
+      $("#timeControl").val(parseInt(slider_value) + parseInt(changeTimeInSecond)).slider("refresh");
+      console.log($("#timeControl").val());
+      audio.currentTime = $("#timeControl").val();
+      audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+    }
+    else{
+      //we need to check if the current time is greater than the time we want to change, if not we just set it to start from 0 second
+      if(audio.currentTime>changeTimeInSecond){
+        console.log("The audio is playing, so we will like to pause it first.");
+        audio.pause();
+        var slider_value = $("#timeControl").val();
+        console.log("substract " + changeTimeInSecond + ' second from ' +slider_value +' second');
+        console.log(parseInt(slider_value) - parseInt(changeTimeInSecond));
+        $("#timeControl").val(parseInt(slider_value) - parseInt(changeTimeInSecond)).slider("refresh");
+        console.log($("#timeControl").val());
+        audio.currentTime = $("#timeControl").val();
+        audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');        
+      }
+      else{
+        console.log("The audio has been playing but currently at a pause state, so we do not need to init the audio.");
+        $("#timeControl").val(0).slider("refresh");
+        audio.currentTime = $("#timeControl").val();
+        audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');        
+      }        
+    }
+  };
 };
 
 $(document).bind('pageinit', '#deme-page',function(){
