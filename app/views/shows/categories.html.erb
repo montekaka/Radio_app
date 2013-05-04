@@ -12,7 +12,7 @@
 	<div data-role="content">
 		<fieldset class="ui-grid-a">
 			<% i = 0 %>
-			<% Show.group(:category).each do |show| %>
+			<% @station.shows.group(:category).each do |show| %>
 				<% if i%2 == 0 %>
 					<div class="ui-block-a">
 						<%= link_to show.category, station_shows_path(show.station, :category=>show.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
