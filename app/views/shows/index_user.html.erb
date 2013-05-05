@@ -8,51 +8,35 @@
     <%= link_to 'Back',"#", {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>  
   </div>
   <div data-role="content">
-    <div class="content-primary">
-      <%= link_to 'Create Yours Now', new_show_path, :"data-role"=>"button",:"data-theme"=>"e", :rel=>"external" %>
-      <br />    
-        <table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">        
-          <thead>
-            <tr class="ui-bar-d">
-              <th>Show Name</th>
-              <th data-priority="3">Show Host</th>
-              <th data-priority="4">Show Category</th>
-              <th data-priority="5">Show Description</th>
-              <th data-priority="1">Detail</th>
-              <!--
-              <th data-priority="2">Edit</th>
-              -->
-              <th data-priority="2">Destroy</th>
-            </tr>
-          </thead>
-          <tbody>          
-            <% @shows.each do |show| %>
-              <tr>
-                <td>
-                  <%= link_to show.name, show_audioposts_path(show)%>
-                </td>
-                <td><%= show.djname%></td>
-                <td><%= show.category%></td>
-                <td><%= show.description%></td>
-                <!--
-                <td><%= show.show_url%></td>
-                -->
-                <td>
-                  <%= link_to 'Manage', show %>
-                </td>
-                <!--
-                <td>
-                  <%= link_to 'Edit', edit_show_path(show), :rel=>"external" %>
-                </td>
-                -->
-                <td>
-                  <%= link_to 'Destroy', show, :confirm => 'Are you sure?', :method => :delete, :rel=>"external" %>
-                </td>
-              </tr>
-            <% end %>
-          </tboyd>
-        </table>    
-    </div>
+    <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider">
+        <% if params[:category] %>
+          <%= params[:category] %>
+            <span class="ui-li-count"><%= @shows.count %></span>
+          <% else %>
+            All
+            <span class="ui-li-count"><%= @shows.count %></span>
+          <% end %>
+      </li>
+      <% @shows.each do |show| %>
+        <li>
+          <% if show.audioposts.count > 0 %>
+            <a href = '<%= show_audioposts_path(show)%>' rel='external'>
+              <h2><%= show.name%></h2>
+              <p><strong><%= show.djname%></strong></p>
+              <p>Total Episode: <%= show.audioposts.count %></p>
+            </a>
+          <% else %>
+              <h2><%= show.name%></h2>
+              <p><strong><%= show.djname%></strong></p>
+              <p>Total Episode: <%= show.audioposts.count %></p>        
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
   </div>
+  <div data-role="footer" data-theme="b">
+    <h4>powered by @BruinSquare</h4>
+  </div><!-- /footer -->      
 </div>
 
