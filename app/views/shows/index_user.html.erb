@@ -1,15 +1,11 @@
-<div data-role="page" id="demo-page">  
-  <div data-role="header" data-theme="a">
+<div data-role="page" id="CategoryPage">  
+  <div data-role="header" data-theme="b">
     <% if params[:category] %>
       <h1><%= params[:category] %></h1>
     <% else %>
       <h1>All</h1>
     <% end %>
-      <%if current_user %>
-        <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
-      <%else%>
-        <%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
-      <%end%>    
+    <%= link_to 'Back',"#", {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>  
   </div>
   <div data-role="content">
     <div class="content-primary">
