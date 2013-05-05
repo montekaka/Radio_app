@@ -5,7 +5,11 @@
     <% else %>
       <h1>All</h1>
     <% end %>
-    <%= link_to 'Back',"#", {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>  
+    <%if @station%>
+        <%= link_to 'Back', categories_station_shows_path(@station) , {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>  
+    <%else%>
+        <%= link_to 'Back',  shows_path  , {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %> 
+     <%end%>
   </div>
   <div data-role="content">
     <ul data-role="listview" data-inset="true">

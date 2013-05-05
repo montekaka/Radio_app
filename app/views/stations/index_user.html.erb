@@ -19,7 +19,7 @@
 	</div>
 	<div data-role="content" id='buttoncontainer'>
 		<% @stations.each do |station| %>
-			<%= link_to station.name, station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
+			<%= link_to station.name, categories_station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
 		<% end %>
 		</ul>
 	</div><!-- /content -->	
