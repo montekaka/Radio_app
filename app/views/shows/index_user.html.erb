@@ -8,35 +8,26 @@
     <%= link_to 'Back',"#", {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>  
   </div>
   <div data-role="content">
-    <ul data-role="listview" data-inset="true">
+    <ul data-role="listview" data-inset="true" data-count-theme="b">
       <li data-role="list-divider">
         <% if params[:category] %>
           <%= params[:category] %>
-            <span class="ui-li-count"><%= @shows.count %></span>
           <% else %>
             All
-            <span class="ui-li-count"><%= @shows.count %></span>
           <% end %>
       </li>
       <% @shows.each do |show| %>
-        <li>
           <% if show.audioposts.count > 0 %>
-            <a href = '<%= show_audioposts_path(show)%>' rel='external'>
-              <h2><%= show.name%></h2>
-              <p><strong><%= show.djname%></strong></p>
-              <p>Total Episode: <%= show.audioposts.count %></p>
-            </a>
-          <% else %>
-              <h2><%= show.name%></h2>
-              <p><strong><%= show.djname%></strong></p>
-              <p>Total Episode: <%= show.audioposts.count %></p>        
+            <li>
+              <a href = '<%= show_audioposts_path(show)%>' rel='external'>
+                <h2><%= show.name%></h2>
+                <p><strong><%= show.djname%></strong></p>
+                <span class='ui-li-count'><%= show.audioposts.count %></span>
+              </a>
+            </li>          
           <% end %>
-        </li>
       <% end %>
     </ul>
-  </div>
-  <div data-role="footer" data-theme="b">
-    <h4>powered by @BruinSquare</h4>
-  </div><!-- /footer -->      
+  </div>   
 </div>
 
