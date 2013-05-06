@@ -17,15 +17,18 @@
           <% end %>
       </li>
       <% @shows.each do |show| %>
+        <li>
           <% if show.audioposts.count > 0 %>
-            <li>
-              <a href = '<%= show_audioposts_path(show)%>' rel='external'>
-                <h2><%= show.name%></h2>
-                <p><strong><%= show.djname%></strong></p>
-                <span class='ui-li-count'><%= show.audioposts.count %></span>
-              </a>
-            </li>          
+            <a href = '<%= show_audioposts_path(show)%>' rel='external'>
+              <h2><%= show.name%></h2>
+              <p><strong><%= show.djname%></strong></p>
+              <span class='ui-li-count'><%= show.audioposts.count %></span>
+            </a>
+          <% else %>
+              <h2><%= show.name%></h2>
+              <p><strong><%= show.djname%></strong></p>
           <% end %>
+        </li>
       <% end %>
     </ul>
   </div>   
