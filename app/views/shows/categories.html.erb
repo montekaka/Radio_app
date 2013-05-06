@@ -5,7 +5,7 @@
 }
 </style>
 <div data-role="page" id="CategoryPage">
-	<div data-role="header" data-theme="b">
+	<div data-role="header" data-theme="f">
 		<h1><%=@station.name%></h1>
 		<%= link_to 'Back',stations_path, {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
 	</div>
@@ -15,12 +15,12 @@
 			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
 				<% if i%2 == 0 %>
 					<div class="ui-block-a">
-						<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
+						<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"b", :"class"=>"categoryName" %>	
 					</div>						
 				<% else %>
 					<div class="ui-block-b">
 						<a>
-						<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>
+						<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"a", :"class"=>"categoryName" %>
 						</a>
 					</div>					
 				<% end %>			

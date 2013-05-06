@@ -1,5 +1,5 @@
 <div data-role="page" id="demo-page">  
-    <div data-role="header" data-theme="b" id ="topheader">    
+    <div data-role="header" data-theme="f" id ="topheader">    
         <h1><%=@show.name%></h1>
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
@@ -34,7 +34,7 @@
     </div>
     <!--info panel-->
     <div data-role="panel" id="infoPanel" data-position="right" data-display="push" data-theme="c">
-         <ul data-role="listview" data-inset="false" data-theme="d" data-divider-theme="d" class="jqm-list" id='jumptosection'>
+         <ul data-role="listview" data-inset="false" data-theme="c" data-divider-theme="c" class="jqm-list" id='jumptosection'>
         </ul>
     </div>
 </div>
@@ -146,7 +146,7 @@ function setupHTML(inputYear){
     //write html
     var jumpToSectionDiv = '<li class="jqm-list-header" data-icon="delete"><a href="#" data-rel="close">Table of Content (目錄)</a></li>';
     var collapsibleDiv='';     
-    var backtoTopDiv='<li data-icon="arrow-u" data-theme="e"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
+    var backtoTopDiv='<li data-icon="arrow-u" data-theme="a"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
         var listViewDiv='';        
         var ep = 0;
@@ -174,7 +174,7 @@ function setupHTML(inputYear){
         };
         
         collapsibleDiv = collapsibleDiv
-            +'<li data-role="list-divider" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
+            +'<li data-role="list-divider" data-theme="b" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
                 
         jumpToSectionDiv = jumpToSectionDiv + '<li><a href="#'+monthNames[uniqueMonths[i]]+currentYear+'" data-ajax="false">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</a></li>';
     };

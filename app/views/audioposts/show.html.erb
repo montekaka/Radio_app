@@ -32,8 +32,8 @@
 
 <div data-role="page" id="demo-page">
 <!---right panel-->
-  <div data-role="panel" id="rightPanel" data-position="right" data-display="push" data-theme="b">
-    <ul data-role="listview" data-theme="d" data-icon="false">
+  <div data-role="panel" id="rightPanel" data-position="right" data-display="push" data-theme="c">
+    <ul data-role="listview" data-theme="c" data-icon="false">
       <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>      
       <li data-role="list-divider">Share this page</li>
         <li><a href="#">Twitter</a></li>
@@ -44,7 +44,7 @@
     </ul>
   </div>
 <!---end right panel-->
-  <div data-role="header" data-theme="b">
+  <div data-role="header" data-theme="f">
     <h1>
       <%= @audiopost.title %>
     </h1>    
@@ -55,7 +55,7 @@
     <hr>
      <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
     <hr id="hr_bottom">
-    <div data-role="collapsible" data-theme="e" data-content-theme="c">
+    <div data-role="collapsible" data-theme="a" data-content-theme="c">
       <h3><%= @audiopost.title %></h3>
       <div>
         <p id = 'showDate'><strong>Show Date:</strong> <%= @audiopost.audio_date %></p>
@@ -70,29 +70,29 @@
         <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
       </audio>
     </div>
-    <div data-role='footer' data-position="fixed" data-theme="b">
+    <div data-role='footer' data-position="fixed" data-theme="f">
       <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
         <tr>
           <td><p id="DisplayRemindTime"></p></td>          
           <td width="100%" class="slider-shit">
-            <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-mini="true"/>
+            <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-theme='c'/>
           </td>         
         </tr>
       </table>
-      <div data-role="footer" class="ui-bar" data-theme="b">
+      <div data-role="footer" class="ui-bar" data-theme="f">
         <div data-role="navbar">
           <ul>
 <!--             <li>
               <a href="#discusspage" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Comment</a>
             </li> -->
             <li>
-              <button type="button" id = "goback" data-theme="b" data-corners="false" onclick="fastForward(15, 'backward');">-15s</button>
+              <button type="button" id = "goback" data-theme="a" data-corners="false" onclick="fastForward(15, 'backward');">-15s</button>
             </li>            
             <li>
-              <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
+              <button type="button" id = "playButton" onclick = "fuck();" data-theme="a" data-corners="false" >Play</button>
             </li>
             <li>
-              <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15, 'forward');">+15s</button>
+              <button type="button" id = "goforward" data-theme="a" data-corners="false" onclick="fastForward(15, 'forward');">+15s</button>
             </li>             
 <!--             <li>
               <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
@@ -106,7 +106,7 @@
 <!--end the demo page-->
 <!--Discuss Page-->
 <div data-role="page" id="discusspage">
-  <div data-role="header" data-theme="b">
+  <div data-role="header" data-theme="f">
     <h1>Comment</h1>
     <a href="#demo-page" data-icon="back" class="ui-btn-left">Back</a>
   </div>

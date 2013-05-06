@@ -1,5 +1,5 @@
 <div data-role="page" id="CategoryPage">  
-  <div data-role="header" data-theme="b">
+  <div data-role="header" data-theme="f">
     <% if params[:category] %>
       <h1><%= params[:category] %></h1>
     <% else %>
@@ -12,8 +12,8 @@
      <%end%>
   </div>
   <div data-role="content">
-    <ul data-role="listview" data-inset="true" data-count-theme="b">
-      <li data-role="list-divider">
+    <ul data-role="listview" data-inset="true" data-count-theme="f">
+      <li data-role="list-divider" data-theme="f">
         <% if params[:category] %>
           <%= params[:category] %>
           <% else %>
@@ -31,6 +31,7 @@
           <% else %>
               <h2><%= show.name%></h2>
               <p><strong><%= show.djname%></strong></p>
+              <span class='ui-li-count'><%= show.audioposts.count %></span>
           <% end %>
         </li>
       <% end %>
