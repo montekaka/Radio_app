@@ -12,15 +12,15 @@
 	<div data-role="content">
 		<fieldset class="ui-grid-a">
 			<% i = 0 %>
-			<% @station.shows.group(:category).order('category DESC').each do |show| %>
+			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
 				<% if i%2 == 0 %>
 					<div class="ui-block-a">
-						<%= link_to show.category, station_shows_path(show.station, :category=>show.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
+						<%= link_to c.category, station_shows_path(@station, :category=>c), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
 					</div>						
 				<% else %>
 					<div class="ui-block-b">
 						<a>
-						<%= link_to show.category, station_shows_path(show.station, :category=>show.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>
+						<%= link_to c.category, station_shows_path(@station, :category=>c), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>
 						</a>
 					</div>					
 				<% end %>			
