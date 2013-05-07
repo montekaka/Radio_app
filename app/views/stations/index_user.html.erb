@@ -9,7 +9,7 @@
 }
 </style>
 <div data-role="page" id="demo-page">  
-	<div data-role="header" data-theme="f">
+	<div data-role="header" data-theme="b">
 		<h1>Podcast</h1>
         <%if current_user %>
         	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
@@ -23,7 +23,7 @@
 		<% end %>
 		</ul>
 	</div><!-- /content -->	
-	<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="footer" data-position="fixed" data-theme="b">
 		<h4>powered by @BruinSquare</h4>
 	</div><!-- /footer -->	
 </div>
