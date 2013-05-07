@@ -146,7 +146,7 @@ function setupHTML(inputYear){
     //write html
     var jumpToSectionDiv = '<li class="jqm-list-header" data-icon="delete"><a href="#" data-rel="close">Table of Content (目錄)</a></li>';
     var collapsibleDiv='';     
-    var backtoTopDiv='<li data-icon="arrow-u" data-theme="a"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
+    var backtoTopDiv='<li data-icon="arrow-u" data-theme="b"><a href="#topheader" data-ajax="false">Back to the top (回到頂部)</a></li>';
     for(var i in uniqueMonths){
         var listViewDiv='';        
         var ep = 0;
@@ -174,7 +174,7 @@ function setupHTML(inputYear){
         };
         
         collapsibleDiv = collapsibleDiv
-            +'<li data-role="list-divider" data-theme="b" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
+            +'<li data-role="list-divider" data-theme="f" id="'+monthNames[uniqueMonths[i]]+currentYear + '">'+monthNames[uniqueMonths[i]]+' '+currentYear+'<span class="ui-li-count">'+ep+'</span>'+'</li>'+backtoTopDiv+listViewDiv;
                 
         jumpToSectionDiv = jumpToSectionDiv + '<li><a href="#'+monthNames[uniqueMonths[i]]+currentYear+'" data-ajax="false">'+monthNames[uniqueMonths[i]]+' '+currentYear+'</a></li>';
     };

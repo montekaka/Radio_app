@@ -55,19 +55,13 @@
     <hr>
      <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
     <hr id="hr_bottom">
-    <div data-role="collapsible" data-theme="a" data-content-theme="c">
-      <h3><%= @audiopost.title %></h3>
-      <div>
-        <p id = 'showDate'><strong>Show Date:</strong> <%= @audiopost.audio_date %></p>
-        <% if @audiopost.short_note.nil? %>
-        <% else %>
-          <%= @audiopost.short_note.html_safe %>
-        <% end %>
-        <p>        
-      </div>
-    </div>
+    <fieldset>
+      <a href="#moreDetailPage" data-role="button" data-icon="flat-menu" data-theme="b">
+        <%= @audiopost.title %>
+      </a>
+    </fieldset>
       <audio class="player" id='audioArchive'>
-        <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>       
+        <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
       </audio>
     </div>
     <div data-role='footer' data-position="fixed" data-theme="f">
@@ -104,6 +98,26 @@
   </div>
 </div>
 <!--end the demo page-->
+<!--More Detail Page-->
+<div data-role="page" id="moreDetailPage">
+  <div data-role="header" data-theme="f">
+    <h1>Description</h1>
+    <a href="#demo-page" data-icon="back" class="ui-btn-left">Back</a>
+  </div>
+  <div data-role="content">
+    <h3><%= @audiopost.title %></h3>
+    <p id = 'showDate'>      
+      <strong>Show Date:</strong> <%= @audiopost.audio_date %>
+    </p>
+    <% if @audiopost.short_note.nil? %>
+      <p><%= @audiopost.short_note.html_safe %></p>        
+    <% end %>   
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="f">
+    <h4>powered by @BruinSquare</h4>
+  </div><!-- /footer -->  
+</div>
+<!--End Detail-->
 <!--Discuss Page-->
 <div data-role="page" id="discusspage">
   <div data-role="header" data-theme="f">
