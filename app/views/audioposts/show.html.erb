@@ -106,9 +106,14 @@
   </div>
   <div data-role="content">
     <h3><%= @audiopost.title %></h3>
-    <p id = 'showDate'>      
+<!--     <p id = 'showDate'>      
       <strong>Show Date:</strong> <%= @audiopost.audio_date %>
-    </p>
+    </p> -->
+    <% if @show.djname.nil? %>
+      <p id = 'showDJName'>      
+        <strong>Host by:</strong> <%= @show.djname %>
+      </p>
+    <% end %>
     <% if @audiopost.short_note.nil? %> 
     <% else %>
       <p><%= @audiopost.short_note.html_safe %></p>
