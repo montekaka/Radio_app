@@ -109,9 +109,10 @@
     <p id = 'showDate'>      
       <strong>Show Date:</strong> <%= @audiopost.audio_date %>
     </p>
-    <% if @audiopost.short_note.nil? %>
-      <p><%= @audiopost.short_note.html_safe %></p>        
-    <% end %>   
+    <% if @audiopost.short_note.nil? %> 
+    <% else %>
+      <p><%= @audiopost.short_note.html_safe %></p>
+    <% end %>
   </div>
   <div data-role="footer" data-position="fixed" data-theme="b">
     <h4>powered by @BruinSquare</h4>
