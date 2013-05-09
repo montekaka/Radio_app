@@ -59,6 +59,9 @@
       <a href="#moreDetailPage" data-role="button" data-icon="info" data-theme="e">
         <%= @audiopost.title %>
       </a>
+      <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
+        資源推介
+      </a>      
     </fieldset>
       <audio class="player" id='audioArchive'>
         <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
@@ -134,8 +137,73 @@
     <div id="disqus_thread"></div>
   </div>
 </div>
-<!--end the disucss page->
-<!-the Time control js-->  
+<!--end the disucss page -->
+<!-- Ads Page-->
+<div data-role="page" id="adsPage">
+  <div data-role="header" data-theme="b">
+    <h1>資源推介</h1>
+    <a href="#demo-page" data-icon="back" class="ui-btn-left">Back</a>
+  </div>
+  <div data-role="content">
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-iconpos="right">
+      <h4>鄧洪律律師事務所</h4>
+      <ul data-role="listview" data-theme="d" data-divider-theme="d">
+        <li data-role="list-divider">Address</li>
+        <li id='address'>
+          3303 Del Mar Avenue, Suite B Rosemead, CA 91770
+        </li>
+        <li data-role="list-divider">Contact Info</li>
+        <li id='phoneNumber'>
+          <a href='tel:16262806000' rel="external">Tel: (626)280-6000</a>
+        </li>
+        <li id='homepage'>
+          <a href='http://www.denglaw.com' rel="external">www.denglaw.com</a>
+        </li>
+        <li data-role="list-divider">Office Hours</li>
+        <li>Mon-Fri, 9:00AM-6:00PM</li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-iconpos="right">
+      <h4>余晨峰律師事務所</h4>
+      <ul data-role="listview" data-theme="d" data-divider-theme="d">
+        <li data-role="list-divider">Address</li>
+        <li id='address'>
+          2 E. Valley Blvd., Suite 270 Alhambra, CA 91801
+        </li>
+        <li data-role="list-divider">Contact Info</li>
+        <li id='phoneNumber'>
+          <a href='tel:16262892833' rel="external">Tel: (626)289-2833</a>
+        </li>
+        <li id='homepage'>
+          <a href='http://www.mylawcorp.com' rel="external">www.mylawcorp.com</a>
+        </li>        
+        <li data-role="list-divider">Office Hours</li>
+        <li>Mon-Fri, 9:00AM-6:00PM</li>
+      </ul>
+    </div>    
+    <div data-role="collapsible" data-theme="c" data-content-theme="d" data-iconpos="right">
+      <h4>陳興邦律師事務所</h4>
+      <ul data-role="listview" data-theme="d" data-divider-theme="d">
+        <li data-role="list-divider">Address</li>
+        <li id='address'>
+          228 W. Valley Boulevard, #201, Alhambra, CA 91801
+        </li>
+        <li data-role="list-divider">Contact Info</li>
+        <li id='phoneNumber'>
+          <a href='tel:16262806000' rel="external">Tel: (626)308-9282</a>
+        </li>
+        <li data-role="list-divider">Office Hours</li>
+        <li>Mon-Fri, 9:00AM-6:00PM</li>
+      </ul>
+    </div>    
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+    <h4>powered by @BruinSquare</h4>
+  </div><!-- /footer -->   
+</div>
+<!-- end the Ads page->
+
+<!-the Time control js-->
 <script>
 //fuction to calculate display hours
 function displayTime(input_seconds){
