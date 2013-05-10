@@ -61,6 +61,9 @@
       </a>
       <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
         資源推介
+      </a>
+      <a href="#adsPageSponsor" data-role="button" data-icon="grid" data-theme="c">
+        New Century BMW Weekly Special
       </a>      
     </fieldset>
       <audio class="player" id='audioArchive'>
@@ -121,6 +124,9 @@
     <% else %>
       <p><%= @audiopost.short_note.html_safe %></p>
     <% end %>
+      <a href="#adsPage" data-role="button" data-inline="true" data-theme="e" data-mini="true" >
+        資源推介
+      </a>    
   </div>
   <div data-role="footer" data-position="fixed" data-theme="b">
     <h4>powered by @BruinSquare</h4>
@@ -186,7 +192,7 @@
       <ul data-role="listview" data-theme="d" data-divider-theme="d">
         <li data-role="list-divider">Address</li>
         <li id='address'>
-        <a href='http://maps.apple.com/?q=228 W. Valley Boulevard, 201, Alhambra, CA 91801'>228 W. Valley Boulevard, #201, Alhambra, CA 91801</a>
+          <a href='http://maps.apple.com/?q=228 W. Valley Boulevard, 201, Alhambra, CA 91801'>228 W. Valley Boulevard, #201, Alhambra, CA 91801</a>
         </li>
         <li data-role="list-divider">Contact Info</li>
         <li id='phoneNumber'>
@@ -197,13 +203,40 @@
       </ul>
     </div>    
   </div>
+  <!-- end Ads Page-->
   <div data-role="footer" data-position="fixed" data-theme="b">
     <h4>powered by @BruinSquare</h4>
-  </div><!-- /footer -->   
+  </div>
+  <!-- footer -->   
 </div>
-<!-- end the Ads page->
-
-<!-the Time control js-->
+<!-- end the Ads page -->
+<!-- Sponsor Ads-->
+<div data-role="page" id="adsPageSponsor">
+  <div data-role="header" data-theme="b">
+    <h1>New Century BMW Weekly Special</h1>
+    <a href="#demo-page" data-icon="back" class="ui-btn-left">Back</a>
+  </div>
+  <div data-role="content">
+    <div>
+      <p class='adsproducttitle'>2013 BMW <strong>328ia</strong> Sedan</p>
+        <a href='tel:162625708444' rel="external">
+          <img src='https://dl.dropboxusercontent.com/u/9338310/Amazon/328.jpeg'>
+        </a>
+      <p>Lease For <span class ='autoMonthlyLeasePrice'>$268</span> Per Month</p>
+      <a href='tel:162625708444' rel="external">Call Now (626)570-8444</a>
+    </div>
+    <div>
+      <p class='adsproducttitle'>2013 BMW <strong>X3</strong> xDrive28i</p>
+        <a href='tel:162625708444' rel="external">
+          <img src='https://dl.dropboxusercontent.com/u/9338310/Amazon/x1.jpeg'>
+        </a>
+      <p>Lease For <span class ='autoMonthlyLeasePrice'>$388</span> Per Month</p>
+      <a href='tel:162625708444' rel="external">Call Now (626)570-8444</a>
+    </div>        
+  </div>
+</div>
+<!-- end sponsor ads-->
+<!-- the Time control js -->
 <script>
 //fuction to calculate display hours
 function displayTime(input_seconds){

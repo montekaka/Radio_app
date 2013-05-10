@@ -80,3 +80,11 @@
 	}
 .calendar em:before{left:9px;}	
 .calendar em:after{right:9px;}
+
+/* end Pure CSS Calendar Icon */
+.autoMonthlyLeasePrice{
+	font-size:250%;
+}
+.adsproducttitle{
+	font-size: 140%;
+}
