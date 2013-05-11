@@ -34,7 +34,7 @@
 <!---right panel-->
   <div data-role="panel" id="rightPanel" data-position="right" data-display="push" data-theme="c">
     <ul data-role="listview" data-theme="c" data-icon="false">
-      <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>      
+      <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>    
       <li data-role="list-divider">Share this page</li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Facebook</a></li>
@@ -48,7 +48,7 @@
     <h1>
       <%= @audiopost.title %>
     </h1>    
-    <%= link_to 'Home', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "home", "rel"=>'external'} %>
+    <%= link_to 'Back', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
     <a href="#rightPanel" type="button" id = "shareButton" class="ui-btn-right" data-icon="grid">Share</a>
   </div>
   <div data-role="content">    
