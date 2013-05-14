@@ -10,6 +10,7 @@
     <%else%>
         <%= link_to 'Back',  shows_path  , {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %> 
      <%end%>
+     <%= link_to 'Create Show', new_station_show_path(@station), {"class"=>"ui-btn-right", "data-icon" => "back", "rel"=>'external'} %> 
   </div>
   <div data-role="content">
     <ul data-role="listview" data-inset="true" data-count-theme="b">
