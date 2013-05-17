@@ -20,10 +20,14 @@
 	<div data-role="content" id='buttoncontainer'>
 		<% @stations.each do |station| %>
 			<%= link_to station.name, categories_station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"stationName", :'rel'=>"external" %>	
-		<% end %>
-		</ul>
-	</div><!-- /content -->	
+		<% end %>		
+		<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>		
+	</div><!-- /content -->
 	<div data-role="footer" data-position="fixed" data-theme="b">		
-		<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+		<h2>powered by KAZN</h2>
 	</div><!-- /footer -->	
 </div>
+
+<script>
+	mixpanel.track("Landing Page Loaded");
+</script>
