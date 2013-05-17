@@ -1,29 +1,32 @@
-<div data-role="page" id="demo-page">  
-  <h1>Listing stations</h1>
+<div data-role="page" id="demo-page">
+  <div data-role="content" id="content">
+    <h1>Listing stations</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Station url</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Station url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
+    <% @stations.each do |station| %>
+      <tr>
+        <td><%= station.name %></td>
+        <td><%= station.description %></td>
+        <td><%= station.station_url %></td>
+        <td><%= link_to 'Show', station %></td>
+        <td><%= link_to 'Edit', edit_station_path(station) %></td>
+        <td><%= link_to 'Destroy', station, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
 
-  <% @stations.each do |station| %>
-    <tr>
-      <td><%= station.name %></td>
-      <td><%= station.description %></td>
-      <td><%= station.station_url %></td>
-      <td><%= link_to 'Show', station %></td>
-      <td><%= link_to 'Edit', edit_station_path(station) %></td>
-      <td><%= link_to 'Destroy', station, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-  </table>
-
-  <br />
-
-  <%= link_to 'New Station', new_station_path %>
+    <br />
+    <%= link_to 'New Station', new_station_path %>    
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="c">
+    <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+  </div>
 </div>
