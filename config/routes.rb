@@ -1,5 +1,8 @@
 RadioApp::Application.routes.draw do
   resources :stations do
+    
+    get 'categories', :on => :member
+    
     resources :shows do
       collection do
         get 'categories' #add for route: shows/categories

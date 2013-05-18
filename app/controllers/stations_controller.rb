@@ -1,4 +1,10 @@
 class StationsController < ApplicationController
+  
+  
+  def categories
+    @station = Station.find(params[:id])
+  end   
+    
   # GET /stations
   # GET /stations.json
   def index

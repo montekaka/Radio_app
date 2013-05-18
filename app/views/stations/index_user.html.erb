@@ -19,7 +19,7 @@
 	</div>
 	<div data-role="content" id='buttoncontainer'>
 		<% @stations.each do |station| %>
-			<%= link_to station.name, categories_station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"stationName", :'rel'=>"external" %>	
+			<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"stationName", :'rel'=>"external" %>	
 		<% end %>		
 		<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>		
 	</div><!-- /content -->
