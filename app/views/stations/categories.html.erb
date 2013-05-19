@@ -22,6 +22,5 @@
 	</div>
 </div>
 <script type="text/javascript">
-    mixpanel.track("Station Landing Page Loaded");
-    mixpanel.track('<%=@station.name%>'+' loaded');
+    mixpanel.track("Station Page Loaded", {"Station Name": "<%= @station.name %>"}, function(){console.log('<%= @station.name %>')});  
 </script>

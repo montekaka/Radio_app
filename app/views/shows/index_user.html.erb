@@ -42,5 +42,5 @@
 <script type="text/javascript">
     //mixpanel.track("Category Landing Page Loaded");
     // mixpanel.track('<%= params[:category] %>'+'('+'<%= @station.name %>'+')' +' loaded');
-    mixpanel.track("Category Landing Page Loaded", {"category": '<%= params[:category] %>', "station_name":'<%= @station.name %>'}, function(){console.log('track call successed')});
-</script
+    mixpanel.track("Category Landing Page Loaded", {"Show Category": '<%= params[:category] %>', "Station Name":'<%= @station.name %>'}, function(){console.log('<%= params[:category] %>' + '(<%= @station.name %>)')});
+</script>
