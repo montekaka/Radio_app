@@ -297,6 +297,7 @@ var audio = document.getElementById('audioArchive');
 
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+  mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+') played');
 };
 
 //fast forward and backward
@@ -485,6 +486,6 @@ $(document).bind('pageinit', '#deme-page',function(){
 <!--Mixpanel-->
 <script type="text/javascript">
     mixpanel.track("epsiode page loaded");
-    mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+')');
+    mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+') loaded');
 </script>
 <!--end-->
