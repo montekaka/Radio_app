@@ -485,5 +485,6 @@ $(document).bind('pageinit', '#deme-page',function(){
 <!--Mixpanel-->
 <script type="text/javascript">
     mixpanel.track("epsiode page loaded");
+    mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+')');
 </script>
 <!--end-->
