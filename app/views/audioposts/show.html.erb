@@ -297,7 +297,12 @@ var audio = document.getElementById('audioArchive');
 
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
-  mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+') played');
+
+  //Only Tracking the audio has been played, not how many time
+  //the Play Button has been press
+  if(audio.currentTime==0){
+    mixpanel.track("Played Epsiode", {"Epsiode": '<%= @audiopost.title %>', "show_name":'<%= @show.name %>'}, function(){console.log('track call successed')});
+  }  
 };
 
 //fast forward and backward
@@ -485,7 +490,6 @@ $(document).bind('pageinit', '#deme-page',function(){
 <!--end-->
 <!--Mixpanel-->
 <script type="text/javascript">
-    mixpanel.track("epsiode page loaded");
-    mixpanel.track('<%= @audiopost.title %>'+'('+"<%= @show.name %>"+') loaded');
+    mixpanel.track("Viewed Epsiode Page", {"Epsiode": '<%= @audiopost.title %>', "show_name":'<%= @show.name %>'}, function(){console.log('track call successed')});
 </script>
 <!--end-->
