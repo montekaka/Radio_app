@@ -1,8 +1,9 @@
 # encoding: UTF-8
-
+Station.destroy_all
+stationa = Station.create(:name=>"AM1430")
 
 Show.destroy_all
-showa = Show.create(:name => "今日話題", :description=>"")
+showa = stationa.shows.create(:name => "今日話題", :description=>"", :category=>"News")
 
 Audiopost.destroy_all
 showa.audioposts.create(:title =>"俄敍通婚/通緝名單", :audio =>"http://www.am1300.com/uploadfile/2012/0704/20120704022610296.mp3", :audio_date =>"03/07/2012")
