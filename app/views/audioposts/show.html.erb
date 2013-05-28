@@ -60,13 +60,13 @@
         <%= @audiopost.title %>
       </a>
       
-      <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
+<!--       <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
         資源推介
-      </a>
+      </a> -->
       
-      <a href="#adsPageSponsor" data-role="button" data-icon="grid" data-theme="c">
+<!--       <a href="#adsPageSponsor" data-role="button" data-icon="grid" data-theme="c">
         New Century BMW
-      </a>      
+      </a>       -->
     </fieldset>
       <audio class="player" id='audioArchive'>
         <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
@@ -126,9 +126,9 @@
     <% else %>
       <p><%= @audiopost.short_note.html_safe %></p>
     <% end %>
-      <a href="#adsPage" data-role="button" data-inline="true" data-theme="e" data-mini="true" >
+<!--       <a href="#adsPage" data-role="button" data-inline="true" data-theme="e" data-mini="true" >
         資源推介
-      </a>    
+      </a> -->    
   </div>
   <div data-role="footer" data-position="fixed" data-theme="b">
     <h4>powered by @BruinSquare</h4>
