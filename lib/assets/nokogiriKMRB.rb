@@ -80,7 +80,7 @@ def getShowName(showurl)
 	end
 end
 
-#puts getShowName('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=33')
+#getShowName('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=33')
 
 def getShowDummyInfo(showURL)
 	page = Nokogiri::HTML(open(showURL))
@@ -144,7 +144,7 @@ def getShowPlayListTable(showURL)
 	page = Nokogiri::HTML(open(showURL))
 	table = page.css('table#type_1 tr td a')
 	table.each do |t|
-		title = t.text.strip
+		title = t.text.to_s.strip
 		l = title.length
 
 		episodeURL = t['href']
@@ -162,12 +162,12 @@ def getShowPlayListTable(showURL)
 	return dummyEpisode
 end
 
-#fy = getShowPlayListTable('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32&page=2')
-#fy.each do |f|
-#	puts f.name
-#	puts f.date
-#	puts f.url
-#end
+# fy = getShowPlayListTable('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59')
+# fy.each do |f|
+# 	puts f.name
+# 	puts f.date
+# 	puts f.url
+# end
 
 def getShowPlayList(showURL, firstTime)
 	# if this is the first time we run
@@ -178,7 +178,7 @@ def getShowPlayList(showURL, firstTime)
 	episodeInfo = []
 	if firstTime == "T"
 		page = Nokogiri::HTML(open(showURL))
-		totalEpisode = page.css('a.a1:nth-child(1)').text.strip
+		totalEpisode = page.css('a.a1:nth-child(1)').text.to_s.strip
 		totalPageToFetch = (totalEpisode[0..totalEpisode.length-4].to_f/15).ceil
 		$i  = 2
 		while $i <= totalPageToFetch do
@@ -198,11 +198,14 @@ def getShowPlayList(showURL, firstTime)
 	return episodeInfo
 end
 
-# fy = getShowPlayList('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32','T')
+# c = 1
+# fy = getShowPlayList('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59','T')
 # fy.each do |f|
+# 	puts c.to_s
 # 	puts f.name.strip
 # 	puts f.date.strip
 # 	puts f.url
+# 	c = c + 1
 # end
 
 def getEpisodeInfo(showURL, firstTime)
@@ -224,16 +227,16 @@ def getEpisodeInfo(showURL, firstTime)
 		dummyDate.push(w.date)
 		dummyEpisodeURL.push(w.url)
 	end
-
+	#c = 1
 	dummyEpisodeURL.each do |u|
 		page = Nokogiri::HTML(open(u))
-		#namePage = page.css('div.jmjs_main span.box_r2')
-		audioPage = page.css('embed')
-
-		shortDesc = page.css('div.right .right01 ul#breakNewsList').text.strip
+		#namePage = page.css('div.jmjs_main span.box_r2')		
+		audioPage = page.css('li:first-child embed')
+		shortDesc = page.css('div.right .right01 ul#breakNewsList').text
 		
-		audioPage.each do |i|
+		audioPage.each do |i|		
 			a = i['src']
+					
 			dummyLength = a.rindex(keyword1)
 			shorterDummyLink =  a[0..dummyLength+keyword1.length-1]
 
@@ -247,8 +250,8 @@ def getEpisodeInfo(showURL, firstTime)
 	f = 0
 	dummyURL.each do |j|
 		episode = EpisodePage.new
-		episode.name = dummyName[f].strip
-		episode.desc = dummyDesc[f].strip
+		episode.name = dummyName[f]
+		episode.desc = dummyDesc[f]
 		episode.date = dummyDate[f]
 		episode.url = j
 		f = f + 1
@@ -267,7 +270,7 @@ end
 # end
 
 
-# show = getShowInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=17')
+# show = getShowInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=18')
 
 # show.each do |s|
 # 	puts "show name: " + s.name
@@ -279,14 +282,16 @@ end
 # end
 
 
-#episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32&page=2',"T")
-
-# episode.each do |e|
-# 	puts "episode name: " + e.name
-# 	puts "episode desc: " + e.desc
-# 	puts "episode date: " + e.date
-# 	puts "episode url: " + e.url
-# end
+episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59',"T")
+c = 1
+episode.each do |e|
+	puts c.to_s
+	puts "episode name: " + e.name.to_s
+	puts "episode desc: " + e.desc.to_s
+	puts "episode date: " + e.date.to_s
+	puts "episode url: " + e.url
+	c = c + 1
+end
 
 class PodcastCategory
 	attr_accessor :name, :url, :showArray
