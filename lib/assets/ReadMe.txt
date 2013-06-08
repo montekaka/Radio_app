@@ -28,7 +28,7 @@ rake create_kmrb_shows
 
 2) To create all the shows
 
-rake create_kmrb_audioposts
+rake create_kmrb_audioposts 
 
 3) To update 
 

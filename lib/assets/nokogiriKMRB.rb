@@ -251,7 +251,7 @@ def getEpisodeInfo(showURL, firstTime)
 	dummyURL.each do |j|
 		episode = EpisodePage.new
 		episode.name = dummyName[f]
-		episode.desc = dummyDesc[f]
+		episode.desc = dummyDesc[f].to_s.strip
 		episode.date = dummyDate[f]
 		episode.url = j
 		f = f + 1
@@ -286,9 +286,9 @@ episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=li
 c = 1
 episode.each do |e|
 	puts c.to_s
-	puts "episode name: " + e.name.to_s
-	puts "episode desc: " + e.desc.to_s
-	puts "episode date: " + e.date.to_s
+	puts "episode name: " + e.name
+	puts "episode desc: " + e.desc
+	puts "episode date: " + e.date
 	puts "episode url: " + e.url
 	c = c + 1
 end

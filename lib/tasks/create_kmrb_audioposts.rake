@@ -7,14 +7,17 @@ task :create_kmrb_audioposts => :environment do
 		puts 'Show ID: ' + show.id.to_s
 		puts 'Show Name: ' + show.name
 		puts 'Show URL: ' + show.show_url
-		
-		audiopostMaster = getEpisodeInfo(show.show_url, 'T')
-		audiopostMaster.each do |e|
-			puts "episode name: " + e.name
-			puts "episode desc: " + e.desc
-			puts "episode date: " + e.date
-			puts "episode url: " + e.url
-			show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+		if(show.name=='大陣仗')
+			puts "Stupid Show"
+		else
+			audiopostMaster = getEpisodeInfo(show.show_url, 'T')
+			audiopostMaster.each do |e|
+				puts "episode name: " + e.name
+				puts "episode desc: " + e.desc
+				puts "episode date: " + e.date
+				puts "episode url: " + e.url
+				show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+			end
 		end						
 	end
 
