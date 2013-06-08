@@ -7,7 +7,7 @@ task :create_kmrb_audioposts => :environment do
 		puts 'Show ID: ' + show.id.to_s
 		puts 'Show Name: ' + show.name
 		puts 'Show URL: ' + show.show_url
-		if(show.name=='大陣仗')
+		if(show.show_url=='http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59')
 			puts "Stupid Show"
 		else
 			audiopostMaster = getEpisodeInfo(show.show_url, 'T')
