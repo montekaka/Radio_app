@@ -202,12 +202,12 @@ end
 # end
 
 def getEpisodeInfo(showURL, firstTime)
-	dummyURL = []
+	dummyURL = Array.new	
 	dummyName = []
 	dummyDate = []
 	dummyDesc = []
 
-	episodeMaster = []
+	episodeMaster = Array.new
 
 	keyword1='mp3'
 	keyword2='soundFile='	
@@ -220,36 +220,44 @@ def getEpisodeInfo(showURL, firstTime)
 		dummyDate.push(w.date)
 		dummyEpisodeURL.push(w.url)
 	end
-
-	dummyEpisodeURL.each do |u|
+	dummyEpisodeURL.each do |u|		
 		page = Nokogiri::HTML(open(u))
 		#namePage = page.css('div.jmjs_main span.box_r2')
 		audioPage = page.css('embed')
-
-		shortDesc = page.css('div.right .right01 ul#breakNewsList').text.strip
 		
+		shortDesc = page.css('div.right .right01 ul#breakNewsList').text.strip
+				
+		audioURL = Array.new
 		audioPage.each do |i|
-			a = i['src']
+			a = i['src']			
 			dummyLength = a.rindex(keyword1)
 			shorterDummyLink =  a[0..dummyLength+keyword1.length-1]
 
 			dummy2 = shorterDummyLink.rindex(keyword2)
 			dummy3 = shorterDummyLink[(dummy2+keyword2.length)..(shorterDummyLink.length)]
-			dummyURL.push(dummy3)
-			dummyDesc.push(shortDesc)
-		end		
+			audioURL.push(dummy3)
+		end
+		dummyURL.push(audioURL)
+		dummyDesc.push(shortDesc)
 	end
 
 	f = 0
 	dummyURL.each do |j|
-		episode = EpisodePage.new
-		episode.name = dummyName[f].strip
-		episode.desc = dummyDesc[f].strip
-		episode.date = dummyDate[f]
-		episode.url = j
-		f = f + 1
-
-		episodeMaster.push(episode)
+		k = 0
+		j.each do |p|
+			episode = EpisodePage.new
+			if j.length > 1
+				episode.name = dummyName[f].to_s.strip + " (" + (k+1).to_s + ")"
+			else
+				episode.name = dummyName[f].to_s.strip
+			end
+			episode.desc = dummyDesc[f].to_s.strip
+			episode.date = dummyDate[f]
+			episode.url = p
+			k = k + 1
+			episodeMaster.push(episode)
+		end
+		f = f + 1	
 	end
 
 	return episodeMaster
@@ -275,12 +283,13 @@ end
 # end
 
 
-# episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=32',"T")
+#episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=33',"T")
+# episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59',"T")
 
 # episode.each do |e|
-# 	puts "episode name: " + e.name
-# 	puts "episode desc: " + e.desc
-# 	puts "episode date: " + e.date
+# 	puts "episode name: " + e.name.to_s
+# 	puts "episode desc: " + e.desc.to_s
+# 	puts "episode date: " + e.date.to_s
 # 	puts "episode url: " + e.url
 # end
 

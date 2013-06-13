@@ -282,16 +282,16 @@ end
 # end
 
 
-episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59',"T")
-c = 1
-episode.each do |e|
-	puts c.to_s
-	puts "episode name: " + e.name
-	puts "episode desc: " + e.desc
-	puts "episode date: " + e.date
-	puts "episode url: " + e.url
-	c = c + 1
-end
+# episode = getEpisodeInfo('http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59',"T")
+# c = 1
+# episode.each do |e|
+# 	puts c.to_s
+# 	puts "episode name: " + e.name
+# 	puts "episode desc: " + e.desc
+# 	puts "episode date: " + e.date
+# 	puts "episode url: " + e.url
+# 	c = c + 1
+# end
 
 class PodcastCategory
 	attr_accessor :name, :url, :showArray
