@@ -9,18 +9,14 @@ task :update_kmrb_audioposts => :environment do
 		lastAudiopost = show.audioposts.order("audio_date desc").limit(1)
 		lastAudiopost.each do |i|
 			puts 'latest audiopost date: ' + i.audio_date.to_s
-			# if show.show_url=='http://www.am1430.net/index.php?m=content&c=index&a=lists&catid=59'			
-			# 	puts "stupid show"
-			# else
-				updateEpisode = updateAudiopost(show.show_url, 'T', i.audio_date)
-				if updateEpisode.length > 0
-					updateEpisode.each do |e|
-						puts "episode name: " + e.name
-						puts "episode date: " + e.date
-						show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
-					end
+			updateEpisode = updateAudiopost(show.show_url, 'T', i.audio_date)
+			if updateEpisode.length > 0
+				updateEpisode.each do |e|
+					puts "episode name: " + e.name
+					puts "episode date: " + e.date
+					show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
 				end
-			#end
+			end
 		end
 	end	
 end
