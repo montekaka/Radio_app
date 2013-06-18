@@ -1,4 +1,4 @@
-<%= form_for(@show, :html => {:data => {:ajax => 'false'}}) do |f| %>
+<%= form_for([@station, @show], :html => {:data => {:ajax => 'false'}}) do |f| %>
   <% if @show.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@show.errors.count, "error") %> prohibited this show from being saved:</h2>
@@ -37,7 +37,7 @@
         <%= f.submit %>
       </div>
       <div class="ui-block-b">        
-        <%= link_to 'Cancel', @show, :"data-theme"=>"a", :"data-role"=>'button' %>    
+        <%= link_to 'Cancel', @station, :"data-theme"=>"a", :"data-role"=>'button' %>    
       </div>      
     </fieldset>
   </li>

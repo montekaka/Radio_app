@@ -63,7 +63,8 @@ class ShowsController < ApplicationController
   # GET /shows/new
   # GET /shows/new.json
   def new
-    @show = Show.new
+    @station = Station.find(params[:station_id])
+    @show = @station.shows.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -79,11 +80,12 @@ class ShowsController < ApplicationController
   # POST /shows
   # POST /shows.json
   def create
-    @show = Show.new(params[:show])
+    @station = Station.find(params[:station_id])
+    @show = @station.shows.new(params[:show])
 
     respond_to do |format|
       if @show.save
-        format.html { redirect_to @show, :notice => 'Show was successfully created.' }
+        format.html { redirect_to station_show_path(@station, @show), :notice => 'Show was successfully created.' }
         format.json { render :json => @show, :status => :created, :location => @show }
       else
         format.html { render :action => "new" }
