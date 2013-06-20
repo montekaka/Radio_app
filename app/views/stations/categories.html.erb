@@ -4,7 +4,7 @@
 		<%= link_to 'Back',stations_path, {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
 	</div>
 	<div data-role="content">
-		<div data-role="collapsible-set" data-theme="e" data-content-theme="d">
+		<div data-role="collapsible-set" data-theme="e" data-content-theme="d" >
 			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
 				<div data-role="collapsible" data-collapsed="false">
 					<h2><%= c.category%></h2>				
