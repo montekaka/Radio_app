@@ -1,24 +1,16 @@
-<style type=text/css>
-.categoryName {
-	height: 100px;
-    text-align: left;
-}
-#buttoncontainer .ui-btn-text{
-	font-size: 20px;
-	/*color: #000066;*/
-}
-</style>
 <div data-role="page" id="CategoryPage">
 	<div data-role="header" data-theme="b">
 		<h1><%=@station.name%></h1>
 		<%= link_to 'Back',stations_path, {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
 	</div>
-	<div data-role="content" id='buttoncontainer'>
-		<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
-			
-				<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
-			
-		<% end %>
+	<div data-role="content">
+		<ul data-role="listview" data-inset="true">
+			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
+				<li data-role="list-divider">
+					<%= c.category%>
+				</li>
+			<% end %>			
+		</ul>
 	</div>
 </div>
 <script type="text/javascript">
