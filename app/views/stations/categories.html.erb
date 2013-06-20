@@ -8,7 +8,26 @@
 			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
 				<li data-role="list-divider">
 					<%= c.category%>
-				</li>
+				</li>				
+				<% @station.shows.find_all_by_category(c.category).each do |show| %>
+					<li>
+						<% if show.audioposts.count > 0 %>
+							<a href = '<%= show_audioposts_path(show)%>' rel='external'>
+								<h2><%= show.name %></h2>
+								<p><%= show.djname %></p>
+								<span class='ui-li-count'>
+									<%= show.audioposts.count %>
+								</span>						
+							</a>
+						<%else%>
+							<h2><%= show.name %></h2>
+							<p><%= show.djname %></p>
+							<span class='ui-li-count'>
+								<%= show.audioposts.count %>
+							</span>						
+						<%end%>
+					</li>
+				<%end%>
 			<% end %>			
 		</ul>
 	</div>
