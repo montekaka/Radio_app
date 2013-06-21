@@ -106,7 +106,12 @@
       </div>
     </div>
   <% else %>
-    something
+    <div data-role="content">
+      <% if @audiopost.short_note.nil? %> 
+      <% else %>
+        <p><%= @audiopost.short_note.html_safe %></p>
+      <% end %>      
+    </div>
   <% end %>
 </div>
 <!--end the demo page-->
