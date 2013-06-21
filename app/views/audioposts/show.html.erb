@@ -51,59 +51,63 @@
     <%= link_to 'Back', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
     <a href="#rightPanel" type="button" id = "shareButton" class="ui-btn-right" data-icon="grid">Share</a>
   </div>
-  <div data-role="content">    
-    <hr>
-     <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
-    <hr id="hr_bottom">
-    <fieldset>
-      <a href="#moreDetailPage" data-role="button" data-icon="info" data-theme="e">
-        <%= @audiopost.title %>
-      </a>
-      
-<!--       <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
-        資源推介
-      </a> -->
-      
-<!--       <a href="#adsPageSponsor" data-role="button" data-icon="grid" data-theme="c">
-        New Century BMW
-      </a>       -->
-    </fieldset>
-      <audio class="player" id='audioArchive'>
-        <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
-      </audio>
+  <% if @audiopost.audio.length > 0 %>
+    <div data-role="content">
+      <hr>
+       <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
+      <hr id="hr_bottom">
+      <fieldset>
+        <a href="#moreDetailPage" data-role="button" data-icon="info" data-theme="e">
+          <%= @audiopost.title %>
+        </a>
+        
+  <!--       <a href="#adsPage" data-role="button" data-icon="grid" data-theme="c">
+          資源推介
+        </a> -->
+        
+  <!--       <a href="#adsPageSponsor" data-role="button" data-icon="grid" data-theme="c">
+          New Century BMW
+        </a>       -->
+      </fieldset>
+        <audio class="player" id='audioArchive'>
+          <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
+        </audio>
     </div>
-    <div data-role='footer' data-position="fixed" data-theme="b">
-      <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
-        <tr>
-          <td><p id="DisplayRemindTime"></p></td>          
-          <td width="100%" class="slider-shit">
-            <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-theme='b'/>
-          </td>         
-        </tr>
-      </table>
-      <div data-role="footer" class="ui-bar" data-theme="b">
-        <div data-role="navbar">
-          <ul>
-<!--             <li>
-              <a href="#discusspage" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Comment</a>
-            </li> -->
-            <li>
-              <button type="button" id = "goback" data-theme="b" data-corners="false" onclick="fastForward(15, 'backward');">-15s</button>
-            </li>            
-            <li>
-              <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
-            </li>
-            <li>
-              <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15, 'forward');">+15s</button>
-            </li>             
-<!--             <li>
-              <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
-            </li> -->
-          </ul>
-        </div>     
+      <div data-role='footer' data-position="fixed" data-theme="b">
+        <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
+          <tr>
+            <td><p id="DisplayRemindTime"></p></td>          
+            <td width="100%" class="slider-shit">
+              <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-theme='b'/>
+            </td>         
+          </tr>
+        </table>
+        <div data-role="footer" class="ui-bar" data-theme="b">
+          <div data-role="navbar">
+            <ul>
+  <!--             <li>
+                <a href="#discusspage" type="button" id = "disqusButton" data-theme="b" data-corners="false" >Comment</a>
+              </li> -->
+              <li>
+                <button type="button" id = "goback" data-theme="b" data-corners="false" onclick="fastForward(15, 'backward');">-15s</button>
+              </li>            
+              <li>
+                <button type="button" id = "playButton" onclick = "fuck();" data-theme="b" data-corners="false" >Play</button>
+              </li>
+              <li>
+                <button type="button" id = "goforward" data-theme="b" data-corners="false" onclick="fastForward(15, 'forward');">+15s</button>
+              </li>             
+  <!--             <li>
+                <a href="#rightPanel" type="button" id = "shareButton" data-theme="b" data-corners="false" >Share</a>
+              </li> -->
+            </ul>
+          </div>     
+        </div>
       </div>
     </div>
-  </div>
+  <% else %>
+    something
+  <% end %>
 </div>
 <!--end the demo page-->
 <!--More Detail Page-->
@@ -391,89 +395,90 @@ function fastForward(changeTimeInSecond, moveToward){
     }
   };
 };
-
-$(document).bind('pageinit', '#deme-page',function(){
-  // var audio = document.getElementById('audioArchive');
-  // audio.play();
-  // audio.pause();
-  audio.addEventListener("loadedmetadata", function(){
-    var playLength = Math.round(audio.duration);
-    $('#DisplayCurrentTime').html(displayTime(playLength));
-    if(audio.currentTime==0){
-      $('#DisplayRemindTime').html("-"+displayTime(playLength));
-    };
-    $('#timeControl').attr('max', playLength);
-    $('#timeControl').slider('refresh');
-    
-    // this is not working well with iOS Simulator
-    // $('#DisplayCurrentTime').on('tap',function(){
-    //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
-    // });
-    // $('#playButton').on('tap',function(){
-    //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
-    // });    
-
-    //slider control the time
-    $('#timeControl').on('slidestart',function(){
+<% if @audiopost.audio.length > 0 %>
+  $(document).bind('pageinit', '#deme-page',function(){
+    // var audio = document.getElementById('audioArchive');
+    // audio.play();
+    // audio.pause();
+    audio.addEventListener("loadedmetadata", function(){
+      var playLength = Math.round(audio.duration);
+      $('#DisplayCurrentTime').html(displayTime(playLength));
       if(audio.currentTime==0){
-        audio.play();
-        audio.pause();
-        console.log("The audio has not played any yet, so we will like to init it.");
-      }
-      else if($('#playButton').text()=="Play"){        
-        console.log("The audio has been playing but currently at a pause state, so we do not need to do anything.");
-        return 0;
-      }
-      else{
-        console.log("The audio is playing, so we will like to pause it first.");
-        audio.pause();
-        $('audio').unbind('timeupdate');
-        audio.play();
-        $('audio').bind('timeupdate', function(){
-          sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
-        });
+        $('#DisplayRemindTime').html("-"+displayTime(playLength));
       };
+      $('#timeControl').attr('max', playLength);
+      $('#timeControl').slider('refresh');
+      
+      // this is not working well with iOS Simulator
+      // $('#DisplayCurrentTime').on('tap',function(){
+      //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
+      // });
+      // $('#playButton').on('tap',function(){
+      //   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl')
+      // });    
+
+      //slider control the time
+      $('#timeControl').on('slidestart',function(){
+        if(audio.currentTime==0){
+          audio.play();
+          audio.pause();
+          console.log("The audio has not played any yet, so we will like to init it.");
+        }
+        else if($('#playButton').text()=="Play"){        
+          console.log("The audio has been playing but currently at a pause state, so we do not need to do anything.");
+          return 0;
+        }
+        else{
+          console.log("The audio is playing, so we will like to pause it first.");
+          audio.pause();
+          $('audio').unbind('timeupdate');
+          audio.play();
+          $('audio').bind('timeupdate', function(){
+            sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+          });
+        };
+      });
+      //end slider start
+      //slider change
+      $("#timeControl").on('change', function(){    
+        $("#DisplayCurrentTime").html(displayTime($("#timeControl").val()));
+        if($('#playButton').text()=="Play"){        
+          $('#DisplayRemindTime').html("-"+displayTime(audio.duration - $("#timeControl").val()));
+        }
+      });
+      //end slider change
+      //slider stop
+      $("#timeControl").on('slidestop', function(){
+        if(audio.currentTime==0){
+          var slider_value = $("#timeControl").val();        
+          console.log("update time to " + displayTime(slider_value));
+          $('audio').bind('timeupdate', function(){
+            sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+          });        
+          audio.currentTime = slider_value;        
+        }
+        else if($('#playButton').text()=="Play"){      
+          var slider_value = $("#timeControl").val();
+          console.log("update time to " + displayTime(slider_value));
+          audio.currentTime = slider_value;
+        }
+        else{
+          audio.pause();
+          $('audio').unbind('timeupdate');
+          var slider_value = $("#timeControl").val();
+          console.log("Slider stop and update time to " + displayTime(slider_value));
+          audio.currentTime = slider_value;
+          $('audio').bind('timeupdate',function(){
+            sliderController(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
+          });        
+          audio.play();
+        };
+      });    
+      //end slider stop
+      //end slider control
     });
-    //end slider start
-    //slider change
-    $("#timeControl").on('change', function(){    
-      $("#DisplayCurrentTime").html(displayTime($("#timeControl").val()));
-      if($('#playButton').text()=="Play"){        
-        $('#DisplayRemindTime').html("-"+displayTime(audio.duration - $("#timeControl").val()));
-      }
-    });
-    //end slider change
-    //slider stop
-    $("#timeControl").on('slidestop', function(){
-      if(audio.currentTime==0){
-        var slider_value = $("#timeControl").val();        
-        console.log("update time to " + displayTime(slider_value));
-        $('audio').bind('timeupdate', function(){
-          sliderControllerWithSliderTime(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
-        });        
-        audio.currentTime = slider_value;        
-      }
-      else if($('#playButton').text()=="Play"){      
-        var slider_value = $("#timeControl").val();
-        console.log("update time to " + displayTime(slider_value));
-        audio.currentTime = slider_value;
-      }
-      else{
-        audio.pause();
-        $('audio').unbind('timeupdate');
-        var slider_value = $("#timeControl").val();
-        console.log("Slider stop and update time to " + displayTime(slider_value));
-        audio.currentTime = slider_value;
-        $('audio').bind('timeupdate',function(){
-          sliderController(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
-        });        
-        audio.play();
-      };
-    });    
-    //end slider stop
-    //end slider control
   });
-});
+<% end %>
 </script>
 <!--Disqus-->
   <script type="text/javascript">
