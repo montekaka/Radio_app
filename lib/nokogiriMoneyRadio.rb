@@ -32,6 +32,7 @@ def getEpisodeInfo(showURL,theYear,defaultDate)
 	episodeTitle = []
 	episodeURL = []
 	episodeDate = []
+	episodeMaster = []
 
 	episodeTable.each do |t|
 		#episodeURL.push('http://www.moneyradio.org/'+t['href'])
@@ -40,10 +41,18 @@ def getEpisodeInfo(showURL,theYear,defaultDate)
 		if(titleText.index(theYear).nil?)
 			episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
 			episodeTitle.push(t.text.strip)
+			#use this print out to debug
+			#puts t.text.strip
 		else
-			episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
-			#episodeDate.push(titleText[0..(titleText.index(theYear)+theYear.length-1)])
-			episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length]).to_s.strip
+			if titleText.index('1011/2007') # this is special case in 2007
+				episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
+				episodeTitle.push(t.text.strip)				
+			else
+				episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
+				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length]).to_s.strip
+			end
+			#use this print out to debug
+			#puts t.text.strip
 		end		
 	end
 
@@ -52,10 +61,28 @@ def getEpisodeInfo(showURL,theYear,defaultDate)
 		episodeURL.push('http://www.moneyradio.org/'+i['href'])
 	end
 
+	puts "Date: "+ episodeDate.length.to_s + ' Title: '+episodeTitle.length.to_s + ' url: '+episodeURL.length.to_s
+	
+	f = 0
+	episodeURL.each do |j|
+		episode = EpisodePage.new
+		episode.name = episodeTitle[f]
+		episode.date = episodeDate[f]
+		episode.url = j
+		f = f + 1
 
-	return episodeDate
+		episodeMaster.push(episode)
+	end
+
+	return episodeMaster
 end
 
-puts getEpisodeInfo("http://www.moneyradio.org/showSubCategory.php?SCID=279",'2004','01/1/2001')
+demo = getEpisodeInfo("http://www.moneyradio.org/showSubCategory.php?SCID=276",'2007','01/1/2001')
+
+demo.each do |d|
+	puts "episode Title: "+d.name
+	puts "episode Date: "+d.date.to_s
+	puts "episode URL: "+d.url.to_s
+end
 
 
