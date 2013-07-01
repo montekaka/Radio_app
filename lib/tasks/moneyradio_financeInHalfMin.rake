@@ -2,6 +2,10 @@
 desc "Finance in Half Minute Podcast Archive"
 task :moneyradio_financeInHalfMin => :environment do
 	require 'nokogiriMoneyRadio'
+	station = Station.find_by_name('節目重溫')
+	showa = station.shows.find_by_name('理財分半鐘')
+	puts showa.name
+
 	halfMinuteYears = ['2004','2005','2006','2007','2008']
 	halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=279', 
 		'http://www.moneyradio.org/showSubCategory.php?SCID=278',
@@ -30,5 +34,6 @@ task :moneyradio_financeInHalfMin => :environment do
 		puts "episode Title: "+d.name
 		puts "episode Date: "+d.date.to_s
 		puts "episode URL: "+d.url.to_s
+		showa.audioposts.create(:title => d.name, :audio=>d.url, :audio_date=>d.date, :short_note=>d.desc)
 	end	
 end
