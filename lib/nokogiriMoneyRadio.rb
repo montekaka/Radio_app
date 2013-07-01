@@ -77,35 +77,4 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 	return episodeMaster
 end
 
-##create Finance in Half Minute
-halfMinuteYears = ['2004','2005','2006','2007','2008']
-halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=279', 
-	'http://www.moneyradio.org/showSubCategory.php?SCID=278',
-	'http://www.moneyradio.org/showSubCategory.php?SCID=277',
-	'http://www.moneyradio.org/showSubCategory.php?SCID=276',
-	'http://www.moneyradio.org/showSubCategory.php?SCID=5001']
-
-k = 0
-halfMinuteArray = []
-halfMinuteYears.each do |h|	
-	demoURL = halfMinuteURLs[k]
-	demo = getHalfMinuteEpisodeInfo(demoURL,h,'01/1/2001')
-	k = k + 1
-	demo.each do |d|
-		episode = EpisodePage.new
-		episode.name = d.name
-		episode.date = d.date
-		episode.url = d.url
-		halfMinuteArray.push(episode)
-	end	
-end
-
-# demo = getHalfMinuteEpisodeInfo("http://www.moneyradio.org/showSubCategory.php?SCID=276",'2007','01/1/2001')
-
-halfMinuteArray.each do |d|
-	puts "episode Title: "+d.name
-	puts "episode Date: "+d.date.to_s
-	puts "episode URL: "+d.url.to_s
-end
-
 
