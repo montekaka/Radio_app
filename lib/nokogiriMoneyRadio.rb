@@ -33,7 +33,7 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 	episodeURL = []
 	episodeDate = []
 	episodeMaster = []
-
+		
 	episodeTable.each do |t|
 		#episodeURL.push('http://www.moneyradio.org/'+t['href'])
 		titleText = t.text.strip
@@ -56,8 +56,14 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 		end		
 	end
 
-	episodeLinks = page.css('td#contentTd table td a[target="_blank"]')
+	episodeLinks = page.css('td#contentTd table td a[target="_blank"]')	
+	puts episodeLinks.length.to_s
 	episodeLinks.each do |i|
+		if(i['href'])
+			puts ""
+		else
+			puts ""
+		end
 		episodeURL.push('http://www.moneyradio.org/'+i['href'])
 	end
 
