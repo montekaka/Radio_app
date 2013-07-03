@@ -45,7 +45,7 @@ task :moneyradio_WeeklyQA => :environment do
 	showa = station.shows.find_by_name('每周問答節目')
 	puts showa.name
 
-	halfMinuteYears = ['2004','2005','2006','2007','2008','2009','2010','2011']
+	halfMinuteYears = ['2004a','2005a','2006a','2007a','2008a','2009a','2010a','2011a']
 	halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=283', 
 		'http://www.moneyradio.org/showSubCategory.php?SCID=282',
 		'http://www.moneyradio.org/showSubCategory.php?SCID=281',
@@ -55,9 +55,9 @@ task :moneyradio_WeeklyQA => :environment do
 		'http://www.moneyradio.org/showSubCategory.php?SCID=6424',
 		'http://www.moneyradio.org/showSubCategory.php?SCID=6742'
 	]
-	# halfMinuteYears = ['2009']
+	# halfMinuteYears = ['2010a']
 	# halfMinuteURLs = [
-	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=6016'
+	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=6424'
 	# ]	
 
 	k = 0
@@ -81,6 +81,6 @@ task :moneyradio_WeeklyQA => :environment do
 		puts "episode Title: "+d.name
 		puts "episode Date: "+d.date.to_s
 		puts "episode URL: "+d.url.to_s
-		#showa.audioposts.create(:title => d.name, :audio=>d.url, :audio_date=>d.date, :short_note=>d.desc)
+		showa.audioposts.create(:title => d.name, :audio=>d.url, :audio_date=>d.date, :short_note=>d.desc)
 	end	
 end

@@ -56,10 +56,12 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 		end		
 	end
 
-	# get FIRST index of element searched
-	titleRemoveIndex = episodeTitle.index('零九年9月16日(第一節')
-	episodeTitle.delete_at(titleRemoveIndex)
-	episodeDate.delete_at(titleRemoveIndex)
+	if(theYear=='2009')
+		# get FIRST index of element searched
+		titleRemoveIndex = episodeTitle.index('零九年9月16日(第一節')
+		episodeTitle.delete_at(titleRemoveIndex)
+		episodeDate.delete_at(titleRemoveIndex)
+	end
 
 	episodeLinks = page.css('td#contentTd table td a[target="_blank"]')	
 	puts episodeLinks.length.to_s
