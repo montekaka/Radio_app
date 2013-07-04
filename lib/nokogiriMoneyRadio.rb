@@ -94,6 +94,7 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 	episodeURL = []
 	episodeDate = []
 	episodeMaster = []
+	episodeDesc = []
 		
 	episodeTable.each do |t|
 		episodeURL.push('http://www.moneyradio.org/'+t['href'])
@@ -116,11 +117,17 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 			#puts t.text.strip
 		end
 	end
+	f = 0
 	episodeURL.each do |c|
 		articlePage = Nokogiri::HTML(open(c))
 		content = articlePage.css('td#contentTd p').text.strip
-		puts content
+		#puts content
+		episodeDesc.push(content)
+		puts f.to_s
+		sleep(5)
+		f = f+1
 	end
+	puts "title: "+episodeTitle.length.to_s + "content: "+episodeDesc.length.to_s
 end
 
 getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=1877','2004','01/01/2001')
