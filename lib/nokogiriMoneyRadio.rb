@@ -49,7 +49,7 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 				episodeTitle.push(t.text.strip)				
 			else
 				episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
-				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length]).to_s.strip
+				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length].to_s.strip)
 			end
 			#use this print out to debug
 			#puts t.text.strip
@@ -111,7 +111,7 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 				episodeTitle.push(t.text.strip)				
 			else
 				episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
-				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length]).to_s.strip
+				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length].to_s.strip)
 			end
 			#use this print out to debug
 			#puts t.text.strip
@@ -124,11 +124,24 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 		#puts content
 		episodeDesc.push(content)
 		puts f.to_s
-		sleep(5)
+		puts episodeTitle[f]
+		sleep(3)
 		f = f+1
 	end
-	puts "title: "+episodeTitle.length.to_s + "content: "+episodeDesc.length.to_s
+	#puts "title: "+episodeTitle.length.to_s + "content: "+episodeDesc.length.to_s
+	k = 0
+	episodeURL.each do |j|
+		episode = EpisodePage.new
+		episode.name = episodeTitle[k]
+		episode.date = episodeDate[k]
+		episode.url = j
+		episode.desc = episodeDesc[k]
+		k = k + 1
+		episodeMaster.push(episode)
+	end
+	return episodeMaster
 end
 
-getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=1877','2004','01/01/2001')
+#finalResult = getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=1877','2004','01/01/2001')
 
+#puts "final: " + finalResult.length.to_s
