@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class StationsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
   setup do
     @station = stations(:one)
   end

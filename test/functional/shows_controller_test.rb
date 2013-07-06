@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ShowsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
   setup do
     @show = shows(:one)
   end

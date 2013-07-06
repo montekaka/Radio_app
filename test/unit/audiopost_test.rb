@@ -11,8 +11,8 @@ class AudiopostTest < ActiveSupport::TestCase
     assert audiopost.errors[:title].any?    
   end
   
-  test "audiopost -- shortnote must be less than 500" do
-      random_string = rand(36**501).to_s(36)
+  test "audiopost -- shortnote must be less than 10000" do
+      random_string = rand(36**100001).to_s(36)
       audiopost = Audiopost.new(:title=>"testing", :short_note=>random_string)
       assert audiopost.invalid?
       assert audiopost.errors[:short_note].any? 
