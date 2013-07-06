@@ -7,7 +7,7 @@ xml.rss :version => "2.0" do
 
     for audiopost in @audioposts
       xml.item do
-        xml.title audiopost.title
+        xml.title audiopost.title.gsub(/\s+/, "")
         xml.description audiopost.short_note
         xml.pubDate audiopost.created_at.to_s(:rfc822)
         xml.enclosure :url=>audiopost.audio, :type=>"audio/mp3"
