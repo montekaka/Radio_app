@@ -7,7 +7,11 @@ xml.rss :version => "2.0" do
 
     for audiopost in @audioposts
       xml.item do
-        xml.title audiopost.title.gsub(/\s+/, "")
+        if @show.name == "早晨LA" #hack for 早晨LA to add date for title
+       		xml.title audiopost.short_note + audiopost.title.gsub(/\s+/, "") 
+		else
+			xml.title audiopost.title.gsub(/\s+/, "")
+		end	
         xml.description audiopost.short_note
         xml.pubDate audiopost.created_at.to_s(:rfc822)
         xml.enclosure :url=>audiopost.audio, :type=>"audio/mp3"
