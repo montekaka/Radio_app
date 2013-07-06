@@ -92,15 +92,15 @@ task :moneyradio_financeInHalfMinArticle => :environment do
 	showa = station.shows.find_by_name('理財分半鐘')
 	puts showa.name
 
-	# halfMinuteYears = ['2004','2005','2006','2007','2008']
-	# halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877', 
-	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2134',
-	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2394',
-	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2648',
-	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=4996'
-	# ]
-	halfMinuteYears = ['2004']
-	halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877']
+	halfMinuteYears = ['2004','2005','2006','2007','2008']
+	halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877', 
+		'http://www.moneyradio.org/showSubCategory.php?SCID=2134',
+		'http://www.moneyradio.org/showSubCategory.php?SCID=2394',
+		'http://www.moneyradio.org/showSubCategory.php?SCID=2648',
+		'http://www.moneyradio.org/showSubCategory.php?SCID=4996'
+	]
+	# halfMinuteYears = ['2004']
+	# halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877']
 
 	k = 0
 	halfMinuteArray = []
@@ -128,14 +128,17 @@ task :moneyradio_financeInHalfMinArticle => :environment do
 		puts "episode Date: "+d.date.to_s
 		puts "episode Desc: "+d.desc.to_s
 		#puts "episode URL: "+d.url.to_s
-		showa.audioposts.create(:title => d.name, :audio_date=>d.date, :short_note=>d.desc)
+		showa.audioposts.create(:title => d.name,:audio=>'', :audio_date=>d.date, :short_note=>d.desc)
 		puts "Success"
 
 		audioarchive = audioshowa.audioposts.find_by_title(d.name)
 		
 		if audioarchive
 			puts "found the show name match with " + audioarchive.title
+			#puts audioarchive.short_note
+			#puts d.desc
 			audioarchive.short_note=d.desc
+			audioarchive.save
 		end
 	end
 end

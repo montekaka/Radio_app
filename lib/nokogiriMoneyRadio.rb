@@ -118,13 +118,14 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 		end
 	end
 	f = 0
-	episodeURL = episodeURL[0..4]
+	#episodeURL = episodeURL[0..4]
 	episodeURL.each do |c|
 		articlePage = Nokogiri::HTML(open(c))
 		content = articlePage.css('td#contentTd p').text.strip
 		#puts content
 		episodeDesc.push(content)
 		puts f.to_s
+		puts episodeDate[f]
 		puts episodeTitle[f]
 		sleep(3)
 		f = f+1
