@@ -3,8 +3,12 @@ xml.rss :version => "2.0" do
   xml.channel do
     xml.title @show.name
     xml.description @show.description
-    xml.link show_audioposts_url(@show)
-
+    xml.link show_audioposts_url(@show)  
+    xml.pubDate @audioposts.last.created_at.to_s(:rfc822)
+    xml.lastBuildDate @audioposts.last.created_at.to_s(:rfc822)  
+    xml.itunes :category, :text => 'News &amp; Politics'    
+    xml.itunes :author, @show.djname
+    
     for audiopost in @audioposts
       xml.item do
         if @show.name == "早晨LA" #hack for 早晨LA to add date for title
