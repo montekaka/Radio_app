@@ -147,3 +147,62 @@ end
 #finalResult = getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=1877','2004','01/01/2001')
 
 #puts "final: " + finalResult.length.to_s
+
+def getArticleWithHTML(showURL,theYear,defaultDate)
+	page = Nokogiri::HTML(open(showURL))
+	showTitle = page.css('td#contentTd table td h3 strong.title').text.strip
+	showDescription = page.css('td#contentTd p').text.strip
+	episodeTable = page.css('td#contentTd table td a.hmenu')
+	episodeTitle = []
+	episodeURL = []
+	episodeDate = []
+	episodeMaster = []
+	episodeDesc = []
+		
+	episodeTable.each do |t|
+		episodeURL.push('http://www.moneyradio.org/'+t['href'])
+		titleText = t.text.strip
+		#episodeDate.push(titleText.index(theYear))		
+		if(titleText.index(theYear).nil?)
+			episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
+			episodeTitle.push(t.text.strip)
+			#use this print out to debug
+			#puts t.text.strip
+		else
+			if titleText.index('1011/2007') # this is special case in 2007
+				episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
+				episodeTitle.push(t.text.strip)				
+			else
+				episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
+				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length].to_s.strip)
+			end
+			#use this print out to debug
+			#puts t.text.strip
+		end
+	end
+	f = 0
+	#episodeURL = episodeURL[0..4]
+	episodeURL.each do |c|
+		articlePage = Nokogiri::HTML(open(c))
+		content = articlePage.css('td#contentTd p').text.strip
+		#puts content
+		episodeDesc.push(content)
+		puts f.to_s
+		puts episodeDate[f]
+		puts episodeTitle[f]
+		sleep(3)
+		f = f+1
+	end
+	#puts "title: "+episodeTitle.length.to_s + "content: "+episodeDesc.length.to_s
+	k = 0
+	episodeURL.each do |j|
+		episode = EpisodePage.new
+		episode.name = episodeTitle[k]
+		episode.date = episodeDate[k]
+		#episode.url = j
+		episode.desc = episodeDesc[k]
+		k = k + 1
+		episodeMaster.push(episode)
+	end
+	return episodeMaster
+end
