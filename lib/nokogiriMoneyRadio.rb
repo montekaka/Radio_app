@@ -190,7 +190,7 @@ def getArticleWithHTML(showURL)
 	return episodeMaster
 end
 
-finalResult = getArticleWithHTML('http://www.moneyradio.org/showSubCategory.php?SCID=4691')
+#finalResult = getArticleWithHTML('http://www.moneyradio.org/showSubCategory.php?SCID=4691')
 
-puts "final: " + finalResult.length.to_s
+#puts "final: " + finalResult.length.to_s
 

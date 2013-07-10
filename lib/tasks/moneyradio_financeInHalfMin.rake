@@ -144,59 +144,50 @@ task :moneyradio_financeInHalfMinArticle => :environment do
 end
 
 desc "Finance in Half Minute Article Archive"
-task :moneyradio_financeInHalfMinArticle => :environment do
+task :moneyradio_Article => :environment do
 	require 'nokogiriMoneyRadio'
 	station = Station.find_by_name('理財文章')
-	showa = station.shows.find_by_name('理財分半鐘')
-	puts showa.name
-
-	halfMinuteYears = ['2004','2005','2006','2007','2008']
-	halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877', 
-		'http://www.moneyradio.org/showSubCategory.php?SCID=2134',
-		'http://www.moneyradio.org/showSubCategory.php?SCID=2394',
-		'http://www.moneyradio.org/showSubCategory.php?SCID=2648',
-		'http://www.moneyradio.org/showSubCategory.php?SCID=4996'
-	]
-	# halfMinuteYears = ['2004']
-	# halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877']
-
-	k = 0
-	halfMinuteArray = []
-	halfMinuteYears.each do |h|	
-		demoURL = halfMinuteURLs[k]
-		demo = getHalfMinuteArticle(demoURL,h,'01/1/2001')
-		k = k + 1
-		demo.each do |d|
-			episode = EpisodePage.new
-			episode.name = d.name
-			episode.date = d.date
-			episode.desc = d.desc
-			#episode.url = d.url
-			halfMinuteArray.push(episode)
-		end	
+	station.shows.each do |show|
+		puts show.name
+		puts show.show_url.length.to_s
 	end
+	# showa = station.shows.find_by_name('理財分半鐘')
+	# puts showa.name
 
-	# demo = getHalfMinuteEpisodeInfo("http://www.moneyradio.org/showSubCategory.php?SCID=276",'2007','01/1/2001')
+	# halfMinuteYears = ['2004','2005','2006','2007','2008']
+	# halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877', 
+	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2134',
+	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2394',
+	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=2648',
+	# 	'http://www.moneyradio.org/showSubCategory.php?SCID=4996'
+	# ]
+	# # halfMinuteYears = ['2004']
+	# # halfMinuteURLs = ['http://www.moneyradio.org/showSubCategory.php?SCID=1877']
 
-	audioStation = Station.find_by_name('節目重溫')
-	audioshowa = audioStation.shows.find_by_name('理財分半鐘')	
+	# k = 0
+	# halfMinuteArray = []
+	# halfMinuteYears.each do |h|	
+	# 	demoURL = halfMinuteURLs[k]
+	# 	demo = getHalfMinuteArticle(demoURL,h,'01/1/2001')
+	# 	k = k + 1
+	# 	demo.each do |d|
+	# 		episode = EpisodePage.new
+	# 		episode.name = d.name
+	# 		episode.date = d.date
+	# 		episode.desc = d.desc
+	# 		#episode.url = d.url
+	# 		halfMinuteArray.push(episode)
+	# 	end	
+	# end
 
-	halfMinuteArray.each do |d|
-		puts "episode Title: "+d.name
-		puts "episode Date: "+d.date.to_s
-		puts "episode Desc: "+d.desc.to_s
-		#puts "episode URL: "+d.url.to_s
-		showa.audioposts.create(:title => d.name,:audio=>'', :audio_date=>d.date, :short_note=>d.desc)
-		puts "Success"
+	# # demo = getHalfMinuteEpisodeInfo("http://www.moneyradio.org/showSubCategory.php?SCID=276",'2007','01/1/2001')
 
-		audioarchive = audioshowa.audioposts.find_by_title(d.name)
-		
-		if audioarchive
-			puts "found the show name match with " + audioarchive.title
-			#puts audioarchive.short_note
-			#puts d.desc
-			audioarchive.short_note=d.desc
-			audioarchive.save
-		end
-	end
+	# halfMinuteArray.each do |d|
+	# 	puts "episode Title: "+d.name
+	# 	puts "episode Date: "+d.date.to_s
+	# 	puts "episode Desc: "+d.desc.to_s
+	# 	#puts "episode URL: "+d.url.to_s
+	# 	showa.audioposts.create(:title => d.name,:audio=>'', :audio_date=>d.date, :short_note=>d.desc)
+	# 	puts "Success"
+	# end
 end
