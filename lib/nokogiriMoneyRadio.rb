@@ -148,7 +148,7 @@ end
 
 #puts "final: " + finalResult.length.to_s
 
-def getArticleWithHTML(showURL,theYear,defaultDate)
+def getArticleWithHTML(showURL)
 	page = Nokogiri::HTML(open(showURL))
 	showTitle = page.css('td#contentTd table td h3 strong.title').text.strip
 	showDescription = page.css('td#contentTd p').text.strip
@@ -162,34 +162,17 @@ def getArticleWithHTML(showURL,theYear,defaultDate)
 	episodeTable.each do |t|
 		episodeURL.push('http://www.moneyradio.org/'+t['href'])
 		titleText = t.text.strip
-		#episodeDate.push(titleText.index(theYear))		
-		if(titleText.index(theYear).nil?)
-			episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
-			episodeTitle.push(t.text.strip)
-			#use this print out to debug
-			#puts t.text.strip
-		else
-			if titleText.index('1011/2007') # this is special case in 2007
-				episodeDate.push(Date.strptime(defaultDate, '%m/%d/%Y'))
-				episodeTitle.push(t.text.strip)				
-			else
-				episodeDate.push(Date.strptime(titleText[0..(titleText.index(theYear)+theYear.length-1)], '%m/%d/%Y'))
-				episodeTitle.push(titleText[(titleText.index(theYear)+theYear.length)..titleText.length].to_s.strip)
-			end
-			#use this print out to debug
-			#puts t.text.strip
-		end
+		puts titleText
 	end
 	f = 0
 	#episodeURL = episodeURL[0..4]
 	episodeURL.each do |c|
 		articlePage = Nokogiri::HTML(open(c))
 		content = articlePage.css('td#contentTd p').text.strip
-		#puts content
+		puts content
 		episodeDesc.push(content)
-		puts f.to_s
-		puts episodeDate[f]
-		puts episodeTitle[f]
+		#puts f.to_s
+		#puts episodeTitle[f]
 		sleep(3)
 		f = f+1
 	end
@@ -198,7 +181,7 @@ def getArticleWithHTML(showURL,theYear,defaultDate)
 	episodeURL.each do |j|
 		episode = EpisodePage.new
 		episode.name = episodeTitle[k]
-		episode.date = episodeDate[k]
+		episode.date = ''
 		#episode.url = j
 		episode.desc = episodeDesc[k]
 		k = k + 1
@@ -206,3 +189,8 @@ def getArticleWithHTML(showURL,theYear,defaultDate)
 	end
 	return episodeMaster
 end
+
+finalResult = getArticleWithHTML('http://www.moneyradio.org/showSubCategory.php?SCID=4691')
+
+puts "final: " + finalResult.length.to_s
+
