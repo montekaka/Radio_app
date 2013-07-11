@@ -85,6 +85,13 @@ def getHalfMinuteEpisodeInfo(showURL,theYear,defaultDate)
 	return episodeMaster
 end
 
+# finalResult = getHalfMinuteEpisodeInfo('http://www.moneyradio.org/showSubCategory.php?SCID=5001','2008','01/01/2001')
+# File.open("output.txt", "w") do |f|
+# 	finalResult.each do |r|
+# 		f.puts r.name.strip
+# 	end
+# end
+
 def getHalfMinuteArticle(showURL,theYear,defaultDate)
 	page = Nokogiri::HTML(open(showURL))
 	showTitle = page.css('td#contentTd table td h3 strong.title').text.strip
@@ -124,9 +131,9 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 		content = articlePage.css('td#contentTd p').text.strip
 		#puts content
 		episodeDesc.push(content)
-		puts f.to_s
-		puts episodeDate[f]
-		puts episodeTitle[f]
+		#puts f.to_s
+		#puts episodeDate[f]
+		#puts episodeTitle[f]
 		sleep(3)
 		f = f+1
 	end
@@ -144,9 +151,9 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 	return episodeMaster
 end
 
-#finalResult = getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=1877','2004','01/01/2001')
-
+#finalResult = getHalfMinuteArticle('http://www.moneyradio.org/showSubCategory.php?SCID=5001','2008','01/01/2001')
 #puts "final: " + finalResult.length.to_s
+ 
 
 def getArticleWithHTML(showURL)
 	page = Nokogiri::HTML(open(showURL))
