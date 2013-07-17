@@ -2,8 +2,18 @@
 desc "Finance in Half Minute Podcast Archive"
 task :moneyradio_financeInHalfMin => :environment do
 	require 'nokogiriMoneyRadio'
+
 	station = Station.find_by_name('節目重溫')
+	if station == nil		
+		station = Station.create(:name=>"節目重溫")
+		puts "there is no station, create a new one"
+	end	
+
 	showa = station.shows.find_by_name('理財分半鐘')
+	if showa == nil
+		showa = station.shows.create(:name=>"理財分半鐘")
+		puts "there is no show, create a new one"
+	end
 	puts showa.name
 
 	halfMinuteYears = ['2004','2005','2006','2007','2008']
