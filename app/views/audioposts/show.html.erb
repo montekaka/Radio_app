@@ -49,7 +49,7 @@
       <%= @audiopost.title %>
     </h1>    
     <%= link_to 'Back', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
-    <a href="#rightPanel" type="button" id = "shareButton" class="ui-btn-right" data-icon="grid">Share</a>
+    <!-- <a href="#rightPanel" type="button" id = "shareButton" class="ui-btn-right" data-icon="grid">Share</a> -->
   </div>
   <% if @audiopost.audio.length > 0 %>
     <div data-role="content">
@@ -128,7 +128,7 @@
     </p> -->
     <% if @show.djname.nil? %>
       <p id = 'showDJName'>      
-        <strong>Host by:</strong> <%= @show.djname %>
+        <%= @show.djname %>
       </p>
     <% end %>
     <% if @audiopost.short_note.nil? %> 
