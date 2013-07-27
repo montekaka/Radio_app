@@ -131,9 +131,9 @@ def getHalfMinuteArticle(showURL,theYear,defaultDate)
 		content = articlePage.css('td#contentTd p').text.strip
 		#puts content
 		episodeDesc.push(content)
-		#puts f.to_s
-		#puts episodeDate[f]
-		#puts episodeTitle[f]
+		puts f.to_s
+		puts episodeDate[f]
+		puts episodeTitle[f]
 		sleep(3)
 		f = f+1
 	end

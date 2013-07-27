@@ -34,7 +34,24 @@
 			</p>		
 			<%= link_to 'Edit', edit_show_path(@show), :"data-role"=>"button", :"data-inline"=>"true", :rel=>"external", :"data-theme"=>"b", :'data-mini'=>'true', 'data-icon'=>'edit' %>		
 		</div>
-		<div data-role="collapsible" data-collapsed="false" data-theme="e" data-content-theme="d">
+		<div data-role="collapsible" data-theme="a" data-collapsed="false" data-content-theme="c">
+			<h4>Seed Files</h4>
+			<a href="#" data-role="button" data-inline="true" id="selectall">Select All</a>
+			<div id="seedfile">				
+				<p>stationa = Station.create(:name=>"<%= @show.station.name %>")</p>
+				<p>showa = stationa.shows.create(:name=>"<%= @show.name %>")</p>
+				<% @show.audioposts.each do |audiopost| %>
+					<p>
+						showa.audioposts.create(
+						:audio_date=>"<%= audiopost.audio_date%>",
+						:title=>"<%=audiopost.title %>",
+						:audio=>"<%=audiopost.audio %>",
+						:short_note=>"<%=audiopost.short_note%>")
+					</p>
+				<% end %>
+			</div> 
+		</div>
+		<div data-role="collapsible" data-theme="e" data-content-theme="d">
 			<h4>List of Episode</h4>
 			<p>
 				<%= link_to 'New Audio', new_show_audiopost_path(@show) ,{'data-role'=>"button", 'data-mini'=>"true", "data-theme"=>"b", 'data-inline'=>"true", 'data-icon'=>"new"} %>
@@ -70,3 +87,26 @@
 		</div>
 	</div>
 </div>
+<script>
+function SelectText(element) {
+    var doc = document
+        , text = doc.getElementById(element)
+        , range, selection
+    ;    
+    if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();        
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+    $("#selectall").click(function(){
+    	//alert('Button has been clicked');
+    	SelectText("seedfile");
+    })
+</script>

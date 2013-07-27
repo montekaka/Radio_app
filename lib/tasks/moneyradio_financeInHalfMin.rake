@@ -2,8 +2,18 @@
 desc "Finance in Half Minute Podcast Archive"
 task :moneyradio_financeInHalfMin => :environment do
 	require 'nokogiriMoneyRadio'
+
 	station = Station.find_by_name('節目重溫')
+	if station == nil		
+		station = Station.create(:name=>"節目重溫")
+		puts "there is no station, create a new one"
+	end	
+
 	showa = station.shows.find_by_name('理財分半鐘')
+	if showa == nil
+		showa = station.shows.create(:name=>"理財分半鐘")
+		puts "there is no show, create a new one"
+	end
 	puts showa.name
 
 	halfMinuteYears = ['2004','2005','2006','2007','2008']
@@ -42,7 +52,17 @@ desc "Weekly Q&A Podcast Archive"
 task :moneyradio_WeeklyQA => :environment do
 	require 'nokogiriMoneyRadio'
 	station = Station.find_by_name('節目重溫')
+
+	if station == nil		
+		station = Station.create(:name=>"節目重溫")
+		puts "there is no station, create a new one"
+	end	
+
 	showa = station.shows.find_by_name('每周問答節目')
+	if showa == nil
+		showa = station.shows.create(:name=>"每周問答節目")
+		puts "there is no show, create a new one"
+	end	
 	puts showa.name
 
 	halfMinuteYears = ['2004a','2005a','2006a','2007a','2008a','2009a','2010a','2011a']
@@ -89,7 +109,17 @@ desc "Finance in Half Minute Article Archive"
 task :moneyradio_financeInHalfMinArticle => :environment do
 	require 'nokogiriMoneyRadio'
 	station = Station.find_by_name('理財文章')
+
+	if station == nil		
+		station = Station.create(:name=>"理財文章")
+		puts "there is no station, create a new one"
+	end
+
 	showa = station.shows.find_by_name('理財分半鐘')
+	if showa == nil
+		showa = station.shows.create(:name=>"理財分半鐘")
+		puts "there is no show, create a new one"
+	end	
 	puts showa.name
 
 	halfMinuteYears = ['2004','2005','2006','2007','2008']
