@@ -109,7 +109,7 @@
     <div data-role="content">
       <% if @audiopost.short_note.nil? %> 
       <% else %>
-        <%= @audiopost.short_note.html_safe %>
+        <%= raw @audiopost.short_note %>
       <% end %>      
     </div>
   <% end %>
