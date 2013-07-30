@@ -2575,3 +2575,3050 @@ showa.audioposts.create( :audio_date=>"2008-01-03", :title=>"家庭預算不可�
 
 showa.audioposts.create( :audio_date=>"2008-01-01", :title=>"新年展望", :audio=>"http://www.moneyradio.org/www/90sec/2008/M080101.mp3", :short_note=>"")
 
+showa = stationa.shows.create(:name=>"每周問答節目")
+
+showa.audioposts.create( :audio_date=>"2004-12-29", :title=>"零四年十二月二十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041229D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-29", :title=>"零四年十二月二十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041229C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-29", :title=>"零四年十二月二十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041229B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-29", :title=>"零四年十二月二十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041229A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-22", :title=>"零四年十二月二十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041222D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-22", :title=>"零四年十二月二十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041222C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-22", :title=>"零四年十二月二十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041222B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-22", :title=>"零四年十二月二十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041222A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-08", :title=>"零四年十二月八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041208D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-08", :title=>"零四年十二月八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041208C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-08", :title=>"零四年十二月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041208B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-08", :title=>"零四年十二月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041208A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-01", :title=>"零四年十二月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041201D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-01", :title=>"零四年十二月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041201C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-01", :title=>"零四年十二月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041201B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-12-01", :title=>"零四年十二月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041201A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-24", :title=>"零四年十一月二十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041124D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-24", :title=>"零四年十一月二十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041124C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-24", :title=>"零四年十一月二十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041124B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-24", :title=>"零四年十一月二十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041124A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-17", :title=>"零四年十一月十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041117D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-17", :title=>"零四年十一月十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041117C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-17", :title=>"零四年十一月十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041117B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-17", :title=>"零四年十一月十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041117A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-10", :title=>"零四年十一月十日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041110E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-10", :title=>"零四年十一月十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041110D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-10", :title=>"零四年十一月十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041110C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-10", :title=>"零四年十一月十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041110B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-10", :title=>"零四年十一月十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041110A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-03", :title=>"零四年十一月三日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041103E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-03", :title=>"零四年十一月三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041103D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-03", :title=>"零四年十一月三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041103C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-03", :title=>"零四年十一月三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041103B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-11-03", :title=>"零四年十一月三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041103A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-27", :title=>"零四年十月二十七日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041027E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-27", :title=>"零四年十月二十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041027D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-27", :title=>"零四年十月二十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041027C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-27", :title=>"零四年十月二十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041027B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-27", :title=>"零四年十月二十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041027A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-20", :title=>"零四年十月二十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041020D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-20", :title=>"零四年十月二十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041020C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-20", :title=>"零四年十月二十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041020B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-20", :title=>"零四年十月二十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041020A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-13", :title=>"零四年十月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041013D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-13", :title=>"零四年十月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041013C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-13", :title=>"零四年十月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041013B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-13", :title=>"零四年十月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041013A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-06", :title=>"零四年十月六日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041006E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-06", :title=>"零四年十月六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041006D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-06", :title=>"零四年十月六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041006C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-06", :title=>"零四年十月六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041006B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-10-06", :title=>"零四年十月六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/041006A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-29", :title=>"零四年九月二十九日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040929E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-29", :title=>"零四年九月二十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040929D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-29", :title=>"零四年九月二十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040929C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-29", :title=>"零四年九月二十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040929B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-29", :title=>"零四年九月二十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040929A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-22", :title=>"零四年九月二十二日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040922E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-22", :title=>"零四年九月二十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040922D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-22", :title=>"零四年九月二十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040922C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-22", :title=>"零四年九月二十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040922B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-22", :title=>"零四年九月二十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040922A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-15", :title=>"零四年九月十五日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040915E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-15", :title=>"零四年九月十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040915D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-15", :title=>"零四年九月十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040915C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-15", :title=>"零四年九月十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040915B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-15", :title=>"零四年九月十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040915A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-08", :title=>"零四年九月八日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040908E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-08", :title=>"零四年九月八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040908D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-08", :title=>"零四年九月八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040908C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-08", :title=>"零四年九月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040908B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-08", :title=>"零四年九月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040908A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-01", :title=>"零四年九月一日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040901E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-01", :title=>"零四年九月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040901D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-01", :title=>"零四年九月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040901C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-01", :title=>"零四年九月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040901B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-09-01", :title=>"零四年九月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040901A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-25", :title=>"零四年八月二十五日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040825E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-25", :title=>"零四年八月二十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040825D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-25", :title=>"零四年八月二十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040825C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-25", :title=>"零四年八月二十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040825B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-25", :title=>"零四年八月二十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040825A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-18", :title=>"零四年八月十八日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040818E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-18", :title=>"零四年八月十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040818D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-18", :title=>"零四年八月十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040818C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-18", :title=>"零四年八月十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040818B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-18", :title=>"零四年八月十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040818A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-11", :title=>"零四年八月十一日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040811E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-11", :title=>"零四年八月十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040811D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-11", :title=>"零四年八月十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040811C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-11", :title=>"零四年八月十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040811B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-11", :title=>"零四年八月十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040811A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-04", :title=>"零四年八月四日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040804E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-04", :title=>"零四年八月四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040804D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-04", :title=>"零四年八月四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040804C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-04", :title=>"零四年八月四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040804B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-08-04", :title=>"零四年八月四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040804A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-28", :title=>"零四年七月二十八日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040728E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-28", :title=>"零四年七月二十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040728D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-28", :title=>"零四年七月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040728C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-28", :title=>"零四年七月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040728B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-28", :title=>"零四年七月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040728A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-21", :title=>"零四年七月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040721D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-21", :title=>"零四年七月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040721C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-21", :title=>"零四年七月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040721B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-21", :title=>"零四年七月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040721A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-14", :title=>"零四年七月十四日節目(第五節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040714E.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-14", :title=>"零四年七月十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040714D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-14", :title=>"零四年七月十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040714B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-14", :title=>"零四年七月十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040714A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2004-07-14", :title=>"零四年七月十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2004/040714C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-28", :title=>"零五年十二月二十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051228D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-28", :title=>"零五年十二月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051228C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-28", :title=>"零五年十二月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051228B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-28", :title=>"零五年十二月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051228A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-21", :title=>"零五年十二月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051221D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-21", :title=>"零五年十二月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051221C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-21", :title=>"零五年十二月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051221B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-21", :title=>"零五年十二月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051221A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-14", :title=>"零五年十二月十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051214D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-14", :title=>"零五年十二月十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051214C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-14", :title=>"零五年十二月十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051214B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-14", :title=>"零五年十二月十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051214A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-07", :title=>"零五年十二月七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051207D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-07", :title=>"零五年十二月七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051207C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-07", :title=>"零五年十二月七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051207B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-12-07", :title=>"零五年十二月七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051207A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-30", :title=>"零五年十一月三十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051130B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-30", :title=>"零五年十一月三十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051130A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-23", :title=>"零五年十一月二十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051123D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-23", :title=>"零五年十一月二十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051123C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-23", :title=>"零五年十一月二十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051123B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-23", :title=>"零五年十一月二十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051123A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-16", :title=>"零五年十一月十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051116D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-16", :title=>"零五年十一月十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051116C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-16", :title=>"零五年十一月十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051116B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-16", :title=>"零五年十一月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051116A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-09", :title=>"零五年十一月九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051109D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-09", :title=>"零五年十一月九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051109C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-09", :title=>"零五年十一月九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051109B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-09", :title=>"零五年十一月九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051109A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-02", :title=>"零五年十一月二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051102D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-02", :title=>"零五年十一月二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051102C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-02", :title=>"零五年十一月二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051102B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-11-02", :title=>"零五年十一月二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051102A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-26", :title=>"零五年十月二十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051026D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-26", :title=>"零五年十月二十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051026C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-26", :title=>"零五年十月二十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051026B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-26", :title=>"零五年十月二十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051026A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-19", :title=>"零五年十月十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051019D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-19", :title=>"零五年十月十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051019C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-19", :title=>"零五年十月十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051019B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-19", :title=>"零五年十月十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051019A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-12", :title=>"零五年十月十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051012D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-12", :title=>"零五年十月十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051012C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-12", :title=>"零五年十月十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051012B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-12", :title=>"零五年十月十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051012A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-05", :title=>"零五年十月五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051005D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-05", :title=>"零五年十月五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051005C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-05", :title=>"零五年十月五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051005B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-10-05", :title=>"零五年十月五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/051005A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-28", :title=>"零五年九月二十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050928D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-28", :title=>"零五年九月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050928C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-28", :title=>"零五年九月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050928B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-28", :title=>"零五年九月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050928A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-21", :title=>"零五年九月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050921D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-21", :title=>"零五年九月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050921C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-21", :title=>"零五年九月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050921B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-21", :title=>"零五年九月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050921A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-14", :title=>"零五年九月十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050914D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-14", :title=>"零五年九月十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050914C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-14", :title=>"零五年九月十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050914B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-14", :title=>"零五年九月十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050914A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-07", :title=>"零五年九月七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050907D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-07", :title=>"零五年九月七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050907C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-07", :title=>"零五年九月七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050907B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-09-07", :title=>"零五年九月七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050907A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-31", :title=>"零五年八月三十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050831D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-31", :title=>"零五年八月三十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050831C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-31", :title=>"零五年八月三十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050831B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-31", :title=>"零五年八月三十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050831A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-24", :title=>"零五年八月二十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050824D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-24", :title=>"零五年八月二十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050824C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-24", :title=>"零五年八月二十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050824B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-24", :title=>"零五年八月二十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050824A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-17", :title=>"零五年八月十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050817D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-17", :title=>"零五年八月十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050817C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-17", :title=>"零五年八月十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050817B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-17", :title=>"零五年八月十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050817A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-10", :title=>"零五年八月十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050810D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-10", :title=>"零五年八月十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050810C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-10", :title=>"零五年八月十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050810B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-10", :title=>"零五年八月十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050810A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-03", :title=>"零五年八月三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050803D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-03", :title=>"零五年八月三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050803C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-03", :title=>"零五年八月三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050803B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-08-03", :title=>"零五年八月三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050803A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-27", :title=>"零五年七月二十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050727D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-27", :title=>"零五年七月二十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050727C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-27", :title=>"零五年七月二十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050727B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-27", :title=>"零五年七月二十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050727A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-20", :title=>"零五年七月二十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050720D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-20", :title=>"零五年七月二十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050720C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-20", :title=>"零五年七月二十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050720B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-20", :title=>"零五年七月二十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050720A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-13", :title=>"零五年七月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050713D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-13", :title=>"零五年七月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050713C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-13", :title=>"零五年七月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050713B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-07-13", :title=>"零五年七月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050713A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-29", :title=>"零五年六月二十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050629D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-29", :title=>"零五年六月二十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050629C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-29", :title=>"零五年六月二十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050629B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-29", :title=>"零五年六月二十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050629A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-22", :title=>"零五年六月二十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050622D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-22", :title=>"零五年六月二十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050622C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-22", :title=>"零五年六月二十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050622B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-15", :title=>"零五年六月十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050615C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-22", :title=>"零五年六月二十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050622A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-15", :title=>"零五年六月十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050615D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-15", :title=>"零五年六月十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050615B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-15", :title=>"零五年六月十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050615A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-08", :title=>"零五年六月八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050608D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-08", :title=>"零五年六月八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050608C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-08", :title=>"零五年六月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050608B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-08", :title=>"零五年六月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050608A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-01", :title=>"零五年六月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050601D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-01", :title=>"零五年六月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050601C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-01", :title=>"零五年六月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050601B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-06-01", :title=>"零五年六月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050601A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-25", :title=>"零五年五月二十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050525D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-25", :title=>"零五年五月二十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050525C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-25", :title=>"零五年五月二十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050525B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-25", :title=>"零五年五月二十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050525A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-18", :title=>"零五年五月十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050518D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-18", :title=>"零五年五月十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050518C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-18", :title=>"零五年五月十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050518B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-18", :title=>"零五年五月十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050518A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-11", :title=>"零五年五月十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050511D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-11", :title=>"零五年五月十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050511C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-11", :title=>"零五年五月十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050511B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-11", :title=>"零五年五月十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050511A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-04", :title=>"零五年五月四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050504D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-04", :title=>"零五年五月四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050504C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-04", :title=>"零五年五月四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050504B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-05-04", :title=>"零五年五月四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050504A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-27", :title=>"零五年四月二十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050427D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-27", :title=>"零五年四月二十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050427C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-27", :title=>"零五年四月二十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050427B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-27", :title=>"零五年四月二十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050427A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-20", :title=>"零五年四月二十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050420D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-20", :title=>"零五年四月二十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050420C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-20", :title=>"零五年四月二十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050420B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-20", :title=>"零五年四月二十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050420A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-13", :title=>"零五年四月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050413D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-13", :title=>"零五年四月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050413C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-13", :title=>"零五年四月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050413B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-13", :title=>"零五年四月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050413A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-06", :title=>"零五年四月六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050406D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-06", :title=>"零五年四月六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050406C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-06", :title=>"零五年四月六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050406B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-04-06", :title=>"零五年四月六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050406A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-23", :title=>"零五年三月二十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050323D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-23", :title=>"零五年三月二十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050323C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-23", :title=>"零五年三月二十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050323B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-23", :title=>"零五年三月二十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050323A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-16", :title=>"零五年三月十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050316D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-16", :title=>"零五年三月十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050316C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-16", :title=>"零五年三月十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050316B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-16", :title=>"零五年三月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050316A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-09", :title=>"零五年三月九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050309D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-09", :title=>"零五年三月九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050309C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-09", :title=>"零五年三月九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050309B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-09", :title=>"零五年三月九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050309A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-02", :title=>"零五年三月二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050302D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-02", :title=>"零五年三月二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050302C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-02", :title=>"零五年三月二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050302B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-03-02", :title=>"零五年三月二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050302A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-23", :title=>"零五年二月二十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050223D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-23", :title=>"零五年二月二十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050223C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-23", :title=>"零五年二月二十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050223B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-23", :title=>"零五年二月二十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050223A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-16", :title=>"零五年二月十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050216D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-16", :title=>"零五年二月十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050216C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-16", :title=>"零五年二月十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050216B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-16", :title=>"零五年二月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050216A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-03", :title=>"零五年二月三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050203D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-03", :title=>"零五年二月三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050203C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-03", :title=>"零五年二月三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050203B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-02-03", :title=>"零五年二月三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050203A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-19", :title=>"零五年一月十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050119D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-19", :title=>"零五年一月十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050119C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-19", :title=>"零五年一月十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050119B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-19", :title=>"零五年一月十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050119A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-12", :title=>"零五年一月十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050112D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-12", :title=>"零五年一月十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050112C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-12", :title=>"零五年一月十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050112B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-12", :title=>"零五年一月十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050112A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-05", :title=>"零五年一月五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050105D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-05", :title=>"零五年一月五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050105C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-05", :title=>"零五年一月五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050105B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2005-01-05", :title=>"零五年一月五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2005/050105A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-04", :title=>"零六年一月四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060104A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-04", :title=>"零六年一月四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060104B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-04", :title=>"零六年一月四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060104C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-04", :title=>"零六年一月四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060104D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-11", :title=>"零六年一月十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060111A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-11", :title=>"零六年一月十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060111B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-11", :title=>"零六年一月十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060111C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-11", :title=>"零六年一月十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060111D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-18", :title=>"零六年一月十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060118A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-18", :title=>"零六年一月十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060118B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-18", :title=>"零六年一月十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060118C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-18", :title=>"零六年一月十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060118D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-25", :title=>"零六年一月二十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060125A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-25", :title=>"零六年一月二十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060125B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-25", :title=>"零六年一月二十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060125C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-01-25", :title=>"零六年一月二十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060125D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-01", :title=>"零六年二月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060201A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-01", :title=>"零六年二月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060201B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-01", :title=>"零六年二月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060201C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-01", :title=>"零六年二月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060201D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-08", :title=>"零六年二月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060208A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-08", :title=>"零六年二月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060208B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-08", :title=>"零六年二月八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060208C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-08", :title=>"零六年二月八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060208D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-15", :title=>"零六年二月十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060215A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-15", :title=>"零六年二月十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060215B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-15", :title=>"零六年二月十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060215C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-02-15", :title=>"零六年二月十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060215D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-01", :title=>"零六年三月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060301A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-01", :title=>"零六年三月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060301B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-01", :title=>"零六年三月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060301C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-01", :title=>"零六年三月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060301D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-08", :title=>"零六年三月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060308A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-08", :title=>"零六年三月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060308B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-08", :title=>"零六年三月八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060308C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-08", :title=>"零六年三月八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060308D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-15", :title=>"零六年三月十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060315A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-15", :title=>"零六年三月十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060315B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-15", :title=>"零六年三月十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060315C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-15", :title=>"零六年三月十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060315D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-22", :title=>"零六年三月二十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060322A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-22", :title=>"零六年三月二十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060322B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-22", :title=>"零六年三月二十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060322C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-22", :title=>"零六年三月二十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060322D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-29", :title=>"零六年三月二十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060329A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-29", :title=>"零六年三月二十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060329B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-29", :title=>"零六年三月二十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060329C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-03-29", :title=>"零六年三月二十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060329D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-05", :title=>"零六年四月五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060405A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-05", :title=>"零六年四月五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060405B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-05", :title=>"零六年四月五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060405C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-05", :title=>"零六年四月五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060405D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-12", :title=>"零六年四月十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060412A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-12", :title=>"零六年四月十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060412B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-12", :title=>"零六年四月十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060412C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-12", :title=>"零六年四月十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060412D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-19", :title=>"零六年四月十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060419A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-19", :title=>"零六年四月十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060419B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-19", :title=>"零六年四月十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060419C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-19", :title=>"零六年四月十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060419D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-26", :title=>"零六年四月二十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060426A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-26", :title=>"零六年四月二十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060426B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-26", :title=>"零六年四月二十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060426C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-04-26", :title=>"零六年四月二十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060426D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-03", :title=>"零六年五月三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060503A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-03", :title=>"零六年五月三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060503B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-03", :title=>"零六年五月三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060503C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-03", :title=>"零六年五月三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060503D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-10", :title=>"零六年五月十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060510A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-10", :title=>"零六年五月十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060510B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-10", :title=>"零六年五月十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060510C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-10", :title=>"零六年五月十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060510D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-17", :title=>"零六年五月十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060517A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-17", :title=>"零六年五月十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060517B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-17", :title=>"零六年五月十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060517C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-17", :title=>"零六年五月十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060517D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-24", :title=>"零六年五月二十四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060524A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-24", :title=>"零六年五月二十四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060524B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-24", :title=>"零六年五月二十四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060524C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-24", :title=>"零六年五月二十四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060524D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-31", :title=>"零六年五月三十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060531A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-31", :title=>"零六年五月三十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060531B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-31", :title=>"零六年五月三十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060531C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-05-31", :title=>"零六年五月三十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060531D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-07", :title=>"零六年六月七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060607A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-07", :title=>"零六年六月七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060607B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-07", :title=>"零六年六月七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060607C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-07", :title=>"零六年六月七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060607D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-16", :title=>"零六年六月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060616A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-16", :title=>"零六年六月十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060616B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-16", :title=>"零六年六月十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060616C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-16", :title=>"零六年六月十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060616D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-21", :title=>"零六年六月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060621A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-21", :title=>"零六年六月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060621B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-21", :title=>"零六年六月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060621C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-21", :title=>"零六年六月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060621D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-28", :title=>"零六年六月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060628A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-28", :title=>"零六年六月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060628B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-28", :title=>"零六年六月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060628C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-06-28", :title=>"零六年六月二十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060628D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-05", :title=>"零六年七月五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060705A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-05", :title=>"零六年七月五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060705B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-05", :title=>"零六年七月五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060705C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-05", :title=>"零六年七月五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060705D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-12", :title=>"零六年七月十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060712A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-12", :title=>"零六年七月十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060712B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-12", :title=>"零六年七月十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060712C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-12", :title=>"零六年七月十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060712D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-19", :title=>"零六年七月十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060719A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-19", :title=>"零六年七月十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060719B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-19", :title=>"零六年七月十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060719C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-19", :title=>"零六年七月十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060719D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-26", :title=>"零六年七月二十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060726A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-26", :title=>"零六年七月二十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060726B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-26", :title=>"零六年七月二十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060726C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-07-26", :title=>"零六年七月二十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060726D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-02", :title=>"零六年八月二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060802A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-02", :title=>"零六年八月二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060802B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-02", :title=>"零六年八月二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060802C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-02", :title=>"零六年八月二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060802D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-09", :title=>"零六年八月九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060809A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-09", :title=>"零六年八月九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060809B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-09", :title=>"零六年八月九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060809C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-09", :title=>"零六年八月九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060809D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-16", :title=>"零六年八月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060816A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-16", :title=>"零六年八月十六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060816B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-16", :title=>"零六年八月十六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060816C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-16", :title=>"零六年八月十六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060816D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-23", :title=>"零六年八月二十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060823A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-23", :title=>"零六年八月二十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060823B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-23", :title=>"零六年八月二十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060823C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-23", :title=>"零六年八月二十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060823D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-30", :title=>"零六年八月三十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060830A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-30", :title=>"零六年八月三十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060830B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-30", :title=>"零六年八月三十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060830C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-08-30", :title=>"零六年八月三十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060830D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-06", :title=>"零六年九月六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060906A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-06", :title=>"零六年九月六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060906B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-06", :title=>"零六年九月六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060906C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-06", :title=>"零六年九月六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060906D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-13", :title=>"零六年九月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060913A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-13", :title=>"零六年九月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060913B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-13", :title=>"零六年九月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060913C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-13", :title=>"零六年九月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060913D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-20", :title=>"零六年九月二十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060920A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-20", :title=>"零六年九月二十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060920B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-20", :title=>"零六年九月二十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060920C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-20", :title=>"零六年九月二十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060920D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-27", :title=>"零六年九月二十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060927A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-27", :title=>"零六年九月二十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060927B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-27", :title=>"零六年九月二十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060927C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-09-27", :title=>"零六年九月二十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/060927D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-04", :title=>"零六年十月四日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061004A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-04", :title=>"零六年十月四日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061004B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-04", :title=>"零六年十月四日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061004C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-04", :title=>"零六年十月四日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061004D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-11", :title=>"零六年十月十一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061011A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-11", :title=>"零六年十月十一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061011B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-11", :title=>"零六年十月十一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061011C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-11", :title=>"零六年十月十一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061011D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-18", :title=>"零六年十月十八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061018A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-18", :title=>"零六年十月十八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061018B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-18", :title=>"零六年十月十八日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061018C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-18", :title=>"零六年十月十八日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061018D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-25", :title=>"零六年十月二十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061025A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-25", :title=>"零六年十月二十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061025B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-25", :title=>"零六年十月二十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061025C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-10-25", :title=>"零六年十月二十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061025D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-01", :title=>"零六年十一月一日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061101A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-01", :title=>"零六年十一月一日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061101B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-01", :title=>"零六年十一月一日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061101C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-01", :title=>"零六年十一月一日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061101D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-08", :title=>"零六年十一月八日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061108A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-08", :title=>"零六年十一月八日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061108B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-15", :title=>"零六年十一月十五日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061115A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-15", :title=>"零六年十一月十五日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061115B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-15", :title=>"零六年十一月十五日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061115C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-15", :title=>"零六年十一月十五日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061115D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-22", :title=>"零六年十一月二十二日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061122A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-22", :title=>"零六年十一月二十二日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061122B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-22", :title=>"零六年十一月二十二日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061122C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-22", :title=>"零六年十一月二十二日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061122D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-29", :title=>"零六年十一月二十九日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061129A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-29", :title=>"零六年十一月二十九日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061129B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-29", :title=>"零六年十一月二十九日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061129C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-11-29", :title=>"零六年十一月二十九日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061129D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-06", :title=>"零六年十二月六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061206A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-06", :title=>"零六年十二月六日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061206B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-06", :title=>"零六年十二月六日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061206C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-06", :title=>"零六年十二月六日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061206D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-13", :title=>"零六年十二月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061213A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-13", :title=>"零六年十二月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061213B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-13", :title=>"零六年十二月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061213C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-13", :title=>"零六年十二月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061213D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-20", :title=>"零六年十二月二十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061220A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-20", :title=>"零六年十二月二十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061220B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-20", :title=>"零六年十二月二十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061220C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-20", :title=>"零六年十二月二十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061220D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-27", :title=>"零六年十二月二十七日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061227A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-27", :title=>"零六年十二月二十七日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061227B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-27", :title=>"零六年十二月二十七日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061227C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2006-12-27", :title=>"零六年十二月二十七日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2006/061227D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-26", :title=>"零七年十二月二十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071226D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-26", :title=>"零七年十二月二十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071226C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-26", :title=>"零七年十二月二十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071226B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-26", :title=>"零七年十二月二十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071226A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-19", :title=>"零七年十二月十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071219D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-19", :title=>"零七年十二月十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071219C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-19", :title=>"零七年十二月十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071219B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-19", :title=>"零七年十二月十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071219A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-12", :title=>"零七年十二月十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071212D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-12", :title=>"零七年十二月十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071212C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-12", :title=>"零七年十二月十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071212B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-12", :title=>"零七年十二月十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071212A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-05", :title=>"零七年十二月五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071205D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-05", :title=>"零七年十二月五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071205C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-05", :title=>"零七年十二月五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071205B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-12-05", :title=>"零七年十二月五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071205A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-28", :title=>"零七年十一月二十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071128D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-28", :title=>"零七年十一月二十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071128C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-28", :title=>"零七年十一月二十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071128B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年十一月二十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/0711218A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-21", :title=>"零七年十一月二十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071121D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-21", :title=>"零七年十一月二十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071121C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-21", :title=>"零七年十一月二十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071121B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-21", :title=>"零七年十一月二十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071121A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-14", :title=>"零七年十一月十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071114D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-14", :title=>"零七年十一月十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071114C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-14", :title=>"零七年十一月十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071114B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-14", :title=>"零七年十一月十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071114A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-07", :title=>"零七年十一月七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071107D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-07", :title=>"零七年十一月七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071107C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-07", :title=>"零七年十一月七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071107B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-11-07", :title=>"零七年十一月七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071107A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-31", :title=>"零七年十月三十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071031D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-31", :title=>"零七年十月三十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071031C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-31", :title=>"零七年十月三十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071031B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-31", :title=>"零七年十月三十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071031A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-24", :title=>"零七年十月二十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071024D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-24", :title=>"零七年十月二十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071024C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-24", :title=>"零七年十月二十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071024B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-24", :title=>"零七年十月二十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071024A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-17", :title=>"零七年十月十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071017D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-17", :title=>"零七年十月十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071017C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-17", :title=>"零七年十月十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071017B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-17", :title=>"零七年十月十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071017A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-10", :title=>"零七年十月十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071010D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-10", :title=>"零七年十月十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071010C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-10", :title=>"零七年十月十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071010B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-10", :title=>"零七年十月十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071010A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-03", :title=>"零七年十月三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071003D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-03", :title=>"零七年十月三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071003C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-03", :title=>"零七年十月三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071003B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-10-03", :title=>"零七年十月三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/071003A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-26", :title=>"零七年九月二十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070926D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-26", :title=>"零七年九月二十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070926C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-26", :title=>"零七年九月二十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070926B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-26", :title=>"零七年九月二十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070926A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-19", :title=>"零七年九月十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070919D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-19", :title=>"零七年九月十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070919C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-19", :title=>"零七年九月十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070919B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-19", :title=>"零七年九月十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070919A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-12", :title=>"零七年九月十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070912D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-12", :title=>"零七年九月十二日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070912C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-12", :title=>"零七年九月十二日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070912B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-12", :title=>"零七年九月十二日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070912A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-05", :title=>"零七年九月五日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070905D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-05", :title=>"零七年九月五日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070905C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-05", :title=>"零七年九月五日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070905B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-09-05", :title=>"零七年九月五日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070905A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-30", :title=>"零七年八月二十九日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070830D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-30", :title=>"零七年八月二十九日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070830C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-30", :title=>"零七年八月二十九日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070830B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-30", :title=>"零七年八月二十九日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070830A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-22", :title=>"零七年八月二十二日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070822D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-22", :title=>"零七年八月二十二日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070822C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-22", :title=>"零七年八月二十二日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070822B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-22", :title=>"零七年八月二十二日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070822A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-15", :title=>"零七年八月十五日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070815D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-15", :title=>"零七年八月十五日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070815C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-15", :title=>"零七年八月十五日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070815B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-15", :title=>"零七年八月十五日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070815A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-08", :title=>"零七年八月八日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070808D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-08", :title=>"零七年八月八日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070808C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-08", :title=>"零七年八月八日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070808B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-08", :title=>"零七年八月八日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070808A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-01", :title=>"零七年八月一日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070801D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-01", :title=>"零七年八月一日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070801C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-01", :title=>"零七年八月一日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070801B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-08-01", :title=>"零七年八月一日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070801A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-25", :title=>"零七年七月二十五日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070725D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-25", :title=>"零七年七月二十五日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070725C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-25", :title=>"零七年七月二十五日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070725B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-25", :title=>"零七年七月二十五日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070725A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-18", :title=>"零七年七月十八日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070718D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-18", :title=>"零七年七月十八日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070718C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-18", :title=>"零七年七月十八日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070718B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-18", :title=>"零七年七月十八日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070718A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-11", :title=>"零七年七月十一日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070711D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-11", :title=>"零七年七月十一日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070711C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-11", :title=>"零七年七月十一日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070711B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-11", :title=>"零七年七月十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070711A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-04", :title=>"零七年七月四日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070704D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-04", :title=>"零七年七月四日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070704C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-04", :title=>"零七年七月四日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070704B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-07-04", :title=>"零七年七月四日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070704A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-27", :title=>"零七年六月二十七日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070627D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-27", :title=>"零七年六月二十七日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070627C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-20", :title=>"零七年六月二十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070620D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-20", :title=>"零七年六月二十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070620C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-20", :title=>"零七年六月二十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070620B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-20", :title=>"零七年六月二十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070620A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-13", :title=>"零七年六月十三日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070613D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-13", :title=>"零七年六月十三日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070613C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-13", :title=>"零七年六月十三日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070613B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-06-13", :title=>"零七年六月十三日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070613A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-05-30", :title=>"零七年五月三十日節目(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070530D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-05-30", :title=>"零七年五月三十日節目(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070530C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-05-30", :title=>"零七年五月三十日節目(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070530B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-05-30", :title=>"零七年五月三十日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070530A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二十三日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070523D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二十三日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070523C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二十三日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070523B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二十三日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070523A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月十六日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070516D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月十六日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070516C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月十六日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070516B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2007-05-16", :title=>"零七年五月十六日節目(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2007/070516A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月九日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070509D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月九日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070509C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月九日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070509B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月九日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070509A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070502D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070502C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070502B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年五月二日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070502A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月二十五日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070425D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月二十五日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070425C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月二十五日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070425B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月二十五日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070425A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十八日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070418D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十八日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070418C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十八日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070418B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十八日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070418A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十一日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070411D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十一日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070411C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十一日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070411B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年四月十一日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070411A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十八日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070328D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070328C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070328B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070328A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070321D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070321C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070321B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070321A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月十四日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070314B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月十四日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070314A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月七日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070307D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月七日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070307C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月七日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070307B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年三月七日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070307A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十八日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070228C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十八日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070228B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十八日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070228A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十一日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070221D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十一日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070221C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十一日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070221B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月二十一日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070221A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月十四日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070214D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月十四日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070214C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月十四日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070214B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月十四日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070214A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月七日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070207D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月七日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070207C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月七日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070207B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年二月七日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070207A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三十一日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070131D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三十一日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070131C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三十一日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070131B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三十一日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070131A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月二十四日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070124D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月二十四日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070124C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月二十四日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070124B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月二十四日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070124A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十七日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070117D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十七日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070117C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十七日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070117B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十七日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070117A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070110D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070110C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070110B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月十日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070110A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三日節目(第四節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070103D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三日節目(第三節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070103C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三日節目(第二節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070103B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零七年一月三日節目(第一節)", :audio=>"http://www.moneyradio.org//www/qna/2007/070103A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-31", :title=>"零八年十二月三十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081231D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-31", :title=>"零八年十二月三十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081231C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-31", :title=>"零八年十二月三十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081231B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-31", :title=>"零八年十二月三十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081231A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-24", :title=>"零八年十二月二十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081224D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-24", :title=>"零八年十二月二十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081224C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-24", :title=>"零八年十二月二十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081224B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-24", :title=>"零八年十二月二十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081224A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-17", :title=>"零八年十二月十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081217D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-17", :title=>"零八年十二月十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081217C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-17", :title=>"零八年十二月十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081217B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-17", :title=>"零八年十二月十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081217A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-10", :title=>"零八年十二月十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081210D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-10", :title=>"零八年十二月十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081210C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-10", :title=>"零八年十二月十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081210B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-10", :title=>"零八年十二月十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081210A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-03", :title=>"零八年十二月三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081203D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-03", :title=>"零八年十二月三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081203C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-03", :title=>"零八年十二月三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081203B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-12-03", :title=>"零八年十二月三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081203A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-26", :title=>"零八年十一月二十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081126D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-26", :title=>"零八年十一月二十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081126C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-26", :title=>"零八年十一月二十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081126B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-26", :title=>"零八年十一月二十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081126A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-19", :title=>"零八年十一月十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081119D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-19", :title=>"零八年十一月十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081119C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-19", :title=>"零八年十一月十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081119B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-19", :title=>"零八年十一月十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081119A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-12", :title=>"零八年十一月十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081112D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-12", :title=>"零八年十一月十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081112C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-12", :title=>"零八年十一月十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081112B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-12", :title=>"零八年十一月十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081112A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-05", :title=>"零八年十一月五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081105D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-05", :title=>"零八年十一月五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081105C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-05", :title=>"零八年十一月五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081105B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-11-05", :title=>"零八年十一月五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081105A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-29", :title=>"零八年十月二十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081029C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-29", :title=>"零八年十月二十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081029B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-29", :title=>"零八年十月二十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081029A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-22", :title=>"零八年十月二十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081022D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-22", :title=>"零八年十月二十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081022C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-22", :title=>"零八年十月二十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081022B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-22", :title=>"零八年十月二十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081022A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-15", :title=>"零八年十月十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081015D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-15", :title=>"零八年十月十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081015C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-15", :title=>"零八年十月十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081015B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零八年十月十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/0810015A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-08", :title=>"零八年十月八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081008D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-08", :title=>"零八年十月八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081008C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-08", :title=>"零八年十月八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081008B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-08", :title=>"零八年十月八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081008A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-01", :title=>"零八年十月一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081001D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-01", :title=>"零八年十月一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081001C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-01", :title=>"零八年十月一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081001B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-10-01", :title=>"零八年十月一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/081001A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零八年九月二十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080924CD.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-24", :title=>"零八年七九月二十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080924C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-24", :title=>"零八年九月二十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080924B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-24", :title=>"零八年九月二十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080924A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-17", :title=>"零八年九月十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080917D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-17", :title=>"零八年九月十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080917C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-17", :title=>"零八年九月十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080917B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-17", :title=>"零八年九月十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080917A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-10", :title=>"零八年九月十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080910D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-10", :title=>"零八年九月十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080910C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-10", :title=>"零八年九月十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080910B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-10", :title=>"零八年九月十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080910A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-03", :title=>"零八年九月三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080903D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-03", :title=>"零八年九月三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080903C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-03", :title=>"零八年九月三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080903B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-09-03", :title=>"零八年九月三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080903A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-27", :title=>"零八年八月二十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080827D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-27", :title=>"零八年八月二十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080827C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-27", :title=>"零八年八月二十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080827B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-27", :title=>"零八年八月二十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080827A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-20", :title=>"零八年八月二十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080820D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-20", :title=>"零八年八月二十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080820C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-20", :title=>"零八年八月二十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080820B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-20", :title=>"零八年八月二十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080820A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-13", :title=>"零八年八月十三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080813D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-13", :title=>"零八年八月十三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080813C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-13", :title=>"零八年八月十三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080813B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-13", :title=>"零八年八月十三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080813A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-06", :title=>"零八年八月六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080806D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-06", :title=>"零八年八月六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080806C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-06", :title=>"零八年八月六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080806B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-08-06", :title=>"零八年八月六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080806A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-30", :title=>"零八年七月三十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080730D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-30", :title=>"零八年七月三十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080730C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-30", :title=>"零八年七月三十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080730B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-30", :title=>"零八年七月三十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080730A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-23", :title=>"零八年七月二十三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080723C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-23", :title=>"零八年七月二十三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080723D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-23", :title=>"零八年七月二十三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080723B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-23", :title=>"零八年七月二十三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080723A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-16", :title=>"零八年七月十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080716D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-16", :title=>"零八年七月十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080716C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-16", :title=>"零八年七月十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080716B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零八年七月十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/0807016A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-09", :title=>"零八年七月九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080709D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-09", :title=>"零八年七月九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080709C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-09", :title=>"零八年七月九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080709B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-09", :title=>"零八年七月九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080709A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-02", :title=>"零八年七月二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080702D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-02", :title=>"零八年七月二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080702C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-02", :title=>"零八年七月二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080702B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-07-02", :title=>"零八年七月二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080702A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-25", :title=>"零八年六月二十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080625D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-25", :title=>"零八年六月二十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080625C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-25", :title=>"零八年六月二十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080625B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-25", :title=>"零八年六月二十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080625A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-18", :title=>"零八年六月十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080618D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-18", :title=>"零八年六月十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080618C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-18", :title=>"零八年六月十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080618B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-18", :title=>"零八年六月十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080618A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-11", :title=>"零八年六月十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080611D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-11", :title=>"零八年六月十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080611C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-11", :title=>"零八年六月十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080611B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-11", :title=>"零八年六月十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080611A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-04", :title=>"零八年六月四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080604D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-04", :title=>"零八年六月四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080604C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-04", :title=>"零八年六月四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080604B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-06-04", :title=>"零八年六月四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080604A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-28", :title=>"零八年五月二十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080528D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-28", :title=>"零八年五月二十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080528C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-28", :title=>"零八年五月二十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080528B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-28", :title=>"零八年五月二十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080528A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-21", :title=>"零八年五月二十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080521D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-21", :title=>"零八年五月二十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080521C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-21", :title=>"零八年五月二十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080521B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-21", :title=>"零八年五月二十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080521A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-14", :title=>"零八年五月十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080514D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-14", :title=>"零八年五月十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080514C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-14", :title=>"零八年五月十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080514B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-14", :title=>"零八年五月十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080514A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-07", :title=>"零八年五月七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080507D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-07", :title=>"零八年五月七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080507C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-07", :title=>"零八年五月七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080507B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-05-07", :title=>"零八年月七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080507A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-30", :title=>"零八年四月三十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080430D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-30", :title=>"零八年四月三十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080430C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-30", :title=>"零八年四月三十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080430B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-30", :title=>"零八年四月三十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080430A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-23", :title=>"零八年四月二十三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080423D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-23", :title=>"零八年四月二十三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080423C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-23", :title=>"零八年四月二十三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080423B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-23", :title=>"零八年四月二十三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080423A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-16", :title=>"零八年四月十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080416D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-16", :title=>"零八年四月十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080416C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-16", :title=>"零八年四月十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080416B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-16", :title=>"零八年四月十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080416A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-09", :title=>"零八年四月九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080409D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-09", :title=>"零八年四月九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080409C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-09", :title=>"零八年四月九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080409B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-09", :title=>"零八年四月九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080409A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-02", :title=>"零八年四月二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080402D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-02", :title=>"零八年四月二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080402C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-02", :title=>"零八年四月二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080402B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-04-02", :title=>"零八年四月二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080402A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-26", :title=>"零八年三月二十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080326D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-26", :title=>"零八年三月二十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080326C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-26", :title=>"零八年三月二十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080326B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-26", :title=>"零八年三月二十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080326A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-19", :title=>"零八年三月十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080319D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-19", :title=>"零八年三月十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080319C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-19", :title=>"零八年三月十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080319B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-19", :title=>"零八年三月十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080319A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-12", :title=>"零八年三月十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080312D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-12", :title=>"零八年三月十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080312C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-12", :title=>"零八年三月十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080312B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-12", :title=>"零八年三月十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080312A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-05", :title=>"零八年三月五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080305D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-05", :title=>"零八年三月五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080305C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-05", :title=>"零八年三月五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080305B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-03-05", :title=>"零八年三月五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080305A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-27", :title=>"零八年二月二十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080227D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-27", :title=>"零八年二月二十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080227C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-27", :title=>"零八年二月二十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080227B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-27", :title=>"零八年二月二十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080227A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-20", :title=>"零八年二月二十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080220D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-20", :title=>"零八年二月二十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080220C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-20", :title=>"零八年二月二十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080220B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-20", :title=>"零八年二月二十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080220A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-06", :title=>"零八年二月六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080206D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-06", :title=>"零八年二月六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080206C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-06", :title=>"零八年二月六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080206B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-02-06", :title=>"零八年二月六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080206A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-30", :title=>"零八年一月三十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080130D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-30", :title=>"零八年一月三十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080130C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-30", :title=>"零八年一月三十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080130B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-30", :title=>"零八年一月三十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080130A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-23", :title=>"零八年一月二十三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080123D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-23", :title=>"零八年一月二十三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080123C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-23", :title=>"零八年一月二十三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080123B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-23", :title=>"零八年一月二十三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080123A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-16", :title=>"零八年一月十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080116D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-16", :title=>"零八年一月十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080116C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-16", :title=>"零八年一月十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080116B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-16", :title=>"零八年一月十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080116A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-09", :title=>"零八年一月九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080109D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-09", :title=>"零八年一月九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080109C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-09", :title=>"零八年一月九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080109B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-09", :title=>"零八年一月九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080109A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-02", :title=>"零八年一月二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080102D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-02", :title=>"零八年一月二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080102C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-02", :title=>"零八年一月二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080102B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2008-01-02", :title=>"零八年一月二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2008/080102A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-13", :title=>"2010年10月13日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101013C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-10", :title=>"2010年2月10日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100210A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-30", :title=>"零九年12月30日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091230D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-30", :title=>"零九年12月30日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091230C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-30", :title=>"零九年12月30日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091230B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-30", :title=>"零九年12月30日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091230A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-23", :title=>"零九年12月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091223D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-23", :title=>"零九年12月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091223C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-23", :title=>"零九年12月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091223B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-23", :title=>"零九年12月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091223A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-16", :title=>"零九年12月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091216D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-16", :title=>"零九年12月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091216C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-16", :title=>"零九年12月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091216B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-16", :title=>"零九年12月16日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091216A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-09", :title=>"零九年12月9日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091209D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-09", :title=>"零九年12月9日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091209C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-09", :title=>"零九年12月9日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091209B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-09", :title=>"零九年12月9日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091209A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-02", :title=>"零九年12月2日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091202D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-02", :title=>"零九年12月2日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091202C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-02", :title=>"零九年12月2日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091202B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-12-02", :title=>"零九年12月2日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091202A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-25", :title=>"零九年11月25日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091125D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-25", :title=>"零九年11月25日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091125C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-25", :title=>"零九年11月25日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091125B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-25", :title=>"零九年11月25日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091125A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-18", :title=>"零九年11月18日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091118D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-18", :title=>"零九年11月18日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091118C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-18", :title=>"零九年11月18日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091118B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-18", :title=>"零九年11月18日(第1 節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091118A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-11", :title=>"零九年11月11日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091111D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-11", :title=>"零九年11月11日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091111C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-11", :title=>"零九年11月11日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091111B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-11", :title=>"零九年11月11日(第1 節))", :audio=>"http://www.moneyradio.org/www/qma/2009/091111A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-04", :title=>"零九年11月4日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091104D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-04", :title=>"零九年11月4日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091104C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-04", :title=>"零九年11月4日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091104B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-11-04", :title=>"零九年11月4日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091104A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-28", :title=>"零九年10月28日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091028D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-28", :title=>"零九年10月28日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091028C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-28", :title=>"零九年10月28日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091028B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-28", :title=>"零九年10月28日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091028A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-21", :title=>"零九年10月21日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091021D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-21", :title=>"零九年10月21日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091021D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-21", :title=>"零九年10月21日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091021B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-21", :title=>"零九年10月21日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091021A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-14", :title=>"零九年10月14日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091014D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-14", :title=>"零九年10月14日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091014C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-14", :title=>"零九年10月14日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091014B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-14", :title=>"零九年10月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091014A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-07", :title=>"零九年10月7日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091007D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-07", :title=>"零九年10月7日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091007C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-07", :title=>"零九年10月7日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091007B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-10-07", :title=>"零九年10月7日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/091007A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-30", :title=>"零九年9月30日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090930D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-30", :title=>"零九年9月30日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090930C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-30", :title=>"零九年9月30日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090930B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-30", :title=>"零九年9月30日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090930A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-23", :title=>"零九年9月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090923D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-23", :title=>"零九年9月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090923C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-23", :title=>"零九年9月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090923B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-23", :title=>"零九年9月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090923A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-16", :title=>"零九年9月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090916D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-16", :title=>"零九年9月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2009.090916C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-16", :title=>"零九年9月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090916B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-09", :title=>"零九年9月16日(第一節", :audio=>"http://www.moneyradio.org/www/qna/2009/090909D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-09", :title=>"零九年九月九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090909C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-09", :title=>"零九年九月九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090909B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-09", :title=>"零九年九月九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090909A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-02", :title=>"零九年九月九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090902D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-02", :title=>"零九年九月二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090902C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-02", :title=>"零九年九月二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090902B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-09-02", :title=>"零九年九月二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090902A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-26", :title=>"零九年九月二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090826D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-26", :title=>"零九年八月二十六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090826C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-26", :title=>"零九年八月二十六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090826B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-26", :title=>"零九年八月二十六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090826A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-19", :title=>"零九年八月二十六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090819D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-19", :title=>"零九年八月十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090819C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-19", :title=>"零九年八月十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090819B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-19", :title=>"零九年八月十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090819A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-12", :title=>"零九年八月十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090812D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-12", :title=>"零九年八月十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090812C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-12", :title=>"零九年八月十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090812B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-12", :title=>"零九年八月十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090812A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-05", :title=>"零九年八月十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090805D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-05", :title=>"零九年八月五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090805C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-05", :title=>"零九年八月五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090805B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-08-05", :title=>"零九年八月五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090805A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-29", :title=>"零九年八月五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090729D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-29", :title=>"零九年七月二十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090729C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-29", :title=>"零九年七月二十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090729B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-29", :title=>"零九年七月二十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090729A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-22", :title=>"零九年七月二十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090722D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-22", :title=>"零九年七月二十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090722C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-22", :title=>"零九年七月二十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090722B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-22", :title=>"零九年七月二十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090722A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-15", :title=>"零九年七月二十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090715D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-15", :title=>"零九年七月十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090715C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-15", :title=>"零九年七月十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090715B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-15", :title=>"零九年七月十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090715A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-08", :title=>"零九年七月十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090708D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-08", :title=>"零九年七月八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090708C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-08", :title=>"零九年七月八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090708B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-08", :title=>"零九年七月八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090708A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-01", :title=>"零九年七月八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090701D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-01", :title=>"零九年七月一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090701C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-01", :title=>"零九年七月一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090701B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-07-01", :title=>"零九年七月一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090701A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-24", :title=>"零九年七月一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090624D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-24", :title=>"零九年六月二十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090624C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-24", :title=>"零九年六月二十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090624B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-24", :title=>"零九年六月二十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090624A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-17", :title=>"零九年六月二十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090617D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-17", :title=>"零九年六月十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090617C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-17", :title=>"零九年六月十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090617B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-17", :title=>"零九年六月十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090617A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-10", :title=>"零九年六月十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090610D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-10", :title=>"零九年六月十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090610C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-10", :title=>"零九年六月十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090610B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-10", :title=>"零九年六月十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090610A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-03", :title=>"零九年六月十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090603D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-03", :title=>"零九年六月三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090603C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-03", :title=>"零九年六月三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090603B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-06-03", :title=>"零九年六月三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090603A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-27", :title=>"零九年六月三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090527D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-27", :title=>"零九年五月二十七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090527C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-27", :title=>"零九年五月二十七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090527B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-27", :title=>"零九年五月二十七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090527A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-20", :title=>"零九年五月二十七日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090520D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-20", :title=>"零九年五月二十日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090520C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-20", :title=>"零九年五月二十日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090520B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-20", :title=>"零九年五月二十日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090520A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-13", :title=>"零九年五月二十日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090513D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-13", :title=>"零九年五月十三日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090513C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-13", :title=>"零九年五月十三日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090513B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-13", :title=>"零九年五月十三日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090513A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-06", :title=>"零九年五月十三日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090506D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-06", :title=>"零九年五月六日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090506C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-06", :title=>"零九年五月六日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090506B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-05-06", :title=>"零九年五月六日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090506A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-29", :title=>"零九年五月六日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090429D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-29", :title=>"零九年四月二十九日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090429C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-29", :title=>"零九年四月二十九日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090429B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-29", :title=>"零九年四月二十九日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090429A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-22", :title=>"零九年四月二十九日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090422D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-22", :title=>"零九年四月二十二日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090422C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-22", :title=>"零九年四月二十二日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090422B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-22", :title=>"零九年四月二十二日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090422A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-15", :title=>"零九年四月二十二日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090415D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-15", :title=>"零九年四月十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090415C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-15", :title=>"零九年四月十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090415B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-15", :title=>"零九年四月十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090415A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-08", :title=>"零九年四月十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090408D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-08", :title=>"零九年四月八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090408C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-08", :title=>"零九年四月八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090408B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-08", :title=>"零九年四月八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090408A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-01", :title=>"零九年四月八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090401D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-01", :title=>"零九年四月一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090401C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-01", :title=>"零九年四月一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090401B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-04-01", :title=>"零九年四月一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090401A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-25", :title=>"零九年四月一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090325D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-25", :title=>"零九年三月二十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090325C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-25", :title=>"零九年三月二十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090325B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-25", :title=>"零九年三月二十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090325A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-18", :title=>"零九年三月二十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090318D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-18", :title=>"零九年三月十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090318C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-18", :title=>"零九年三月十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090318B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-18", :title=>"零九年三月十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090318A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-11", :title=>"零九年三月十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090311D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-11", :title=>"零九年三月十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090311C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-11", :title=>"零九年三月十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090311B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-11", :title=>"零九年三月十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090311A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-04", :title=>"零九年三月十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090304D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-04", :title=>"零九年三月四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090304C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-04", :title=>"零九年三月四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090304B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-03-04", :title=>"零九年三月四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090304A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-25", :title=>"零九年三月四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090225D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-25", :title=>"零九年二月二十五日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090225C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-25", :title=>"零九年二月二十五日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090225B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-25", :title=>"零九年一月二十五日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090225A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-18", :title=>"零九年二月二十五日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090218D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-18", :title=>"零九年二月十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090218C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-18", :title=>"零九年二月十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090218B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-18", :title=>"零九年二月十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090218A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-11", :title=>"零九年二月十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090211D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-11", :title=>"零九年二月十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090211C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-11", :title=>"零九年二月十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090211B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-11", :title=>"零九年二月十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090211A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-04", :title=>"零九年二月十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090204D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-04", :title=>"零九年二月四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090204C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-04", :title=>"零九年二月四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090204B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-02-04", :title=>"零九年二月四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090204A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-28", :title=>"零九年二月四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090128D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-28", :title=>"零九年一月二十八日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090128C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-28", :title=>"零九年一月二十八日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090128B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-28", :title=>"零九年一月二十八日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090128A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-21", :title=>"零九年一月二十八日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090121D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"零九年一月二十一日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/0901121C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-21", :title=>"零九年一月二十一日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090121B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-21", :title=>"零九年一月二十一日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090121A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-14", :title=>"零九年一月二十一日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090114D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-14", :title=>"零九年一月十四日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090114C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-14", :title=>"零九年一月十四日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090114B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-14", :title=>"零九年一月十四日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090114A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-07", :title=>"零九年一月十四日(第一節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090107D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-07", :title=>"零九年一月七日(第四節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090107C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-07", :title=>"零九年一月七日(第三節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090107B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2009-01-07", :title=>"零九年一月七日(第二節)", :audio=>"http://www.moneyradio.org/www/qna/2009/090107A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-29", :title=>"2010年12月29日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101229D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-29", :title=>"2010年12月29日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101229C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-29", :title=>"2010年12月29日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101229B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-29", :title=>"2010年12月29日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101229A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-22", :title=>"2010年12月22日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101222D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-22", :title=>"2010年12月22日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101222C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-22", :title=>"2010年12月22日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101222B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-22", :title=>"2010年12月22日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101222A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-15", :title=>"2010年12月15日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101215D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-15", :title=>"2010年12月15日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101215C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-15", :title=>"2010年12月15日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101215B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-15", :title=>"2010年12月15日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101215A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-08", :title=>"2010年12月8日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101208D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-08", :title=>"2010年12月8日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101208C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-08", :title=>"2010年12月8日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101208B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-08", :title=>"2010年12月8日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101208A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-01", :title=>"2010年12月1日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101201D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-01", :title=>"2010年12月1日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101201C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-01", :title=>"2010年12月1日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101201B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-12-01", :title=>"2010年12月1日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101201A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-24", :title=>"2010年11月24日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101124D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-24", :title=>"2010年11月24日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101124C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-24", :title=>"2010年11月24日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101124B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-24", :title=>"2010年11月24日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101124A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-17", :title=>"2010年11月17日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101117D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-17", :title=>"2010年11月17日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101117C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-17", :title=>"2010年11月17日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101117B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-17", :title=>"2010年11月17日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101117A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-10", :title=>"2010年11月10日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101110D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-10", :title=>"2010年11月10日(第3節", :audio=>"http://www.moneyradio.org/www/qna/2010/101110C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-10", :title=>"2010年11月10日(第2節", :audio=>"http://www.moneyradio.org/www/qna/2010/101110B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-10", :title=>"2010年11月10日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101110A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-03", :title=>"2010年11月3日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101103D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-03", :title=>"2010年11月3日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101103C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-03", :title=>"2010年11月3日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101103B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-11-03", :title=>"2010年11月3日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101103A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-27", :title=>"2010年10月27日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101027D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-27", :title=>"2010年10月27日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101027C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-27", :title=>"2010年10月27日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101027B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-27", :title=>"2010年10月27日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101027A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-20", :title=>"2010年10月20日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101020D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-20", :title=>"2010年10月20日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101020C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-20", :title=>"2010年10月20日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101020B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-20", :title=>"2010年10月20日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101020A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-13", :title=>"2010年10月13日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101013D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-13", :title=>"2010年10月13日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101013C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-13", :title=>"2010年10月13日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101013B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-13", :title=>"2010年10月13日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101013A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-06", :title=>"2010年10月6日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101006D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-06", :title=>"2010年10月6日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101006C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-06", :title=>"2010年10月6日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101006B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-10-06", :title=>"2010年10月6日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/101006A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-29", :title=>"2010年9月29日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100929D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-29", :title=>"2010年9月29日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100929C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-29", :title=>"2010年9月29日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100929B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-29", :title=>"2010年9月29日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100929A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-22", :title=>"2010年9月22日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100922D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-22", :title=>"2010年9月22日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100922C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-22", :title=>"2010年9月22日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100922B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-22", :title=>"2010年9月22日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100922A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-15", :title=>"2010年9月15日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100915D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-15", :title=>"2010年9月15日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100915C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-15", :title=>"2010年9月15日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100915B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-15", :title=>"2010年9月15日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100915A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-08", :title=>"2010年9月8日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100908D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-08", :title=>"2010年9月8日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100908C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-08", :title=>"2010年9月8日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100908B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-08", :title=>"2010年9月8日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100908A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-01", :title=>"2010年9月1日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100901D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-01", :title=>"2010年9月1日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100901C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-01", :title=>"2010年9月1日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100901B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-09-01", :title=>"2010年9月1日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100901A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-25", :title=>"2010年8月25日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100825D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-25", :title=>"2010年8月25日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100825C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-25", :title=>"2010年8月25日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100825B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-25", :title=>"2010年8月25日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100825A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-18", :title=>"2010年8月18日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100818D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-18", :title=>"2010年8月18日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100818C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-18", :title=>"2010年8月18日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100818B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-18", :title=>"2010年8月18日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100818A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-11", :title=>"2010年8月11日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100811D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-11", :title=>"2010年8月11日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100811C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-11", :title=>"2010年8月11日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100811B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-11", :title=>"2010年8月11日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100811A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-04", :title=>"2010年8月4日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100804D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-04", :title=>"2010年8月4日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100804C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-04", :title=>"2010年8月4日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100804B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-08-04", :title=>"2010年8月4日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100804A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-28", :title=>"2010年7月28日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100728D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-28", :title=>"2010年7月28日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100728C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-28", :title=>"2010年7月28日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100728B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-28", :title=>"2010年7月28日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100728A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-21", :title=>"2010年7月21日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100721D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-21", :title=>"2010年7月21日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100721C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-21", :title=>"2010年7月21日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100721B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-21", :title=>"2010年7月21日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100721A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-14", :title=>"2010年7月14日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100714D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-14", :title=>"2010年7月14日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100714C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-14", :title=>"2010年7月14日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100714B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-14", :title=>"2010年7月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100714A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-07", :title=>"2010年7月7日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100707D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-07", :title=>"2010年7月7日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100707C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-07", :title=>"2010年7月7日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100707B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-07-07", :title=>"2010年7月7日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100707A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-30", :title=>"2010年6月30日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100630D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-30", :title=>"2010年6月30日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100630C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-30", :title=>"2010年6月30日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100630B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-30", :title=>"2010年6月30日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100630A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-23", :title=>"2010年6月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100623D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-23", :title=>"2010年6月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100623C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-23", :title=>"2010年6月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100623B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-23", :title=>"2010年6月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100623A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-16", :title=>"2010年6月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100616D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-16", :title=>"2010年6月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100616C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-16", :title=>"2010年6月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100616B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-16", :title=>"2010年6月16日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100616A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-09", :title=>"2010年6月9日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100609D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-09", :title=>"2010年6月9日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100609C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-09", :title=>"2010年6月9日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100609B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-09", :title=>"2010年6月9日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100609A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-02", :title=>"2010年6月2日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100602D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-02", :title=>"2010年6月2日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100602C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-02", :title=>"2010年6月2日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100602B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-06-02", :title=>"2010年6月2日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100602A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-26", :title=>"2010年5月26日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100526D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-26", :title=>"2010年5月26日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100526C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-26", :title=>"2010年5月26日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100526B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-26", :title=>"2010年5月26日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100526A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-19", :title=>"2010年5月19日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100519D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-19", :title=>"2010年5月19日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100519C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-19", :title=>"2010年5月19日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100519B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-19", :title=>"2010年5月19日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100519A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-12", :title=>"2010年5月12日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100512D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-12", :title=>"2010年5月12日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100512C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-12", :title=>"2010年5月12日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100512B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-12", :title=>"2010年5月12日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100512A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-05", :title=>"2010年5月5日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100505D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-05", :title=>"2010年5月5日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100505C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-05", :title=>"2010年5月5日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100505B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-05-05", :title=>"2010年5月5日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100505A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-28", :title=>"2010年4月28日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100428D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-28", :title=>"2010年4月28日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100428C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-28", :title=>"2010年4月28日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100428B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-28", :title=>"2010年4月28日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100428A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-21", :title=>"2010年4月21日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100421D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-21", :title=>"2010年4月21日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100421C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-21", :title=>"2010年4月21日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100421B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-21", :title=>"2010年4月21日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100421A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-14", :title=>"2010年4月14日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100414D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-14", :title=>"2010年4月14日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100414C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-14", :title=>"2010年4月14日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100414B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-14", :title=>"2010年4月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100414A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-07", :title=>"2010年4月7日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100407D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-07", :title=>"2010年4月7日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100407C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-07", :title=>"2010年4月7日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100407B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-04-07", :title=>"2010年4月7日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100407A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-31", :title=>"2010年3月31日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100331D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-31", :title=>"2010年3月31日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100331C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-31", :title=>"2010年3月31日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100331B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-31", :title=>"2010年3月31日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100331A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-24", :title=>"2010年3月24日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100324D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-24", :title=>"2010年3月24日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100324C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-24", :title=>"2010年3月24日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100324B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-24", :title=>"2010年3月24日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100324A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-17", :title=>"2010年3月17日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100317D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-17", :title=>"2010年3月17日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100317C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-17", :title=>"2010年3月17日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100317B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-17", :title=>"2010年3月17日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100317A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-10", :title=>"2010年3月10日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100310D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-10", :title=>"2010年3月10日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100310C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-10", :title=>"2010年3月10日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100310B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-10", :title=>"2010年3月10日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100310A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-03", :title=>"2010年3月3日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100303D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-03", :title=>"2010年3月3日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100303C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-03", :title=>"2010年3月3日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100303B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-03-03", :title=>"2010年3月3日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100303A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-24", :title=>"2010年2月24日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100224D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-24", :title=>"2010年2月24日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100224C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-24", :title=>"2010年2月24日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100224B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-24", :title=>"2010年2月24日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100224A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-17", :title=>"2010年2月17日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100217D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-17", :title=>"2010年2月17日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100217C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-17", :title=>"2010年2月17日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100217B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-17", :title=>"2010年2月17日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100217A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-10", :title=>"2010年2月10日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100210D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-10", :title=>"2010年2月10日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100210C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-10", :title=>"2010年2月10日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100210B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-02-10", :title=>"2010年2月10日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100210A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-27", :title=>"2010年1月27日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100127D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-27", :title=>"2010年1月27日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100127C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-27", :title=>"2010年1月27日(第2節)", :audio=>"http://www.moneyradio.org/www/qma/2010/100127B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-27", :title=>"2010年1月27日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100127A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-20", :title=>"2010年1月20日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100120D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-20", :title=>"2010年1月20日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100120C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-20", :title=>"2010年1月20日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100120B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-20", :title=>"2010年1月20日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100120A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-13", :title=>"2010年1月13日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100113D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-13", :title=>"2010年1月13日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100113C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-13", :title=>"2010年1月13日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100113B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-13", :title=>"2010年1月13日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100113A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-06", :title=>"2010年1月6日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100106D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-06", :title=>"2010年1月6日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100106C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2010-01-06", :title=>"2010年1月6日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100106B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"2010年1月6日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/100106.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2012-01-18", :title=>"2012年1月18日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2012/120118D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-28", :title=>"2011年12月28日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111228D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-28", :title=>"2011年12月28日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111228C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"2011年12月28日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/11128B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-28", :title=>"2011年12月28日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111228A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-21", :title=>"2011年12月21日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111221D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-21", :title=>"2011年12月21日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111221C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-14", :title=>"2011年12月21日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111214B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-21", :title=>"2011年12月21日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111221A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-14", :title=>"2011年12月14日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111214D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-14", :title=>"2011年12月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111214C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-14", :title=>"2011年12月14日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111214B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-14", :title=>"2011年12月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111214A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-07", :title=>"2011年12月7日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111207D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-07", :title=>"2011年12月7日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111207C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-07", :title=>"2011年12月7日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111207B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-12-07", :title=>"2011年12月7日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111207A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-30", :title=>"2011年11月30日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111130D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-30", :title=>"2011年11月30日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111130C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-30", :title=>"2011年11月30日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111130B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-30", :title=>"2011年11月30日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111130A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-23", :title=>"2011年11月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111123D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-23", :title=>"2011年11月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111123C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-23", :title=>"2011年11月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111123B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-23", :title=>"2011年11月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111123A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-16", :title=>"2011年11月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111116D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-16", :title=>"2011年11月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111116C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-16", :title=>"2011年11月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111116B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-16", :title=>"2011年11月16日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111116A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-09", :title=>"2011年11月9日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111109D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-09", :title=>"2011年11月9日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111109C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-09", :title=>"2011年11月9日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111109B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-09", :title=>"2011年11月9日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111109A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-02", :title=>"2011年11月2日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111102D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-02", :title=>"2011年11月2日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111102C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-11-02", :title=>"2011年11月2日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111102B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"2011年11月2日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/111102A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-26", :title=>"2011年10月26日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111026D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-26", :title=>"2011年10月26日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111026C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-26", :title=>"2011年10月26日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111026B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-29", :title=>"2011年10月26日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111029A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-19", :title=>"2011年10月19日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111019D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-19", :title=>"2011年10月19日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111019C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-19", :title=>"2011年10月19日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111019B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-19", :title=>"2011年10月19日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111019A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-12", :title=>"2011年10月12日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111012D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-12", :title=>"2011年10月12日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111012C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-12", :title=>"2011年10月12日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111012B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-12", :title=>"2011年10月12日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111012A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-05", :title=>"2011年10月5日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111005D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-05", :title=>"2011年10月5日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111005C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-05", :title=>"2011年10月5日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111005B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-10-05", :title=>"2011年10月5日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/111005A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-28", :title=>"2011年9月28日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110928D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"2011年9月28日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110928.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-28", :title=>"2011年9月28日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110928B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-28", :title=>"2011年9月28日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110928A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-21", :title=>"2011年9月21日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110921D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-21", :title=>"2011年9月21日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110921B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-21", :title=>"2011年9月21日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110921C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-21", :title=>"2011年9月21日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110921A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-14", :title=>"2011年9月14日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110914D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-14", :title=>"2011年9月14日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110914C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-14", :title=>"2011年9月14日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110914B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-14", :title=>"2011年9月14日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110914A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-07", :title=>"2011年9月7日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110907D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-07", :title=>"2011年9月7日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110907C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-07", :title=>"2011年9月7日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110907B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-09-07", :title=>"2011年9月7日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110907A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-31", :title=>"2011年8月31日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110831D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-31", :title=>"2011年8月31日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110831C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-31", :title=>"2011年8月31日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110831B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-31", :title=>"2011年8月31日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110831A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-24", :title=>"2011年8月24日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110824D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-24", :title=>"2011年8月24日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110824C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-24", :title=>"2011年8月24日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110824B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-24", :title=>"2011年8月24日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110824A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-17", :title=>"2011年8月17日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110817D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-17", :title=>"2011年8月17日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110817C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-17", :title=>"2011年8月17日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110817B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-17", :title=>"2011年8月17日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110817A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-10", :title=>"2011年8月10日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110810D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-10", :title=>"2011年8月10日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110810C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-10", :title=>"2011年8月10日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110810B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-10", :title=>"2011年8月10日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110810A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-03", :title=>"2011年8月3日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110803D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-03", :title=>"2011年8月3日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110803C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-03", :title=>"2011年8月3日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110803B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-08-03", :title=>"2011年8月3日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110803A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-27", :title=>"2011年7月27日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110727D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-27", :title=>"2011年7月27日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110727C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-27", :title=>"2011年7月27日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110727B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-27", :title=>"2011年7月27日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110727A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-20", :title=>"2011年7月20日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110720D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-20", :title=>"2011年7月20日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110720C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-20", :title=>"2011年7月20日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110720B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-20", :title=>"2011年7月20日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110720A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-13", :title=>"2011年7月13日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110713D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-13", :title=>"2011年7月13日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110713C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-13", :title=>"2011年7月13日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110713B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-13", :title=>"2011年7月13日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110713A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-06", :title=>"2011年7月6日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110706D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-06", :title=>"2011年7月6日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110706C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-06", :title=>"2011年7月6日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110706B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-07-06", :title=>"2011年7月6日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110706A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-29", :title=>"2011年6月29日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110629D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-29", :title=>"2011年6月29日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110629C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-29", :title=>"2011年6月29日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110629B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-29", :title=>"2011年6月29日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110629A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-22", :title=>"2011年6月22日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110622D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-22", :title=>"2011年6月22日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110622C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-22", :title=>"2011年6月22日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110622B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-22", :title=>"2011年6月22日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110622A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-15", :title=>"2011年6月15日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110615D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-15", :title=>"2011年6月15日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110615C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-15", :title=>"2011年6月15日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110615B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2001-01-01", :title=>"2011年6月15日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/1106015A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-08", :title=>"2011年6月8日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110608D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-08", :title=>"2011年6月8日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110608C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-08", :title=>"2011年6月8日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110608B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-08", :title=>"2011年6月8日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110608A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-01", :title=>"2011年6月1日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110601D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-01", :title=>"2011年6月1日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110601C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-01", :title=>"2011年6月1日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110601B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-06-01", :title=>"2011年6月1日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110601A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-25", :title=>"2011年5月25日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110525D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-25", :title=>"2011年5月25日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110525C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-25", :title=>"2011年5月25日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110525B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-25", :title=>"2011年5月25日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110525A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-18", :title=>"2011年5月18日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110518D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-18", :title=>"2011年5月18日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110518C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-18", :title=>"2011年5月18日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110518B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-18", :title=>"2011年5月18日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110518A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-11", :title=>"2011年5月11日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110511D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-11", :title=>"2011年5月11日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110511C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-11", :title=>"2011年5月11日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110511B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-11", :title=>"2011年5月11日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110511A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-04", :title=>"2011年5月4日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110504D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-04", :title=>"2011年5月4日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110504C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-04", :title=>"2011年5月4日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110504B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-05-04", :title=>"2011年5月4日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2010/110504A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-27", :title=>"2011年4月27日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110427D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-27", :title=>"2011年4月27日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110427C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-27", :title=>"2011年4月27日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110427B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-27", :title=>"2011年4月27日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110427A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-20", :title=>"2011年4月20日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110420D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-20", :title=>"2011年4月20日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110420C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-20", :title=>"2011年4月20日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110420B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-20", :title=>"2011年4月20日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110420A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-13", :title=>"2011年4月13日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110413D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-13", :title=>"2011年4月13日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110413C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-13", :title=>"2011年4月13日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110413B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-13", :title=>"2011年4月13日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110413A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-06", :title=>"2011年4月6日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110406D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-06", :title=>"2011年4月6日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110406C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-06", :title=>"2011年4月6日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110406B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-04-06", :title=>"2011年4月6日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110406A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-30", :title=>"2011年3月30日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110330D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-30", :title=>"2011年3月30日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110330C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-30", :title=>"2011年3月30日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110330B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-30", :title=>"2011年3月30日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110330A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-23", :title=>"2011年3月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110323D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-23", :title=>"2011年3月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110323C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-23", :title=>"2011年3月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110323B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-23", :title=>"2011年3月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110323A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-16", :title=>"2011年3月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110316D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-16", :title=>"2011年3月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110316C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-16", :title=>"2011年3月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110316B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-16", :title=>"2011年3月16日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110316A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-09", :title=>"2011年3月9日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110309D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-09", :title=>"2011年3月9日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110309C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-09", :title=>"2011年3月9日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110309B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-03-09", :title=>"2011年3月9日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110309A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-23", :title=>"2011年2月23日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110223D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-23", :title=>"2011年2月23日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110223C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-23", :title=>"2011年2月23日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110223B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-23", :title=>"2011年2月23日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110223A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-16", :title=>"2011年2月16日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110216D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-16", :title=>"2011年2月16日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110216C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-16", :title=>"2011年2月16日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110216B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-16", :title=>"2011年2月16日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110216A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-09", :title=>"2011年2月9日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110209D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-09", :title=>"2011年2月9日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110209C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-09", :title=>"2011年2月9日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110209B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-09", :title=>"2011年2月9日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110209A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-02", :title=>"2011年2月2日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110202D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-02", :title=>"2011年2月2日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110202C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-02", :title=>"2011年2月2日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110202B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-02-02", :title=>"2011年2月2日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110202A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-26", :title=>"2011年1月26日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110126D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-26", :title=>"2011年1月26日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110126C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-26", :title=>"2011年1月26日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110126B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-26", :title=>"2011年1月26日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110126A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-19", :title=>"2011年1月19日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110119D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-19", :title=>"2011年1月19日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110119C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-19", :title=>"2011年1月19日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110119B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-19", :title=>"2011年1月19日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110119A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-12", :title=>"2011年1月12日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110112D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-12", :title=>"2011年1月12日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110112C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-12", :title=>"2011年1月12日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110112B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-12", :title=>"2011年1月12日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110112A.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-05", :title=>"2011年1月5日(第4節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110105D.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-12", :title=>"2011年1月5日(第3節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110112C.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-05", :title=>"2011年1月5日(第2節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110105B.mp3", :short_note=>"")
+
+showa.audioposts.create( :audio_date=>"2011-01-05", :title=>"2011年1月5日(第1節)", :audio=>"http://www.moneyradio.org/www/qna/2011/110105A.mp3", :short_note=>"")
