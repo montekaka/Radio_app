@@ -105,6 +105,42 @@ task :moneyradio_WeeklyQA => :environment do
 	end	
 end
 
+desc "Fill in Weekly Q&A Date"
+task :moneyradio_WeeklyQA_update_Date =>:environment do
+	require 'date'
+	station = Station.find_by_name('節目重溫')
+	
+	showa = station.shows.find_by_name('每周問答節目')
+	
+	#puts showa.audioposts.length.to_s
+	para1 = "http://www.moneyradio.org/www/qna/"
+	para2 = ".mp3"
+	startAt = para1.length+5
+
+	# url = showa.audioposts[0].audio
+	# startAt = para1.length+5
+	# endAt = url.length-para2.length-2	
+	# dummyDate = url[startAt..endAt]
+	# dummyDate2 = dummyDate[2..3]+"/"+dummyDate[4..dummyDate.length]+"/20"+dummyDate[0..1]
+	# puts dummyDate2
+
+	showa.audioposts.each do |i|
+	 	url = i.audio
+		endAt = url.length-para2.length-2	
+		dummyDate = url[startAt..endAt]
+		n = dummyDate.length
+		if(n==6)
+			#puts n.to_s
+			dummyDate2 = dummyDate[2..3]+"/"+dummyDate[4..5]+"/20"+dummyDate[0..1]	 	
+			puts i.title
+			#puts dummyDate2
+			dummyDate3 = Date.strptime(dummyDate2, '%m/%d/%Y')
+			i.audio_date = dummyDate3
+			i.save
+		end
+	end
+end
+
 desc "Finance in Half Minute Article Archive"
 task :moneyradio_financeInHalfMinArticle => :environment do
 	require 'nokogiriMoneyRadio'
