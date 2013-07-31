@@ -13,11 +13,15 @@
         	<%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
       	<%end%>		
 	</div>
-	<div data-role="content" id='buttoncontainer'>
-		<% @stations.each do |station| %>
-			<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
-		<% end %>		
-		<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>		
+	<div data-role="content" id='buttoncontainer'>	
+		<div class="ui-grid-solo">
+			<% @stations.each do |station| %>
+				<div class="ui-block-a">
+					<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
+				</div>
+			<% end %>
+		</div>
+		<a href="https://mixpanel.com/f/partner" data-role="button" data-theme="a"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
 	</div><!-- /content -->
 	<div data-role="footer" data-position="fixed" data-theme="b">		
 		<h2>Powered by BruinSquare</h2>
