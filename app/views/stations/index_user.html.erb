@@ -1,16 +1,12 @@
 <style type=text/css>
 .stationName {
-	height: 80px;
+	height: 60px;
     text-align: left;
-}
-#buttoncontainer .ui-btn-text{
-	font-size: 30px;
-	/*color: #000066;*/
 }
 </style>
 <div data-role="page" id="demo-page">  
 	<div data-role="header" data-theme="b">
-		<h1>Podcast</h1>
+		<h1>理財天地</h1>
         <%if current_user %>
         	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
       	<%else%>
@@ -19,7 +15,7 @@
 	</div>
 	<div data-role="content" id='buttoncontainer'>
 		<% @stations.each do |station| %>
-			<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"stationName", :'rel'=>"external" %>	
+			<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
 		<% end %>		
 		<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>		
 	</div><!-- /content -->
