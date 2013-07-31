@@ -133,7 +133,7 @@ function setupHTML(inputYear){
     
     var currentYearAudioDates = currentYearArray(audioDates,audioDates, currentYear);
     var currentYearAudioTitles = currentYearArray(aduioTitles,audioDates, currentYear);
-    var currentYearAudioNotes = currentYearArray(aduioNotes,audioDates, currentYear);
+    var currentYearAudioNotes = currentYearArray(audioNotes,audioDates, currentYear);
     var currentYearAudioLinks = currentYearArray(aduioLinks,audioDates, currentYear);
     var descendingDates = sortDateArray(currentYearAudioDates,"descending");
     var indexDateArray = getArrayIndex(descendingDates, currentYearAudioDates);
@@ -171,6 +171,9 @@ function setupHTML(inputYear){
                             // +'</div>'
                             //+'<div class="ui-block-b" style="width:70%">'
                                 +'<h2>'+newAudioTitles[j]+'</h2>'
+                                    +'<p>'
+                                        +newAudioNotes[j]
+                                    +'</p>'
                                 +'<p class="ui-li-aside"><strong>'+descendingDates[j].getMonth()+'/'+descendingDates[j].getDate()+'/'+descendingDates[j].getFullYear()+'</strong></p>'
                             //+'</div>'                                
                         //+'</div>'         
@@ -204,7 +207,7 @@ var audioDates = [];
 var audioYears = [];
 var aduioLinks = [];
 var aduioTitles = [];
-var aduioNotes = [];
+var audioNotes = [];
 var audioCount = 0;
 
 <% @audioposts.each do |audiopost| %>
@@ -215,7 +218,7 @@ if(audioCount>0){
         audioDates.push(new Date('<%= audiopost.audio_date.year%>', '<%= audiopost.audio_date.month-1%>', '<%= audiopost.audio_date.day%>'));
         aduioLinks.push('<%= show_audiopost_path(audiopost.show_id, audiopost.id)%>');
         aduioTitles.push('<%= audiopost.title%>');
-        aduioNotes.push('<%= audiopost.short_note.length%>');
+        audioNotes.push('<%= audiopost.short_note.gsub("\'", %q(\\\q)) %>');
     <% end %>
     
     $(document).bind('pageinit', function() {
