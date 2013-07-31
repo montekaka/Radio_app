@@ -57,7 +57,7 @@
        <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
       <hr id="hr_bottom">
       <fieldset>
-        <a href="#moreDetailPage" data-role="button" data-icon="info" data-theme="e">
+        <a href="#moreDetailPage" data-role="button" data-icon="info" data-theme="c">
           <%= @audiopost.title %>
         </a>
         
@@ -73,16 +73,16 @@
           <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
         </audio>
     </div>
-      <div data-role='footer' data-position="fixed" data-theme="a">
+      <div data-role='footer' data-position="fixed" data-theme="c">
         <table style="margin-left: 5px; margin-right: 5px;" id="sliderTime">
           <tr>
             <td><p id="DisplayRemindTime"></p></td>          
             <td width="100%" class="slider-shit">
-              <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-theme='a'/>
+              <input type="range" name="slider-fill" id="timeControl" value="0" min="0" max="1432" width="100%" data-highlight="true" data-theme='c'/>
             </td>         
           </tr>
         </table>
-        <div data-role="footer" class="ui-grid-b" data-theme="b">
+        <div data-role="footer" class="ui-bar" data-theme="b">
           <div data-role="navbar">
             <ul>
   <!--             <li>
