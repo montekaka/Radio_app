@@ -1,7 +1,7 @@
 <div data-role="page" id="demo-page">  
     <div data-role="header" data-theme="b" id ="topheader">    
         <h1><%=@show.name%></h1>
-  		<%= link_to 'Back',stations_path, {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
+  		<%= link_to 'Back',categories_station_path(@show.station), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
 
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
