@@ -21,3 +21,6 @@
 		<% end %>
 	</div>
 </div>
+<script type="text/javascript">
+    mixpanel.track("Viewed Station Page", {"Station Name": '<%=@station.name%>'}, function(){console.log('track call successed')});
+</script>
