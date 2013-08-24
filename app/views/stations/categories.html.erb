@@ -6,30 +6,31 @@
 	<div data-role="content">
 		<div data-role="collapsible-set" data-theme="e" data-content-theme="d" >
 			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
-				<div data-role="collapsible" data-collapsed="false">
-					<h2><%= c.category%></h2>				
-				<ul data-role="listview">
-					<% @station.shows.find_all_by_category(c.category).each do |show| %>
-						<li>
-							<% if show.audioposts.count > 0 %>
-								<a href = '<%= show_audioposts_path(show)%>' rel='external'>
-									<h2><%= show.name %></h2>
-									<p><%= show.djname %></p>
-									<span class='ui-li-count'>
-										<%= show.audioposts.count %>
-									</span>
-								</a>
-							<%else%>
-								<h2><%= show.name %></h2>
-								<p><%= show.djname %></p>
-								<span class='ui-li-count'>
-									<%= show.audioposts.count %>
-								</span>
-							<%end%>
-						</li>
-					<% end %>
-				</ul>
-				</div>
+				<% i = 0%>
+				<% @station.shows.find_all_by_category(c.category).each do |show| %>
+					<% i = show.audioposts.count + i %>			
+				<% end %>
+				<% if i > 0 %>		
+					<div data-role="collapsible" data-collapsed="false">
+						<h2><%= c.category%></h2>				
+						<ul data-role="listview">
+							<% @station.shows.find_all_by_category(c.category).each do |show| %>
+									<% if show.audioposts.count > 0 %>
+										<li>									
+											<a href = '<%= show_audioposts_path(show)%>' rel='external'>
+												<h2><%= show.name %></h2>
+												<p><%= show.djname %></p>
+												<span class='ui-li-count'>
+													<%= show.audioposts.count %>
+												</span>
+											</a>
+										</li>
+									<%end%>
+								</li>
+							<% end %>
+						</ul>
+					</div>
+				<% end %>
 			<% end %>
 		</div>
 	</div>
