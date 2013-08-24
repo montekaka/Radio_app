@@ -1,3 +1,4 @@
+# encoding: UTF-8
 desc "manually update money radio articles"
 task :manually_update_articles => :environment do
 	station = Station.find_by_name('理財文章')
