@@ -310,7 +310,14 @@ function fuck(){
   //Only Tracking the audio has been played, not how many time
   //the Play Button has been press
   if(audio.currentTime==0){
-    mixpanel.track("Played Epsiode", {"Epsiode": '<%= @audiopost.title %>', "show_name":'<%= @show.name %>'}, function(){console.log('track call successed')});
+    mixpanel.track("Played Epsiode", {
+      "Epsiode": '<%= @audiopost.title %>', 
+      "show_name":'<%= @show.name %>', 
+      "Epsiode Date": '<%= @audiopost.audio_date %>'}, 
+      function(){console.log(      
+      '<%= @show.name %>',
+      '<%= @audiopost.audio_date %>',
+      '<%= @audiopost.title %>')});
   }  
 };
 
@@ -500,6 +507,10 @@ function fastForward(changeTimeInSecond, moveToward){
 <!--end-->
 <!--Mixpanel-->
 <script type="text/javascript">
-    mixpanel.track("Viewed Epsiode Page", {"Epsiode": '<%= @audiopost.title %>', "show_name":'<%= @show.name %>'}, function(){console.log('track call successed')});
+    mixpanel.track("Viewed Epsiode Page", {"Epsiode": '<%= @audiopost.title %>', "show_name":'<%= @show.name %>', "Epsiode Date": '<%= @audiopost.audio_date %>'}, function(){console.log(
+      '<%= @show.name %>',
+      '<%= @audiopost.audio_date %>',
+      '<%= @audiopost.title %>'
+      )});
 </script>
 <!--end-->

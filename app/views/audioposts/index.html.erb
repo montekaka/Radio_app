@@ -6,7 +6,8 @@
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
         -->    
-        <a href="#infoPanel" class="ui-btn-right" data-icon="bars" data-rel="push">     About
+        <a href="#infoPanel" class="ui-btn-right" data-icon="bars" data-rel="push">
+            About
         </a>
         <%if current_user %>
             <%= link_to 'Home', @show, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
@@ -42,7 +43,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    mixpanel.track("Viewed Show Page", {"Show Name": '<%=@show.name%>'}, function(){console.log('track call successed')});
+    mixpanel.track("Viewed Show Page", {"Show Name": '<%=@show.name%>'}, function(){console.log('<%=@show.name%>')});
 </script>
 <script>
 //panel
