@@ -301,24 +301,82 @@ function audioControl(audioSource, PlayStopButtonID, DisplayCurrentTimeID, Displ
   };
 };
 
-
 var audio = document.getElementById('audioArchive');
 
 function fuck(){
   audioControl(audio,'#playButton','#DisplayCurrentTime', '#DisplayRemindTime', '#timeControl');
 
-  //Only Tracking the audio has been played, not how many time
-  //the Play Button has been press
-  if(audio.currentTime==0){
+  /*
+    Only Tracking the audio has been played, not how many time
+    the Play Button has been press
+  */
+  if(audio.currentTime==0){    
     mixpanel.track("Played Epsiode", {
       "Epsiode": '<%= @audiopost.title %>', 
       "show_name":'<%= @show.name %>', 
-      "Epsiode Date": '<%= @audiopost.audio_date %>'}, 
+      "Epsiode Date": '<%= @audiopost.audio_date %>'},
+
       function(){console.log(      
       '<%= @show.name %>',
       '<%= @audiopost.audio_date %>',
-      '<%= @audiopost.title %>')});
-  }  
+      '<%= @audiopost.title %>')}
+
+      );      
+  }
+};
+
+// $(window).bind("beforeunload", function() {
+//   if(audio.currentTime>0){
+//     mixpanel.track(
+//       "Played Epsiode", 
+//       {
+//         "Epsiode": '<%= @audiopost.title %>',
+//         "show_name":'<%= @show.name %>',  
+//         "Epsiode Date": '<%= @audiopost.audio_date %>',
+//         "Epsiode played": displayTime(audio.currentTime)
+//       },
+//       function()
+//         {
+//           console.log
+//           (      
+//             '<%= @show.name %>',
+//             '<%= @audiopost.audio_date %>',
+//             '<%= @audiopost.title %>',
+//             displayTime(audio.currentTime)
+//           )
+//         }
+//     );
+//   }
+// }); 
+
+
+
+window.onbeforeunload = confirmExit;
+function confirmExit(){
+    //alert("confirm exit is being called");
+    if(audio.currentTime>0){
+      mixpanel.track(
+        "Played Epsiode", 
+        {
+          "Epsiode": '<%= @audiopost.title %>',
+          "show_name":'<%= @show.name %>',  
+          "Epsiode Date": '<%= @audiopost.audio_date %>',
+          "Epsiode played": audio.currentTime
+        },
+        function()
+          {
+            console.log
+            (      
+              '<%= @show.name %>',
+              '<%= @audiopost.audio_date %>',
+              '<%= @audiopost.title %>',
+              audio.currentTime
+            )
+          }
+      );
+    }
+    // mixpanel.track("Epsiode played:")
+    // return displayTime(audio.currentTime);
 };
 
 //fast forward and backward
@@ -511,6 +569,6 @@ function fastForward(changeTimeInSecond, moveToward){
       '<%= @show.name %>',
       '<%= @audiopost.audio_date %>',
       '<%= @audiopost.title %>'
-      )});
+      )});    
 </script>
 <!--end-->
