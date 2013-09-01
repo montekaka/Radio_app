@@ -17,3 +17,6 @@
 /tmp
 /nbproject/private/
 /.metadata/
+
+# Ignore Paperclip uploaded files
+/public/system
