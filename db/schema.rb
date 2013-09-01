@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716045509) do
+ActiveRecord::Schema.define(:version => 20130901213651) do
 
   create_table "audioposts", :force => true do |t|
     t.integer  "user_id"
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(:version => 20130716045509) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "show_id"
+    t.string   "soundfile_file_name"
+    t.string   "soundfile_content_type"
+    t.integer  "soundfile_file_size"
+    t.datetime "soundfile_updated_at"
   end
 
   create_table "shows", :force => true do |t|

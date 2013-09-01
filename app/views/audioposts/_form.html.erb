@@ -1,4 +1,4 @@
-<%= form_for([@show, @audiopost], :html => {:data => {:ajax => 'false'}}) do |f| %>
+<%= simple_form_for([@show, @audiopost], :html => {:data => {:ajax => 'false'}}) do |f| %>
   <% if @audiopost.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@audiopost.errors.count, "error") %> prohibited this audiopost from being saved:</h2>
@@ -48,6 +48,9 @@
     <%= f.label :audio %>
     <%= f.text_field :audio %>
   </li>
+  <li data-role="fieldcontain">
+    <%= f.input :soundfile %>
+  </li>  
   <li data-role="fieldcontain">
     <fieldset data-role="controlgroup">
       <legend>Audio Date</legend>
