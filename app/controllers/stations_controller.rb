@@ -8,17 +8,21 @@ class StationsController < ApplicationController
   # GET /stations
   # GET /stations.json
   def index
-    @stations = Station.all
+    #@stations = Station.all
     
     if !current_user
       #render :action => 'index_user', :layout => 'admin'
+      @stations = Station.all
+
       respond_to do |format|
         format.html { render :action => 'index_user' }
         format.json { render :json => @stations }
       end    
     else
+      @stations = current_user.stations.all
+      
       respond_to do |format|
-        format.html # index.html.erb
+        format.html # index.html.erb        
         format.json { render :json => @stations }
       end      
     end
@@ -39,7 +43,8 @@ class StationsController < ApplicationController
   # GET /stations/new
   # GET /stations/new.json
   def new
-    @station = Station.new
+    #@station = Station.new
+    @station = current_user.stations.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -49,13 +54,15 @@ class StationsController < ApplicationController
 
   # GET /stations/1/edit
   def edit
-    @station = Station.find(params[:id])
+    #@station = Station.find(params[:id])
+    @station = current_user.stations.find(params[:id])
   end
 
   # POST /stations
   # POST /stations.json
   def create
-    @station = Station.new(params[:station])
+    #@station = Station.new(params[:station])
+    @station = current_user.stations.new(params[:station])
 
     respond_to do |format|
       if @station.save
@@ -71,7 +78,8 @@ class StationsController < ApplicationController
   # PUT /stations/1
   # PUT /stations/1.json
   def update
-    @station = Station.find(params[:id])
+    #@station = Station.find(params[:id])
+    @station = current_user.stations.find(params[:id])
 
     respond_to do |format|
       if @station.update_attributes(params[:station])
@@ -87,7 +95,8 @@ class StationsController < ApplicationController
   # DELETE /stations/1
   # DELETE /stations/1.json
   def destroy
-    @station = Station.find(params[:id])
+    #@station = Station.find(params[:id])
+    @station = current_user.stations.find(params[:id])
     @station.destroy
 
     respond_to do |format|
