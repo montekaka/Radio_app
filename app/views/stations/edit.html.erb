@@ -1,8 +1,10 @@
 <div data-role="page" id="demo-page">  
-	<h1>Editing station</h1>
-
-	<%= render 'form' %>
-
-	<%= link_to 'Show', @station %> |
-	<%= link_to 'Back', stations_path %>
+	<div data-role="header" data-theme="a">
+		<h1>New station</h1>
+		<%= link_to 'Back', stations_path,  :"data-icon"=>"back", :"class"=>"ui-btn-left"%>		
+	</div>
+	<div data-role="content">
+		<%= render 'form' %>
+	</div>
+	<%= link_to 'Show', @station %>
 </div>
