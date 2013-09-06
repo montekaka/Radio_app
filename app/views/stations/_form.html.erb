@@ -10,8 +10,30 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <ul data-role="listview" data-inset="true">
+    <li data-role="fieldcontain">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <li data-role="fieldcontain">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </li>
+<!--     <li data-role="fieldcontain">
+      <%= f.label 'twitter page' %>
+      <%= f.text_field :station_url, :"placeholder"=>"Optional" %>
+    </li> -->
+    <li class="ui-body ui-body-b">
+      <fieldset class="ui-grid-a">
+        <div class="ui-block-a">
+          <%= f.submit %>
+        </div>
+        <div class="ui-block-b">        
+          <%= link_to 'Cancel', @station, :"data-theme"=>"a", :"data-role"=>'button' %>
+        </div>
+    </li> 
+  </ul>
+<!--   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
@@ -25,5 +47,5 @@
   </div>
   <div class="actions">
     <%= f.submit %>
-  </div>
+  </div> -->
 <% end %>

@@ -15,7 +15,7 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </li>
-  <li data-role="fieldcontain" id="toolbar">
+<!--   <li data-role="fieldcontain" id="toolbar">
     <fieldset data-role="controlgroup" data-type="horizontal">
       <legend>Font styling:</legend>
       <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
@@ -39,15 +39,15 @@
         </a>
       </fieldset>
     </div> 
-  </li>
+  </li> -->
   <li data-role="fieldcontain">
     <%= f.label :short_note %>
-    <%= f.text_area :short_note%>
+    <%= f.text_area :short_note, :"placeholder"=>"Optional" %>
   </li>
-  <li data-role="fieldcontain">
+<!--   <li data-role="fieldcontain">
     <%= f.label :audio %>
     <%= f.text_field :audio %>
-  </li>
+  </li> -->
   <li data-role="fieldcontain">
     <%= f.input :soundfile %>
   </li>  
@@ -70,9 +70,9 @@
 </ul>
 <% end %>
 <script>
-  var editor = new wysihtml5.Editor("audiopost_short_note", {
-    toolbar:        "toolbar",
-    parserRules:    wysihtml5ParserRules,
-    useLineBreaks:  false
-  });  
+  // var editor = new wysihtml5.Editor("audiopost_short_note", {
+  //   toolbar:        "toolbar",
+  //   parserRules:    wysihtml5ParserRules,
+  //   useLineBreaks:  false
+  // });  
 </script>
