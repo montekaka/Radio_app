@@ -86,7 +86,7 @@ class ShowsController < ApplicationController
 
     respond_to do |format|
       if @show.save
-        format.html { redirect_to station_show_path(@station, @show), :notice => 'Show was successfully created.' }
+        format.html { redirect_to new_show_audiopost_path(@show), :notice => 'Show was successfully created.' }
         format.json { render :json => @show, :status => :created, :location => @show }
       else
         format.html { render :action => "new" }
