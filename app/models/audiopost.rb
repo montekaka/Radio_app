@@ -4,7 +4,7 @@ class Audiopost < ActiveRecord::Base
 
 	validates :short_note, :length=>{ :maximum => 100000 }
 	validates :title, :length=>{ :maximum => 100 }, :presence => :true	
-	validates_attachment :soundfile, content_type: {content_type: ['audio/mp4', 'audio/mpeg', 'audio/ogg', 'video/mp4']},
+	validates_attachment :soundfile, content_type: {content_type: ['audio/mp4', 'audio/mpeg', 'audio/mp3','audio/ogg', 'video/mp4']},
 											 size: {less_than: 50.megabytes}
 
 	belongs_to :user

@@ -51,7 +51,7 @@
     <%= link_to 'Back', show_audioposts_path(@show), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
     <!-- <a href="#rightPanel" type="button" id = "shareButton" class="ui-btn-right" data-icon="grid">Share</a> -->
   </div>
-  <% if @audiopost.audio.length > 0 || @audiopost.soundfile? %>
+  <% if @audiopost.audio? || @audiopost.soundfile? %>
     <div data-role="content">
       <hr>
        <p id='DisplayCurrentTime' onclick = "fuck();">00:00</p>
@@ -70,7 +70,7 @@
         </a>       -->
       </fieldset>
         <audio class="player" id='audioArchive'>
-          <% if @audiopost.audio.length > 0 %>
+          <% if @audiopost.audio? %>
             <source src=<%= @audiopost.audio %> type='audio/mpeg' id='todaynews'>
           <% else %>
             <source src=<%= @audiopost.soundfile %> type='audio/mpeg' id='todaynews'>
@@ -373,7 +373,7 @@ function fastForward(changeTimeInSecond, moveToward){
     }
   };
 };
-<% if @audiopost.audio.length > 0 %>
+<% if @audiopost.audio?  || @audiopost.soundfile?%>
   $(document).bind('pageinit', '#deme-page',function(){
     // var audio = document.getElementById('audioArchive');
     // audio.play();
