@@ -8,8 +8,5 @@ class Audiopost < ActiveRecord::Base
 											 size: {less_than: 50.megabytes}
 
 	belongs_to :user
-     belongs_to :show
-  
- 
-  
+  belongs_to :show
 end

@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 	attr_accessible :email, :name
 	has_many :audioposts
 	has_many :stations
+	has_many :shows
 end
