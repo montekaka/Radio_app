@@ -46,6 +46,7 @@ class AudiopostsController < ApplicationController
   # POST /audioposts.json
   def create
     @audiopost = @show.audioposts.new(params[:audiopost])
+    @audiopost.user = current_user
 
     respond_to do |format|
       if @audiopost.save

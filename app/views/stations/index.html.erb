@@ -4,6 +4,8 @@
     <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>    
   </div>
   <div data-role="content" id="content">
+    <%= link_to 'New Station', new_station_path, :'data-role'=>'button' %>
+    <br/>
     <table data-role="table" data-mode="Reflow" class="ui-body-d ui-shadow table-stripe ui-responsive tablesorter">
       <thead>
         <tr class="ui-bar-d">
@@ -28,9 +30,6 @@
       <% end %>
     </tbody>
     </table>
-
-    <br />
-    <%= link_to 'New Station', new_station_path, :'data-role'=>'button' %>    
   </div>
   <div data-role="footer" data-position="fixed" data-theme="c">
     <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>

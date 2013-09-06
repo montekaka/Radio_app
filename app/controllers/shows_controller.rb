@@ -82,6 +82,7 @@ class ShowsController < ApplicationController
   def create
     @station = Station.find(params[:station_id])
     @show = @station.shows.new(params[:show])
+    @show.user = current_user
 
     respond_to do |format|
       if @show.save

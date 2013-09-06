@@ -9,4 +9,5 @@ class Audiopost < ActiveRecord::Base
 
 	belongs_to :user
   belongs_to :show
+  validates :user_id, presence: true
 end
