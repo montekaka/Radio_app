@@ -1,4 +1,9 @@
 RadioApp::Application.routes.draw do
+  get  "dropbox/main"
+  post "dropbox/upload"
+  get  "dropbox/auth_start"
+  get  "dropbox/auth_finish"
+  
   resources :stations do
     
     get 'categories', :on => :member
