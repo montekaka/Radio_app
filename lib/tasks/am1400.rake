@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
+require 'net/http'
 
 desc "Create and load all am1400 show and episodes"
 task :am1400 => :environment do
@@ -20,6 +21,7 @@ task :am1400 => :environment do
     doc = Nokogiri::HTML(open("http://www.chineseradio.com/program.html"))
 	items = doc.xpath('//td[(((count(preceding-sibling::*) + 1) = 2) and parent::*)]//*[contains(concat( " ", @class, " " ), concat( " ", "style9", " " ))]//a')
 	items.each do |item|
+
 		if item.text != ""
 			show_name = item.text.strip
 			show_url = "http://www.chineseradio.com/" + item['href']		
@@ -37,9 +39,16 @@ task :am1400 => :environment do
 	  			podcast_url =  "http://www.chineseradio.com/" + podcast['href']
 	  			podcast_date = Date.new(podcast.text[6..9].to_i,podcast.text[0..1].to_i,podcast.text[3..4].to_i)
 	  			#podcast_date = podcast.text[3..4]+podcast.text[0..1]+podcast.text[6..9]
+	  			#puts "the podcast_url is #{podcast_url}"
+	  			contents = URI.parse(podcast_url).read	
+
+				#puts "the HTTP get resquest reponse is"
+				#puts contents
+				actual_link = contents
+
 	  			audiopost = show.audioposts.find_by_title(podcast_name)
 	  			if audiopost == nil
-	  				audiopost = show.audioposts.create(:title=>podcast_name, :audio=>podcast_url, :user_id=>user.id, :audio_date=>podcast_date)
+	  				audiopost = show.audioposts.create(:title=>podcast_name, :audio=>actual_link, :user_id=>user.id, :audio_date=>podcast_date)
 	  				puts "created audiopost with name: #{podcast_name} in show: #{show_name} with date: #{podcast_date}"
 	  				#puts "the audio_post url is #{podcast_url}"
 	  			end
