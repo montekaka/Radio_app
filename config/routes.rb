@@ -1,6 +1,7 @@
 RadioApp::Application.routes.draw do
   get  "dropbox/main"
   post "dropbox/upload"
+  post "dropbox/create"
   get  "dropbox/auth_start"
   get  "dropbox/auth_finish"
   
