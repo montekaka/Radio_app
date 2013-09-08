@@ -31,12 +31,29 @@ class DropboxController < ApplicationController
         account_info = client.account_info
 
         # Show a file upload page
-        #render :inline =>
+        # render :inline =>
         #   "#{account_info['email']} <br/><%= form_tag({:action => :upload}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Upload' %><% end %>"
 
         # Show a folder create page
+        # render :inline =>
+        #    "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
+
+        # Show delta file
         render :inline =>
-            "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
+                "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
+    end
+
+    def delta
+        client = get_dropbox_client
+        unless client
+            redirect_to(:action => 'auth_start') and return
+        end
+        begin
+            #get delta
+            delta = client.delta 'on99'
+
+            render :text => resp.entries
+        end    
     end
 
     def create
