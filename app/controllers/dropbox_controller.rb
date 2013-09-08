@@ -43,19 +43,7 @@ class DropboxController < ApplicationController
                 "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
     end
 
-    def delta
-        client = get_dropbox_client
-        unless client
-            redirect_to(:action => 'auth_start') and return
-        end
-        begin
-            #get delta
-            delta = client.delta 'on99'
-
-            render :text => resp.entries
-        end    
-    end
-
+    
     def create
         client = get_dropbox_client
         unless client
@@ -66,6 +54,13 @@ class DropboxController < ApplicationController
             #Create a folder Dropbox with given name
             resp = client.file_create_folder('on99')
             render :text => "Create successful.  File now at #{resp['path']}"
+        rescue DropboxAuthError => e
+            session.delete(:access_token)  # An auth error means the access token is probably bad
+            logger.info "Dropbox auth error: #{e}"
+            render :text => "Dropbox auth error"
+        rescue DropboxError => e
+            logger.info "Dropbox API error: #{e}"
+            render :text => "Dropbox API error"
         end        
     end
 

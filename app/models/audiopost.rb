@@ -1,5 +1,5 @@
 class Audiopost < ActiveRecord::Base
-	attr_accessible :title, :short_note, :user_id, :audio, :audio_date, :soundfile
+	attr_accessible :title, :short_note, :user_id, :audio, :audio_date, :soundfile, :cast_remote_url
   has_attached_file :soundfile  
 
 	validates :short_note, :length=>{ :maximum => 100000 }
@@ -10,4 +10,9 @@ class Audiopost < ActiveRecord::Base
 	belongs_to :user
   belongs_to :show
   validates :user_id, presence: true
+
+  def cast_remote_url=(url_value)
+  	self.soundfile = URI.parse(url_value) unless url_value.blank?
+  	super
+  end
 end
