@@ -43,7 +43,7 @@ class DropboxController < ApplicationController
         # render :inline =>
         #        "#{account_info['email']} <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
         render :inline =>
-                "<%=@station_show_name %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
+                "<%=params[:param_a] %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
     end
 
     
