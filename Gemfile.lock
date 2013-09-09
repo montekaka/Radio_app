@@ -52,11 +52,16 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    dropbox-api (0.4.0)
+      hashie
+      multi_json
+      oauth
     dropbox-sdk (1.6.1)
       json
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    hashie (2.0.5)
     hike (1.2.2)
     i18n (0.6.4)
     jquery-rails (2.2.1)
@@ -70,6 +75,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.2)
     nokogiri (1.5.9)
+    oauth (0.4.7)
     orm_adapter (0.4.0)
     paperclip (3.5.1)
       activemodel (>= 3.0.0)
@@ -139,6 +145,7 @@ DEPENDENCIES
   aws-sdk
   coffee-rails (~> 3.1.1)
   devise
+  dropbox-api
   dropbox-sdk
   jquery-rails
   json

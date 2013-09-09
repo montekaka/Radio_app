@@ -52,7 +52,7 @@ class DropboxController < ApplicationController
 
         begin
             #Create a folder Dropbox with given name
-            resp = client.file_create_folder('on99')
+            resp = client.file_create_folder('Apps/on99')
             render :text => "Create successful.  File now at #{resp['path']}"
         rescue DropboxAuthError => e
             session.delete(:access_token)  # An auth error means the access token is probably bad
