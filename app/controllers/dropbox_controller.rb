@@ -27,7 +27,8 @@ class DropboxController < ApplicationController
         unless client
             redirect_to(:action => 'auth_start') and return
         end
-
+        
+        #@station_show_name = 'ruby'
         account_info = client.account_info
 
         # Show a file upload page
@@ -39,8 +40,10 @@ class DropboxController < ApplicationController
         #    "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
 
         # Show delta file
+        # render :inline =>
+        #        "#{account_info['email']} <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
         render :inline =>
-                "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
+                "<%=@station_show_name %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
     end
 
     
@@ -51,8 +54,8 @@ class DropboxController < ApplicationController
         end
 
         begin
-            #Create a folder Dropbox with given name
-            resp = client.file_create_folder('Apps/on99')
+            #Create a folder Dropbox with given name            
+            resp = client.file_create_folder('ilovela')
             render :text => "Create successful.  File now at #{resp['path']}"
         rescue DropboxAuthError => e
             session.delete(:access_token)  # An auth error means the access token is probably bad

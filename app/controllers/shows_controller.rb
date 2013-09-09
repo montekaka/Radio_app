@@ -84,12 +84,14 @@ class ShowsController < ApplicationController
     @show = @station.shows.new(params[:show])
     @show.user = current_user
     
-    puts @show.name
+    @station_show_name = 'Apps/on99/'+@station.name+'/'+@show.name
+    #puts @station_show_name
 
     respond_to do |format|
       if @show.save
-        format.html { redirect_to new_show_audiopost_path(@show), :notice => 'Show was successfully created.' }
+        #format.html { redirect_to new_show_audiopost_path(@show), :notice => 'Show was successfully created.' }
         format.json { render :json => @show, :status => :created, :location => @show }
+        format.html { redirect_to dropbox_main_path(@station_show_name), :notice => 'Show was successfully created.'}
       else
         format.html { render :action => "new" }
         format.json { render :json => @show.errors, :status => :unprocessable_entity }
@@ -124,4 +126,5 @@ class ShowsController < ApplicationController
       format.json { head :ok }
     end
   end
+
 end
