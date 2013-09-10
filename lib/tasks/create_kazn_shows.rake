@@ -1,7 +1,7 @@
 desc "Create KAZN"
 task :create_kazn_shows => :environment do
   require 'updateAudiopost.rb'
-  
+  user = User.find_by_email("b@a.com")
   #check whether 1300 station exist?
   station = Station.find_by_name('AM1300')
   if station == nil
@@ -16,7 +16,7 @@ task :create_kazn_shows => :environment do
     puts "show category: " + s.categoryName
     puts "show url: " + s.url
     #Show.create(:name=>s.name, :djname=>s.hostDJ, :description=>s.desc, :category=>s.categoryName, :show_url=>s.url)
-    station.shows.create(:name=>s.name, :djname=>s.hostDJ, :description=>s.desc, :category=>s.categoryName, :show_url=>s.url)
+    station.shows.create(:name=>s.name, :djname=>s.hostDJ, :description=>s.desc, :category=>s.categoryName, :show_url=>s.url,:user_id=>user.id)
   end
   
 end

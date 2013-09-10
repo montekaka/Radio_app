@@ -2,7 +2,7 @@ desc "Create KMRB Shows Podcast Archive"
 task :create_kmrb_audioposts => :environment do
 	require 'updateAudiopost.rb'
 	station = Station.find_by_name('AM1430')
-
+	user = User.find_by_email("b@a.com")
 	station.shows.each do |show|
 		puts 'Show ID: ' + show.id.to_s
 		puts 'Show Name: ' + show.name
@@ -13,7 +13,7 @@ task :create_kmrb_audioposts => :environment do
 			puts "episode desc: " + e.desc
 			puts "episode date: " + e.date
 			puts "episode url: " + e.url
-			show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+			show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc,:user_id=>user.id)
 		end
 	end
 

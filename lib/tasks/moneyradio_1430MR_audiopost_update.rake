@@ -2,7 +2,7 @@
 desc "Update Money Radio from 1430 Shows Podcast Archive"
 task :moneyradio_1430MR_audiopost_update => :environment do
 	require 'updateAudiopost'
-	
+	user = User.find_by_email("b@a.com")
 	station = Station.find_by_name('節目重溫')
 	show = station.shows.find_by_name('理財天地')
 	puts show.name
@@ -15,7 +15,7 @@ task :moneyradio_1430MR_audiopost_update => :environment do
 			updateEpisode.each do |e|
 				puts "episode name: " + e.name
 				puts "episode date: " + e.date
-				show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+				show.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc,:user_id=>user.id)
 			end
 		end
 	end	

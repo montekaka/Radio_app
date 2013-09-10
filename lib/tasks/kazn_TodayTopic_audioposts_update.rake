@@ -3,6 +3,7 @@ desc "Update Today Topic Shows Podcast Archive"
 task :kazn_TodayTopic_audioposts_update => :environment do
 	require 'updateAudiopost'
 	require 'nokogiriTodayTopic'
+	user = User.find_by_email("b@a.com")
 	station = Station.find_by_name('AM1300')
 	showa = station.shows.find_by_name('今日話題')
 	puts showa.name
@@ -15,7 +16,7 @@ task :kazn_TodayTopic_audioposts_update => :environment do
 			updateEpisode.each do |e|
 				puts "episode name: " + e.name
 				puts "episode date: " + e.date.to_s
-				showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc)
+				showa.audioposts.create(:title => e.name, :audio=>e.url, :audio_date=>e.date, :short_note=>e.desc,:user_id=>user.id)
 			end
 		else
 			puts "No new episode to update"
