@@ -28,8 +28,23 @@ class DropboxController < ApplicationController
             redirect_to(:action => 'auth_start') and return
         end
         
+        dropbox_path_create = params[:dropbox_path]
         #@station_show_name = 'ruby'
         account_info = client.account_info
+
+        #create the show folder
+        begin
+            #Create a folder Dropbox with given name            
+            resp = client.file_create_folder(dropbox_path_create)
+            render :text => "Create successful.  File now at #{resp['path']}"
+        rescue DropboxAuthError => e
+            session.delete(:access_token)  # An auth error means the access token is probably bad
+            logger.info "Dropbox auth error: #{e}"
+            render :text => "Dropbox auth error"
+        rescue DropboxError => e
+            logger.info "Dropbox API error: #{e}"
+            render :text => "Dropbox API error"
+        end        
 
         # Show a file upload page
         # render :inline =>
@@ -42,8 +57,9 @@ class DropboxController < ApplicationController
         # Show delta file
         # render :inline =>
         #        "#{account_info['email']} <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
-        render :inline =>
-                "<%=params[:param_a] %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
+        
+        #render :inline =>
+        #        "<%=params[:param_a] %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
     end
 
     
