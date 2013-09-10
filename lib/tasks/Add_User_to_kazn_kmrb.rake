@@ -1,5 +1,5 @@
 desc "Update userID to Station Show and Audioposts associate with KAZN and KMRB"
-task :update_UserID_to_KAZN_KMRB => :environment do
+task :update_UserID_to_KAZN => :environment do
 	user = User.find_by_email("b@a.com")
 	if user == nil
 		user = User.create!(:name=>"Josh",:password=>"aaaaaa", :email=>"b@a.com")
@@ -23,6 +23,13 @@ task :update_UserID_to_KAZN_KMRB => :environment do
 			a.save!
 			puts "Save " + a.title + " UserID to " + a.user_id.to_s
 		end
+	end	
+end
+
+task :update_UserID_to_KMRB => :environment do
+	user = User.find_by_email("b@a.com")
+	if user == nil
+		user = User.create!(:name=>"Josh",:password=>"aaaaaa", :email=>"b@a.com")
 	end
 
 	#Update am1430 station
