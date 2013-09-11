@@ -17,8 +17,8 @@
 require 'dropbox_sdk'
 require 'securerandom'
 
-APP_KEY = "s3gpjqz19zhdonm"
-APP_SECRET = "rdc51wc46jgla9n"
+APP_KEY = "xs74qq784d9t162"
+APP_SECRET = "06jeldwww4n7kl1"
 
 class DropboxController < ApplicationController
 
