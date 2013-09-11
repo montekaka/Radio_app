@@ -85,7 +85,7 @@ class ShowsController < ApplicationController
     @show.user = current_user
     
     #@station_show_name = 'Apps/on99/'+@station.name+'/'+@show.name
-    @station_show_name = 'Apps/on99/'+@station.name+'/'+@show.name
+    @station_show_name = @station.name+'/'+@show.name
     #puts @station_show_name
 
     respond_to do |format|
