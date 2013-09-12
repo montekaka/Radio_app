@@ -80,18 +80,25 @@ class DropboxController < ApplicationController
             station = Station.create!(:name=>"JustCast", :user_id=>user.id)
         end
 
-        show = Show.find_by_name('Testing') 
-        if show == nil
-            show = station.shows.create!(:name=>'Testing', :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>user.id) 
-        end
-
         @urls = Array.new
         @root_metadata = client.metadata('/')
+        #loop for each folder inside root(/Apps/justCast)
         @root_metadata['contents'].each do |c|
             if c['is_dir'] == true
-                # if it is a folder, go into folder and get the content
+
                 path = c['path']
+                folder_name = Array.new
+                path.split('/').collect do |folder|
+                    folder_name << folder
+                end    
+                # if it is a folder, go into folder and get the content
+                show = Show.find_by_name(folder_name.last)
+                if show == nil
+                    show = station.shows.create!(:name=>folder_name.last, :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>user.id) 
+                end
+
                 @folder_metadata = client.metadata(path)
+                #loop for each item inside folder
                 @folder_metadata['contents'].each do |file|
                     if file['is_dir'] == false
                         #make sure it is a file instead of folder
@@ -103,11 +110,12 @@ class DropboxController < ApplicationController
 
                         puts "the file path is #{file['path']}"
                         puts "the file name is #{file_name.last}"
+                        puts "the date is #{file['modified']}"
                         url = client.media(file_path)
                         @urls << url['url'] #add to urls array
                         audiopost = Audiopost.find_by_title("file_name.last")
                         if audiopost == nil 
-                            audiopost = show.audioposts.create(:title=>file_name.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>Time.new)
+                            audiopost = show.audioposts.create(:title=>file_name.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>file['modified'])
                         end               
 
                     end
