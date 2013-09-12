@@ -13,7 +13,8 @@
 #        get  "dropbox/auth_finish"
 # 4. Run: rails server
 # 5. Point your browser at: https://localhost:3000/dropbox/main
-
+# example of delta and media call
+#client.media(client.delta(prev_cursor)['entries'][0][1]['path'])['url']
 require 'dropbox_sdk'
 require 'securerandom'
 
