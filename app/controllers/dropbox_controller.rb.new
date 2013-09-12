@@ -13,8 +13,7 @@
 #        get  "dropbox/auth_finish"
 # 4. Run: rails server
 # 5. Point your browser at: https://localhost:3000/dropbox/main
-# example of delta and media call
-#client.media(client.delta(prev_cursor)['entries'][0][1]['path'])['url']
+
 require 'dropbox_sdk'
 require 'securerandom'
 
@@ -28,24 +27,8 @@ class DropboxController < ApplicationController
         unless client
             redirect_to(:action => 'auth_start') and return
         end
-        
-        dropbox_path_create = params[:dropbox_path]? params[:dropbox_path] : "example"
-        #@station_show_name = 'ruby'
-        account_info = client.account_info
 
-        #create the show folder
-        begin
-            #Create a folder Dropbox with given name            
-            resp = client.file_create_folder(dropbox_path_create)
-            render :text => "Create successful.  File now at #{resp['path']}"
-        rescue DropboxAuthError => e
-            session.delete(:access_token)  # An auth error means the access token is probably bad
-            logger.info "Dropbox auth error: #{e}"
-            render :text => "Dropbox auth error"
-        rescue DropboxError => e
-            logger.info "Dropbox API error: #{e}"
-            render :text => "Dropbox API error"
-        end        
+        account_info = client.account_info
 
         # Show a file upload page
         # render :inline =>
@@ -56,65 +39,8 @@ class DropboxController < ApplicationController
         #    "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
 
         # Show delta file
-        # render :inline =>
-        #        "#{account_info['email']} <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
-        
-        #render :inline =>
-        #        "<%=params[:param_a] %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
-    end
-
-    def testing 
-        #get the dropbox client, will redirect for auth if user has not login
-        client = get_dropbox_client
-        unless client
-            redirect_to(:action => 'auth_start') and return
-        end
-
-        user = User.find_by_email("a@a.com")
-        if user == nil
-            user = User.create!(:name=>"Roland", :password=>"aaaaaa", :email=>"a@a.com")
-        end
-
-        #create boxcast station if it is not created
-        station = Station.find_by_name('JustCast') 
-        if station == nil
-            station = Station.create!(:name=>"JustCast", :user_id=>user.id)
-        end
-
-        show = Show.find_by_name('Testing') 
-        if show == nil
-            show = station.shows.create!(:name=>'Testing', :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>user.id) 
-        end
-
-        @urls = Array.new
-        @root_metadata = client.metadata('/')
-        @root_metadata['contents'].each do |c|
-            if c['is_dir'] == true
-                # if it is a folder, go into folder and get the content
-                path = c['path']
-                @folder_metadata = client.metadata(path)
-                @folder_metadata['contents'].each do |file|
-                    if file['is_dir'] == false
-                        #make sure it is a file instead of folder
-                        file_path = file['path']
-                        file_name = Array.new
-                        file_path.split('/').collect do |item|
-                            file_name << item
-                        end    
-
-                        puts "the file path is #{file['path']}"
-                        puts "the file name is #{file_name.last}"
-                        url = client.media(file_path)
-                        @urls << url['url'] #add to urls array
-                        audiopost = Audiopost.find_by_title("file_name.last")
-                        if audiopost == nil 
-                            audiopost = show.audioposts.create(:title=>file_name.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>Time.new)
-                        end               
-
-                    end
-                end
-            end
-        end
+        render :inline =>
+                "#{account_info['email']} <br/><%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"
     end
 
     
@@ -125,8 +51,8 @@ class DropboxController < ApplicationController
         end
 
         begin
-            #Create a folder Dropbox with given name            
-            resp = client.file_create_folder('ilovela')
+            #Create a folder Dropbox with given name
+            resp = client.file_create_folder('Apps/boxcast')
             render :text => "Create successful.  File now at #{resp['path']}"
         rescue DropboxAuthError => e
             session.delete(:access_token)  # An auth error means the access token is probably bad
@@ -182,6 +108,60 @@ class DropboxController < ApplicationController
         # Send the user to the Dropbox website so they can authorize our app.  After the user
         # authorizes our app, Dropbox will redirect them here with a 'code' parameter.
         redirect_to authorize_url
+    end
+
+    def testing 
+        #get the dropbox client, will redirect for auth if user has not login
+        client = get_dropbox_client
+        unless client
+            redirect_to(:action => 'auth_start') and return
+        end
+
+        user = User.find_by_email("a@a.com")
+        if user == nil
+            user = User.create!(:name=>"Roland", :password=>"aaaaaa", :email=>"a@a.com")
+        end
+
+        #create boxcast station if it is not created
+        station = Station.find_by_name('BoxCast') 
+        if station == nil
+            station = Station.create!(:name=>"BoxCast", :user_id=>user.id)
+        end
+
+        show = Show.find_by_name('Testing') 
+        if show == nil
+            show = station.shows.create!(:name=>'Testing', :djname=>nil, :description=>nil, :category=>"BoxCast", :show_url=>nil, :user_id=>user.id) 
+        end
+
+        @urls = Array.new
+        @root_metadata = client.metadata('/apps/boxcast')
+        @root_metadata['contents'].each do |c|
+            if c['is_dir'] == true
+                # if it is a folder, go into folder and get the content
+                path = c['path']
+                @folder_metadata = client.metadata(path)
+                @folder_metadata['contents'].each do |file|
+                    if file['is_dir'] == false
+                        #make sure it is a file instead of folder
+                        file_path = file['path']
+                        file_name = Array.new
+                        file_path.split('/').collect do |item|
+                            file_name << item
+                        end    
+
+                        puts "the file path is #{file['path']}"
+                        puts "the file name is #{file_name.last}"
+                        url = client.media(file_path)
+                        @urls << url['url'] #add to urls array
+                        audiopost = Audiopost.find_by_title("file_name.last")
+                        if audiopost == nil 
+                            audiopost = show.audioposts.create(:title=>file_name.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>Time.new)
+                        end               
+
+                    end
+                end
+            end
+        end
     end
 
     def auth_finish
