@@ -27,9 +27,9 @@ namespace :tweets do
 						audiopost_name = d['audiopost_name']
 						audiopost_url = d['audiopost_url']
 						audiopost_date = d['audiopost_date']
-						actual_link = URI.parse(url_value)
+						#actual_link = URI.parse(url_value)
 						puts "created audiopost with name: #{audiopost_name} in show: #{show_name} with date: #{audiopost_date}"
-						audiopost = show.audioposts.create(:title=>audiopost_name, :audio=>actual_link, :user_id=>user.id, :audio_date=>audiopost_date)
+						audiopost = show.audioposts.create(:title=>audiopost_name, :cast_remote_url=>audiopost_url, :user_id=>user.id, :audio_date=>audiopost_date)
 					end
 				end
 			else
