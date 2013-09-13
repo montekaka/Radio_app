@@ -5,11 +5,14 @@
 	</div>
 	<div data-role="content">
 		<div class="content-primary">
-			This is the testing content<br/>
-			<%=@root_metadata['contents']%><br/>
-			<%@urls.each do |url|%>
+			<p>This is the testing content<br/></p>
+			<p><%=@root_metadata['contents']%><br/></p>
+			<p><%=@delta%><br/></p>
+			<p>Cursor from database is<%=@cursor%><br/></p>			
+			<p><%@urls.each do |url|%>
 				<%=link_to "podcast", url%><br/>
-			<%end%>			
+			<%end%>
+			</p>			
 		</div>
 	</div>
 </div>
