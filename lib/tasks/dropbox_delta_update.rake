@@ -1,6 +1,6 @@
-namespace :tweets do
+namespace :justcast do
 	# to call the task with parameters
-	# rake 'tweets:dropbox_delta_update[josh, hello]'
+	# rake 'justcast:dropbox_delta_update[josh, hello]'
 	desc "Check delta from dropbox and create audiopost"
 	task :dropbox_delta_update, [:delta_array] => [:environment] do |t, args|
 		delta_array = args[:delta_array]
