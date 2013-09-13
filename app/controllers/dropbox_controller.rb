@@ -63,6 +63,75 @@ class DropboxController < ApplicationController
         #        "<%=params[:param_a] %> <br/> <%= form_tag({:action => :create}, :multipart => true) do %><%= file_field_tag 'file' %><%= submit_tag 'Create' %><% end %>"        
     end
 
+    def reset
+
+        #get the dropbox client, will redirect for auth if user has not login
+        client = get_dropbox_client
+        unless client
+            redirect_to(:action => 'auth_start') and return
+        end
+
+        user = User.find_by_email("b@b.com")
+        if user == nil
+            user = User.create!(:name=>"Dropbox Testing", :password=>"dropbox", :email=>"b@b.com")
+        end
+
+        user.audioposts.destroy_all
+        user.shows.destroy_all
+        user.stations.destroy_all
+
+        #create boxcast station if it is not created
+        station = user.stations.find_by_name('JustCast') 
+        if station == nil
+            station = Station.create!(:name=>"JustCast", :user_id=>user.id)
+        end
+
+        @root_metadata = client.metadata('/')
+        #loop for each folder inside root(/Apps/justCast)
+        @root_metadata['contents'].each do |c|
+            if c['is_dir'] == true
+
+                path = c['path']
+                folder_name = Array.new
+                path.split('/').collect do |folder|
+                    folder_name << folder
+                end    
+                # if it is a folder, go into folder and get the content
+                show = station.shows.find_by_name(folder_name.last)
+                if show == nil
+                    show = station.shows.create!(:name=>folder_name.last, :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>user.id) 
+                end
+
+                @folder_metadata = client.metadata(path)
+                #loop for each item inside folder
+                @folder_metadata['contents'].each do |file|
+                    if file['is_dir'] == false
+                        #make sure it is a file instead of folder
+                        file_path = file['path']
+                        file_name = Array.new
+                        file_path.split('/').collect do |item|
+                            file_name << item
+                        end
+
+                        puts "the file path is #{file['path']}"
+                        puts "the file name is #{file_name.last}"
+                        puts "the date is #{file['modified']}"
+
+                        audiopost = show.audioposts.find_by_title(file_name.last)
+                        if audiopost == nil 
+                            url = client.media(file_path)
+                            audiopost = show.audioposts.create(:title=>file_name.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>file['modified'])
+                        end
+                    end
+                end
+            end
+        end
+
+        render :text => "Successfully Sync to latest (Brute Force) "
+
+    end
+
+
     def testing 
         #get the dropbox client, will redirect for auth if user has not login
         client = get_dropbox_client
@@ -70,9 +139,9 @@ class DropboxController < ApplicationController
             redirect_to(:action => 'auth_start') and return
         end
 
-        user = User.find_by_email("a@a.com")
+        user = User.find_by_email("b@b.com")
         if user == nil
-            user = User.create!(:name=>"Roland", :password=>"aaaaaa", :email=>"a@a.com")
+            user = User.create!(:name=>"Dropbox Testing", :password=>"dropbox", :email=>"b@b.com")
         end
 
         #create boxcast station if it is not created
@@ -91,8 +160,46 @@ class DropboxController < ApplicationController
         # loop for each entry
         entries.each do |entry|
             path = entry[0]
-            metadata = entry[1]               
-            if metadata['is_dir'] == true
+            metadata = entry[1]
+            if metadata == nil
+                # the file/folder is deleted
+                # sample for a deleted delta
+                #{"reset"=>false, 
+                #"cursor"=>"AAFfMgSVnfaABJROaOE6WQdaOJh10XfRi2LVs-OH9gVp1hZA4_-Jqi4Vzb6hYWgfrOurc8jfHjnn0IYTR95C991LW3RvkmTw0PTk38Ac12ttqQ", 
+                #"has_more"=>false, 
+                #"entries"=>[["/newly added/林峯 - 如果時間來到.mp3", nil], ["/newly added", nil]]}
+
+                #parse the path
+                folder_names = Array.new
+                path.split('/').collect do |folder|
+                    folder_names << folder
+                end
+                
+                if folder_names.size() == 2 
+                    #it is a show folder
+                    show = station.shows.find_by_name(folder_names.last)
+                    if show != nil
+                        puts "deleted a show with name #{folder_names.last}"
+                        show.destroy()     
+                    end
+                elsif folder_names.size() == 3
+                    #it is a audiopost
+                    show_name = folder_names[1] 
+                    show = station.shows.find_by_name(show_name)
+                    if show == nil
+                        puts "show #{show_name} already deleted"
+                    else
+                        audiopost = show.audioposts.find_by_title(folder_names.last)
+                        if audiopost != nil 
+                            audiopost.destroy()
+                        end
+                    end
+
+                else
+                    #ignore all other folder_name.size()
+                end
+
+            elsif metadata['is_dir'] == true
                 # if it is a folder 
                 folder_names = Array.new
                 path.split('/').collect do |folder|

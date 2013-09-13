@@ -5,6 +5,7 @@ RadioApp::Application.routes.draw do
   get  "dropbox/auth_start"
   get  "dropbox/auth_finish"
   get  "dropbox/testing"
+  get  "dropbox/reset"
 
   resources :stations do
     
