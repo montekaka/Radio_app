@@ -1,6 +1,5 @@
 class StationsController < ApplicationController
   
-  
   def categories
     @station = Station.find(params[:id])
   end   

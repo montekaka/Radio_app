@@ -1,12 +1,12 @@
 class ShowsController < ApplicationController
   
-  before_filter :authenticate_user!, :except=>[:index, :show, :categories]  
+  before_filter :sync_dropbox 
+  before_filter :authenticate_user!, :except=>[:index, :show, :categories]
   
   # GET /station/1/shows/categories
   def categories
     @station = Station.find(params[:station_id])
-  end 
-  
+  end  
 
   # GET /stations/1/shows
   # GET /stations/1/shows.json  
@@ -127,5 +127,16 @@ class ShowsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def sync_dropbox
+      puts "***************syncing dropbox*********************" 
+      @show = Show.find(params[:show_id])
+      if @show != nil
+        puts "Show found. The name is #{@station.name}"
+        user = @show.user
+        user.sync_dropbox
+      end
+  end
+
 
 end

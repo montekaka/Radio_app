@@ -133,6 +133,8 @@ class DropboxController < ApplicationController
 
 
     def testing 
+        @token = session[:access_token]
+
         #get the dropbox client, will redirect for auth if user has not login
         client = get_dropbox_client
         unless client
@@ -230,12 +232,11 @@ class DropboxController < ApplicationController
                         puts "error, show not found"
                     end
                     audiopost = show.audioposts.find_by_title(file_names.last)
-                    if audiopost == nil 
-                        url = client.media(path)
-                        audiopost = show.audioposts.create(:title=>file_names.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>metadata['modified'])
+                    if audiopost != nil
+                        audiopost.destroy #destroy the old one in case it is replacement file, always destroy old record
                     end
-
-
+                    url = client.media(path)
+                    audiopost = show.audioposts.create(:title=>file_names.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>metadata['modified'])
                 end
 
             end

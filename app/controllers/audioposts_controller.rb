@@ -2,6 +2,7 @@ class AudiopostsController < ApplicationController
   
   before_filter :authenticate_user!, :except=>[:index, :show]  
   before_filter :load_parent
+  before_filter :sync_dropbox 
   
   # GET /audioposts
   # GET /audioposts.json
@@ -89,6 +90,17 @@ class AudiopostsController < ApplicationController
   
   def load_parent
       @show = Show.find(params[:show_id])
+  end
+
+  def sync_dropbox
+      puts "***************syncing dropbox*********************" 
+      access_token = session[:access_token]
+      @show = Show.find(params[:show_id])
+      if @show != nil
+        puts "Show found. The name is #{@show.name}"
+        user = @show.user
+        user.sync_dropbox(access_token)
+      end
   end
   
 end
