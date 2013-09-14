@@ -1,17 +1,17 @@
 <div data-role="page" id="demo-page">  
     <div data-role="header" data-theme="b" id ="topheader">    
         <h1><%=@show.name%></h1>
-  		<%= link_to 'Back',categories_station_path(@show.station), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
-
+        <%if current_user %>
+            <%= link_to 'Back', @show.station, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
+        <%else%>
+        <%= link_to 'Back',categories_station_path(@show.station), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>        
+        <% end %>        
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
         -->    
         <a href="#infoPanel" class="ui-btn-right" data-icon="bars" data-rel="push">
             About
-        </a>
-        <%if current_user %>
-            <%= link_to 'Home', @show, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
-        <% end %>        
+        </a>        
     </div>
     <div data-role="content" id="content">
         <div data-role="fieldcontain">

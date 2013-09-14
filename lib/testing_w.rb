@@ -1,4 +1,4 @@
-# require 'dropbox_sdk'
+require 'dropbox_sdk'
 
 # APP_KEY = 'xs74qq784d9t162'
 # APP_SECRET = '06jeldwww4n7kl1'
@@ -17,4 +17,6 @@ client = DropboxClient.new(access_token)
 prev_delta = client.delta()
 prev_cursor = prev_delta['cursor']
 #puts prev_cursor.to_s
-puts prev_delta['entries']
+prev_delta['entries'].each do |e|
+	puts e[1]['is_dir']
+end
