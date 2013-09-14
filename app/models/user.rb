@@ -9,42 +9,45 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-	attr_accessible :email, :name
+	attr_accessible :email, :name, :token
 	has_many :audioposts
 	has_many :stations
 	has_many :shows
 
 def sync_dropbox(access_token)
-        #get the dropbox client, will redirect for auth if user has not login
-        client = DropboxClient.new(access_token)
+
+        token = self.token
+        puts "the self.token is #{token}"
+        client = DropboxClient.new(token)
+
+        if client == nil
+            puts "error getting dropbox user"
+        end
 
         #client = get_dropbox_client
         #unless client
         #    redirect_to(:action => 'auth_start') and return
         #end
-        user = User.find_by_email("b@b.com")
-        if user == nil
-            user = User.create!(:name=>"Roland Chan", :password=>"dropbox", :email=>"b@b.com", :token=>"w5gTdMYthqAAAAAAAAAAAUjYJ7489pbgtAGUxN_BSdG3QzOkL5S5Xm7v7d91HGFy")
-            puts "User Roland Chan created"
-        end
-        
+
         #create boxcast station if it is not created
-        station = user.stations.find_by_name('JustCast') 
+        station_name = self.name + "'s JustCast"
+        station = self.stations.find_by_name(station_name)
         if station == nil
-            station = Station.create!(:name=>"JustCast", :user_id=>user.id)
+            station = Station.create!(:name=>station_name, :user_id=>self.id)
         end
 
         @urls = Array.new
-        @cursor = user.cursor
-        @delta = client.delta(user.cursor)
+        @cursor = self.cursor
+        @delta = client.delta(self.cursor)
         # save the cursor to database
-        user.cursor = @delta['cursor']
-        user.save
-        entries = @delta['entries'] 
+        self.cursor = @delta['cursor']
+        self.save
+        entries = @delta['entries']
         # loop for each entry
         entries.each do |entry|
             path = entry[0]
             metadata = entry[1]
+
             if metadata == nil
                 # the file/folder is deleted
                 # sample for a deleted delta
@@ -95,7 +98,7 @@ def sync_dropbox(access_token)
                     show = station.shows.find_by_name(folder_names.last)
                     if show == nil
                         puts "created a show with name #{folder_names.last}"
-                        show = station.shows.create!(:name=>folder_names.last, :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>user.id) 
+                        show = station.shows.create!(:name=>folder_names.last, :djname=>nil, :description=>nil, :category=>"JustCast", :show_url=>nil, :user_id=>self.id) 
                     end
                 else
                 # ignore other folders for now
@@ -118,7 +121,7 @@ def sync_dropbox(access_token)
                         audiopost.destroy #destroy the old one in case it is replacement file, always destroy old record
                     end
                     url = client.media(path)
-                    audiopost = show.audioposts.create(:title=>file_names.last, :audio=>url['url'], :user_id=>user.id, :audio_date=>metadata['modified'])
+                    audiopost = show.audioposts.create(:title=>file_names.last, :audio=>url['url'], :user_id=>self.id, :audio_date=>metadata['modified'])
                 end
 
             end
