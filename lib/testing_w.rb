@@ -1,5 +1,5 @@
 require 'date'
-def parse_podcast_name(path)	
+def parse_podcast_name(path)
 	while path.index('/') != nil do
 		i = path.index('/')+1
 		path = path[i..path.length]
@@ -27,10 +27,11 @@ def parse_podcast_name(path)
 		file_Date = Date.strptime(possible_Date, '%Y-%m-%d')
 	end
 	file = Hash.new
-	file = { :file_Name => file_Name, :file_Date => file_Date }
+	file = {:file_Name => file_Name, :file_Date => file_Date }
 	return file
 end
 
+# example to use it
 require 'dropbox_sdk'
 
 # APP_KEY = 'xs74qq784d9t162'
@@ -50,7 +51,6 @@ client = DropboxClient.new(access_token)
 prev_delta = client.delta()
 prev_cursor = prev_delta['cursor']
 
-# example to use it
 prev_delta['entries'].each do |e|
 	puts parse_podcast_name(e[1]['path'])
 end
