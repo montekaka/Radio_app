@@ -36,7 +36,7 @@ task :dropbox => :environment do
 
         User.all.each do |user|
             puts "working on user: #{user.name}"
-        	user.sync_dropbox(nil)
+        	user.sync_dropbox()
         end
 
 end
