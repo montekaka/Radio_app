@@ -16,12 +16,19 @@ def parse_podcast_name(path)
 	file_Name = new_path.reverse
 	possible_Date = new_path[0..9].reverse
 
-	# if Date.strptime(possible_Date, '%Y-%m-%d')
-	# 	file_Date = nil
-	# else
-	# 	file_Date = Date.strptime(possible_Date, '%Y-%m-%d')
-	# end
-	return Date._parse('abc')[:year]
+	month = possible_Date[0..1]
+	day = possible_Date[3..4]
+	year = possible_Date[6..9]
+
+	possible_Date = year.to_s+'-'+month.to_s+'-'+day.to_s
+	if Date._parse(possible_Date)[:year].nil? or Date._parse(possible_Date)[:mon].nil? or Date._parse(possible_Date)[:mday].nil?
+		file_Date = nil
+	else
+		file_Date = Date.strptime(possible_Date, '%Y-%m-%d')
+	end
+	file = Hash.new
+	file = { :file_Name => file_Name, :file_Date => file_Date }
+	return file
 end
 
 require 'dropbox_sdk'
@@ -42,9 +49,8 @@ client = DropboxClient.new(access_token)
 
 prev_delta = client.delta()
 prev_cursor = prev_delta['cursor']
-#puts prev_cursor
-#puts prev_cursor.to_s
+
+# example to use it
 prev_delta['entries'].each do |e|
-	#puts e[1]['path']	
 	puts parse_podcast_name(e[1]['path'])
 end
