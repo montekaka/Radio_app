@@ -1,5 +1,7 @@
 class StationsController < ApplicationController
-  
+
+  before_filter :sync_dropbox 
+
   def categories
     @station = Station.find(params[:id])
   end   
@@ -103,4 +105,19 @@ class StationsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def sync_dropbox
+      puts "***************syncing dropbox*********************" 
+      if params[:id] != nil
+        @station = Station.find(params[:id])
+        if @station != nil
+          puts "Station found. The name is #{@station.name}"
+          user = @station.user
+          user.sync_dropbox()
+        end
+      end
+  end
+
+
+
 end

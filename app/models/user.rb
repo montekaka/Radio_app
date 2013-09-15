@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 	has_many :stations
 	has_many :shows
 
-def sync_dropbox(access_token)
+def sync_dropbox()
 
         token = self.token
         puts "the self.token is #{token}"

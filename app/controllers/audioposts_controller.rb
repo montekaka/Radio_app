@@ -94,12 +94,13 @@ class AudiopostsController < ApplicationController
 
   def sync_dropbox
       puts "***************syncing dropbox*********************" 
-      access_token = session[:access_token]
-      @show = Show.find(params[:show_id])
-      if @show != nil
-        puts "Show found. The name is #{@show.name}"
-        user = @show.user
-        user.sync_dropbox(access_token)
+      if params[:show_id] != nil
+        @show = Show.find(params[:show_id])
+        if @show != nil
+          puts "Show found. The name is #{@show.name}"
+          user = @show.user
+          user.sync_dropbox()
+        end
       end
   end
   
