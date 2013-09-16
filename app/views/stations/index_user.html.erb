@@ -24,7 +24,7 @@
 		<div class="ui-grid-solo">
 			<% @stations.each do |station| %>
 				<div class="ui-block-a">
-					<%= link_to station.name, categories_station_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
+					<%= link_to station.name, categories_station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
 				</div>
 			<% end %>
 		</div>

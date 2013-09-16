@@ -1,26 +1,41 @@
-<style type=text/css>
-.categoryName {
-	height: 100px;
-    text-align: left;
-}
-#buttoncontainer .ui-btn-text{
-	font-size: 20px;
-	/*color: #000066;*/
-}
-</style>
 <div data-role="page" id="CategoryPage">
 	<div data-role="header" data-theme="b">
 		<h1><%=@station.name%></h1>
 		<%= link_to 'Back',stations_path, {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>
 	</div>
-	<div data-role="content" id='buttoncontainer'>
-		<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
-			
-				<%= link_to c.category, station_shows_path(@station, :category=>c.category), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"c", :"class"=>"categoryName" %>	
-			
-		<% end %>
+	<div data-role="content">
+		<!-- <div data-role="collapsible-set" data-theme="e" data-content-theme="d" > -->
+		<ul data-role="listview" data-inset="true">
+			<% @station.shows.select("DISTINCT(CATEGORY)").each do |c| %>
+				<% i = 0%>
+				<% @station.shows.find_all_by_category(c.category).each do |show| %>
+					<% i = show.audioposts.count + i %>			
+				<% end %>
+				<% if i > 0 %>		
+					<!-- <div data-role="collapsible" data-collapsed="false"> -->
+					<li data-role="list-divider"><%= c.category%></li>
+						<!-- <h2><%= c.category%></h2>				 -->						
+							<% @station.shows.find_all_by_category(c.category).each do |show| %>
+									<% if show.audioposts.count > 0 %>
+									<li>								
+										<a href = '<%= show_audioposts_path(show)%>' rel='external'>
+											<h2><%= show.name %></h2>
+											<!-- <span class='ui-li-count'> -->
+											<span class="ui-li-count">
+												<%= show.audioposts.count %>
+											</span>
+											<!-- </span> -->
+										</a>
+									<%end%>
+								</li>
+							<% end %>
+					<!-- </div> -->
+				<% end %>
+			<% end %>
+		</ul>
+		<!-- </div> -->
 	</div>
 </div>
 <script type="text/javascript">
-    mixpanel.track("Viewed Station Page", {"Station Name": '<%=@station.name%>'}, function(){console.log('track call successed')});
+    mixpanel.track("Station Page Loaded", {"Station Name": "<%= @station.name %>"}, function(){console.log('<%= @station.name %>')});  
 </script>

@@ -1,11 +1,5 @@
 class StationsController < ApplicationController
 
-  before_filter :sync_dropbox 
-
-  def categories
-    @station = Station.find(params[:id])
-  end   
-    
   # GET /stations
   # GET /stations.json
   def index
@@ -18,14 +12,14 @@ class StationsController < ApplicationController
       respond_to do |format|
         format.html { render :action => 'index_user' }
         format.json { render :json => @stations }
-      end    
+      end
     else
       @stations = current_user.stations.all
       
       respond_to do |format|
         format.html # index.html.erb        
         format.json { render :json => @stations }
-      end      
+      end
     end
     
   end
@@ -105,19 +99,5 @@ class StationsController < ApplicationController
       format.json { head :ok }
     end
   end
-
-  def sync_dropbox
-      puts "***************syncing dropbox*********************" 
-      if params[:id] != nil
-        @station = Station.find(params[:id])
-        if @station != nil
-          puts "Station found. The name is #{@station.name}"
-          user = @station.user
-          user.sync_dropbox()
-        end
-      end
-  end
-
-
 
 end

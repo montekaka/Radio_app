@@ -8,13 +8,8 @@ RadioApp::Application.routes.draw do
   get  "dropbox/reset"
 
   resources :stations do
-    
-    get 'categories', :on => :member
-    
     resources :shows do
-      collection do
-        get 'categories' #add for route: shows/categories
-      end
+        get 'categories', :on => :collection #add for route: stations/:station_id/shows/categories
     end
   end
 

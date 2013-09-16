@@ -22,7 +22,7 @@ class ShowsController < ApplicationController
         @shows = @station.shows
       end
     else
-      @shows = Show.all      
+      @shows = Show.all
     end
     
     if !current_user
@@ -36,8 +36,7 @@ class ShowsController < ApplicationController
         format.html # index.html.erb
         format.json { render :json => @shows }
       end    
-    end 
-    
+    end    
   end
 
   # GET /shows/1
@@ -55,9 +54,8 @@ class ShowsController < ApplicationController
       respond_to do |format|
         format.html # index.html.erb
         format.json { render :json => @show }
-      end      
-    end   
-    
+      end
+    end    
   end
 
   # GET /shows/new
@@ -130,10 +128,10 @@ class ShowsController < ApplicationController
 
   def sync_dropbox
       puts "***************syncing dropbox*********************" 
-      @show = Show.find(params[:show_id])
-      if @show != nil
-        puts "Show found. The name is #{@station.name}"
-        user = @show.user
+      @station = Station.find(params[:station_id])
+      if @station != nil
+        puts "Station found. The name is #{@station.name}"
+        user = @station.user
         user.sync_dropbox
       end
   end

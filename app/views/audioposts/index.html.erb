@@ -4,7 +4,7 @@
         <%if current_user %>
             <%= link_to 'Back', @show.station, {"class"=>"ui-btn-left", "data-icon" => "home"} %>
         <%else%>
-        <%= link_to 'Back',categories_station_path(@show.station), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>        
+        <%= link_to 'Back',categories_station_shows_path(@show.station), {"class"=>"ui-btn-left", "data-icon" => "back", "rel"=>'external'} %>        
         <% end %>        
         <!--
             <%= link_to 'New Audio', new_show_audiopost_path(@show), {"class"=>"ui-btn-right", "data-icon" => "plus", :rel=>"external"} %>
