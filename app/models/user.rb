@@ -76,9 +76,12 @@ def sync_dropbox()
                     if show == nil
                         puts "show #{show_name} already deleted"
                     else
-                        audiopost = show.audioposts.find_by_title(folder_names.last)
-                        if audiopost != nil 
-                            audiopost.destroy()
+                        filename_date = self.parse_podcast_name(path)    
+                        if filename_date != nil
+                            audiopost = show.audioposts.find_by_title(filename_date[:file_date])
+                            if audiopost != nil 
+                                audiopost.destroy()
+                            end
                         end
                     end
 
@@ -116,12 +119,28 @@ def sync_dropbox()
                     if show == nil
                         puts "error, show not found"
                     end
-                    audiopost = show.audioposts.find_by_title(file_names.last)
-                    if audiopost != nil
-                        audiopost.destroy #destroy the old one in case it is replacement file, always destroy old record
+                    filename_date = self.parse_podcast_name(path)
+
+                    if filename_date != nil
+                        if filename_date[:file_date] == nil
+                            audio_date = metadata['modified']
+                        else
+                            audio_date = filename_date[:file_date]
+                        end
+                        audiopost = show.audioposts.find_by_title(filename_date[:file_name])
+                        if audiopost != nil
+                            audiopost.destroy #destroy the old one in case it is replacement file, always destroy old record
+                        end
                     end
                     url = client.media(path)
-                    audiopost = show.audioposts.create(:title=>file_names.last, :audio=>url['url'], :user_id=>self.id, :audio_date=>metadata['modified'])
+                    puts "the filename is #{filename_date[:file_name]}"
+                    puts "the file date is #{audio_date}"
+                    audiopost = show.audioposts.create(:title=>filename_date[:file_name], :audio=>url['url'], :user_id=>self.id, :audio_date=>audio_date)
+                    if audiopost.errors.size != 0
+                        puts "error creating audiopost"
+                        puts audiopost.errors.inspect
+                    end
+
                 end
 
             end
@@ -131,7 +150,7 @@ def sync_dropbox()
 
         end
 
-        @root_metadata = client.metadata('/')
+        # @root_metadata = client.metadata('/')
         # #loop for each folder inside root(/Apps/justCast)
         # @root_metadata['contents'].each do |c|
         #     if c['is_dir'] == true
@@ -175,5 +194,43 @@ def sync_dropbox()
 
 
     end
+
+    require 'date'
+    def parse_podcast_name(path)
+        # we only allow the second layer such as show/podcast.mp3
+        allow_path = 1
+        while path.index('/') != nil do
+            i = path.index('/')+1
+            path = path[i..path.length]
+            allow_path = allow_path + 1
+        end
+        if allow_path == 3
+            rev_path = path.reverse
+            if rev_path.index('.').nil?
+                i = 0
+            else
+                i = rev_path.index('.')+1
+            end
+            new_path = rev_path[i..rev_path.length]
+
+            file_Name = new_path.reverse
+            possible_Date = new_path[0..9].reverse
+
+            month = possible_Date[0..1]
+            day = possible_Date[3..4]
+            year = possible_Date[6..9]
+
+            possible_Date = year.to_s+'-'+month.to_s+'-'+day.to_s
+            if Date._parse(possible_Date)[:year].nil? or Date._parse(possible_Date)[:mon].nil? or Date._parse(possible_Date)[:mday].nil?
+                file_Date = nil
+            else
+                file_Date = Date.strptime(possible_Date, '%Y-%m-%d')
+            end
+            
+            return { :file_name => file_Name, :file_date => file_Date }
+        else
+            return nil
+        end
+    end #end of def parse_podcast_name(path)
 
 end
