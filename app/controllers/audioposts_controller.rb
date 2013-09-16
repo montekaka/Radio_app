@@ -2,7 +2,7 @@ class AudiopostsController < ApplicationController
   
   before_filter :authenticate_user!, :except=>[:index, :show]  
   before_filter :load_parent
-  before_filter :sync_dropbox
+  before_filter :sync_dropbox, :except=>[:new, :create, :edit, :update, :destroy]
   
   # GET /audioposts
   # GET /audioposts.json

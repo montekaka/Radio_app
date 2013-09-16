@@ -30,9 +30,9 @@ def sync_dropbox()
         #end
 
         #create boxcast station if it is not created
-        station_name = self.name + "'s JustCast"
-        station = self.stations.find_by_name(station_name)
+        station = self.stations.first
         if station == nil
+            tation_name = "JustCast"
             station = Station.create!(:name=>station_name, :user_id=>self.id)
         end
 

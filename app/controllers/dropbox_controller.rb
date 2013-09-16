@@ -336,6 +336,8 @@ class DropboxController < ApplicationController
         if session[:access_token]
             begin
                 access_token = session[:access_token]
+                current_user.token = access_token
+                current_user.save
                 DropboxClient.new(access_token)
             rescue
                 # Maybe something's wrong with the access token?
@@ -347,7 +349,7 @@ class DropboxController < ApplicationController
 
     def get_web_auth()
         redirect_uri = url_for(:action => 'auth_finish')
-        DropboxOAuth2Flow.new(APP_KEY, APP_SECRET, redirect_uri, session, :dropbox_auth_csrf_token)
+        DropboxOAuth2Flow.new(APP_KEY, APP_SECRET, redirect_uri, session, :dropbox_auth_csrf_token)        
     end
 
     def auth_start
