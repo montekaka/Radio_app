@@ -78,7 +78,7 @@ def sync_dropbox()
                     else
                         filename_date = self.parse_podcast_name(path)    
                         if filename_date != nil
-                            audiopost = show.audioposts.find_by_title(filename_date[:file_date])
+                            audiopost = show.audioposts.find_by_title(filename_date[:file_name])
                             if audiopost != nil 
                                 audiopost.destroy()
                             end
