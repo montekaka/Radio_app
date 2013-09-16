@@ -1,4 +1,6 @@
 RadioApp::Application.routes.draw do
+  get "abouts/home"
+
   get  "dropbox/main"
   post "dropbox/upload"
   post "dropbox/create"
