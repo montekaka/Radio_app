@@ -29,7 +29,13 @@ class DropboxController < ApplicationController
             redirect_to(:action => 'auth_start') and return
         end
         
-        dropbox_path_create = params[:dropbox_path]? params[:dropbox_path] : "example"
+        # if params.has_key?(:dropbox_path) 
+        #     dropbox_path_create = params[:dropbox_path] 
+        # else
+        #     dropbox_path_create = "example"
+        # end
+
+        dropbox_path_create = params.has_key?(:dropbox_path) ? params[:dropbox_path] : "example"
         #@station_show_name = 'ruby'
         account_info = client.account_info
 
