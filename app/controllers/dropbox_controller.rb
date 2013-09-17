@@ -34,7 +34,7 @@ class DropboxController < ApplicationController
         # else
         #     dropbox_path_create = "example"
         # end
-
+        
         dropbox_path_create = params.has_key?(:dropbox_path) ? params[:dropbox_path] : "example"
         #@station_show_name = 'ruby'
         account_info = client.account_info
