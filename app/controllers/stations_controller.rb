@@ -1,5 +1,7 @@
 class StationsController < ApplicationController
 
+  before_filter :authenticate_user!, :only=>[:new, :create, :edit, :update]
+
   # GET /stations
   # GET /stations.json
   def index
@@ -39,12 +41,19 @@ class StationsController < ApplicationController
   # GET /stations/new.json
   def new
     #@station = Station.new
-    @station = current_user.stations.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @station }
+    # only one station is allowed for now
+    if current_user.stations.count > 0 
+        redirect_to stations_url, :notice => "Only one station is allowed"
+    else
+      @station = current_user.stations.new
+
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render :json => @station }
+      end
     end
+
   end
 
   # GET /stations/1/edit

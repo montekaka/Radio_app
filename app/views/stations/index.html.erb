@@ -4,6 +4,7 @@
     <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>    
   </div>
   <div data-role="content" id="content">
+    <p id="notice"><%= notice %></p>
     <%= link_to 'New Station', new_station_path, :'data-role'=>'button' %>
     <br/>
     <table data-role="table" data-mode="Reflow" class="ui-body-d ui-shadow table-stripe ui-responsive tablesorter">

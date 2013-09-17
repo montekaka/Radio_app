@@ -11,16 +11,18 @@
 <div data-role="page" id="demo-page">  
 	<div data-role="header" data-theme="b">
 		<h1>華語播客</h1>
-<!--         <%if current_user %>
+		<a href="#feedbackPage" data-role="button" data-icon="grid" data-theme="b">
+          意見箱
+        </a>
+        <%if current_user %>
         	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
       	<%else%>
         	<%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
-      	<%end%>	 -->
-        <a href="#feedbackPage" data-role="button" data-icon="grid" data-theme="b">
-          意見箱
-        </a>
+      	<%end%>
 	</div>
+
 	<div data-role="content" id='buttoncontainer'>	
+	    <p id="notice"><%= notice %></p>
 		<div class="ui-grid-solo">
 			<% @stations.each do |station| %>
 				<div class="ui-block-a">
@@ -30,8 +32,9 @@
 		</div>
 		<!-- <a href="https://mixpanel.com/f/partner" data-role="button" data-theme="c"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a> -->
 	</div><!-- /content -->
+	
 	<div data-role="footer" data-position="fixed" data-theme="b">		
-		<h2>Powered by BruinSquare</h2>
+		<h2>Powered by <%=link_to "BruinSquare", "http://www.bruinsquare.com", :target=>"_blank"%> </h2>
 	</div><!-- /footer -->	
 </div>
 
@@ -43,9 +46,7 @@
 	<div data-role="content">
 		<div id="disqus_thread"></div>
 	</div>
-	<div data-role="footer" data-position="fixed" data-theme="b">
-		<h4>powered by @BruinSquare</h4>
-	</div>	
+
 </div>
 
 <script>
