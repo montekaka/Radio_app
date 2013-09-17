@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :authenticate_user!, :except=>[:show]
+
   # GET /users
   # GET /users.json
   def index
@@ -14,10 +17,13 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @user }
+    if @user != current_user
+            render :text => "You are not allowed to view this page, please go back"
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render :json => @user }
+      end
     end
   end
 

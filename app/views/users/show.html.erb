@@ -11,7 +11,17 @@
 	  <%= @user.email %>
 	</p>
 
+	<p>
+		dropbox linking status <br/>
+		<% if current_user.token == nil %>
+			<%= link_to "Link with dropbox", dropbox_main_path %>
+		<% else %>
+			<p>You are currently linked with dropbox.</p>
+		<% end %>
 
-	<%= link_to 'Edit', edit_user_path(@user) %> |
-	<%= link_to 'Back', users_path %>
+	</p>
+
+
+	<%= link_to 'Edit', edit_user_registration_path %> |
+	<%= link_to 'Back', root_path %>
 <div>

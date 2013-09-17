@@ -16,6 +16,7 @@ RadioApp::Application.routes.draw do
   end
 
   devise_for :users
+  resources :users, :only => [:show]
 
   resources :shows do
       resources :audioposts      

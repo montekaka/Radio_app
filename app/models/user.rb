@@ -22,6 +22,7 @@ def sync_dropbox()
 
         if client == nil
             puts "error getting dropbox user"
+            return
         end
 
         #client = get_dropbox_client
