@@ -35,15 +35,20 @@ class DropboxController < ApplicationController
         #     dropbox_path_create = "example"
         # end
         
-        dropbox_path_create = params.has_key?(:dropbox_path) ? params[:dropbox_path] : "example"
-        #@station_show_name = 'ruby'
+        #dropbox_path_create = params.has_key?(:dropbox_path) ? params[:dropbox_path] : "example"
+        
+        dropbox_path_create = "example"
         account_info = client.account_info
+
 
         #create the show folder
         begin
             #Create a folder Dropbox with given name            
             resp = client.file_create_folder(dropbox_path_create)
-            render :text => "Create successful.  File now at #{resp['path']}"
+            client.put_file('/example/test_file_on_dropbox.mp3', open('https://dl.dropboxusercontent.com/s/gmzjeuvlo8vmx5a/sample.mp3'))
+            #render :text => "Create successful.  File now at #{resp['path']}"
+            #render :text => "Created the file /example/test_file_on_dropbox.mp3}"
+            redirect_to categories_station_shows_path(current_user.stations.first)    
         rescue DropboxAuthError => e
             session.delete(:access_token)  # An auth error means the access token is probably bad
             logger.info "Dropbox auth error: #{e}"
