@@ -1,38 +1,68 @@
-<div data-role="page" id="demo-page">
-  <div data-role="header" data-theme="a">
-    <h1>Welcome</h1>
-    <%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>    
-  </div>
-  <div data-role="content" id="content">
-    <p id="notice"><%= notice %></p>
-    <%= link_to 'New Station', new_station_path, :'data-role'=>'button' %>
-    <br/>
-    <table data-role="table" data-mode="Reflow" class="ui-body-d ui-shadow table-stripe ui-responsive tablesorter">
-      <thead>
-        <tr class="ui-bar-d">
-          <th>Name</th>
-  <!--         <th>Description</th>
-          <th>Station url</th> -->
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-    <tbody>
-      <% @stations.each do |station| %>
-        <tr>
-          <td><%= station.name %></td>
-  <!--         <td><%= station.description %></td>
-          <td><%= station.station_url %></td> -->
-          <td><%= link_to 'Show', station %></td>
-          <td><%= link_to 'Edit', edit_station_path(station) %></td>
-          <td><%= link_to 'Destroy', station, :confirm => 'Are you sure?', :method => :delete %></td>
-        </tr>
-      <% end %>
-    </tbody>
-    </table>
-  </div>
-  <div data-role="footer" data-position="fixed" data-theme="c">
-    <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-  </div>
+<style type=text/css>
+.stationName {
+	height: 80px;
+    text-align: left;
+}
+#buttoncontainer .ui-btn-text{
+	font-size: 30px;
+	/*color: #000066;*/
+}
+</style>
+<div data-role="page" id="demo-page">  
+	<div data-role="header" data-theme="b">
+		<h1>華語播客</h1>
+		<a href="#feedbackPage" data-role="button" data-icon="grid" data-theme="b">
+          意見箱
+        </a>
+        <%if current_user %>
+        	<%= link_to "Logout", destroy_user_session_path, :method=>"delete", :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+      	<%else%>
+        	<%= link_to "Login", new_user_session_path, :"data-icon"=>"gear", :"class"=>"ui-btn-right"%>
+      	<%end%>
+	</div>
+
+	<div data-role="content" id='buttoncontainer'>	
+	    <p id="notice"><%= notice %></p>
+		<div class="ui-grid-solo">
+			<% @stations.each do |station| %>
+				<div class="ui-block-a">
+					<%= link_to station.name, categories_station_shows_path(station), :"data-role"=>"button", :"data-corners"=>"false", :"data-theme"=>"d", :"class"=>"stationName", :'rel'=>"external" %>	
+				</div>
+			<% end %>
+		</div>
+		<!-- <a href="https://mixpanel.com/f/partner" data-role="button" data-theme="c"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a> -->
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" data-theme="b">		
+		<h2>Powered by <%=link_to "BruinSquare", "http://www.bruinsquare.com", :target=>"_blank"%> </h2>
+	</div><!-- /footer -->	
 </div>
+
+<div data-role="page" id="feedbackPage">
+	<div data-role="header" data-theme="b">
+		<h1>意見箱</h1>
+		<a href="#demo-page" data-icon="back" class="ui-btn-left">Back</a>
+	</div>
+	<div data-role="content">
+		<div id="disqus_thread"></div>
+	</div>
+
+</div>
+
+<script>
+	mixpanel.track("Landing Page Loaded");
+</script>
+
+<!--Disqus-->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'todaytopic'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();  
+</script>
+

@@ -12,18 +12,20 @@ class StationsController < ApplicationController
       @stations = Station.all
 
       respond_to do |format|
-        format.html { render :action => 'index_user' }
+        format.html # index.html.erb  
         format.json { render :json => @stations }
       end
     else
       @stations = current_user.stations.all
-      
-      respond_to do |format|
-        format.html # index.html.erb        
-        format.json { render :json => @stations }
+      if @stations.size == 0
+        redirect_to new_station_path, :flash => { :notice => "Plese add an station to start" }
+      else
+        respond_to do |format|
+          format.html { render :action => 'index_user' }       
+          format.json { render :json => @stations }
+        end      
       end
-    end
-    
+    end    
   end
 
   # GET /stations/1
