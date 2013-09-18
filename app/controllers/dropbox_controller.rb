@@ -40,7 +40,6 @@ class DropboxController < ApplicationController
         dropbox_path_create = "example"
         account_info = client.account_info
 
-
         #create the show folder
         begin
             #Create a folder Dropbox with given name            

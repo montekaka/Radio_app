@@ -70,7 +70,8 @@ class StationsController < ApplicationController
 
     respond_to do |format|
       if @station.save
-        format.html { redirect_to new_station_show_path(@station), :notice => 'Station was successfully created.' }
+        #format.html { redirect_to new_station_show_path(@station), :notice => 'Station was successfully created.' }
+        format.html { redirect_to dropbox_main_path(:dropbox_path =>"station_show_name"), :notice => 'Show was successfully created.' }
         format.json { render :json => @station, :status => :created, :location => @station }
       else
         format.html { render :action => "new" }
