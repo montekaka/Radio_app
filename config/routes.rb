@@ -1,10 +1,8 @@
 RadioApp::Application.routes.draw do
+  
   get "admin/login"
-
   get "admin/logout"
-
   get "admin/dropbox_authorized"
-
   get "admin/main"
 
   get "abouts/home"
