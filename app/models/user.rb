@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-	attr_accessible :email, :name, :token
+	attr_accessible :email, :name, :token, :dropbox_id
 	has_many :audioposts
 	has_many :stations
 	has_many :shows
@@ -33,7 +33,7 @@ def sync_dropbox()
         #create boxcast station if it is not created
         station = self.stations.first
         if station == nil
-            tation_name = "JustCast"
+            tation_name = self.name + " JustCast"
             station = Station.create!(:name=>station_name, :user_id=>self.id)
         end
 

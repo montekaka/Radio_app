@@ -1,2 +1,38 @@
-<h1>Admin#main</h1>
-<p>Find me in app/views/admin/main.html.erb</p>
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Stations</a></li>
+    <li><a href="#tab2" data-toggle="tab">Account</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <% if @station %>
+	      <p>Station Name: <%=@station.name%></p>
+	      <p><%= link_to "Change Station Name", edit_station_path(@station)%></p>
+	      <p>Now you can put podcast files into your dropbox folder (/App/JustCast/)</p>
+	      <br/>
+	      <p>Podcast Details</p>
+	      <p><%=link_to "Your Podcast Main Page", categories_station_shows_path(@station), :target => "_blank" %></p>
+		  <br/>
+		  <b>Shows</b>
+		  <%@shows.each do |show|%>
+	      <p>
+	      	 <%=show.name%> 	
+	      	 <%=link_to "Link", show_audioposts_path(show), :target => "_blank"%>
+	      	 <%=link_to "RSS", show_audioposts_path(show, :rss), :target => "_blank"%>
+	      </p>
+	      <%end%>	
+	  <%else%>
+	  	<p><%= link_to "Please create a new station to start with", new_station_path%>	
+	  <%end%>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Account Details</p>
+      <p>Name: <%= current_user.name%></p>
+      <br/>
+      <p>For debug only:</p>
+      <p>Dropbox ID: <%= current_user.dropbox_id%></p>
+      <p>Cursor: <%= current_user.cursor%></p>
+      <p>Dropbox Token: <%= current_user.token%></p>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,9 @@
 RadioApp::Application.routes.draw do
   
-  get "admin/login"
-  get "admin/logout"
-  get "admin/dropbox_authorized"
+  get "admin/signout"
   get "admin/main"
+  get "admin/auth_finish"
+  get "admin/auth_start"
 
   get "abouts/home"
 
@@ -77,7 +77,7 @@ RadioApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'stations#index'
+  root :to => 'abouts#home'
 
   # See how all your routes lay out with "rake routes"
 
